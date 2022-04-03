@@ -1,0 +1,109 @@
+<?php 
+if(isset($_POST['submit'])){
+    $to = "email@example.com"; // this is your Email address
+    $from = $_POST['email']; // this is the sender's Email address
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $subject = "Form submission";
+    $subject2 = "Copy of your form submission";
+    $message = $first_name . " " . $last_name . " wrote the following:" . "\n\n" . $_POST['message'];
+    $message2 = "Here is a copy of your message " . $first_name . "\n\n" . $_POST['message'];
+
+    $headers = "From:" . $from;
+    $headers2 = "From:" . $to;
+    mail($to,$subject,$message,$headers);
+    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
+    echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
+    // You can also use header('Location: thank_you.php'); to redirect to another page.
+    }
+?>
+
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact-Us</title>
+    <link href="style_contact.css" rel="stylesheet" type="text/css">
+    <!--Icon set created by Lane Schwartz (lanes@illinois.edu)-->
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#50b5c2">
+    <meta name="msapplication-TileColor" content="#b0e0e6">
+    <meta name="theme-color" content="#b0e0e6">
+    <script type="text/javascript" src="bases.js"></script>
+    <script type="text/javascript" src="inflection_tables.js"></script>
+    <script type="text/javascript" src="inflections.js"></script>
+    <script type="text/javascript" src="dictionary_js/foma_apply_down.js"></script>
+    <script type="text/javascript" src="dictionary_js/foma_print.js"></script>
+    <script type="text/javascript" src="dictionary_js/transducer_inverted.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="title">
+            <a href="main_test.html">
+                <img src="icons/Sivuqaq_icon.png" width="109" height="66" alt="" />
+            </a>
+            <div class="titleText">
+                <h1>Yupigestun Sangaawa</h1>
+                <h3><i>A dictionary for St. Lawrence Island Yupik</i></h3>
+            </div>
+        </div>
+        <div class="border"></div>
+        <div class="nav">
+            <a href="https://ldl.linguistics.gmu.edu/" data-title="GMU LangDoc Lab Group"><img src="icons/lab_group.png"
+                    width="51" height="42" alt="" /></a>
+            <a href="#" data-title="Yupik Corpus"><img src="icons/corpus.png" width="52" height="37" alt="" /></a>
+            <a href="#" data-title="Morphological Analyzer"><img src="icons/analyzer.png" width="52" height="51"
+                    alt="" /></a>
+            <a href="https://saintlawrenceislandyupik.github.io/web_tools/index_utilities.html"
+                data-title="Orthotactic Spellchecker"><img src="icons/spellchecker.png" width="53" height="51"
+                    alt="" /></a>
+            <a href="#" data-title="Contact Us"><img src="icons/contact.png" width="52" height="37" alt="" /></a>
+        </div>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="qavaghtuq...">
+            <input id="searchButton" type="button" value="Search">
+        </div>
+        <div class="form">
+            <h2>Contact Us</h2><br>
+            <p>Have questions about the dictionary or suggestions for improvements?</p>
+            <p>Submit your comments in the form below and we will follow up as soon as we are able.</p><br>
+
+            <form action="" method="post">
+                <input type="text" name="first_name" placeholder="first name">
+                <input type="text" name="last_name" placeholder="last name"><br>
+                <input type="text" name="email" placeholder="email"><br>
+                <br><textarea rows="5" name="message" cols="30" placeholder="message"></textarea><br>
+                <input type="submit" name="submit" value="Submit">
+            </form>
+        </div>
+        <div class="footer">
+            © 2021 St.Lawrence Island
+        </div>
+    </div>
+    <script>
+
+        //Search functionality
+        const searchInput = document.getElementById("searchInput");
+
+        searchInput.addEventListener("keyup", (e) => {
+            if (e.keyCode == 13) {
+                e.preventDefault();
+                document.getElementById("searchButton").click();
+            }
+        });
+
+        //Search functionality; redirect to results page
+        document.getElementById("searchButton").onclick = function () {
+            location.href = "results.html?search=" + searchInput.value.toLowerCase();
+        };
+
+        
+    </script>
+</body>
+
+</html>

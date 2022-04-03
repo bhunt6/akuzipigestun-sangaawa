@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="style_dictionary.css" rel="stylesheet" type="text/css">
+    <title>Yupigestun Sangaawa</title>
+    <script type="text/javascript" src="dictionary_js/foma_apply_down.js"></script>
+    <script type="text/javascript" src="dictionary_js/transducer.js"></script>
+    <script type="text/javascript" src="dictionary_js/cyrillic_convert.js"></script>
+    <script type="text/javascript" src="dictionary_js/postbases_infl.js"></script>
+
+    <!--Icon set created by Lane Schwartz (lanes@illinois.edu)-->
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#50b5c2">
+    <meta name="msapplication-TileColor" content="#b0e0e6">
+    <meta name="theme-color" content="#b0e0e6">
+    <script type="text/javascript" src="bases.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="title">
+            <a href="#">
+                <img src="icons/Sivuqaq_icon.png" width="109" height="66" alt="" />
+            </a>
+            <div class="titleText">
+                <h1>Yupigestun Sangaawa</h1>
+                <h3><i>A dictionary for St. Lawrence Island Yupik</i></h3>
+            </div>
+        </div>
+        <div class="border"></div>
+        <div class="nav">
+            <a href="https://ldl.linguistics.gmu.edu/" data-title="GMU LangDoc Lab Group"><img src="icons/lab_group.png"
+                    width="51" height="42" alt="" /></a>
+            <a href="#" data-title="Yupik Corpus"><img src="icons/corpus.png" width="52" height="37" alt="" /></a>
+            <a href="#" data-title="Morphological Analyzer"><img src="icons/analyzer.png" width="52" height="51"
+                    alt="" /></a>
+            <a href="https://saintlawrenceislandyupik.github.io/web_tools/index_utilities.html"
+                data-title="Orthotactic Spellchecker"><img src="icons/spellchecker.png" width="53" height="51"
+                    alt="" /></a>
+            <a href="#" data-title="Contact Us"><img src="icons/contact.png" width="52" height="37" alt="" /></a>
+        </div>
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="qavaghtuq..." autocomplete="off">
+            <input id="searchButton" type="button" value="Search" onclick="parseSearch()">
+        </div>
+        <div class="parse" id="parse">
+            <div class="parseTag">Parse</div>
+            <div class="morphs" id="morphs"></div>
+        </div>
+        <div class="results" id="results"></div>
+        <div class="footer">
+            © 2021 St.Lawrence Island
+        </div>
+    </div>
+    <script>
+
+        const searchInput = document.getElementById("searchInput");
+        const results = document.getElementById("results");
+
+        searchInput.addEventListener("keyup", (e) => {
+            if (e.keyCode == 13) {
+                e.preventDefault();
+                document.getElementById("searchButton").click();
+            }
+        });
+
+        const buttonSearch = (token) => {
+            const searchString = token.toLowerCase();
+            const filteredLexicon = LEX.filter((word) =>
+
+                word.search_word.toLowerCase().includes(searchString) ||
+                word.gloss.some(gloss => gloss.includes(searchString))
+            );
+
+            displayWords(filteredLexicon);
+        };
+
+        function parseSearch() {
+            results.innerHTML = "";
+            const userInputRaw = searchInput.value.toLowerCase();
+
+            const userInput = cyrillic_to_latin(userInputRaw);
+
+            const result = foma_apply_down(myNet, userInput);
+
+            if (result === undefined || result.length == 0) {
+                results.innerHTML = "No results found"
+            }
+
+            else {
+                var token = new Array;
+                for (var i = 0; i < result.length; i++) {
+                    var morphemes = new Array;
+                    var inflNotSplit = result[i].split("-");
+
+                    for (var m = 0; m < inflNotSplit.length; m++) {
+                        if (inflNotSplit[m].includes("[N]")) {
+                            inflSplit = inflNotSplit[m].split("[N]");
+                            tmp = morphemes.concat(inflSplit);
+                            morphemes = tmp;
+                        }
+                        else if (inflNotSplit[m].includes("[V]")) {
+                            inflSplit = inflNotSplit[m].split("[V]");
+                            tmp = morphemes.concat(inflSplit);
+                            morphemes = tmp;
+                        }
+                        else {
+                            morphemes.push(inflNotSplit[m]);
+                        }
+                    }
+                    token.push(morphemes)
+                }
+                setParse(token);
+
+                // Array to hold all morphophonological symbols
+                var symbols = ["~", "–", ")"];
+
+                for (var m = 0; m < token[0].length-1; m++) {
+                    searchToken = token[0][m].split("[")[0];
+
+                    for (var s = 0; s < symbols.length; s++) {
+                        symSplit = searchToken.split(symbols[s]);
+                        searchToken = symSplit[symSplit.length - 1];
+                    }
+
+                    if (searchToken.charAt(0) == "f") {
+                        var tmp = searchToken;
+                        searchToken = tmp.charAt(0) + "+" + tmp.substr(1);
+                    }
+
+                    if (searchToken != "") {
+                        buttonSearch(searchToken);
+                    }
+                }   
+            }
+        }
+
+        const setParse = (token) => {
+            const parse = document.getElementById("morphs");
+
+            parse.innerHTML = token[0].join("   +   ");
+        }
+
+        const displayWords = (words) => {
+            const htmlString = words
+                .map((word) =>
+                    //entry formatting as string
+                    `<div class="result">
+                        <div>
+					        <a href="entry.html?entry=${word.UUID}"><span class="entryHead">${word.headword}, ${word.pos}</span></a>
+					        <span class="entryCyr">(${word.cyrillic})</span>
+                            <span class="entryipa">[${word.ipa}]</span>
+					        <span class="entryDef">${word.gloss.join("; ")}</span>
+				        </div>
+                            <span class="entryOther">${word.examples.join("\n")}</span>
+			        </div>
+                    `)
+                .join('');
+            results.innerHTML += htmlString;
+        };
+    </script>
+</body>
+</html>
