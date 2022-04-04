@@ -142,13 +142,13 @@
 
         const setParse = (token) => {
             const morphs = document.getElementById("morphs");
-            const output = `<span class='base'>${token[0][0]}</span>`;
+            let output = `<span class='base'>${token[0][0]}</span>`;
 
             for(i=1; i<token[0].length; i++){
-                output = `<span class='morpheme'>${token[0][i]}</span>`;
+                output += `<span class='morpheme'>${token[0][i]}</span>`;
             }
 
-            morphs.innerHTML = token[0].join("   +   ");
+            morphs.innerHTML = output;
         }
 
         const displayWords = (words) => {
