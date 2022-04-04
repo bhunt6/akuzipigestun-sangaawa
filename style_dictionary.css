@@ -118,7 +118,7 @@ input[type=button]:hover{
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 .parseTag {
@@ -132,6 +132,21 @@ input[type=button]:hover{
 	justify-content: center;
  	background: #b0e0e6;
 	font-weight: bold;
+}
+
+.morphs{
+	display:flex;
+	flex-direction: row;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.base{
+	color: #ef9d87;
+}
+
+.morpheme{
+	color: #4c4f53;
 }
 
 .results{
