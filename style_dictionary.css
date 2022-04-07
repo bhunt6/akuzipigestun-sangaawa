@@ -13,7 +13,7 @@
 	display: grid;
 	min-height: 100%;
 	grid-template-columns: 1fr 3fr 3fr 1fr;
-	grid-template-rows: 170px 145px 100px 100px minmax(200px, auto) 70px;
+	grid-template-rows: 170px 145px 100px minmax(100px, auto) minmax(200px, auto) 70px;
 	grid-template-areas: 
 		"title title title title"
 		". . nav ."
@@ -118,7 +118,7 @@ input[type=button]:hover{
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	
+	margin-bottom: 40px;
 }
 
 .parseTag {
