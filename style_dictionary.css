@@ -118,7 +118,7 @@ input[type=button]:hover{
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	margin-bottom: 40px;
+	
 }
 
 .parseTag {
