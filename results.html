@@ -75,7 +75,6 @@
 
             searchInput.value = searchWord;
 
-            //searchInput.addEventListener('keyup', (e) => {
             const buttonSearch = (e) => {
                 const searchString = searchInput.value.toLowerCase();
                 const filteredLexicon = LEX.filter((word) =>
@@ -88,6 +87,7 @@
             };
 
             const displayWords = (words) => {
+                results.innerHTML = "";
                 const htmlString = words
                     .map((word) =>
                         //entry formatting as string
