@@ -3,12 +3,15 @@
 
 <head>
     <meta charset="utf-8">
+    <title>Akuzipigestun Sangaawa</title>
     <link href="style_dictionary.css" rel="stylesheet" type="text/css">
-    <title>Yupigestun Sangaawa</title>
     <script type="text/javascript" src="dictionary_js/foma_apply_down.js"></script>
     <script type="text/javascript" src="dictionary_js/transducer.js"></script>
     <script type="text/javascript" src="dictionary_js/cyrillic_convert.js"></script>
     <script type="text/javascript" src="dictionary_js/postbases_infl.js"></script>
+    <script type="text/javascript" src="buttonSearch.js"></script>
+    <script type="text/javascript" src="displayWords.js"></script>
+    <script type="text/javascript" src="parseSearch.js"></script>
 
     <!--Icon set created by Lane Schwartz (lanes@illinois.edu)-->
     <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
@@ -20,7 +23,6 @@
     <meta name="theme-color" content="#b0e0e6">
     <script type="text/javascript" src="bases.js"></script>
 </head>
-
 <body>
     <div class="main">
         <div class="title">
@@ -28,7 +30,7 @@
                 <img src="icons/Sivuqaq_icon.png" width="109" height="66" alt="" />
             </a>
             <div class="titleText">
-                <h1>Yupigestun Sangaawa</h1>
+                <h1>Akuzipigestun Sangaawa</h1>
                 <h3><i>A dictionary for St. Lawrence Island Yupik</i></h3>
             </div>
         </div>
@@ -65,7 +67,7 @@
             }
         });
 
-        const buttonSearch = (e) => {
+        /*const buttonSearch = (e) => {
             const searchString = searchInput.value.toLowerCase();
             const filteredLexicon = LEX.filter((word) =>
 
@@ -74,7 +76,7 @@
             );
 
             displayWords(filteredLexicon);
-        };
+        };*/
 
         const setParse = (token) => {
             const morphs = document.getElementById("morphs");
@@ -87,7 +89,7 @@
             morphs.innerHTML = output;
         }
 
-        const displayWords = (words) => {
+        /*const displayWords = (words) => {
             results.innerHTML = "";
             const htmlString = words
                 .map((word) =>
@@ -104,7 +106,7 @@
                     `)
                 .join('');
             results.innerHTML += htmlString;
-        };
+        };*/
     </script>
 </body>
 </html>
