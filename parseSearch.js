@@ -1,17 +1,18 @@
-function parseSearch() {
-    results.innerHTML = "";
+function parseWord() {
     const userInputRaw = searchInput.value.toLowerCase();
 
     const userInput = cyrillic_to_latin(userInputRaw);
 
     const result = foma_apply_down(myNet, userInput);
 
+    var token = new Array;
+
     if (result === undefined || result.length == 0) {
         results.innerHTML = "No results found"
+        token[0] = "No results";
     }
 
     else {
-        var token = new Array;
         for (var i = 0; i < result.length; i++) {
             var morphemes = new Array;
             var inflNotSplit = result[i].split("-");
@@ -37,6 +38,7 @@ function parseSearch() {
 
         // Array to hold all morphophonological symbols
         var symbols = ["~", "–", ")"];
+        var finalList = new Array;
 
         for (var m = 0; m < token[0].length; m++) {
             searchToken = token[0][m].split("[")[0];
@@ -50,10 +52,11 @@ function parseSearch() {
                 var tmp = searchToken;
                 searchToken = tmp.charAt(0) + "+" + tmp.substr(1);
             }
-
-            if (searchToken != "") {
-                buttonSearch(searchToken);
+            if(searchToken != "") {
+                finalList.push(searchToken)
             }
         }   
+        
+        return finalList;
     }
 }
