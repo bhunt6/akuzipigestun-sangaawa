@@ -1,5 +1,5 @@
 const displayWords = (words) => {
-    results.innerHTML = "";
+    let results = document.getElementById("results");
     const htmlString = words
         .map((word) =>
         //entry formatting as string
