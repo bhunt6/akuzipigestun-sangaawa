@@ -75,8 +75,21 @@
 .search{
 	grid-area: search;
 	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.bar_button{
+	display: flex;
+	flex-direction: row;
 	justify-content: center;
 	flex-wrap: wrap;
+}
+
+.radios{
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
 }
 
 input[type=text]{

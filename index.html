@@ -43,11 +43,19 @@
             <a href="#" data-title="Contact Us"><img src="icons/contact.png" width="52" height="37" alt="" /></a>
         </div>
         <div class="search">
-            <input type="text" id="searchInput" placeholder="qavaghtuq..." autocomplete="off">
-            <input id="searchButton" type="button" value="Search" onclick="buttonSearch()">
-            <div>
-                <input type="radio" id="akuzSearch">Akuzipik Search</input>
-                <input type="radio" id="engSearch">English Search</input>
+            <div class="bar_button">
+                <input type="text" id="searchInput" placeholder="qavaghtuq..." autocomplete="off">
+                <input id="searchButton" type="button" value="Search" onclick="buttonSearch()">
+            </div>
+            <div class="radios">
+                <label>
+                    <input type="radio" id="akuzSearch" name="radio" checked />
+                    Akuzipik Search
+                </label>
+                <label>
+                    <input type="radio" id="engSearch" name="radio" />
+                    English Search
+                </label>
             </div>
         </div>
         <div class="parse" id="parse">
