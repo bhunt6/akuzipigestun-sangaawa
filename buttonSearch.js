@@ -1,5 +1,5 @@
-/*
-Old buttonSearch
+
+//Old buttonSearch
 
 const buttonSearch = (e) => {
     const searchString = searchInput.value.toLowerCase();
@@ -10,7 +10,7 @@ const buttonSearch = (e) => {
     );
 
     displayWords(filteredLexicon);
-};*/
+};
 
 function akuzSearch(term){
     const searchString = term;
