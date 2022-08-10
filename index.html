@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>Akuzipigestun Sangaawa</title>
@@ -12,6 +11,8 @@
     <script type="text/javascript" src="buttonSearch.js"></script>
     <script type="text/javascript" src="displayWords.js"></script>
     <script type="text/javascript" src="parseSearch.js"></script>
+    <script type="text/javascript" src="autocomplete.js"></script>
+    <script type="text/javascript" src="bases.js"></script>
 
     <!--Icon set created by Lane Schwartz (lanes@illinois.edu)-->
     <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
@@ -40,20 +41,20 @@
             <a href="https://github.com/SaintLawrenceIslandYupik/digital_corpus" data-title="Yupik Corpus"><img src="icons/corpus.png" width="52" height="37" alt="" /></a>
             <a href="https://bhunt6.github.io/itemquulteki/" data-title="Morphological Analyzer"><img src="icons/analyzer.png" width="52" height="51" alt="" /></a>
             <a href="https://saintlawrenceislandyupik.github.io/web_tools/index_utilities.html" data-title="Orthotactic Spellchecker"><img src="icons/spellchecker.png" width="53" height="51" alt="" /></a>
-            <a href="#" data-title="Contact Us"><img src="icons/contact.png" width="52" height="37" alt="" /></a>
+            <a href="contact.html" data-title="Contact Us"><img src="icons/contact.png" width="52" height="37" alt="" /></a>
         </div>
         <div class="search">
-            <div class="bar_button">
+            <div class="bar_button autocomplete">
                 <input type="text" id="searchInput" placeholder="qavaghtuq..." autocomplete="off">
-                <input id="searchButton" type="button" value="Search" onclick="buttonSearch()">
+                <input id="searchButton" type="button" value="Search" onclick="searchController()">
             </div>
             <div class="radios">
-                <label>
-                    <input type="radio" id="akuzSearch" name="radio" checked />
+                <label class="radiolabel">
+                    <input type="radio" id="akuzSearch" name="radio" value="Akuzipik Search" checked />
                     Akuzipik Search
                 </label>
-                <label>
-                    <input type="radio" id="engSearch" name="radio" />
+                <label class="radiolabel">
+                    <input type="radio" id="engSearch" name="radio" value="English Search" />
                     English Search
                 </label>
             </div>
@@ -64,11 +65,10 @@
         </div>
         <div class="results" id="results"></div>
         <div class="footer">
-            © 2021 St.Lawrence Island
+            © 2022 St.Lawrence Island
         </div>
     </div>
     <script>
-
         const searchInput = document.getElementById("searchInput");
         const results = document.getElementById("results");
 
@@ -79,46 +79,28 @@
             }
         });
 
-        /*const buttonSearch = (e) => {
-            const searchString = searchInput.value.toLowerCase();
-            const filteredLexicon = LEX.filter((word) =>
+        
+        var headwords = new Array;
+        var glosses = new Array;
 
-                word.search_word.toLowerCase().includes(searchString) ||
-                word.gloss.some(gloss => gloss.includes(searchString))
-            );
-
-            displayWords(filteredLexicon);
-        };*/
-
-        const setParse = (token) => {
-            const morphs = document.getElementById("morphs");
-            let output = `<span class='base'>${token[0][0]}</span>`;
-
-            for(i=1; i<token[0].length; i++){
-                output += `<span class='morpheme'> + ${token[0][i]}</span>`;
-            }
-
-            morphs.innerHTML = output;
+        for(let i=0; i<LEX.length; i++){
+            headwords[i] = LEX[i].headword;
         }
 
-        /*const displayWords = (words) => {
-            results.innerHTML = "";
-            const htmlString = words
-                .map((word) =>
-                    //entry formatting as string
-                    `<div class="result">
-                        <div>
-					        <a href="entry.html?entry=${word.UUID}"><span class="entryHead">${word.headword}, ${word.pos}</span></a>
-					        <span class="entryCyr">(${word.cyrillic})</span>
-                            <span class="entryipa">[${word.ipa}]</span>
-					        <span class="entryDef">${word.gloss.join("; ")}</span>
-				        </div>
-                            <span class="entryOther">${word.examples.join("\n")}</span>
-			        </div>
-                    `)
-                .join('');
-            results.innerHTML += htmlString;
-        };*/
+        for(let j=0; j<LEX.length; j++){
+            glosses[j] = LEX[j].gloss.join(", ")
+        }
+
+        searchInput.addEventListener("focus", function(e){
+
+            if(document.getElementById("akuzSearch").checked){
+                autocomplete(searchInput, headwords);
+            }
+
+            if(document.getElementById("engSearch").checked){
+                autocomplete(searchInput, glosses);
+            }
+        }, true);
     </script>
 </body>
 </html>
