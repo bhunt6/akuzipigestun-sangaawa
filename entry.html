@@ -180,7 +180,13 @@
                 wheel.innerHTML = wheelElements;
                 
                 //inflectional tables
-                controller(currentEntry.search_word, currentEntry.pos);
+                if(currentEntry.headword.includes("<sup>e</sup>")){
+                    controller(currentEntry.search_word, currentEntry.pos, true);
+                }
+                else{
+                    controller(currentEntry.search_word, currentEntry.pos, false);
+                }
+                
 
                 //Event listeners for collapsibles
                 var coll = document.getElementsByClassName("collapsible");
