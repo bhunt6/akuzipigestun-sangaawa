@@ -1,15 +1,12 @@
-function parseWord() {
-    const userInputRaw = searchInput.value.toLowerCase();
-
-    const userInput = cyrillic_to_latin(userInputRaw);
+function parseWord(term) {
+    const userInput = cyrillic_to_latin(term);
 
     const result = foma_apply_down(myNet, userInput);
 
     var token = new Array;
 
     if (result === undefined || result.length == 0) {
-        results.innerHTML = "No results found"
-        token[0] = "No results";
+        return false;
     }
 
     else {
@@ -34,7 +31,7 @@ function parseWord() {
             }
             token.push(morphemes)
         }
-        setParse(token);
+        //setParse(token);
 
         // Array to hold all morphophonological symbols
         var symbols = ["~", "–", ")"];
@@ -48,15 +45,17 @@ function parseWord() {
                 searchToken = symSplit[symSplit.length - 1];
             }
 
+            
             if (searchToken.charAt(0) == "f") {
                 var tmp = searchToken;
-                searchToken = tmp.charAt(0) + "+" + tmp.substr(1);
+                searchToken = "~<sub>" + tmp.charAt(0) + "</sub>" + tmp.substr(1);
             }
             if(searchToken != "") {
                 finalList.push(searchToken)
             }
         }   
-        
+        finalList.push(token[0][token[0].length-1])
         return finalList;
+        
     }
 }
