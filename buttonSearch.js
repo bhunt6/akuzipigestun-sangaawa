@@ -25,9 +25,16 @@ function containsMatch(term){
 
     //contains word
     let containsWord = LEX.filter((word) =>
+    word.search_word.toLowerCase().includes(searchString)
+    );
+
+    let startsWord = LEX.filter((word) =>
     word.search_word.toLowerCase().startsWith(searchString)
-);
-    return containsWord;
+    );
+
+    let containsResults = startsWord.concat(containsWord.filter((item) => startsWord.indexOf(item) < 0));
+
+    return containsResults;
 }
 
 function printSearch(displayTerm, first, second = []){
