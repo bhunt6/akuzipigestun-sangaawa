@@ -1,6 +1,6 @@
 <?php 
 if(isset($_POST['submit'])){
-    $to = "email@example.com"; // this is your Email address
+    $to = "LangDoc@gmu.edu"; // this is your Email address
     $from = $_POST['email']; // this is the sender's Email address
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
@@ -34,6 +34,7 @@ if(isset($_POST['submit'])){
     <meta name="msapplication-TileColor" content="#b0e0e6">
     <meta name="theme-color" content="#b0e0e6">
     <script type="text/javascript" src="bases.js"></script>
+    <script type="text/javascript" src="autocomplete.js"></script>
     <script type="text/javascript" src="inflection_tables.js"></script>
     <script type="text/javascript" src="inflections.js"></script>
     <script type="text/javascript" src="dictionary_js/foma_apply_down.js"></script>
@@ -48,7 +49,7 @@ if(isset($_POST['submit'])){
                 <img src="icons/Sivuqaq_icon.png" width="109" height="66" alt="" />
             </a>
             <div class="titleText">
-                <h1>Yupigestun Sangaawa</h1>
+                <h1>Akuzipigestun Sangaawa</h1>
                 <h3><i>A dictionary for St. Lawrence Island Yupik</i></h3>
             </div>
         </div>
@@ -82,7 +83,7 @@ if(isset($_POST['submit'])){
             </form>
         </div>
         <div class="footer">
-            © 2021 St.Lawrence Island
+            © 2022 St.Lawrence Island
         </div>
     </div>
     <script>
@@ -102,7 +103,27 @@ if(isset($_POST['submit'])){
             location.href = "results.html?search=" + searchInput.value.toLowerCase();
         };
 
-        
+        var headwords = new Array;
+        var glosses = new Array;
+
+        for(let i=0; i<LEX.length; i++){
+            headwords[i] = LEX[i].headword;
+        }
+
+        for(let j=0; j<LEX.length; j++){
+            glosses[j] = LEX[j].gloss.join(", ")
+        }
+
+        searchInput.addEventListener("focus", function(e){
+
+            if(document.getElementById("akuzSearch").checked){
+                autocomplete(searchInput, headwords);
+            }
+
+            if(document.getElementById("engSearch").checked){
+                autocomplete(searchInput, glosses);
+            }
+        }, true);
     </script>
 </body>
 
