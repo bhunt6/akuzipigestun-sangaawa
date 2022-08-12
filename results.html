@@ -1,128 +1,128 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>results</title>
-        <link href="style_results.css" rel="stylesheet" type="text/css">
-        <script type="text/javascript" src="bases.js"></script>
-        <script type="text/javascript" src="autocomplete.js"></script>
-        <script type="text/javascript" src="dictionary_js/foma_apply_down.js"></script>
-        <script type="text/javascript" src="dictionary_js/transducer.js"></script>
-        <script type="text/javascript" src="dictionary_js/cyrillic_convert.js"></script>
-        <script type="text/javascript" src="buttonSearch.js"></script>
-        <script type="text/javascript" src="displayWords.js"></script>
-        <script type="text/javascript" src="parseSearch.js"></script>
-
-        <!--Icon set created by Lane Schwartz (lanes@illinois.edu)-->
-        <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-        <link rel="manifest" href="icons/site.webmanifest">
-        <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#50b5c2">
-        <meta name="msapplication-TileColor" content="#b0e0e6">
-        <meta name="theme-color" content="#b0e0e6">
-    </head>
-    <body>
-        <div class="main">
-            <div class="title">
-                <a href="index.html">
-                    <img src="icons/Sivuqaq_icon.png" width="109" height="66" alt="" />
-                </a>
-                <div class="titleText">
-                    <h1>Akuzipigestun Sangaawa</h1>
-                    <h3><i>A dictionary for St. Lawrence Island Yupik</i></h3>
-                </div>
-            </div>
-            <div class="border"></div>
-            <div class="nav">
-                <a href="https://ldl.linguistics.gmu.edu/" data-title="GMU LangDoc Lab Group"><img src="icons/lab_group.png" width="51" height="42" alt="" /></a>
-                <a href="https://github.com/SaintLawrenceIslandYupik/digital_corpus" data-title="Yupik Corpus"><img src="icons/corpus.png" width="52" height="37" alt="" /></a>
-                <a href="https://bhunt6.github.io/itemquulteki/" data-title="Morphological Analyzer"><img src="icons/analyzer.png" width="52" height="51" alt="" /></a>
-                <a href="https://saintlawrenceislandyupik.github.io/web_tools/index_utilities.html" data-title="Orthotactic Spellchecker"><img src="icons/spellchecker.png" width="53" height="51" alt="" /></a>
-                <a href="#" data-title="Contact Us"><img src="icons/contact.png" width="52" height="37" alt="" /></a>
-            </div>
-            <div class="search">
-                <div class="bar_button autocomplete">
-                    <input type="text" id="searchInput" placeholder="qavaghtuq...">
-                    <input id="searchButton" type="button" value="Search" onclick="searchController()">
-                </div>
-                <div class="radios">
-                    <label class="radiolabel">
-                        <input type="radio" id="akuzSearch" name="radio" value="Akuzipik Search" />
-                        Akuzipik Search
-                    </label>
-                    <label class="radiolabel">
-                        <input type="radio" id="engSearch" name="radio" value="English Search" />
-                        English Search
-                    </label>
-                </div>
-            </div>
-            <div class="parse" id="parse">
-                <div class="parseTag">Parse</div>
-                <div class="morphs" id="morphs"></div>
-            </div>
-            <div class="results" id="results">
-                <!--<div class="entry">
-                            <div>
-                                <a href=""><span class="entryHead">qavagh-, n.</span></a>
-                                <span class="entryScript">(қаваӷ-) [qɑ.vɑʁ]</span>
-                                <span class="entryDef">to sleep; to fall asleep</span>
-                            </div>
-                            <span class="entryOther">qavaghtuq 'he slept'...</span>
-                        </div>-->
-            </div>
-            <div class="footer">
-                © 2022 St.Lawrence Island
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>results</title>
+    <link href="style_results.css" rel="stylesheet" type="text/css">
+    <!--Icon set created by Lane Schwartz (lanes@illinois.edu)-->
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#50b5c2">
+    <meta name="msapplication-TileColor" content="#b0e0e6">
+    <meta name="theme-color" content="#b0e0e6">
+</head>
+<body>
+    <div class="main">
+        <div class="title">
+            <a href="index.html">
+                <img src="icons/Sivuqaq_icon.png" width="109" height="66" alt="" />
+            </a>
+            <div class="titleText">
+                <h1>Akuzipigestun Sangaawa</h1>
+                <h3><i>A dictionary for St. Lawrence Island Yupik</i></h3>
             </div>
         </div>
-        <script>
-            //Search functionality; redirect to results page
-            const searchInput = document.getElementById("searchInput");
-            
-            //Search functionality
-            searchInput.addEventListener("keyup", (e) => {
-                if (e.keyCode == 13) {
-                    e.preventDefault();
-                    document.getElementById("searchButton").click();
-                }
-            });
-
-            var captured = /search=([^&]+)/.exec(window.location.href)[1]; // Value is in [1]
-            var captured2 = /lang=([^&]+)/.exec(window.location.href)[1]; // Value is in [1]
-            var searchWord = captured ? captured : 'qavagh';
-
-            searchInput.value = searchWord.replace(/%20/g, " ");
-
-            if(captured2 == "eng"){
-                document.getElementById("engSearch").checked = true;
+        <div class="border"></div>
+        <div class="nav">
+            <a href="https://ldl.linguistics.gmu.edu/" data-title="GMU LangDoc Lab Group"><img src="icons/lab_group.png" width="51" height="42" alt="" /></a>
+            <a href="https://github.com/SaintLawrenceIslandYupik/digital_corpus" data-title="Yupik Corpus"><img src="icons/corpus.png" width="52" height="37" alt="" /></a>
+            <a href="https://bhunt6.github.io/itemquulteki/" data-title="Morphological Analyzer"><img src="icons/analyzer.png" width="52" height="51" alt="" /></a>
+            <a href="https://saintlawrenceislandyupik.github.io/web_tools/index_utilities.html" data-title="Orthotactic Spellchecker"><img src="icons/spellchecker.png" width="53" height="51" alt="" /></a>
+            <a href="#" data-title="Contact Us"><img src="icons/contact.png" width="52" height="37" alt="" /></a>
+        </div>
+        <div class="search">
+            <div class="bar_button autocomplete">
+                <input type="text" id="searchInput" placeholder="qavaghtuq...">
+                <input id="searchButton" type="button" value="Search" onclick="searchController()">
+            </div>
+            <div class="radios">
+                <label class="radiolabel">
+                    <input type="radio" id="akuzSearch" name="radio" value="Akuzipik Search" />
+                    Akuzipik Search
+                </label>
+                <label class="radiolabel">
+                    <input type="radio" id="engSearch" name="radio" value="English Search" />
+                    English Search
+                </label>
+            </div>
+        </div>
+        <div class="parse" id="parse">
+            <div class="parseTag">Parse</div>
+            <div class="morphs" id="morphs"></div>
+        </div>
+        <div class="results" id="results">
+            <!--<div class="entry">
+                        <div>
+                            <a href=""><span class="entryHead">qavagh-, n.</span></a>
+                            <span class="entryScript">(қаваӷ-) [qɑ.vɑʁ]</span>
+                            <span class="entryDef">to sleep; to fall asleep</span>
+                        </div>
+                        <span class="entryOther">qavaghtuq 'he slept'...</span>
+                    </div>-->
+        </div>
+        <div class="footer">
+            © 2022 St.Lawrence Island
+        </div>
+    </div>
+    <script type="text/javascript" src="bases.js"></script>
+    <script type="text/javascript" src="autocomplete.js"></script>
+    <script type="text/javascript" src="dictionary_js/foma_apply_down.js"></script>
+    <script type="text/javascript" src="dictionary_js/transducer.js"></script>
+    <script type="text/javascript" src="dictionary_js/cyrillic_convert.js"></script>
+    <script type="text/javascript" src="buttonSearch.js"></script>
+    <script type="text/javascript" src="displayWords.js"></script>
+    <script type="text/javascript" src="parseSearch.js"></script>
+    <script>
+        //Search functionality; redirect to results page
+        const searchInput = document.getElementById("searchInput");
+        
+        //Search functionality
+        searchInput.addEventListener("keyup", (e) => {
+            if (e.keyCode == 13) {
+                e.preventDefault();
+                document.getElementById("searchButton").click();
             }
-            else{
-                document.getElementById("akuzSearch").checked = true;
+        });
+
+        var captured = /search=([^&]+)/.exec(window.location.href)[1]; // Value is in [1]
+        var captured2 = /lang=([^&]+)/.exec(window.location.href)[1]; // Value is in [1]
+        var searchWord = captured ? captured : 'qavagh';
+
+        searchInput.value = searchWord.replace(/%20/g, " ");
+
+        if(captured2 == "eng"){
+            document.getElementById("engSearch").checked = true;
+        }
+        else{
+            document.getElementById("akuzSearch").checked = true;
+        }
+
+        searchController();
+
+        var headwords = new Array;
+        var glosses = new Array;
+
+        for(let i=0; i<LEX.length; i++){
+            headwords[i] = LEX[i].headword;
+        }
+
+        for(let j=0; j<LEX.length; j++){
+            glosses[j] = LEX[j].gloss.join(", ")
+        }
+
+        searchInput.addEventListener("focus", function(e){
+
+            if(document.getElementById("akuzSearch").checked){
+                autocomplete(searchInput, headwords);
             }
 
-            searchController();
-
-            var headwords = new Array;
-            var glosses = new Array;
-
-            for(let i=0; i<LEX.length; i++){
-                headwords[i] = LEX[i].headword;
+            if(document.getElementById("engSearch").checked){
+                autocomplete(searchInput, glosses);
             }
-
-            for(let j=0; j<LEX.length; j++){
-                glosses[j] = LEX[j].gloss.join(", ")
-            }
-
-            searchInput.addEventListener("focus", function(e){
-
-                if(document.getElementById("akuzSearch").checked){
-                    autocomplete(searchInput, headwords);
-                }
-
-                if(document.getElementById("engSearch").checked){
-                    autocomplete(searchInput, glosses);
-                }
-            }, true);
-        </script>
-    </body>
+        }, true);
+    </script>
+</body>
 </html>
