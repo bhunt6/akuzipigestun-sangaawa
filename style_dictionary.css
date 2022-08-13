@@ -13,7 +13,7 @@
 	display: grid;
 	min-height: 100%;
 	grid-template-columns: 1fr 3fr 3fr 1fr;
-	grid-template-rows: 170px 145px 100px minmax(100px, auto) minmax(200px, auto) 70px;
+	grid-template-rows: 10.5rem 9rem 6.25rem minmax(6.25rem, auto) minmax(12.5rem, auto) 4.4rem;
 	grid-template-areas: 
 		"title title title title"
 		". . nav ."
@@ -36,12 +36,12 @@
 .title a::after{
 	content: '';
 	display: block;
-	height: 6px;
-	width: 110px;
+	height: .4em;
+	width: 7em;
 	position: relative;
 	background: #EF9D87;
-	bottom: -35px;
-	right: -80px;
+	bottom: -2.2em;
+	right: -5em;
 }
 
 .titleText{
@@ -136,7 +136,7 @@ input[type='radio'] {
 	box-sizing: border-box;
 	appearance: none;
 	background: white;
-	outline: 2px solid #333;
+	outline: .125em solid #333;
 	border: 3px solid white;
 	width: .75rem;
 	height: .75rem;
@@ -207,12 +207,10 @@ input[type='radio']:checked {
 	display: flex;
 	flex-direction: column;
 	background: #efefef;
-	box-shadow: 2px 2px 6px 1px #ccc;
+	box-shadow: .125em .125em .375em .06em #ccc;
 	font-size: 1.1rem;
 	color: #2f3235;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-top: 10px;
+	padding: 10px 20px 0px 20px;
 	overflow: hidden;
 }
 
