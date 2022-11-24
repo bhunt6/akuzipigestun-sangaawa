@@ -255,9 +255,24 @@ input[type='radio']:checked {
 .footer{
 	grid-area: footer;
 	display: flex;
-	padding-top: 40px;
+	flex-direction: column;
+	padding-top: 4rem;
 	justify-content: center;
-	font-size: 13px
+	font-size: .8rem;
+}
+
+#footer1{
+	margin: auto;
+	width: 50%;
+	text-align: center;
+}
+
+#footer2{
+	margin: auto;
+	width: 50%;
+	text-align: center;
+	padding-top: 1rem;
+	padding-bottom: 2rem;
 }
 
 a{
