@@ -34,7 +34,7 @@
             <a href="https://github.com/SaintLawrenceIslandYupik/digital_corpus" data-title="Yupik Corpus"><img src="icons/corpus.png" width="52" height="37" alt="" /></a>
             <a href="https://bhunt6.github.io/itemquulteki/" data-title="Morphological Analyzer"><img src="icons/analyzer.png" width="52" height="51" alt="" /></a>
             <a href="https://saintlawrenceislandyupik.github.io/web_tools/index_utilities.html" data-title="Orthotactic Spellchecker"><img src="icons/spellchecker.png" width="53" height="51" alt="" /></a>
-            <a href="#" data-title="Contact Us"><img src="icons/contact.png" width="52" height="37" alt="" /></a>
+            <a href="contact.html" data-title="Contact Us"><img src="icons/contact.png" width="52" height="37" alt="" /></a>
         </div>
         <div class="search">
             <div class="bar_button autocomplete">
@@ -57,6 +57,7 @@
             <div class="morphs" id="morphs"></div>
         </div>
         <div class="results" id="results"></div>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
         <div class="footer">
             <div id="footer1">© 2022 St.Lawrence Island</div>
             <div id="footer2"><b>Data and entries sourced from: </b>
@@ -112,6 +113,26 @@
                 autocomplete(searchInput, glosses);
             }
         }, true);
+
+        // Get the button:
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
     </script>
 </body>
 </html>
