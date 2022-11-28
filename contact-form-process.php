@@ -1,13 +1,13 @@
 <?php
 if (isset($_POST['Email'])) {
 
-    // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "bhunt6@gmu.edu;
+    // EDIT THE FOLLOWING TWO LINES:
+    $email_to = "bhunt6@gmu.edu";
     $email_subject = "New form submissions";
 
     function problem($error)
     {
-        echo "We are very sorry, but there were error(s) found with the form you submitted. ";
+        echo "We're sorry, but there were error(s) found with the form you submitted. ";
         echo "These errors appear below.<br><br>";
         echo $error . "<br><br>";
         echo "Please go back and fix these errors.<br><br>";
@@ -16,16 +16,14 @@ if (isset($_POST['Email'])) {
 
     // validation expected data exists
     if (
-        !isset($_POST['First_name']) ||
-        !isset($_POST['Last_name']) ||
+        !isset($_POST['Name']) ||
         !isset($_POST['Email']) ||
         !isset($_POST['Message'])
     ) {
-        problem('We are sorry, but there appears to be a problem with the form you submitted.');
+        problem("Were sorry, but there appears to be a problem with the form you submitted.");
     }
 
-    $firstname = $_POST['First_name']; // required
-    $lastname = $_POST['Last_name']; // required
+    $name = $_POST['Name']; // required
     $email = $_POST['Email']; // required
     $message = $_POST['Message']; // required
 
@@ -36,7 +34,7 @@ if (isset($_POST['Email'])) {
         $error_message .= 'The Email address you entered does not appear to be valid.<br>';
     }
 
-    $string_exp = "/^[A-Za-z .-]+$/";
+    $string_exp = "/^[A-Za-z .'-]+$/";
 
     if (!preg_match($string_exp, $name)) {
         $error_message .= 'The Name you entered does not appear to be valid.<br>';
@@ -58,7 +56,7 @@ if (isset($_POST['Email'])) {
         return str_replace($bad, "", $string);
     }
 
-    $email_message .= "Name: " . clean_string($firstname) . clean_string($lastname) . "\n";
+    $email_message .= "Name: " . clean_string($name) . "\n";
     $email_message .= "Email: " . clean_string($email) . "\n";
     $email_message .= "Message: " . clean_string($message) . "\n";
 
@@ -69,9 +67,9 @@ if (isset($_POST['Email'])) {
     @mail($email_to, $email_subject, $email_message, $headers);
 ?>
 
-    <!-- include your success message below -->
+    <!-- INCLUDE YOUR SUCCESS MESSAGE BELOW -->
 
-    Thank you for contacting us. We will be in touch with you very soon.
+    Thanks for getting in touch. We'll get back to you soon.
 
 <?php
 }
