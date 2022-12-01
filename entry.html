@@ -83,7 +83,11 @@
             </div>-->
         </div>
         <div class="wheel" id="wheel">
-            <div class="wheelBorder"><div class="wheelList" id="wheelList"></div></div>
+            <div class="wheelBorder">
+                <div><i class="arrow up"></i></div>
+                <div class="wheelList" id="wheelList"></div>
+                <div><i class="arrow up"></i></div>
+            </div>
         </div>
         <div class="tables" id="tables">
 
@@ -170,24 +174,30 @@
 
             output.innerHTML = htmlString;
             
+            window.onload(function() {
+                var current_index = LEX.indexOf(currentEntry);
+                wordWheeler(current_index)
+            });
+
             //Word Wheel
-            wheel = document.getElementById("wheelList");
+            function wordWheeler(index){
+                let wheel = document.getElementById("wheelList");
 
-            var index = LEX.indexOf(currentEntry);
+                const wheelElements = `<a href="entry.html?entry=${LEX[index-5].UUID}" class="wheelElement"><span>${LEX[index-5].headword}, ${LEX[index-5].pos}</span></a>
+                                        <a href="entry.html?entry=${LEX[index-4].UUID}" class="wheelElement shaded"><span>${LEX[index-4].headword}, ${LEX[index-4].pos}</span></a>
+                                        <a href="entry.html?entry=${LEX[index-3].UUID}" class="wheelElement"><span>${LEX[index-3].headword}, ${LEX[index-3].pos}</span></a>
+                                        <a href="entry.html?entry=${LEX[index-2].UUID}" class="wheelElement shaded"><span>${LEX[index-2].headword}, ${LEX[index-2].pos}</span></a>
+                                        <a href="entry.html?entry=${LEX[index-1].UUID}" class="wheelElement"><span>${LEX[index-1].headword}, ${LEX[index-1].pos}</span></a>
+                                        <a href="entry.html?entry=${LEX[index].UUID}" class="wheelElement current"><span>${LEX[index].headword}, ${LEX[index].pos}</span></a>
+                                        <a href="entry.html?entry=${LEX[index+1].UUID}" class="wheelElement"><span>${LEX[index+1].headword}, ${LEX[index+1].pos}</span></a>
+                                        <a href="entry.html?entry=${LEX[index+2].UUID}" class="wheelElement shaded"><span>${LEX[index+2].headword}, ${LEX[index+2].pos}</span></a>
+                                        <a href="entry.html?entry=${LEX[index+3].UUID}" class="wheelElement"><span>${LEX[index+3].headword}, ${LEX[index+3].pos}</span></a>
+                                        <a href="entry.html?entry=${LEX[index+4].UUID}" class="wheelElement shaded"><span>${LEX[index+4].headword}, ${LEX[index+4].pos}</span></a>
+                                        <a href="entry.html?entry=${LEX[index+5].UUID}" class="wheelElement"><span>${LEX[index+5].headword}, ${LEX[index+5].pos}</span></a>`;
 
-            const wheelElements = `<a href="entry.html?entry=${LEX[index-5].UUID}" class="wheelElement"><span>${LEX[index-5].headword}, ${LEX[index-5].pos}</span></a>
-                                    <a href="entry.html?entry=${LEX[index-4].UUID}" class="wheelElement shaded"><span>${LEX[index-4].headword}, ${LEX[index-4].pos}</span></a>
-                                    <a href="entry.html?entry=${LEX[index-3].UUID}" class="wheelElement"><span>${LEX[index-3].headword}, ${LEX[index-3].pos}</span></a>
-                                    <a href="entry.html?entry=${LEX[index-2].UUID}" class="wheelElement shaded"><span>${LEX[index-2].headword}, ${LEX[index-2].pos}</span></a>
-                                    <a href="entry.html?entry=${LEX[index-1].UUID}" class="wheelElement"><span>${LEX[index-1].headword}, ${LEX[index-1].pos}</span></a>
-                                    <a href="entry.html?entry=${LEX[index].UUID}" class="wheelElement current"><span>${LEX[index].headword}, ${LEX[index].pos}</span></a>
-                                    <a href="entry.html?entry=${LEX[index+1].UUID}" class="wheelElement"><span>${LEX[index+1].headword}, ${LEX[index+1].pos}</span></a>
-                                    <a href="entry.html?entry=${LEX[index+2].UUID}" class="wheelElement shaded"><span>${LEX[index+2].headword}, ${LEX[index+2].pos}</span></a>
-                                    <a href="entry.html?entry=${LEX[index+3].UUID}" class="wheelElement"><span>${LEX[index+3].headword}, ${LEX[index+3].pos}</span></a>
-                                    <a href="entry.html?entry=${LEX[index+4].UUID}" class="wheelElement shaded"><span>${LEX[index+4].headword}, ${LEX[index+4].pos}</span></a>
-                                    <a href="entry.html?entry=${LEX[index+5].UUID}" class="wheelElement"><span>${LEX[index+5].headword}, ${LEX[index+5].pos}</span></a>`;
-
-            wheel.innerHTML = wheelElements;
+                wheel.innerHTML = wheelElements;
+            }
+            
             
             //inflectional tables
             if(currentEntry.headword.includes("<sup>e</sup>")){
