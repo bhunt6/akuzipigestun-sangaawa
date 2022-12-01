@@ -84,9 +84,9 @@
         </div>
         <div class="wheel" id="wheel">
             <div class="wheelBorder">
-                <div><i class="arrow up"></i></div>
+                <div style="text-align:center"><i class="arrow up" onclick="scrollWheelUp(incrIndex)"></i></div>
                 <div class="wheelList" id="wheelList"></div>
-                <div><i class="arrow up"></i></div>
+                <div style="text-align:center"><i class="arrow down" onclick="scrollWheelDown(incrIndex)"></i></div>
             </div>
         </div>
         <div class="tables" id="tables">
@@ -125,6 +125,8 @@
         });
 
         var lang = [];
+        var currentIndex = LEX.indexOf(currentEntry);
+        var incrIndex = currentIndex;
 
         //Search functionality; redirect to results page
         document.getElementById("searchButton").onclick = function () {
@@ -174,10 +176,19 @@
 
             output.innerHTML = htmlString;
             
-            window.onload(function() {
-                var current_index = LEX.indexOf(currentEntry);
-                wordWheeler(current_index)
-            });
+            window.onload = (event) => {
+                wordWheeler(currentIndex)
+            }
+
+            function scrollWheelDown(index){
+                incrIndex += 5;
+                wordWheeler(incrIndex);
+            }
+
+            function scrollWheelup(index){
+                incrIndex -= 5;
+                wordWheeler(incrIndex);
+            }
 
             //Word Wheel
             function wordWheeler(index){
