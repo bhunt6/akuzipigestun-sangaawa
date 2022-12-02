@@ -139,10 +139,11 @@
         }
 
         function findEntry(currentID){
-            LEX.filter((word) =>
+            let entry = LEX.filter((word) =>
         
             word.UUID === currentID)
 
+            return entry;
         } 
 
         function wordOfTheDay() {
