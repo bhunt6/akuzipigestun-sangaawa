@@ -276,17 +276,30 @@ input[type='radio']:checked {
 	border-width: 0 3px 3px 0;
 	display: inline-block;
 	padding: 3px;
-  }
+}
 
-  .up {
-	transform: rotate(-135deg);
-  	-webkit-transform: rotate(-135deg);
-  }
-  
-  .down {
-	transform: rotate(45deg);
-	-webkit-transform: rotate(45deg);
-  }
+.arrow:hover{
+	border: #ffffff;
+	cursor: pointer;
+}
+
+.arrow_box{
+	text-align:center
+}
+
+.arrow_box:hover{
+	background: #b0e0e6;
+}
+
+.up {
+transform: rotate(-135deg);
+-webkit-transform: rotate(-135deg);
+}
+
+.down {
+transform: rotate(45deg);
+-webkit-transform: rotate(45deg);
+}
 
 .current{
 	background: #b0e0e6;
