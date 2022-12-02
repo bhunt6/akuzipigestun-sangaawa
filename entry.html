@@ -125,8 +125,6 @@
         });
 
         var lang = [];
-        var currentIndex = LEX.indexOf(currentEntry);
-        var incrIndex = currentIndex;
 
         //Search functionality; redirect to results page
         document.getElementById("searchButton").onclick = function () {
@@ -143,6 +141,9 @@
         );
         
         const currentEntry = findEntry[0];
+
+        var currentIndex = LEX.indexOf(currentEntry);
+        var incrIndex = currentIndex;
 
         //Entry formatting
         const output = document.getElementById("entry");
