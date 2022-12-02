@@ -17,7 +17,7 @@
 	grid-template-areas: 
 		". title title title"
 		". border border ."
-		". . nav ."
+		".  wod nav ."
 		". search search ."
 		". parse parse ."
 		". results results ."
@@ -76,6 +76,13 @@
 
 .nav a{
 	margin: 20px 20px 0px 0px;
+}
+
+.wod{
+	grid-area: wod;
+	display: flex;
+	float: right;
+	justify-content: flex-start;
 }
 
 .search{
