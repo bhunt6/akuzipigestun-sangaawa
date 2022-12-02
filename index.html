@@ -163,7 +163,7 @@
             let wod_cont = document.getElementById("wod_container");
             wod_cont.innerHTML = `<div class="result">
                                     <div>
-                                        <a href="entry.html?entry=${currentEntry.UUID}"><span class="entryHead">${currentEntry.headword}, ${word.pos}</span></a>
+                                        <a href="entry.html?entry=${currentEntry.UUID}"><span class="entryHead">${currentEntry.headword}, ${currentEntry.pos}</span></a>
                                         <span class="entryCyr">(${currentEntry.cyrillic})</span>
                                         <span class="entryipa">/${currentEntry.ipa}/</span>
                                         <span class="entryDef">${currentEntry.gloss.join("; ")}</span>
