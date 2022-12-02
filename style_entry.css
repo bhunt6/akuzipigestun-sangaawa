@@ -279,16 +279,17 @@ input[type='radio']:checked {
 }
 
 .arrow_box{
-	text-align:center
+	text-align: center;
+	cursor: pointer;
 }
 
 .arrow_box:hover{
 	background: #b0e0e6;
-	cursor: pointer;
 }
 
-.arrow_box:hover > .arrow{
-	border: #ffffff;
+.arrow_box:hover .arrow{
+	border: solid #ffffff;
+	border-width: 0 3px 3px 0;
 }
 
 .up {
