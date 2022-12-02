@@ -149,8 +149,11 @@
 
         function wordOfTheDay() {
             let d = new Date();
+            let month = c.getMonth();
+            let day = c.getDay();
+            let year = c.getFullYear();
 
-            let current = d.getMonth + "/" + d.getDay + "/" + d.getFullYear;
+            let current = month + "/" + day + "/" + year;
             alert("current date: " + current)
             if (current in wordOfDay) {
                 var currentID = wordOfDay[current];
