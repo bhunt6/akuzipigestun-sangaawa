@@ -143,7 +143,7 @@
         
             word.UUID === currentID)
 
-            alert("entry: ", entry)
+            alert("entry: " + entry)
             return entry;
         } 
 
@@ -151,16 +151,16 @@
             let d = new Date();
 
             let current = d.getMonth + "/" + d.getDay + "/" + d.getFullYear;
-            alert("current date: ", current)
+            alert("current date: " + current)
             if (current in wordOfDay) {
                 var currentID = wordOfDay[current];
             }
             else{
                 var currentID = "";
             }
-            alert("currentID: ", currentID)
+            alert("currentID: " + currentID)
             let currentEntry = findEntry(currentID);
-            alert("currentID:" , currentEntry)
+            alert("currentID:" + currentEntry)
 
             let wod_cont = document.getElementById("wod_container");
             wod_cont.innerHTML = `<div class="result">
