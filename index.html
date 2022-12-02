@@ -143,6 +143,7 @@
         
             word.UUID === currentID)
 
+            alert("entry: ", entry)
             return entry;
         } 
 
@@ -158,7 +159,9 @@
             else{
                 currentID = "";
             }
+            alert("currentID: ", currentID)
             let currentEntry = findEntry(currentID);
+            alert("currentID:" , currentEntry)
 
             let wod_cont = document.getElementById("wod_container");
             wod_cont.innerHTML = `<div class="result">
