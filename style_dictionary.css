@@ -13,12 +13,13 @@
 	display: grid;
 	min-height: 100%;
 	grid-template-columns: 1fr 3fr 3fr 1fr;
-	grid-template-rows: 10.5rem .4em 9rem 6.25rem minmax(6.25rem, auto) minmax(12.5rem, auto) 4.4rem;
+	grid-template-rows: 10.5rem .4em 9rem 6.25rem 6rem minmax(6.25rem, auto) minmax(12.5rem, auto) 4.4rem;
 	grid-template-areas: 
 		". title title title"
 		". border border ."
-		".  wod nav ."
+		".  . nav ."
 		". search search ."
+		". wod wod ."
 		". parse parse ."
 		". results results ."
 		"footer footer footer footer";
@@ -83,6 +84,16 @@
 	display: flex;
 	float: right;
 	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: space-around;
+}
+
+#wod_container{
+	padding: 0.2rem 2rem 1.4rem 2rem;
+}
+
+.wod_inner{
+	margin-top: .2rem;
 }
 
 .search{
@@ -365,7 +376,7 @@ h1, h2, h3, h4, i{
 	z-index: 99; /* Make sure it does not overlap */
 	border: none; /* Remove borders */
 	outline: none; /* Remove outline */
-	background-color: #ef9d87; /* Set a background color */
+	background-color: #4c4f53; /* Set a background color */
 	color: white; /* Text color */
 	cursor: pointer; /* Add a mouse pointer on hover */
 	padding: 15px; /* Some padding */
@@ -374,7 +385,7 @@ h1, h2, h3, h4, i{
 }
 	
 #myBtn:hover {
-	background-color: #4c4f53; /* Add a dark-grey background on hover */
+	background-color: #ef9d87; /* Add a dark-grey background on hover */
 }
 
 /*media queries*/
@@ -383,12 +394,13 @@ h1, h2, h3, h4, i{
 		display: grid;
 		min-height: 100%;
 		grid-template-columns: 1fr 3fr 3fr 1fr;
-		grid-template-rows: 10.5rem .4em 9rem 6.25rem minmax(6.25rem, auto) minmax(12.5rem, auto) 4.4rem;
+		grid-template-rows: 10.5rem .4em 9rem 6.25rem 6rem minmax(6.25rem, auto) minmax(12.5rem, auto) 4.4rem;
 		grid-template-areas: 
 			"title title title title"
 			". border border ."
 			". nav nav ."
 			". search search ."
+			". wod wod ."
 			". parse parse ."
 			". results results ."
 			"footer footer footer footer";
