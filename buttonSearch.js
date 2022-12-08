@@ -96,7 +96,8 @@ function englishSearch(term) {
     //search for contained in gloss
     let filteredGloss = LEX.filter((word) =>
 
-        word.gloss.some(gloss => gloss.includes(term))
+        word.gloss.some(gloss => gloss.includes(term)) ||
+        word.gloss.join("; ").includes(term)
     );
 
     //search for match in examples
