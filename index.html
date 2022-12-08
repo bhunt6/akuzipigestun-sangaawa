@@ -108,7 +108,7 @@
         }
 
         for(let j=0; j<LEX.length; j++){
-            glosses[j] = LEX[j].gloss.join(", ")
+            glosses[j] = LEX[j].gloss.join("; ")
         }
 
         searchInput.addEventListener("focus", function(e){
@@ -144,10 +144,7 @@
 
         function findEntry(currentID){
             let entry = LEX.find((word) =>
-        
             word.UUID == currentID)
-
-            //alert("entry: " + entry)
             return entry;
         } 
 
@@ -166,8 +163,6 @@
                 var currentID = "";
             }
             let currentEntry = findEntry(currentID);
-
-            console.log("currentID:" + currentEntry.search_word)
 
             let wod_cont = document.getElementById("wod_container");
             wod_cont.innerHTML += `<div class="wod_inner">
