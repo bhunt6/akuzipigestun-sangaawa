@@ -39,8 +39,10 @@ function containsMatch(term){
 
 function printSearch(displayTerm, first, second = []){
     //Print results in section
-    results.innerHTML += `<span class="results_section">Results for <i>${displayTerm}</i>:</span>`;
     let termResults = first.concat(second.filter((item) => first.indexOf(item) < 0));
+    if(termResults && termResults.length){
+        results.innerHTML += `<span class="results_section">Results for <i>${displayTerm}</i>:</span>`;
+    }
     displayWords(termResults);
 }
 
@@ -69,7 +71,9 @@ function akuzSearch(term){
             var pb = LEX.filter((word) =>
                 word.search_word.toLowerCase() == postBases[i]
             );
-            results.innerHTML += `<span class="results_section">Results for <i>${postBases[i]}</i>:</span>`
+            if(pb && pb.length){
+                results.innerHTML += `<span class="results_section">Results for <i>${postBases[i]}</i>:</span>`
+            }
             displayWords(pb);
         }
     }
