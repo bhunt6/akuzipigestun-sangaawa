@@ -2,7 +2,7 @@
 
 //Determine words part of speech and assign appropriate parser tags to the root
 //then pass to the appropriate paradigm function
-function controller(word, pos, underE) {
+function controller(word, head, pos, underE) {
     let root = word;
     if (pos == "noun") {
         console.log("root:", root)
@@ -17,11 +17,16 @@ function controller(word, pos, underE) {
                 root = root.slice(0, -2) + "ghw";
             }
         }
-        else if(underE){
+        else if(underE || root[root.length-1] == "a"){
             root = root.slice(0, -1) + "e";
+            console.log(root)
         }
         else{
             root = root.slice(0, -1) + "gh"
+        }
+
+        if(head[head.length-1] == "*"){
+            root+="*";
         }
         root += "[N]";
         nominal(root);
