@@ -49,6 +49,15 @@
 	padding: 70px 30px;
 }
 
+.titleText h1{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 2rem;
+}
+
+.titleText h3{
+	font-size: 1.1rem;
+}
+
 .border{
 	grid-row: 1/2;
 	grid-column: 2/5;
