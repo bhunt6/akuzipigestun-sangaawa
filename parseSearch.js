@@ -2,7 +2,7 @@ function parseWord(term) {
     const userInput = cyrillic_to_latin(term);
 
     const result = foma_apply_down(myNet, userInput);
-
+    console.log(result);
     var token = new Array;
 
     if (result === undefined || result.length == 0) {
