@@ -63,9 +63,10 @@ function nominal(root) {
     
         tableContent += `
         <button type="button" class="collapsible">${nCase}</button>
+        <div class="table_cont">
         <table class="tg">
         <colgroup>
-            <col style="width: 8rem">
+            <col style="min-width: 8rem">
             <col>
             <col>
             <col>
@@ -162,10 +163,20 @@ function nominal(root) {
                 <td class="tg-d0ae">${forms[34][0]}</td>
             </tr>
         </tbody>
-    </table>`
+    </table>
+    </div>`
     };
     tableZone.innerHTML = tableContent;
 }
+
+function intransitiveVerbs() {
+
+}
+
+function transitiveVerbs() {
+
+}
+
 
 function verbal(root) {
     var tableContent = "";
@@ -173,32 +184,28 @@ function verbal(root) {
     var transducer = myNetInvert;
     var forms = new Object;
     for(var vMood in verbMoods) {
-        forms[vMood] = new Array;
-            var surString = verbMoods[vMood];
-            if(verbMoods[vMood].includes("Intr")) {
+        forms[vMood] = [];
+            var mood = verbMoods[vMood];
+            if(mood.includes(".Intr")) {
                 for(let j=0; j<verbIntr.length; j++){
-                    temp = surString + verbIntr[j];
-                    console.log(temp)
-                    for(let k=0; k<verbExeptions.length; k++){
-                        if(temp == verbExeptions[k]) {
-                            temp = root + verbExeptions[k];
-                            
-                            forms[vMood][i] = foma_apply_down(transducer, surString);
-                            console.log(forms[vMood][i])
+                    let inflections = mood + verbIntr[j];
+                    for(var exception in verbExeptions){
+                        if(inflections == exception) {
+                            let surfaceForm = root + verbExeptions[exception];
+                            forms[vMood].push(foma_apply_down(transducer, surfaceForm));
+                            console.log(foma_apply_down(transducer, surfaceForm))
                         }
                         else{
-                            temp = root + surString;
-                            console.log(temp)
-                            forms[vMood][i] = foma_apply_down(transducer, surString);
-                            console.log(forms[vMood][i])
+                            let surfaceForm = root + inflections;
+                            forms[vMood].push(foma_apply_down(transducer, surfaceForm));
                         }
                     }
                 }
             }
             else{
                 for(let j=0; j<verbTrns.length; j++){
-                    surString += verbTrns[j];
-                    forms[vMood][i] = foma_apply_down(transducer, surString);
+                    let surfaceForm = root + mood + verbTrns[j];
+                    forms[vMood].push(foma_apply_down(transducer, surfaceForm));
                 }
             }
     }
@@ -209,7 +216,7 @@ function verbal(root) {
 
 /*
 tableContent += `
-    <button type="button" class="collapsible">${nCase}</button>
+    <button type="button" class="collapsible">${vMood}</button>
     <table class="tg">
     <colgroup>
         <col style="width: 8rem">
