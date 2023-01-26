@@ -13,11 +13,12 @@
 	display: grid;
 	min-height: 100%;
 	grid-template-columns: 1fr 3fr 2fr 230px 1fr;
-	grid-template-rows: 170px 120px minmax(60px, auto) minmax(300px, auto) 70px;
+	grid-template-rows:  minmax(10.5rem, auto) .4em 9rem minmax(60px, auto) minmax(300px, auto) minmax(4.4rem, auto);
 	grid-template-areas: 
-		"title title search search ."
+		". title search search ."
+		". border border border ."
 		". . nav nav ."
-		". parse parse . ."
+		". parse parse parse ."
 		". results results results ."
 		"footer footer footer footer footer";
 }
@@ -28,26 +29,15 @@
 }
 
 .title a img{
-	padding: 60px 0px 0px 80px;
+	padding: 60px 0px 0px 0px;
 	position: relative;
-}
-
-.title a::after{
-	content: '';
-	display: block;
-	height: 6px;
-	width: 110px;
-	position: relative;
-	background: #EF9D87;
-	bottom: -35px;
-	right: -80px;
 }
 
 .titleText{
 	display: flex;
 	flex-direction: column;
 	background: none;
-	padding: 70px 30px;
+	padding: 4.5rem 2rem 1rem 1.5rem;
 }
 
 .titleText h1{
@@ -60,9 +50,20 @@
 }
 
 .border{
-	grid-row: 1/2;
-	grid-column: 2/5;
+	grid-area: border;
 	border-bottom: 2px solid #999999;
+}
+
+.border::after{
+	content: '';
+	display: block;
+	height: .4em;
+	width: 7em;
+	position: relative;
+	background: #EF9D87;
+	bottom: 0em;
+	right: 0em;
+	z-index: 99999;
 }
 
 .nav{
@@ -111,7 +112,7 @@ input[type=text]{
 input[type=button]{
     border: none;
     height: 43px;
-    width: 115px;
+    min-width: 115px;
     background: #4c4f53;
     font-size: 18px;
     font-weight: lighter;
@@ -156,7 +157,7 @@ input[type='radio']:checked {
 	grid-area: parse;
 	display: none;
 	flex-direction: row;
-	justify-content: start;
+	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 	margin-bottom: 2rem;
@@ -350,3 +351,90 @@ h1, h2, h3, h4{
 	background-color: #b0e0e6 !important;
 	color: #ffffff;
 }
+
+/*display: grid;
+	min-height: 100%;
+	grid-template-columns: 1fr 3fr 2fr 230px 1fr;
+	grid-template-rows: 170px 120px minmax(60px, auto) minmax(300px, auto) 70px;
+	grid-template-areas: 
+		"title title search search ."
+		". . nav nav ."
+		". parse parse . ."
+		". results results results ."
+		"footer footer footer footer footer";*/
+
+/*media queries*/
+@media only screen and (max-width: 750px) {
+	.main{
+		display: grid;
+		min-height: 100%;
+		grid-template-columns: 1fr 3fr 2fr 2fr 1fr;
+		grid-template-rows: minmax(10.5rem, auto) 6.25rem .4em 9rem minmax(6.25rem, auto) minmax(12.5rem, auto) minmax(12rem, auto);
+		grid-template-areas: 
+			"title title title title title"
+			". search search search ."
+			". border border border ."
+			". nav nav nav ."
+			". parse parse parse ."
+			". results results results ."
+			"footer footer footer footer footer";
+	}
+
+	.title a img{
+		padding: 3.75rem 0rem 0rem 3rem;
+		width: 7rem;
+		height: 4.5rem;
+	}
+	
+	.titleText{
+		padding: 4rem 2rem 0rem 2rem;
+	}
+	
+	.titleText h1{
+		font-family: 'Josefin Sans', sans-serif;
+		font-size: 1.5rem;
+	}
+	
+	.titleText h3{
+		font-size: .8rem;
+	}
+
+	.nav a{
+		margin: 20px 10px 0px 0px;
+	}
+	
+	.nav a img{
+		transform: scale(0.85);
+	}
+
+	[data-title]:after {
+		font-size: .8rem;
+	}
+
+	.morphs{
+		flex-wrap: wrap;
+	}
+
+	.morpheme{
+		flex-shrink: 1;
+	}
+
+	.radios{
+		padding-left: 0rem;
+		justify-content: flex-start;
+	}
+
+	.radiolabel{
+		margin: 0 1rem 0 0;
+		font-size: .9rem;
+		padding-left: 1em;
+	}
+
+	.parse{
+		flex-direction: column;
+	}
+
+	.parseTag{
+		margin-bottom: 1rem;
+	}
+} 
