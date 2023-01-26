@@ -13,7 +13,7 @@
 	display: grid;
 	min-height: 100%;
 	grid-template-columns: 1fr 3fr 2fr 230px 1fr;
-	grid-template-rows: minmax(10.5rem, auto) .4em 9rem minmax(200px, auto) minmax(200px, auto) 4.4rem;
+	grid-template-rows: minmax(10.5rem, auto) .4em 9rem minmax(200px, auto) minmax(200px, auto) minmax(4.4rem, auto);
 	grid-template-areas: 
 		". title search search ."
 		". border border border ."
@@ -112,7 +112,7 @@ input[type=text]{
 input[type=button]{
     border: none;
     height: 43px;
-    width: 115px;
+    min-width: 115px;
     background: #4c4f53;
     font-size: 18px;
     font-weight: lighter;
@@ -392,6 +392,11 @@ h1, h2, h3, h4{
 }
 
 /*Table styling*/
+.table_cont{
+	width: 100%;
+	overflow-x: scroll;
+}
+
 .tg {
 	table-layout: fixed;
 	width: 65%;
@@ -438,6 +443,8 @@ h1, h2, h3, h4{
 	text-align: left;
 	vertical-align: top;
 	font-weight: normal;
+	padding-left: .5rem;
+	padding-right: .5rem;
 }
 
 .tg .tg-d0ae:hover{
@@ -516,12 +523,12 @@ h1, h2, h3, h4{
 }
 
 /*media queries*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
 	.main{
 		display: grid;
 		min-height: 100%;
 		grid-template-columns: 1fr 3fr 2fr 2fr 1fr;
-		grid-template-rows: minmax(10.5rem, auto) 6.25rem .4em 9rem minmax(6.25rem, auto) minmax(12.5rem, auto) minmax(6.25rem, auto) 12rem;
+		grid-template-rows: minmax(10.5rem, auto) 6.25rem .4em 9rem minmax(6.25rem, auto) minmax(12.5rem, auto) minmax(6.25rem, auto) minmax(12rem, auto);
 		grid-template-areas: 
 			"title title title title title"
 			". search search search ."
@@ -580,8 +587,8 @@ h1, h2, h3, h4{
 	}
 
 	.tg {
-		table-layout: fixed;
-		width: 100%;
+		table-layout: auto;
+		min-width: 500px;
 	}
 
 	.wheel{
