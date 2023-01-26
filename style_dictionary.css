@@ -389,7 +389,7 @@ h1, h2, h3, h4, i{
 }
 
 /*media queries*/
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
 	.main{
 		display: grid;
 		min-height: 100%;
