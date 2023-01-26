@@ -13,7 +13,7 @@
 	display: grid;
 	min-height: 100%;
 	grid-template-columns: 1fr 3fr 3fr 1fr;
-	grid-template-rows: 10.5rem .4em 9rem 6.25rem 6rem minmax(6.25rem, auto) minmax(12.5rem, auto) 4.4rem;
+	grid-template-rows: minmax(10.5rem, auto) .4em 9rem 6.25rem 6rem minmax(6.25rem, auto) minmax(12.5rem, auto) 4.4rem;
 	grid-template-areas: 
 		". title title title"
 		". border border ."
