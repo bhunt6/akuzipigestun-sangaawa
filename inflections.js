@@ -313,7 +313,7 @@ var verbMoods = [
 ]
 
 var verbExeptions = {
-    '[Ind.Intr][2Sg]' : '[Intrg.Intr.2Sg]',
+    '[Intrg.Intr][2Sg]' : '[Intrg.Intr.2Sg]',
     '[Intrg.Intr][2Pl]' : '[Intrg.Intr.2Pl]',
     '[Intrg.Intr][2Du]' : '[Intrg.Intr.2Du]',
 }
