@@ -394,7 +394,7 @@ h1, h2, h3, h4{
 /*Table styling*/
 .table_cont{
 	width: 100%;
-	overflow-x: scroll;
+	overflow-x: visible;
 }
 
 .tg {
@@ -589,6 +589,10 @@ h1, h2, h3, h4{
 	.tg {
 		table-layout: auto;
 		min-width: 500px;
+	}
+
+	.table_cont{
+		overflow-x: scroll;
 	}
 
 	.wheel{
