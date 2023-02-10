@@ -31,6 +31,8 @@
 }
 
 .title a img{
+	width: 7rem;
+	height: 4.5rem;
 	padding: 3.75rem 0rem 0rem 0rem;
 	position: relative;
 }
@@ -39,7 +41,9 @@
 	display: flex;
 	flex-direction: column;
 	background: none;
-	padding: 70px 30px;
+	justify-content: center;
+	align-items: flex-start;
+	padding-left: 2rem;
 }
 
 .titleText h1{
@@ -328,9 +332,10 @@ h1, h2, h3, h4, i{
     font-size: 1rem;
 	font-weight: bold;
     position: absolute;
-    bottom: 3.5rem;
+    top: 3rem;
     left: 0%;
-    white-space: nowrap;
+	max-width: 6rem;
+    white-space: normal;
     opacity: 0;
     z-index: 99999;
     visibility: hidden;
@@ -394,9 +399,9 @@ h1, h2, h3, h4, i{
 		display: grid;
 		min-height: 100%;
 		grid-template-columns: 1fr 3fr 3fr 1fr;
-		grid-template-rows: 10.5rem .4em 9rem 6.25rem 6rem minmax(6.25rem, auto) minmax(12.5rem, auto) 4.4rem;
+		grid-template-rows: 10.5rem .4em minmax(9rem, auto) 6.25rem 6rem minmax(6.25rem, auto) minmax(12.5rem, auto) 4.4rem;
 		grid-template-areas: 
-			"title title title title"
+			". title title title"
 			". border border ."
 			". nav nav ."
 			". search search ."
@@ -407,13 +412,11 @@ h1, h2, h3, h4, i{
 	}
 
 	.title a img{
-		padding: 3.75rem 0rem 0rem 3rem;
-		width: 7rem;
-		height: 4.5rem;
+		transform: scale(0.85);
 	}
-	
+
 	.titleText{
-		padding: 4rem 2rem 0rem 2rem;
+		padding: 0 1rem 0 .5rem;
 	}
 	
 	.titleText h1{
@@ -435,6 +438,7 @@ h1, h2, h3, h4, i{
 
 	[data-title]:after {
 		font-size: .8rem;
+		bottom: 4rem;
 	}
 
 	.morphs{
@@ -456,3 +460,19 @@ h1, h2, h3, h4, i{
 		padding-left: 1em;
 	}
 } 
+
+/*media queries*/
+@media only screen and (max-width: 400px) {
+
+	.titleText{
+		padding: 0 1rem 0 .25rem;
+	}
+
+	.nav{
+		padding-top: 1rem;
+	}
+
+	.nav a{
+		margin: 0;
+	}
+}
