@@ -231,15 +231,17 @@ input[type='radio']:checked {
 .result{
 	height: auto;
 	width: auto;
-	margin-bottom: 20px;
 	display: flex;
 	flex-direction: column;
-	background: #efefef;
-	box-shadow: .125em .125em .375em .06em #ccc;
+	/*box-shadow: .125em .125em .375em .06em #ccc;*/
 	font-size: 1.1rem;
 	color: #2f3235;
 	padding: 10px 20px 0px 20px;
 	overflow: hidden;
+}
+
+.result:hover{
+	background: #f6f4f4;
 }
 
 .entryHead{
