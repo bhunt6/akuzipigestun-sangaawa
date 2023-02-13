@@ -127,13 +127,6 @@
         
         //Search functionality
         const searchInput = document.getElementById("searchInput");
-        
-        searchInput.addEventListener("keyup", (e) => {
-            if (e.keyCode == 13) {
-                e.preventDefault();
-                document.getElementById("searchButton").click();
-            }
-        });
 
         var lang = [];
 
@@ -149,7 +142,14 @@
                 lang = "eng";
             }
         }, true);
-        
+
+        searchInput.addEventListener("keyup", (e) => {
+            if (e.keyCode == 13) {
+                e.preventDefault();
+                document.getElementById("searchButton").click();
+            }
+        });
+
         //Search functionality; redirect to results page
         document.getElementById("searchButton").onclick = function () {
             location.href = "results.html?search=" + searchInput.value.toLowerCase() + "&lang=" + lang;
