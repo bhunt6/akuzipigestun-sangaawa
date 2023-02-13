@@ -52,6 +52,8 @@
             <form method="post" action="https://formspree.io/f/maykzgya">
                 <input type="text" id="Name" name="Name" placeholder="Full name"><br>
                 <input type="text" id="Email" name="Email" placeholder="Email"><br>
+                <input type="text" id="entryID" name="entryID" placeholder="Entry ID"><br>
+                <input type="text" id="headword" name="headword" placeholder="Headword"><br>
                 <br><textarea rows="5" id="Message" name="Message" cols="30" placeholder="Message..." required></textarea><br>
                 <input type="submit" name="submit" value="Submit">
             </form>
@@ -69,5 +71,17 @@
             </div>
         </div>
     </div>
+    <script>
+
+        var entry = /entry=([^&]+)/.exec(window.location.href)[1]; // Value is in [1]
+        var headword = /headword=([^&]+)/.exec(window.location.href)[1]; // Value is in [1]
+
+        const entryIDAutofill = document.getElementById("entryID");
+        const headwordAutofill = document.getElementById("headword");
+
+        entryIDAutofill.value = entry;
+        headwordAutofill.value = headword;
+
+    </script>
 </body>
 </html>
