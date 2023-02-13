@@ -104,7 +104,7 @@
 
         </div>
         <div class="footer">
-            <div id="footer1">© 2022 St.Lawrence Island</div>
+            <div id="footer1">© 2023 St.Lawrence Island</div>
             <div id="footer2"><b>Data and entries sourced from: </b>
                 <br> 
                 Badten, L.W. (Aghnaghaghpik), 
@@ -177,9 +177,13 @@
 
         //Entry formatting
         const output = document.getElementById("entry");
-        var htmlString = `<span class="entryHead">${currentEntry.headword}, 
+        var htmlString = `<div class="entryHeaderLine"><span class="entryHead">${currentEntry.headword}, 
                             <span class="entryPos">${currentEntry.pos}</span>
                             </span>
+                            <a href="contact.html?entry=${currentEntry.UUID}&headword=${currentEntry.headword}" title="Report Issue">
+                                <img src="icons/ReportIssueButton.png" width="30" height="30" alt="" />
+                            </a>
+                            </div>
                             <hr>
                             <span class="entryInfo">Cyrillic: 
                                 <span class="entryCyr">(${currentEntry.cyrillic})</span>
