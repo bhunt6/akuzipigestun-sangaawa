@@ -137,6 +137,19 @@
 
         var lang = [];
 
+        searchInput.addEventListener("focus", function(e){
+
+            if(document.getElementById("akuzSearch").checked){
+                autocomplete(searchInput, headwords);
+                lang = "akuz";
+            }
+
+            if(document.getElementById("engSearch").checked){
+                autocomplete(searchInput, glosses);
+                lang = "eng";
+            }
+        }, true);
+        
         //Search functionality; redirect to results page
         document.getElementById("searchButton").onclick = function () {
             location.href = "results.html?search=" + searchInput.value.toLowerCase() + "&lang=" + lang;
@@ -259,18 +272,6 @@
                 glosses[j] = LEX[j].gloss.join(", ")
             }
 
-            searchInput.addEventListener("focus", function(e){
-
-                if(document.getElementById("akuzSearch").checked){
-                    autocomplete(searchInput, headwords);
-                    lang = "akuz";
-                }
-
-                if(document.getElementById("engSearch").checked){
-                    autocomplete(searchInput, glosses);
-                    lang = "eng";
-                }
-            }, true);
     </script>
 </body>
 </html>
