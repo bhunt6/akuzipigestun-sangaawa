@@ -134,12 +134,10 @@
 
             if(document.getElementById("akuzSearch").checked){
                 autocomplete(searchInput, headwords);
-                lang = "akuz";
             }
 
             if(document.getElementById("engSearch").checked){
                 autocomplete(searchInput, glosses);
-                lang = "eng";
             }
         }, true);
 
@@ -152,6 +150,14 @@
 
         //Search functionality; redirect to results page
         document.getElementById("searchButton").onclick = function () {
+            if(document.getElementById("akuzSearch").checked){
+                lang = "akuz";
+            }
+
+            else if(document.getElementById("engSearch").checked){
+                lang = "eng";
+            }
+
             location.href = "results.html?search=" + searchInput.value.toLowerCase() + "&lang=" + lang;
         };
 
