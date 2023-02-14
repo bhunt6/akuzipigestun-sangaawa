@@ -177,12 +177,13 @@
 
         //Entry formatting
         const output = document.getElementById("entry");
-        var htmlString = `<div class="entryHeaderLine"><span class="entryHead">${currentEntry.headword}, 
-                            <span class="entryPos">${currentEntry.pos}</span>
-                            </span>
-                            <a href="contact.html?entry=${currentEntry.UUID}&headword=${currentEntry.headword}" title="Report Issue">
-                                <img src="icons/ReportIssueButton.png" width="30" height="30" alt="" />
-                            </a>
+        var htmlString = `<div class="entryHeaderLine">
+                                <span class="entryHead">${currentEntry.headword}, 
+                                    <span class="entryPos">${currentEntry.pos}</span>
+                                </span>
+                                <a href="contact.html?entry=${currentEntry.UUID}&headword=${currentEntry.headword}" title="Report Issue">
+                                    <img src="icons/ReportIssueButton.png" width="30" height="30" alt="" />
+                                </a>
                             </div>
                             <hr>
                             <span class="entryInfo">Cyrillic: 
