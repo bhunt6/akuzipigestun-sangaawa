@@ -184,6 +184,21 @@ input[type='radio']:checked {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-items: center;
+}
+
+.entryHead{
+	font-weight: bold;
+	font-size: 30px;
+	color: #ef9d87;
+	padding-right: 15px;
+}
+
+.headwordCont{
+	width: auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 }
 
 .tag{
@@ -239,13 +254,6 @@ input[type='radio']:checked {
 
 .exclamatoryTag, .conjunctiveTag, .interjectionalTag .adverbialTag{
 	background: #9F86C0
-}
-
-.entryHead{
-	font-weight: bold;
-	font-size: 30px;
-	color: #ef9d87;
-	padding-right: 15px;
 }
 
 .entryInfo{
