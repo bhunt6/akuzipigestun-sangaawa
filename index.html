@@ -95,7 +95,7 @@
     <script type="text/javascript" src="displayWords.js"></script>
     <script type="text/javascript" src="parseSearch.js"></script>
     <script type="text/javascript" src="autocomplete.js"></script>
-    <script type="text/javascript" src="bases.js"></script>
+    <script type="text/javascript" src="bases_21323.js"></script>
     <script type="text/javascript" src="wordoftheday.js"></script>
     <script>
         const searchInput = document.getElementById("searchInput");
@@ -174,12 +174,19 @@
             let currentEntry = findEntry(currentID);
 
             let wod_cont = document.getElementById("wod_container");
-            wod_cont.innerHTML += `<div class="wod_inner">
-                                    <div>
-                                        <a href="entry.html?entry=${currentEntry.UUID}"><span class="entryHead">${currentEntry.headword}, ${currentEntry.pos}</span></a>
-                                        <span class="entryDef">${currentEntry.gloss.join("; ")}</span>
+            wod_cont.innerHTML += `<a href="entry.html?entry=${currentEntry.UUID}" class="result">
+                                    <div class="entryContent">
+                                        <div class="entryTop">
+                                            <span class="entryHead">
+                                                <div class="headwordCont">${currentEntry.headword}</div>
+                                                <div class="tagCont">${currentEntry.tags}${currentEntry.pos}</div>
+                                            </span>
+                                        </div>
+                                        <div class="entryBottom">
+                                            <span class="entryDef">${currentEntry.gloss.join("; ")}</span>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
                                 `;
         }
 
