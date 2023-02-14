@@ -248,10 +248,10 @@
             
             //inflectional tables
             if(currentEntry.headword.includes("<sup>e</sup>")){
-                controller(currentEntry.search_word, currentEntry.headword, currentEntry.pos, true);
+                controller(currentEntry.search_word, currentEntry.headword, currentEntry.source_pos, true);
             }
             else{
-                controller(currentEntry.search_word, currentEntry.headword, currentEntry.pos, false);
+                controller(currentEntry.search_word, currentEntry.headword, currentEntry.source_pos, false);
             }
             
             //Event listeners for collapsibles
