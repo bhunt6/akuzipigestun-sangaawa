@@ -4,15 +4,20 @@ const displayWords = (words) => {
         .map((word) =>
         //entry formatting as string
             `<a href="entry.html?entry=${word.UUID}" class="result">
-                <div>
-                    <span class="entryHead">${word.headword}, ${word.pos}</span>
-                    <span class="entryCyr">(${word.cyrillic})</span>
-                    <span class="entryipa">/${word.ipa}/</span>
-                    <span class="entryDef">${word.gloss.join("; ")}</span>
+                <div class="entryContent">
+                    <div class="entryTop">
+                        <span class="entryHead">${word.headword}, ${word.pos}</span>
+                        <span class="entryCyr">(${word.cyrillic})</span>
+                        <span class="entryipa">/${word.ipa}/</span>
+                    </div>
+                    <div class="entryBottom">
+                        <span class="entryDef">${word.gloss.join("; ")}</span>
+                    </div>
                 </div>
-                <span class="entryOther">${word.examples.join("\n")}</span>
             </a>
             `)
         .join('');
     results.innerHTML += htmlString;
 };
+//code for displaying examples on card
+//<span class="entryOther">${word.examples.join("\n")}</span>

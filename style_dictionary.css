@@ -236,8 +236,9 @@ input[type='radio']:checked {
 	/*box-shadow: .125em .125em .375em .06em #ccc;*/
 	font-size: 1.1rem;
 	color: #2f3235;
-	padding: 10px 20px 0px 20px;
+	padding: 10px 20px 10px 20px;
 	overflow: hidden;
+	/*border-bottom: #2f3235 solid 1px;*/
 }
 
 .result:hover{
@@ -265,6 +266,10 @@ input[type='radio']:checked {
 
 .entryDef{
 	font-style: italic;
+}
+
+.entryTop{
+	padding-bottom: .5rem;
 }
 
 .entryOther{
