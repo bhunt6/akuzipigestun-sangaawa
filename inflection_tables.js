@@ -9,6 +9,9 @@ function controller(word, head, pos, underE) {
         if(root[root.length-1] == "k"){
             root = root.slice(0, -1) + "g";
         }
+        else if(root[root.length-1] == "n"){
+            root = root.slice(0, -1) + "te";
+        }
         else if(root[root.length-1] == "w"){
             if(root[root.length-2] == "k"){
                 root = root.slice(0, -2) + "w";
@@ -46,6 +49,7 @@ function controller(word, head, pos, underE) {
     else if (pos == "pronoun") {
         root += "[N]";
     }
+    console.log("root:", root)
 }
 
 function nominal(root) {
