@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akuzipigestun Sangaawa</title>
+    <link href="style_about.css" rel="stylesheet" type="text/css">
+    <!--Icon set created by Lane Schwartz (lanes@illinois.edu)-->
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#50b5c2">
+    <meta name="msapplication-TileColor" content="#b0e0e6">
+    <meta name="theme-color" content="#b0e0e6">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XHL7JCQHC0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XHL7JCQHC0');
+    </script>
+
+</head>
+<body>
+    <div class="main">
+        <div class="title">
+            <a href="index.html">
+                <img src="icons/Sivuqaq_icon.png" width="109" height="66" alt="" />
+            </a>
+            <div class="titleText">
+                <h1>Akuzipigestun Sangaawa</h1>
+                <h3><i>A dictionary for St. Lawrence Island Yupik</i></h3>
+            </div>
+        </div>
+        <div class="border"></div>
+        <div class="nav">
+            <a href="https://ldl.linguistics.gmu.edu/" data-title="GMU LangDoc Lab Group"><img src="icons/lab_group_hires.png" width="51" height="42" alt="" /></a>
+            <a href="https://github.com/SaintLawrenceIslandYupik/digital_corpus" data-title="Yupik Corpus"><img src="icons/corpus_hires.png" width="52" height="37" alt="" /></a>
+            <a href="https://bhunt6.github.io/itemquulteki/" data-title="Morphological Analyzer"><img src="icons/analyzer_hires.png" width="52" height="51" alt="" /></a>
+            <a href="https://saintlawrenceislandyupik.github.io/web_tools/index_utilities.html" data-title="Orthotactic Spellchecker"><img src="icons/spellchecker_hires.png" width="53" height="51" alt="" /></a>
+            <a href="contact.html" data-title="Contact Us"><img src="icons/contact_hires.png" width="52" height="37" alt="" /></a>
+        </div>
+        <div class="search">
+            <div class="bar_button autocomplete">
+                <input type="text" id="searchInput" placeholder="qavaghtuq...">
+                <input id="searchButton" type="button" value="Search">
+            </div>
+            <div class="radios">
+                <label class="radiolabel">
+                    <input type="radio" id="akuzSearch" name="radio" value="Akuzipik Search" checked />
+                    Akuzipik Search
+                </label>
+                <label class="radiolabel">
+                    <input type="radio" id="engSearch" name="radio" value="English Search" />
+                    English Search
+                </label>
+            </div>
+        </div>
+        <div class="section about">
+            <div class="sectionHeader">About the Dictionary</div>
+            <div class="sectionContent">
+                <p>This site is an implementation of an existing print dictionary for St. Lawrence Island Yupik/Akuzipik. 
+
+                </p>
+            </div>
+        </div>        
+        <div class="section methods">
+            <div class="sectionHeader">Methodology</div>
+            <div class="sectionContent">
+                <p>
+                    The implementation of this electronic dictionary, as well as the accompanying work on Akuzipik that our team has engaged in, 
+                    has been undertaken with ongoing discussions with rights holders in the Akuzipik-speaking community in the 
+                    village of Sivuqaq (Gambell). This work is part of a larger project that includes documentation, digitization, 
+                    building computer tools for the use of speakers and scholars, and supporting revitalization and pedagogical 
+                    efforts in the community.
+                </p>
+                <p>
+                    <i>Igamsiqayugvikamsi</i> to all the Yupiget who have used and provided feedback about the online dictionary in its 
+                    various forms. Any mistakes herein or in the online implementations of the dictionary are entirely our own.
+                </p>
+            </div>
+        </div>
+        <div class="section parserInfo">
+            <div class="sectionHeader">Morphological Parser</div>
+            <div class="sectionContent">
+                <p>This dictionary integrates a morphological </p>
+            </div>
+        </div>
+        <div class="section entryInfo">
+            <div class="sectionHeader">Overview of an Entry</div>
+            <div class="sectionContent"></div>
+        </div>
+        <div class="section tagsInfo">
+            <div class="sectionHeader">Entry Tags</div>
+            <div class="sectionContent">
+                <p>Each entry is labeled with one or more tags which describe things like the headword's part of speech, 
+                    its status as a loanword, certain pragmatic information, dialectal differences, or whether the word is commonly used 
+                    in the Akuzipik corpus.
+                </p>
+                <p>These tags are pictured below:</p>
+                <div class="twoColumn">
+                    <div class="taglist">
+                        <div>
+                            <span class='tag nounTag'>NOUN</span>
+                            <p>Akuzipik nouns inflect for seven cases, four persons, and three numbers.</p>
+                        </div>
+                        <div>
+                            <span class='tag verbTag'>VERB</span>
+                            <p>Verbs inflect for eleven moods, transitivity, four persons, and three numbers and exhibit polypersonal 
+                                agreement in transitive constructions.</p>
+                        </div>
+                        <div>
+                            <span class='tag ProperNounTag'>PROPER NOUN</span>
+                            <p>Proper nouns are listed in citation form and begin with a capital letter.</p>
+                        </div>
+                        <div>
+                            <span class='tag rootTag'>ROOT</span>
+                            <p>The dictionary contains a number of roots that are not licit forms in their own right, 
+                                but serve as the morphological base for a number of Akuzipik nouns and verbs.</p>
+                        </div>
+                        <div>
+                            <span class='tag emotionalTag'>EMOTIONAL</span>
+                            <p>A classification given by Badten, et al. (2008) to a number of verbs which involve experiencing 
+                                a particular feeling or being in a particular emotional state.</p>
+                        </div>
+                        <div>
+                            <span class='tag posturalTag'>POSTURAL</span>
+                            <p>A classification given by Badten, et al. (2008) to a number of verbs which involve being in a 
+                                certain position, state or, more generally, "posture". These verbs have both an active form to 
+                                indicate getting into that posture and a stative form to indicate being in that posture.</p>
+                        </div>
+                        <div>
+                            <span class='tag dimensionalTag'>DIMENSIONAL</span>
+                            <p>A classification given by Badten, et al. (2008) to a number of verbs which involve ____</p>
+                        </div>
+                    </div>
+                    <div class="taglist">
+                        <div>
+                            <span class='tag particleTag'>PARTICLE</span>
+                            <p></p>
+                        </div>
+                        <div>
+                            <span class='tag exclamatoryTag'>EXCLAMATORY</span>
+                            <p></p>
+                        </div>
+                        <div>
+                            <span class='tag conjunctiveTag'>CONJUNCTIVE</span>
+                            <p></p>
+                        </div>
+                        <div>
+                            <span class='tag interjectionalTag'>INTERJECTIONAL</span>
+                            <p></p>
+                        </div>
+                        <div>
+                            <span class='tag adverbialTag'>ADVERBIAL</span>
+                            <p></p>
+                        </div>
+                        <div>
+                            <span class='tag ChukotkanTag'>CHUKOTKAN</span>
+                            <p>A number of words are used only in the Chukotkan dialect.</p>
+                        </div>
+                        <div>
+                            <span class='tag commonTag'>COMMON</span>
+                            <p>This tag marks words that are among the most commonly used in the lexicon. These words
+                                have a frequency value in the written corpus higher than ___.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section attachmentRules">
+            <div class="sectionHeader">Jacobson's Attachment Rules</div>
+            <div class="sectionContent">
+                <p>
+                    The derivational morphemes listed in the lexicon are often prefixed by a number of symbols denoting how 
+                    the morpheme affects the base it attaches to phonologically. 
+                </p>
+                <table>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Meaning</th>
+                    </tr>
+                    <tr>
+                        <td>~<sub>f</sub></td>
+                        <td>Drop final e</td>
+                    </tr>
+                    <tr>
+                        <td>~<sub>sf</sub></td>
+                        <td>Drop semi-final e</td>
+                    </tr>
+                    <tr>
+                        <td>~</td>
+                        <td>Drop final and semi-final e</td>
+                    </tr>
+                    <tr>
+                        <td>&ndash;<sub>w</sub></td>
+                        <td>Drop weak final consonants; keep strong final consonants</td>
+                    </tr>
+                    <tr>
+                        <td>&ndash;</td>
+                        <td>Drop all final consonants (both strong and weak)</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>Attach the ending as presented</td>
+                    </tr>
+                    <tr>
+                        <td>:</td>
+                        <td>Uvular dropping</td>
+                    </tr>
+                    <tr>
+                        <td>@</td>
+                        <td>Modification of base-final te</td>
+                    </tr>
+                    <tr>
+                        <td>( )</td>
+                        <td>Segment(s) used optionally, if the environment
+                            calls for it</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Unattested form (if word-initial);
+                            Upredictably strong gh (if word-final)</td>
+                    </tr>
+                    <tr>
+                        <td>&lt; &gt;</td>
+                        <td>Segment between brackets only appears
+                            certain forms of the word</td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+        <div class="section suggestions">
+            <div class="sectionHeader">Suggestions?</div>
+            <div class="sectionContent">
+                <p>If you have any suggestions for improvements to the dictionary, additions or corrections to existing entries, 
+                    or Akuzipik words or phrases that we don't have record of, please submit this information using the form on
+                    the contact page.
+                </p>
+                <br>
+                <p>
+                    <i>Igamsiqayugvikamsi!</i>
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+            <div id="footer1">© 2023 St.Lawrence Island</div>
+            <div id="footer2"><b>Data and entries sourced from: </b>
+                <br> 
+                Badten, L.W. (Aghnaghaghpik), 
+                Kaneshiro, V.O. (Uqiitlek), 
+                Oovi, M. (Uvegtu), & 
+                Koonooka, C. (Petuwaq). (2008). 
+                <i>St. Lawrence Island/Siberian Yupik Eskimo dictionary. </i>
+                University of Alaska Fairbanks: Alaska Native Language Center.
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="autocomplete.js"></script>
+    <script type="text/javascript" src="dictionary_js/foma_apply_down.js"></script>
+    <script type="text/javascript" src="dictionary_js/foma_print.js"></script>
+    <script type="text/javascript" src="dictionary_js/transducer_inverted.js"></script>
+    <script>
+
+
+    </script>
+
+</body>
