@@ -226,22 +226,36 @@
                 incrIndex -= 5;
                 wordWheeler(incrIndex);
             }
+            
+            const lexLength = LEX.length;
 
             //Word Wheel
             function wordWheeler(index){
                 let wheel = document.getElementById("wheelList");
 
-                const wheelElements = `<a href="entry.html?entry=${LEX[index-5].UUID}" class="wheelElement"><span><span>${LEX[index-5].headword}</span><span><span>${LEX[index-5].pos}</span></span></a>
-                                        <a href="entry.html?entry=${LEX[index-4].UUID}" class="wheelElement shaded"><span><span>${LEX[index-4].headword}</span><span>${LEX[index-4].pos}</span></span></a>
-                                        <a href="entry.html?entry=${LEX[index-3].UUID}" class="wheelElement"><span><span>${LEX[index-3].headword}</span><span>${LEX[index-3].pos}</span></span></a>
-                                        <a href="entry.html?entry=${LEX[index-2].UUID}" class="wheelElement shaded"><span><span>${LEX[index-2].headword}</span><span>${LEX[index-2].pos}</span></span></a>
-                                        <a href="entry.html?entry=${LEX[index-1].UUID}" class="wheelElement"><span><span>${LEX[index-1].headword}</span><span>${LEX[index-1].pos}</span></span></a>
-                                        <a href="entry.html?entry=${LEX[index].UUID}" class="wheelElement current"><span><span>${LEX[index].headword}</span><span>${LEX[index].pos}</span></span></a>
-                                        <a href="entry.html?entry=${LEX[index+1].UUID}" class="wheelElement"><span><span>${LEX[index+1].headword}</span><span>${LEX[index+1].pos}</span></span></a>
-                                        <a href="entry.html?entry=${LEX[index+2].UUID}" class="wheelElement shaded"><span><span>${LEX[index+2].headword}</span><span>${LEX[index+2].pos}</span></span></a>
-                                        <a href="entry.html?entry=${LEX[index+3].UUID}" class="wheelElement"><span><span>${LEX[index+3].headword}</span><span>${LEX[index+3].pos}</span></span></a>
-                                        <a href="entry.html?entry=${LEX[index+4].UUID}" class="wheelElement shaded"><span><span>${LEX[index+4].headword}</span><span>${LEX[index+4].pos}</span></span></a>
-                                        <a href="entry.html?entry=${LEX[index+5].UUID}" class="wheelElement"><span><span>${LEX[index+5].headword}</span><span>${LEX[index+5].pos}</span></span></a>`;
+                let min5 = LEX[(index+lexLength-5)%lexLength];
+                let min4 = LEX[(index+lexLength-4)%lexLength];
+                let min3 = LEX[(index+lexLength-3)%lexLength];
+                let min2 = LEX[(index+lexLength-2)%lexLength];
+                let min1 = LEX[(index+lexLength-1)%lexLength];
+                let cur = LEX[(index+lexLength)%lexLength];
+                let plus1 = LEX[(index+lexLength+1)%lexLength];
+                let plus2 = LEX[(index+lexLength+2)%lexLength];
+                let plus3 = LEX[(index+lexLength+3)%lexLength];
+                let plus4 = LEX[(index+lexLength+4)%lexLength];
+                let plus5 = LEX[(index+lexLength+5)%lexLength];
+
+                const wheelElements = `<a href="entry.html?entry=${min5.UUID}" class="wheelElement"><span><span>${min5.headword}</span><span><span>${min5.pos}</span></span></a>
+                                        <a href="entry.html?entry=${min4.UUID}" class="wheelElement shaded"><span><span>${min4.headword}</span><span>${min4.pos}</span></span></a>
+                                        <a href="entry.html?entry=${min3.UUID}" class="wheelElement"><span><span>${min3.headword}</span><span>${min3.pos}</span></span></a>
+                                        <a href="entry.html?entry=${min2.UUID}" class="wheelElement shaded"><span><span>${min2.headword}</span><span>${min2.pos}</span></span></a>
+                                        <a href="entry.html?entry=${min1.UUID}" class="wheelElement"><span><span>${min1.headword}</span><span>${min1.pos}</span></span></a>
+                                        <a href="entry.html?entry=${cur.UUID}" class="wheelElement current"><span><span>${cur.headword}</span><span>${cur.pos}</span></span></a>
+                                        <a href="entry.html?entry=${plus1.UUID}" class="wheelElement"><span><span>${plus1.headword}</span><span>${plus1.pos}</span></span></a>
+                                        <a href="entry.html?entry=${plus2.UUID}" class="wheelElement shaded"><span><span>${plus2.headword}</span><span>${plus2.pos}</span></span></a>
+                                        <a href="entry.html?entry=${plus3.UUID}" class="wheelElement"><span><span>${plus3.headword}</span><span>${plus3.pos}</span></span></a>
+                                        <a href="entry.html?entry=${plus4.UUID}" class="wheelElement shaded"><span><span>${plus4.headword}</span><span>${plus4.pos}</span></span></a>
+                                        <a href="entry.html?entry=${plus5.UUID}" class="wheelElement"><span><span>${plus5.headword}</span><span>${plus5.pos}</span></span></a>`;
 
                 wheel.innerHTML = wheelElements;
             }
