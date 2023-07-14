@@ -49,7 +49,6 @@ function printSearch(displayTerm, first, second = []){
 function akuzSearch(term){
     //parse the searchTerm
     let parsedRootList = parseWord(term);
-    console.log("parserootlist:", parsedRootList)
     if(parsedRootList){
         
         let initialMatch = exactMatch(term);
@@ -152,6 +151,5 @@ const setParse = (token) => {
         }
     
         morphs.innerHTML = output;
-        console.log(token)
     }
 };
