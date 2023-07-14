@@ -12,6 +12,9 @@ function controller(word, head, pos, underE) {
         else if(root[root.length-1] == "n"){
             root = root.slice(0, -1) + "te";
         }
+        else if(root[root.length-2] == "ta"){
+            root = root.slice(0, -2) + "te";
+        }
         else if(root[root.length-1] == "w"){
             if(root[root.length-2] == "k"){
                 root = root.slice(0, -2) + "w";
