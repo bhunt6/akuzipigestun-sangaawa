@@ -41,10 +41,17 @@
 	display: flex;
 	flex-direction: column;
 	background: none;
+	padding: 4.5rem 2rem 1rem 1.5rem;
+}
+
+/*.titleText{
+	display: flex;
+	flex-direction: column;
+	background: none;
 	justify-content: center;
 	align-items: flex-start;
 	padding-left: 2rem;
-}
+}*/
 
 .titleText h1{
 	font-family: 'Josefin Sans', sans-serif;

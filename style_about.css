@@ -34,7 +34,9 @@
 }
 
 .title a img{
-	padding: 60px 0px 0px 0px;
+	width: 7rem;
+	height: 4.5rem;
+	padding: 3.75rem 0rem 0rem 0rem;
 	position: relative;
 }
 
