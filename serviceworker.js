@@ -70,12 +70,12 @@ const addResourcesToCache = async (resources) => {
     await cache.addAll(resources);
   };
   
-  const putInCache = async (request, response) => {
+const putInCache = async (request, response) => {
     const cache = await caches.open('v1');
     await cache.put(request, response);
-  };
+};
   
-  const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
+const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
     // First try to get the resource from the cache
     const responseFromCache = await caches.match(request);
     if (responseFromCache) {
@@ -85,7 +85,7 @@ const addResourcesToCache = async (resources) => {
     // Next try to use the preloaded response, if it's there
     const preloadResponse = await preloadResponsePromise;
     if (preloadResponse) {
-      console.info('using preload response', preloadResponse);
+      console.log('using preload response', preloadResponse);
       putInCache(request, preloadResponse.clone());
       return preloadResponse;
     }
@@ -122,6 +122,7 @@ const addResourcesToCache = async (resources) => {
   
   self.addEventListener('activate', (event) => {
     event.waitUntil(enableNavigationPreload());
+    console.log("preload")
   });
   
   self.addEventListener('install', (event) => {
