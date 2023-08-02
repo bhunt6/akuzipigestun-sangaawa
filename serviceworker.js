@@ -66,81 +66,60 @@ const assets = [
   "./wordoftheday.js"
 ]
 
-const addResourcesToCache = async (resources) => {
-    console.log("add resources to cache entry");
-    const cache = await caches.open(cacheName);
-    await cache.addAll(resources);
-  };
-  
-const putInCache = async (request, response) => {
-    const cache = await caches.open(cacheName);
-    await cache.put(request, response);
-};
-  
-const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
-    console.log("cacheFirst entry");
-    // First try to get the resource from the cache
-    const responseFromCache = await caches.match(request);
-    if (responseFromCache) {
-      return responseFromCache;
-    }
-  
-    // Next try to use the preloaded response, if it's there
-    const preloadResponse = await preloadResponsePromise;
-    if (preloadResponse) {
-      console.log('using preload response', preloadResponse);
-      putInCache(request, preloadResponse.clone());
-      return preloadResponse;
-    }
-  
-    // Next try to get the resource from the network
-    try {
-      const responseFromNetwork = await fetch(request.clone());
-      // response may be used only once
-      // we need to save clone to put one copy in cache
-      // and serve second one
-      putInCache(request, responseFromNetwork.clone());
-      return responseFromNetwork;
-    } catch (error) {
-      const fallbackResponse = await caches.match(fallbackUrl);
-      if (fallbackResponse) {
-        return fallbackResponse;
-      }
-      // when even the fallback response is not available,
-      // there is nothing we can do, but we must always
-      // return a Response object
-      return new Response('Network error happened', {
-        status: 408,
-        headers: { 'Content-Type': 'text/plain' },
-      });
-    }
-  };
-  
-  const enableNavigationPreload = async () => {
-    if (self.registration.navigationPreload) {
-      // Enable navigation preloads!
-      await self.registration.navigationPreload.enable();
-    }
-  };
-  
-  self.addEventListener('activate', (event) => {
-    event.waitUntil(enableNavigationPreload());
-    console.log("preload")
-  });
-  
-  self.addEventListener('install', (event) => {
+self.addEventListener("install", (event) => {
     event.waitUntil(
-      addResourcesToCache(assets)
+        caches
+        .open(cacheName)
+        .then((cache) => {
+            console.log(`Service Worker: Caching Files: ${cache}`);
+            cache.addAll(assets);
+        }),
     );
-    console.log("worker installed")
-  });
-  
-  self.addEventListener('fetch', (event) => {
-    event.respondWith(
-      cacheFirst({
-        request: event.request,
-        preloadResponsePromise: event.preloadResponse,
-        fallbackUrl: './uuids.txt',
-      })
+});
+
+// Call Activate Event
+self.addEventListener('activate', e => {
+    console.log('Service Worker: Activated');
+    // Clean up old caches by looping through all of the
+    // caches and deleting any old caches or caches that
+    // are not defined in the list
+    e.waitUntil(
+        caches.keys().then(cacheNames => {
+            return Promise.all(
+                cacheNames.map(
+                    cache => {
+                        if (cache !== cacheName) {
+                            console.log('Service Worker: Clearing Old Cache');
+                            return caches.delete(cache);
+                        }
+                    }
+                )
+            )
+        })
     );
-  });
+})
+
+// Call Fetch Event 
+self.addEventListener('fetch', e => {
+    console.log('Service Worker: Fetching');
+    e.respondWith(
+        fetch(e.request)
+        .then(res => {
+            // The response is a stream and in order the browser 
+            // to consume the response and in the same time the 
+            // cache consuming the response it needs to be 
+            // cloned in order to have two streams.
+            const resClone = res.clone();
+            // Open cache
+            caches.open(cacheName)
+                .then(cache => {
+                    // Add response to cache
+                    cache.put(e.request, resClone);
+                });
+            return res;
+        }).catch(
+            err => caches.match(e.request)
+            .then(res => res)
+        )
+    );
+});
