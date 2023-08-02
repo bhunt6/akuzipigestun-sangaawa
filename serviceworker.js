@@ -128,6 +128,7 @@ const addResourcesToCache = async (resources) => {
     event.waitUntil(
       addResourcesToCache(assets)
     );
+    console.log("worker installed")
   });
   
   self.addEventListener('fetch', (event) => {
