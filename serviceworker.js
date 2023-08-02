@@ -1,3 +1,4 @@
+const cacheName = "v1"
 const assets = [
   "./",
   "./about.html",
@@ -66,16 +67,18 @@ const assets = [
 ]
 
 const addResourcesToCache = async (resources) => {
-    const cache = await caches.open('v1');
+    console.log("add resources to cache entry");
+    const cache = await caches.open(cacheName);
     await cache.addAll(resources);
   };
   
 const putInCache = async (request, response) => {
-    const cache = await caches.open('v1');
+    const cache = await caches.open(cacheName);
     await cache.put(request, response);
 };
   
 const cacheFirst = async ({ request, preloadResponsePromise, fallbackUrl }) => {
+    console.log("cacheFirst entry");
     // First try to get the resource from the cache
     const responseFromCache = await caches.match(request);
     if (responseFromCache) {
