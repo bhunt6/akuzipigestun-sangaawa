@@ -106,7 +106,7 @@
                 navigator.serviceWorker
                     // The register function takes as argument
                     // the file path to the worker's file
-                    .register('/serviceworker.js')
+                    .register('./serviceworker.js')
                     // Gives us registration object
                     .then(reg => console.log('Service Worker Registered'))
                     .catch(swErr => console.log(
