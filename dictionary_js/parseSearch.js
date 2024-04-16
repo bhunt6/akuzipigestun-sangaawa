@@ -1,5 +1,6 @@
 function parseWord(term) {
-    const userInput = cyrillic_to_latin(term);
+    //const userInput = cyrillic_to_latin(term);
+    const userInput = term;
 
     const result = foma_apply_down(myNet, userInput);
     let token = new Array;
