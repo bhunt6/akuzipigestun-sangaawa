@@ -65,6 +65,7 @@ h3{
     clip-path: inset(50%); /*modern browsers, clip-path works inwards from each corner*/
     white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
 }
+
 .border{
 	grid-area: border;
 	border-bottom: 2px solid #999999;
