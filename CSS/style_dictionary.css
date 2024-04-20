@@ -44,14 +44,18 @@
 	padding: 4.5rem 2rem 1rem 1.5rem;
 }
 
-/*.titleText{
-	display: flex;
-	flex-direction: column;
-	background: none;
-	justify-content: center;
-	align-items: flex-start;
-	padding-left: 2rem;
-}*/
+.titleText h1{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 2rem;
+}
+
+.titleText h2{
+	font-size: 1.1rem;
+}
+
+h3{
+	font-size: 1.1rem;
+}
 
 .visually-hidden { 
     border: 0;
@@ -65,19 +69,6 @@
     clip: rect(1px, 1px, 1px, 1px); /*maybe deprecated but we need to support legacy browsers */
     clip-path: inset(50%); /*modern browsers, clip-path works inwards from each corner*/
     white-space: nowrap; /* added line to stop words getting smushed together (as they go onto seperate lines and some screen readers do not understand line feeds as a space */
-}
-
-.titleText h1{
-	font-family: 'Josefin Sans', sans-serif;
-	font-size: 2rem;
-}
-
-.titleText h2{
-	font-size: 1.1rem;
-}
-
-h3{
-	font-size: 1.1rem;
 }
 
 .border{
