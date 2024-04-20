@@ -266,23 +266,23 @@ input[type='radio']:checked {
 }
 
 .ChukotkanTag{
-	background: #58641D
-}
-
-.commonTag{
-	background: #C0D461
-}
-
-.demonstrativeTag{
-	background: #0E7C7B
-}
-
-.nounTag{
 	background: #4c4f53
 }
 
+.commonTag{
+	background: #4c4f53
+}
+
+.demonstrativeTag{
+	background: #4c4f53 
+}
+
+.nounTag{
+	background: #0E7C7B
+}
+
 .verbTag{
-	background: #EEC170
+	background: #4B1D3F
 }
 
 .ProperNounTag{
@@ -294,15 +294,15 @@ input[type='radio']:checked {
 }
 
 .emotionalTag, .posturalTag, .dimensionalTag{
-	background: #F06449
+	background: #4c4f53
 }
 
 .particleTag{
-	background: #4B1D3F
+	background: #4c4f53
 }
 
 .exclamatoryTag, .conjunctiveTag, .interjectionalTag, .adverbialTag{
-	background: #9F86C0
+	background: #4c4f53
 }
 
 .entryHead{
