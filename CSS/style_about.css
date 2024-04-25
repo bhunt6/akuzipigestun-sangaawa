@@ -263,6 +263,10 @@ input[type='radio']:checked {
 	background: #4B1D3F
 }
 
+.postbaseTag{
+	background: #4c4f53
+}
+
 .ProperNounTag{
 	background: #5d737e
 }
