@@ -3,7 +3,7 @@ const buttonSearch = (e) => {
     var searchString = searchInput.value.toLowerCase();
     const filteredLexicon = LEX.filter((word) =>
 
-        word.search_word.toLowerCase().includes(searchString) ||
+        word.search_word.join(", ").toLowerCase().includes(searchString) ||
         word.gloss.some(gloss => gloss.includes(searchString))
     );
 
@@ -12,10 +12,10 @@ const buttonSearch = (e) => {
 
 function exactMatch(term){
     let searchString = term;
-
+    let temp = new Array;
     //Exact match
     let exactWord = LEX.filter((word) =>
-    word.search_word.toLowerCase() == searchString
+    word.search_word.join(", ").toLowerCase() == searchString
 );
     return exactWord;
 }
@@ -25,11 +25,11 @@ function containsMatch(term){
 
     //contains word
     let containsWord = LEX.filter((word) =>
-    word.search_word.toLowerCase().includes(searchString)
+    word.search_word.join(", ").toLowerCase().includes(searchString)
     );
 
     let startsWord = LEX.filter((word) =>
-    word.search_word.toLowerCase().startsWith(searchString)
+    word.search_word.join(", ").toLowerCase().startsWith(searchString)
     );
 
     let containsResults = startsWord.concat(containsWord.filter((item) => startsWord.indexOf(item) < 0));
@@ -59,7 +59,7 @@ function akuzSearch(term){
         let parsedRoot = parsedRootList[0];
         var postBases = parsedRootList.slice(1,parsedRootList.length);
         setParse(parsedRootList);
-
+        console.log(postBases);
         //exact match parsed root
         var exactParsedRoot = exactMatch(parsedRoot);
         var containsParsedRoot = containsMatch(parsedRoot);
@@ -67,8 +67,8 @@ function akuzSearch(term){
 
         //exact match postbases
         for(let i=0; i < postBases.length-1; i++){
-            var pb = LEX.filter((word) =>
-                word.search_word.toLowerCase() == postBases[i]
+            var pb = pbLEX.filter((word) =>
+                word.search_word.join(", ").toLowerCase().includes(postBases[i])
             );
             if(pb && pb.length){
                 results.innerHTML += `<span class="results_section">Results for <i>${postBases[i]}</i>:</span>`

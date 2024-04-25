@@ -11,7 +11,7 @@ const displayWords = (words) => {
                             <div class="tagCont">${word.tags}${word.pos}</div>
                         </span>
                         <span class="entryCyr">(${word.cyrillic})</span>
-                        <span class="entryipa">/${word.ipa}/</span>
+                        <span class="entryipa">/${word.ipa.join("/, /")}/</span>
                     </div>
                     <div class="entryBottom">
                         <span class="entryDef">${word.gloss.join("; ")}</span>
