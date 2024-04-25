@@ -117,7 +117,8 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="dictionary_js/bases_21323.js"></script>
+    <script type="text/javascript" src="dictionary_js/bases42424.js"></script>
+    <script type="text/javascript" src="dictionary_js/postbases42424.js"></script>
     <script type="text/javascript" src="dictionary_js/autocomplete.js"></script>
     <script type="text/javascript" src="dictionary_js/inflection_tables.js"></script>
     <script type="text/javascript" src="dictionary_js/inflections.js"></script>
@@ -165,17 +166,24 @@
         var captured = /entry=([^&]+)/.exec(window.location.href)[1]; // Value is in [1]
         var entryID = captured ? captured : 'fbf759704d42e303bc1a4f596f5d9ce2a220d0e9';
 
-        const findEntry = LEX.filter((word) =>
-        
-            word.UUID === entryID
-        );
-        
-        const currentEntry = findEntry[0];
-        console.log(currentEntry.headword);
+        let currentEntry, currentIndex
 
-        var currentIndex = LEX.indexOf(currentEntry);
+        function entryFinder(){
+            let findEntry = LEX.filter((word) => word.UUID === entryID);
+            if(typeof findEntry !== 'undefined'){
+                findEntry = pbLEX.filter((word) => word.UUID === entryID);
+                currentEntry = findEntry[0];
+                currentIndex = pbLEX.indexOf(currentEntry);
+                console.log(currentIndex);
+                return;
+            }
+                currentEntry = findEntry[0];
+                currentIndex = LEX.indexOf(currentEntry);
+        }
+
+        entryFinder()
+        console.log(currentIndex);
         var incrIndex = currentIndex;
-
         //Entry formatting
         const output = document.getElementById("entry");
         var htmlString = `<div class="entryHeaderLine">
@@ -191,8 +199,8 @@
                             <span class="entryInfo">Cyrillic: 
                                 <span class="entryCyr">(${currentEntry.cyrillic})</span>
                             </span>
-                            <span class="entryInfo">Pronunciation: 
-                                <span class="entryIpa">/${currentEntry.ipa}/</span>
+                            <span class="entryInfo">Pronunciation:
+                                <span class="entryIpa">/${currentEntry.ipa.join("/, /")}/</span>
                             </span>
                             <span class="entryInfo">Etymology: 
                                 <span class="etymology">${currentEntry.etymology}</span>
@@ -264,10 +272,10 @@
             
             //inflectional tables
             if(currentEntry.headword.includes("<sup>e</sup>")){
-                controller(currentEntry.search_word, currentEntry.headword, currentEntry.source_pos, true);
+                controller(currentEntry.search_word[0], currentEntry.headword, currentEntry.source_pos, true);
             }
             else{
-                controller(currentEntry.search_word, currentEntry.headword, currentEntry.source_pos, false);
+                controller(currentEntry.search_word[0], currentEntry.headword, currentEntry.source_pos, false);
             }
             
             //Event listeners for collapsibles
