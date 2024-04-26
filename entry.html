@@ -166,23 +166,26 @@
         var captured = /entry=([^&]+)/.exec(window.location.href)[1]; // Value is in [1]
         var entryID = captured ? captured : 'fbf759704d42e303bc1a4f596f5d9ce2a220d0e9';
 
-        let currentEntry, currentIndex
+        var currentEntry, currentIndex
 
         function entryFinder(){
             let findEntry = LEX.filter((word) => word.UUID === entryID);
-            if(typeof findEntry !== 'undefined'){
+            console.log(findEntry)
+            if(!findEntry){
                 findEntry = pbLEX.filter((word) => word.UUID === entryID);
                 currentEntry = findEntry[0];
                 currentIndex = pbLEX.indexOf(currentEntry);
                 console.log(currentIndex);
                 return;
             }
-                currentEntry = findEntry[0];
-                currentIndex = LEX.indexOf(currentEntry);
+            currentEntry = findEntry[0];
+            console.log(currentEntry);
+            currentIndex = LEX.indexOf(currentEntry);
+            console.log(currentIndex);
         }
 
         entryFinder()
-        console.log(currentIndex);
+        
         var incrIndex = currentIndex;
         //Entry formatting
         const output = document.getElementById("entry");
