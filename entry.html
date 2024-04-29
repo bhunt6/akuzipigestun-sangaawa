@@ -173,7 +173,7 @@
         function entryFinder(){
             let findEntry = LEX.filter((word) => word.UUID === entryID);
             console.log(findEntry)
-            if(!findEntry){
+            if(!findEntry.length){
                 findEntry = pbLEX.filter((word) => word.UUID === entryID);
                 currentEntry = findEntry[0];
                 currentIndex = pbLEX.indexOf(currentEntry);
