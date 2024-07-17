@@ -153,7 +153,6 @@
             let j=0;
             headwords[i] = pbLEX[j].headword;
             j++;
-            console.log(headwords[i]);
         }
 
         for(let j=0; j<LEX.length; j++){
@@ -219,7 +218,6 @@
             let currentEntry = findEntry(currentID);
 
             let wod_cont = document.getElementById("wod_container");
-            console.log(wod_cont);
             wod_cont.innerHTML += `<a href="entry.html?entry=${currentEntry.UUID}" class="result">
                                     <div class="entryContent">
                                         <div class="entryTop">
