@@ -151,7 +151,7 @@
 
         for(let i=LEX.length; i<(LEX.length+pbLEX.length); i++){
             let j=0;
-            headwords[i] = pbLEX[i].headword;
+            headwords[i] = pbLEX[j].headword;
             j++;
             console.log(headwords[i]);
         }
@@ -160,8 +160,10 @@
             glosses[j] = LEX[j].gloss.join("; ")
         }
 
-        for(let j=LEX.length; j<(LEX.length+pbLEX.length); j++){
-            glosses[j] = pbLEX[j].gloss.join("; ")
+        for(let i=LEX.length; i<(LEX.length+pbLEX.length); i++){
+            let j=0;
+            glosses[i] = pbLEX[j].gloss.join("; ")
+            j++
         }
 
         searchInput.addEventListener("focus", function(e){
@@ -217,6 +219,7 @@
             let currentEntry = findEntry(currentID);
 
             let wod_cont = document.getElementById("wod_container");
+            console.log(wod_cont);
             wod_cont.innerHTML += `<a href="entry.html?entry=${currentEntry.UUID}" class="result">
                                     <div class="entryContent">
                                         <div class="entryTop">
