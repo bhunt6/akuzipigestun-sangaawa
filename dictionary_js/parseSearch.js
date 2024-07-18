@@ -3,6 +3,7 @@ function parseWord(term) {
     const userInput = term;
 
     const result = foma_apply_down(myNet, userInput);
+    console.log(result);
     let token = new Array;
     //console.log("result: ", result)
     if (result === undefined || result.length == 0) {

@@ -49,6 +49,7 @@ function printSearch(displayTerm, first, second = []){
 function akuzSearch(term){
     //parse the searchTerm
     let parsedRootList = parseWord(term);
+    console.log(parsedRootList);
     if(term[0] == "-"){
         let pb = pbLEX.filter((word) =>
             word.search_word.join(", ").toLowerCase().includes(term)
@@ -68,7 +69,6 @@ function akuzSearch(term){
         let parsedRoot = parsedRootList[0];
         var postBases = parsedRootList.slice(1,parsedRootList.length);
         setParse(parsedRootList);
-        console.log(postBases);
         //exact match parsed root
         var exactParsedRoot = exactMatch(parsedRoot);
         var containsParsedRoot = containsMatch(parsedRoot);
@@ -76,8 +76,9 @@ function akuzSearch(term){
 
         //exact match postbases
         for(let i=0; i < postBases.length-1; i++){
+
             let pb = pbLEX.filter((word) =>
-                word.search_word.join(", ").toLowerCase().includes(postBases[i])
+                word.search_word.join(", ").toLowerCase().includes("-" + postBases[i].replace(/[\@\~\–\-\+\?\±\%\:]/g, "").replace(/\<su[bp]\>[\d*ef]\<\/su[bp]\>/g, "") + "-")
             );
             if(pb && pb.length){
                 results.innerHTML += `<span class="results_section">Results for <i>${postBases[i]}</i>:</span>`
