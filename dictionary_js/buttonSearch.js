@@ -49,6 +49,15 @@ function printSearch(displayTerm, first, second = []){
 function akuzSearch(term){
     //parse the searchTerm
     let parsedRootList = parseWord(term);
+    if(term[0] == "-"){
+        let pb = pbLEX.filter((word) =>
+            word.search_word.join(", ").toLowerCase().includes(term)
+        );
+        if(pb && pb.length){
+            results.innerHTML += `<span class="results_section">Results for <i>${term}</i>:</span>`
+        }
+        displayWords(pb);
+    }
     if(parsedRootList){
         
         let initialMatch = exactMatch(term);
@@ -67,7 +76,7 @@ function akuzSearch(term){
 
         //exact match postbases
         for(let i=0; i < postBases.length-1; i++){
-            var pb = pbLEX.filter((word) =>
+            let pb = pbLEX.filter((word) =>
                 word.search_word.join(", ").toLowerCase().includes(postBases[i])
             );
             if(pb && pb.length){

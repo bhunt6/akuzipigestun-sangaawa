@@ -149,20 +149,20 @@
             headwords[i] = LEX[i].headword;
         }
 
-        for(let i=LEX.length; i<(LEX.length+pbLEX.length); i++){
-            let j=0;
-            headwords[i] = pbLEX[j].headword;
+        for(let j=0, i=LEX.length; i<(LEX.length+pbLEX.length); i++){
+            
+            headwords[i] = "-" + pbLEX[j].headword.replace(/[\@\~\–\-\+\?\±\%\:]/g, "").replace(/\<su[bp]\>[\d*ef]\<\/su[bp]\>/g, "") + "-";
             j++;
+            console.log(headwords)
         }
 
         for(let j=0; j<LEX.length; j++){
             glosses[j] = LEX[j].gloss.join("; ")
         }
 
-        for(let i=LEX.length; i<(LEX.length+pbLEX.length); i++){
-            let j=0;
+        for(let j=0, i=LEX.length; i<(LEX.length+pbLEX.length); i++){
             glosses[i] = pbLEX[j].gloss.join("; ")
-            j++
+            j++;
         }
 
         searchInput.addEventListener("focus", function(e){
