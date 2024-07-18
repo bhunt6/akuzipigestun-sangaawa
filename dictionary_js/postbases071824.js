@@ -1,4 +1,4 @@
-
+var pbLEX = [
 {"UUID":"6e8c8fdcb895f8dbe661351768d530e1ec965d31",
 "search_word":['-aatagh-'],
 "headword":"~+aatagh-",
@@ -13066,3 +13066,4 @@
 "alphaA":"",
 "alphaB":"yuq"
 },
+];
