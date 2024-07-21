@@ -80,4 +80,4 @@ const catList = (categories) => {
 
 };
 
-catList(categories);
+//catList(categories);
