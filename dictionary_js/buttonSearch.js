@@ -12,29 +12,33 @@ const buttonSearch = (e) => {
 
 function exactMatch(term){
     let searchString = term;
-    let temp = new Array;
+    let result = new Array;
     //Exact match
     let exactWord = LEX.filter((word) =>
-    word.search_word.join(", ").toLowerCase() == searchString
-);
-    return exactWord;
+        word.search_word.join(", ").toLowerCase() == searchString
+    );
+    let exactPb = pbLEX.filter((word) =>
+        word.search_word.join(", ").toLowerCase() == searchString
+    );
+    result = exactWord.concat(exactPb);
+    return result
 }
 
 function containsMatch(term){
     let searchString = term;
-
+    let results = new Array;
     //contains word
     let containsWord = LEX.filter((word) =>
-    word.search_word.join(", ").toLowerCase().includes(searchString)
+        word.search_word.join(", ").toLowerCase().startsWith(searchString) || word.search_word.join(", ").toLowerCase().includes(searchString)
     );
 
-    let startsWord = LEX.filter((word) =>
-    word.search_word.join(", ").toLowerCase().startsWith(searchString)
+    let containsPb = pbLEX.filter((word) =>
+        word.search_word.join(", ").toLowerCase().startsWith(searchString) || word.search_word.join(", ").toLowerCase().includes(searchString)
     );
 
-    let containsResults = startsWord.concat(containsWord.filter((item) => startsWord.indexOf(item) < 0));
+    results = containsWord.concat(containsPb);
 
-    return containsResults;
+    return results;
 }
 
 function printSearch(displayTerm, first, second = []){
@@ -49,7 +53,6 @@ function printSearch(displayTerm, first, second = []){
 function akuzSearch(term){
     //parse the searchTerm
     let parsedRootList = parseWord(term);
-    console.log(parsedRootList);
     if(term[0] == "-"){
         let pb = pbLEX.filter((word) =>
             word.search_word.join(", ").toLowerCase().includes(term.toLowerCase())
@@ -60,7 +63,6 @@ function akuzSearch(term){
         displayWords(pb);
     }
     if(parsedRootList){
-        
         let initialMatch = exactMatch(term.toLowerCase());
         if(initialMatch.length){
             printSearch(term, initialMatch);
