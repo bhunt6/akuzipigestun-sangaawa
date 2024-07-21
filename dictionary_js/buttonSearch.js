@@ -52,7 +52,7 @@ function akuzSearch(term){
     console.log(parsedRootList);
     if(term[0] == "-"){
         let pb = pbLEX.filter((word) =>
-            word.search_word.join(", ").toLowerCase().includes(term)
+            word.search_word.join(", ").toLowerCase().includes(term.toLowercase())
         );
         if(pb && pb.length){
             results.innerHTML += `<span class="results_section">Results for <i>${term}</i>:</span>`
@@ -61,7 +61,7 @@ function akuzSearch(term){
     }
     if(parsedRootList){
         
-        let initialMatch = exactMatch(term);
+        let initialMatch = exactMatch(term.toLowercase());
         if(initialMatch.length){
             printSearch(term, initialMatch);
         }
@@ -70,8 +70,8 @@ function akuzSearch(term){
         var postBases = parsedRootList.slice(1,parsedRootList.length);
         setParse(parsedRootList);
         //exact match parsed root
-        var exactParsedRoot = exactMatch(parsedRoot);
-        var containsParsedRoot = containsMatch(parsedRoot);
+        var exactParsedRoot = exactMatch(parsedRoot.toLowercase());
+        var containsParsedRoot = containsMatch(parsedRoot.toLowercase());
         printSearch(parsedRoot, exactParsedRoot, containsParsedRoot);
 
         //exact match postbases
@@ -88,8 +88,8 @@ function akuzSearch(term){
     }
     //exact and contains searches if word could not be parsed
     else{
-        var exactWord = exactMatch(term);
-        var containsWord = containsMatch(term);
+        var exactWord = exactMatch(term.toLowercase());
+        var containsWord = containsMatch(term.toLowercase());
         printSearch(term, exactWord, containsWord);
     }
 };
@@ -100,27 +100,27 @@ function englishSearch(term) {
     //search for exact match in gloss first
     let filteredGlossExact = LEX.filter((word) =>
         
-        word.gloss.some(gloss => gloss == term) ||
-        word.gloss.join(" ").includes(regTerm)
+        word.gloss.some(gloss => gloss.toLowercase() == term.toLowercase()) ||
+        word.gloss.join(" ").toLowercase().includes(regTerm.toLowercase())
     );
 
     //search for contained in gloss
     let filteredGloss = LEX.filter((word) =>
 
-        word.gloss.some(gloss => gloss.includes(term)) ||
-        word.gloss.join(" ").includes(term)
+        word.gloss.some(gloss => gloss.toLowercase().includes(term.toLowercase())) ||
+        word.gloss.join(" ").toLowercase().includes(term.toLowercase())
     );
 
     //search for match in examples
     let filteredExamples = LEX.filter((word) =>
 
-        word.examples.some(example => example.includes(term))
+        word.examples.some(example => example.toLowercase().includes(term.toLowercase()))
     );
 
     //search for match in notes
     let filteredNotes = LEX.filter((word) =>
 
-        word.notes.some(note => note.includes(term))
+        word.notes.some(note => note.toLowercase().includes(term.toLowercase()))
     );
 
     //join all results together
