@@ -1,6 +1,6 @@
 var pbLEX = [
 {"UUID":"6e8c8fdcb895f8dbe661351768d530e1ec965d31",
-"search_word":['-aatagh-', 'aatagh'],
+"search_word":['-aatagh-', '~+aatagh-', 'aatagh'],
 "headword":"~+aatagh-",
 "root":['aatagh'],
 "cyrillic":"-āтаӷ-",
@@ -22,7 +22,7 @@ var pbLEX = [
 },
 
 {"UUID":"ef6809055f6acf821236801bf4c4ae8d4154ef23",
-"search_word":['-aate-', 'aate'],
+"search_word":['+aate-', '-aate-', 'aate'],
 "headword":"+aate-",
 "root":['aate'],
 "cyrillic":"-āты-",
@@ -44,7 +44,7 @@ var pbLEX = [
 },
 
 {"UUID":"a4c99be1f2bfa70c85c62fe6aa51b5e2206118fd",
-"search_word":['-a-', 'a'],
+"search_word":['-a-', 'a', '+a<sup>e</sup>'],
 "headword":"+a<sup>e</sup>",
 "root":['a'],
 "cyrillic":"-аы",
@@ -66,7 +66,7 @@ var pbLEX = [
 },
 
 {"UUID":"f94271ff6761d004b94ab4b7c6268b678c99a4f6",
-"search_word":['agh', '-agh-'],
+"search_word":['agh', '+agh-', '-agh-'],
 "headword":"+agh-",
 "root":['agh'],
 "cyrillic":"-аӷ-",
@@ -88,7 +88,7 @@ var pbLEX = [
 },
 
 {"UUID":"e05e154e8bfd0553b2824cb23e7b7c1e9ab0d32c",
-"search_word":['-aghagh-', 'aghagh'],
+"search_word":['aghagh', '-aghagh-'],
 "headword":"-aghagh-",
 "root":['aghagh'],
 "cyrillic":"",
@@ -110,7 +110,7 @@ var pbLEX = [
 },
 
 {"UUID":"1a963ca86c395746a4ea9c9a5f4e927129cfefd9",
-"search_word":['aghaghte', '-aghaghte-'],
+"search_word":['aghaghte', '-aghaghte-', '+aghaghte-'],
 "headword":"+aghaghte-",
 "root":['aghaghte'],
 "cyrillic":"-аӷаҳты-",
@@ -132,7 +132,7 @@ var pbLEX = [
 },
 
 {"UUID":"89f6cf78c98739ddd8d44a2cd08982bb2804b6c3",
-"search_word":['aghagh*', '-aghaq-'],
+"search_word":['-aghaq-', ':aghaq*', 'aghagh*'],
 "headword":":aghaq*",
 "root":['aghagh*'],
 "cyrillic":"-аӷақ",
@@ -154,7 +154,7 @@ var pbLEX = [
 },
 
 {"UUID":"75679daca96969cddbc92ec98963d600ebb472db",
-"search_word":['-aghesnagh-', 'aghesnagh'],
+"search_word":['aghesnagh', '-aghesnagh-'],
 "headword":"-aghesnagh-",
 "root":['aghesnagh'],
 "cyrillic":"",
@@ -176,7 +176,7 @@ var pbLEX = [
 },
 
 {"UUID":"10c750073da4dc8b66b398abe755e36805aaf1d2",
-"search_word":['aghtagh', '-aghtagh-'],
+"search_word":['aghtagh', '-aghtagh-', '~+aghtagh-'],
 "headword":"~+aghtagh-",
 "root":['aghtagh'],
 "cyrillic":"-аҳтаӷ-",
@@ -198,7 +198,7 @@ var pbLEX = [
 },
 
 {"UUID":"9168097260f9ef5c4915bde2ff118262f5210f48",
-"search_word":['aghte', '-aghte-'],
+"search_word":['~+aghte-', '-aghte-', 'aghte'],
 "headword":"~+aghte-",
 "root":['aghte'],
 "cyrillic":"-аҳты-",
@@ -220,7 +220,7 @@ var pbLEX = [
 },
 
 {"UUID":"e123ee8d5164a5c5b50c64d47159c900a54600eb",
-"search_word":['-aghtugh-', 'aghtugh'],
+"search_word":['-aghtugh-', 'aghtugh', '~+aghtugh-'],
 "headword":"~+aghtugh-",
 "root":['aghtugh'],
 "cyrillic":"-аҳтуӷ-",
@@ -242,7 +242,7 @@ var pbLEX = [
 },
 
 {"UUID":"4094f17d7b4ec7ad3bc1d4f2241c7a206d7a3133",
-"search_word":['agh', '-aq-'],
+"search_word":['agh', '?aq', '-aq-'],
 "headword":"?aq",
 "root":['agh'],
 "cyrillic":"-ақ",
@@ -286,7 +286,7 @@ var pbLEX = [
 },
 
 {"UUID":"be4d260029509303d9c281205fbb0ecc16311f34",
-"search_word":['ataghagh', '-aghagh-', '-ataghagh-', 'aghagh'],
+"search_word":['aghagh', 'ataghagh', '-aghagh-', '~+(at)aghagh-', '-ataghagh-'],
 "headword":"~+(at)aghagh-",
 "root":['aghagh', 'ataghagh'],
 "cyrillic":"-(ат)аӷаӷ-",
@@ -308,7 +308,7 @@ var pbLEX = [
 },
 
 {"UUID":"c277e1158a237570fbe6e942bd03ee83d0e10dd6",
-"search_word":['ate', '-ate-'],
+"search_word":['-ate-', 'ate', '?ate-'],
 "headword":"?ate-",
 "root":['ate'],
 "cyrillic":"-аты-",
@@ -330,11 +330,11 @@ var pbLEX = [
 },
 
 {"UUID":"dfe75b4df06f759fe64c28b34f8cc9f4047a8b8d",
-"search_word":['-nkut-', 'nkug', 'enkug', 'nkut', 'enkut', '-enkut-', '-enkuk-', '-nkuk-'],
+"search_word":['-nkut-', 'nkug', '-enkut-', '-nkuk-', 'nkut', '%(e)nkuk, %(e)nkut', 'enkug', 'enkut', '-enkuk-'],
 "headword":"%(e)nkuk, %(e)nkut",
-"root":['nkut', 'nkug', 'enkut', 'enkug'],
+"root":['enkut', 'nkut', 'nkug', 'enkug'],
 "cyrillic":"-(ы)нкук - -(ы)нкут",
-"ipa":['nkut', 'nkuk', 'ənkut', 'ənkuk'],
+"ipa":['ənkut', 'nkut', 'nkuk', 'ənkuk'],
 "jacobson":"-øsπyrer - -øsπyren",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -352,7 +352,7 @@ var pbLEX = [
 },
 
 {"UUID":"23024046333d2eaa9b997a6946dac02eb6017f91",
-"search_word":['laghate', '-laghate-'],
+"search_word":['laghate', '-laghate-', '~<sub>f</sub>–laghate-'],
 "headword":"~<sub>f</sub>–laghate-",
 "root":['laghate'],
 "cyrillic":"-ляӷаты-",
@@ -374,7 +374,7 @@ var pbLEX = [
 },
 
 {"UUID":"8a5c807ae6d513d697dbfa2e4c02c66550cfcfa3",
-"search_word":['nasiigh', '-nasiigh-'],
+"search_word":['@~<sub>f</sub>–nasiigh-', 'nasiigh', '-nasiigh-'],
 "headword":"@~<sub>f</sub>–nasiigh-",
 "root":['nasiigh'],
 "cyrillic":"-насӣӷ-",
@@ -396,11 +396,11 @@ var pbLEX = [
 },
 
 {"UUID":"44b92e8f8ccb02157a57d59358ad0525ea1f07e4",
-"search_word":['-neghllugte-', 'neghllug', 'neghllugte', '-neghllug-'],
+"search_word":['@~<sub>f</sub>–neghllug-, @~<sub>f</sub>–neghllugte-', '-neghllugte-', '-neghllug-', 'neghllugte', 'neghllug'],
 "headword":"@~<sub>f</sub>–neghllug-, @~<sub>f</sub>–neghllugte-",
-"root":['neghllug', 'neghllugte'],
+"root":['neghllugte', 'neghllug'],
 "cyrillic":"-ныҳльюг-, -ныҳльюхты-",
-"ipa":['nəχɬuɣ', 'nəχɬuxtə'],
+"ipa":['nəχɬuxtə', 'nəχɬuɣ'],
 "jacobson":"-ys5k]/u-. -ys5k]/[ns-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -418,7 +418,7 @@ var pbLEX = [
 },
 
 {"UUID":"63c4a9f92a0d132598c04cee012643098794f874",
-"search_word":['neghllug', '-neghlluk-'],
+"search_word":['-neghlluk-', '@~<sub>f</sub>–neghlluk', 'neghllug'],
 "headword":"@~<sub>f</sub>–neghlluk",
 "root":['neghllug'],
 "cyrillic":"-ныҳльюк",
@@ -440,7 +440,7 @@ var pbLEX = [
 },
 
 {"UUID":"eacbaccaa9fd36791faa8f7f9f29a607518ff1cd",
-"search_word":['neghsigh', '-neghsigh-'],
+"search_word":['-neghsigh-', '@~<sub>f</sub>–neghsigh-', 'neghsigh'],
 "headword":"@~<sub>f</sub>–neghsigh-",
 "root":['neghsigh'],
 "cyrillic":"-ныҳсиӷ-",
@@ -462,7 +462,7 @@ var pbLEX = [
 },
 
 {"UUID":"b67e8a18132b73abf42c4efff5590ffd3b289fe3",
-"search_word":['neghtu', '-neghtu-'],
+"search_word":['neghtu', '-neghtu-', '@~<sub>f</sub>–neghtu-'],
 "headword":"@~<sub>f</sub>–neghtu-",
 "root":['neghtu'],
 "cyrillic":"-ныҳту-",
@@ -484,7 +484,7 @@ var pbLEX = [
 },
 
 {"UUID":"050ba55f7a5cadb20e86248825ddbb8d0be34c5a",
-"search_word":['-neq-', 'negh'],
+"search_word":['-neq-', '@~<sub>f</sub>–neq<sup>1</sup>', 'negh'],
 "headword":"@~<sub>f</sub>–neq<sup>1</sup>",
 "root":['negh'],
 "cyrillic":"-нық1",
@@ -506,7 +506,7 @@ var pbLEX = [
 },
 
 {"UUID":"9860797c961a3a20d4999623f3d69a46e31246b4",
-"search_word":['ragkiigh', '-ragkiigh-'],
+"search_word":['@~<sub>f</sub>–ragkiigh-', '-ragkiigh-', 'ragkiigh'],
 "headword":"@~<sub>f</sub>–ragkiigh-",
 "root":['ragkiigh'],
 "cyrillic":"-рахкӣӷ-",
@@ -528,7 +528,7 @@ var pbLEX = [
 },
 
 {"UUID":"af3bb1efa158cc114017b88ffd7b674ccd5f3b52",
-"search_word":['ragkiighute', '-ragkiighute-'],
+"search_word":['-ragkiighute-', 'ragkiighute', '@~<sub>f</sub>–ragkiighute-'],
 "headword":"@~<sub>f</sub>–ragkiighute-",
 "root":['ragkiighute'],
 "cyrillic":"-рахкӣӷуты-",
@@ -550,7 +550,7 @@ var pbLEX = [
 },
 
 {"UUID":"c3e7f273a1d8408665527bf9b00a5ab8cab52615",
-"search_word":['rakegtagh', '-rakegtaq-'],
+"search_word":['-rakegtaq-', 'rakegtagh', '@~<sub>f</sub>–rakegtaq'],
 "headword":"@~<sub>f</sub>–rakegtaq",
 "root":['rakegtagh'],
 "cyrillic":"-ракыхтақ",
@@ -572,7 +572,7 @@ var pbLEX = [
 },
 
 {"UUID":"8e2c38df7a275823ec6072827dade257cb8db87c",
-"search_word":['rakegte', '-rakegte-'],
+"search_word":['@~<sub>f</sub>–rakegte-', '-rakegte-', 'rakegte'],
 "headword":"@~<sub>f</sub>–rakegte-",
 "root":['rakegte'],
 "cyrillic":"-ракыхты-",
@@ -594,7 +594,7 @@ var pbLEX = [
 },
 
 {"UUID":"60cd495e42d1183320959aab359c20a631c4cba2",
-"search_word":['-rakguugh-', 'rakguugh'],
+"search_word":['rakguugh', '-rakguugh-', '@~<sub>f</sub>–rakguugh-'],
 "headword":"@~<sub>f</sub>–rakguugh-",
 "root":['rakguugh'],
 "cyrillic":"-ракӯӷ-",
@@ -616,7 +616,7 @@ var pbLEX = [
 },
 
 {"UUID":"f2e6f7441d6a8743f172d2abdaeb4623c902e7ea",
-"search_word":['-vag-', 'vag'],
+"search_word":['vag', '~<sub>f</sub>–vag-', '-vag-'],
 "headword":"~<sub>f</sub>–vag-",
 "root":['vag'],
 "cyrillic":"-ваг-",
@@ -638,7 +638,7 @@ var pbLEX = [
 },
 
 {"UUID":"a884bdaedaca66249f32dee7a62b77cc47b4fd1e",
-"search_word":['yaag', '-yaag-'],
+"search_word":['yaag', '@~<sub>f</sub>–yaag-', '-yaag-'],
 "headword":"@~<sub>f</sub>–yaag-",
 "root":['yaag'],
 "cyrillic":"-я̄г-",
@@ -660,7 +660,7 @@ var pbLEX = [
 },
 
 {"UUID":"73335220c037a82e89bcb2c6a14ce18f1b0665bf",
-"search_word":['yiilliqe', '-yiilliqe-'],
+"search_word":['@~<sub>f</sub>–yiilliqe-', '-yiilliqe-', 'yiilliqe'],
 "headword":"@~<sub>f</sub>–yiilliqe-",
 "root":['yiilliqe'],
 "cyrillic":"-ӥӣльиқы-",
@@ -682,7 +682,7 @@ var pbLEX = [
 },
 
 {"UUID":"edbd6e351117bb58597f5d5afb9cfe39cb787c39",
-"search_word":['yiite', '-yiite-'],
+"search_word":['-yiite-', 'yiite', '@~<sub>f</sub>–yiite-'],
 "headword":"@~<sub>f</sub>–yiite-",
 "root":['yiite'],
 "cyrillic":"-ӥӣты-",
@@ -704,7 +704,7 @@ var pbLEX = [
 },
 
 {"UUID":"cfc2430b2fd9efcf6479d6c051cf133c8aadeeb2",
-"search_word":['yu', '-yu-'],
+"search_word":['yu', '-yu-', '@~<sub>f</sub>–yu-<sup>2</sup>'],
 "headword":"@~<sub>f</sub>–yu-<sup>2</sup>",
 "root":['yu'],
 "cyrillic":"-ю-2",
@@ -726,7 +726,7 @@ var pbLEX = [
 },
 
 {"UUID":"ec3d88dd0a856f3bbf1987983166b3a342db7b5e",
-"search_word":['yu', '-yu-'],
+"search_word":['@~<sub>f</sub>–yu<sup>1</sup>', 'yu', '-yu-'],
 "headword":"@~<sub>f</sub>–yu<sup>1</sup>",
 "root":['yu'],
 "cyrillic":"-ю1",
@@ -748,7 +748,7 @@ var pbLEX = [
 },
 
 {"UUID":"f6d4823bae7823ac59118a72a60971f26239fd1d",
-"search_word":['-yuqaq-', 'yuqagh'],
+"search_word":['@~<sub>f</sub>–yuqaq', '-yuqaq-', 'yuqagh'],
 "headword":"@~<sub>f</sub>–yuqaq",
 "root":['yuqagh'],
 "cyrillic":"-юқақ",
@@ -770,7 +770,7 @@ var pbLEX = [
 },
 
 {"UUID":"e69e4df30cfcd220fdc8601b662c32d7e35fea41",
-"search_word":['-mete-', 'mete'],
+"search_word":['-mete-', 'mete', '~<sub>f</sub>%mete-<sup>2</sup>'],
 "headword":"~<sub>f</sub>%mete-<sup>2</sup>",
 "root":['mete'],
 "cyrillic":"-мыты-2",
@@ -792,7 +792,7 @@ var pbLEX = [
 },
 
 {"UUID":"bdb5834fd8c38210ad8658daaa1e724df378800e",
-"search_word":['-aghesnagh-', '-ghesnagh-', 'aghesnagh', 'ghesnagh'],
+"search_word":['~<sub>f</sub>+(a)ghesnagh-', 'aghesnagh', '-ghesnagh-', '-aghesnagh-', 'ghesnagh'],
 "headword":"~<sub>f</sub>+(a)ghesnagh-",
 "root":['aghesnagh', 'ghesnagh'],
 "cyrillic":"-(а)ӷысньаӷ-",
@@ -814,7 +814,7 @@ var pbLEX = [
 },
 
 {"UUID":"688a9c9cb8bd3c3022a3fc517b9beba0d4044c00",
-"search_word":['-laatagh-', 'laatagh'],
+"search_word":['-laatagh-', 'laatagh', '@~<sub>f</sub>+laatagh-'],
 "headword":"@~<sub>f</sub>+laatagh-",
 "root":['laatagh'],
 "cyrillic":"-лятаӷ-",
@@ -836,7 +836,7 @@ var pbLEX = [
 },
 
 {"UUID":"cd37a037c40932d44b9359f52e1ec748f6686258",
-"search_word":['-leghagh-', 'leghagh'],
+"search_word":['leghagh', '-leghagh-', '@~<sub>f</sub>+leghagh-'],
 "headword":"@~<sub>f</sub>+leghagh-",
 "root":['leghagh'],
 "cyrillic":"-лыӷаӷ-",
@@ -858,7 +858,7 @@ var pbLEX = [
 },
 
 {"UUID":"d1781630c50042a557f62397277810b6ceb25c61",
-"search_word":['mig', '-mig-'],
+"search_word":['-mig-', '~<sub>f</sub>+mig-', 'mig'],
 "headword":"~<sub>f</sub>+mig-",
 "root":['mig'],
 "cyrillic":"-миг-",
@@ -880,7 +880,7 @@ var pbLEX = [
 },
 
 {"UUID":"5c13286872a6fe9ad86035e1a7613682ad28ce69",
-"search_word":['-mii-', 'mii'],
+"search_word":['mii', '~<sub>f</sub>+mii', '-mii-'],
 "headword":"~<sub>f</sub>+mii",
 "root":['mii'],
 "cyrillic":"-мӣ",
@@ -902,7 +902,7 @@ var pbLEX = [
 },
 
 {"UUID":"d71863af1de85ae0a047883246251c4480bd6b58",
-"search_word":['miigh', '-miigh-'],
+"search_word":['miigh', '~<sub>f</sub>+miigh-', '-miigh-'],
 "headword":"~<sub>f</sub>+miigh-",
 "root":['miigh'],
 "cyrillic":"-мӣӷ-",
@@ -924,7 +924,7 @@ var pbLEX = [
 },
 
 {"UUID":"dffd85efaa4e8ed17244e6af401f7de3187cfd9b",
-"search_word":['miigh', '-miiq-'],
+"search_word":['miigh', '~<sub>f</sub>+miiq', '-miiq-'],
 "headword":"~<sub>f</sub>+miiq",
 "root":['miigh'],
 "cyrillic":"-мӣқ",
@@ -946,7 +946,7 @@ var pbLEX = [
 },
 
 {"UUID":"1913a7e5d786bb68292167ce04ba13d86407d57a",
-"search_word":['mig', '-mik-'],
+"search_word":['-mik-', '~<sub>f</sub>+mik', 'mig'],
 "headword":"~<sub>f</sub>+mik",
 "root":['mig'],
 "cyrillic":"-мик",
@@ -968,7 +968,7 @@ var pbLEX = [
 },
 
 {"UUID":"cd2767f42d76059a40353bda99f61ccee0d26651",
-"search_word":['miqe', '-miqe-'],
+"search_word":['@~<sub>f</sub>+miqe-', '-miqe-', 'miqe'],
 "headword":"@~<sub>f</sub>+miqe-",
 "root":['miqe'],
 "cyrillic":"-миқы-",
@@ -990,7 +990,7 @@ var pbLEX = [
 },
 
 {"UUID":"b47b0d4eb86eb6d904710fc2eab355cc194959af",
-"search_word":['-na-', 'na'],
+"search_word":['@~<sub>f</sub>+na-<sup>1</sup>', '-na-', 'na'],
 "headword":"@~<sub>f</sub>+na-<sup>1</sup>",
 "root":['na'],
 "cyrillic":"-на-1",
@@ -1012,7 +1012,7 @@ var pbLEX = [
 },
 
 {"UUID":"7938732e662aa260f41270bf780b099d33f1fa7f",
-"search_word":['-na-', 'na'],
+"search_word":['@~<sub>f</sub>+na-<sup>2</sup>', '-na-', 'na'],
 "headword":"@~<sub>f</sub>+na-<sup>2</sup>",
 "root":['na'],
 "cyrillic":"-на-2",
@@ -1034,7 +1034,7 @@ var pbLEX = [
 },
 
 {"UUID":"372653b45df2ee300d11dabda8a522498c842883",
-"search_word":['naagh', '-naagh-'],
+"search_word":['-naagh-', 'naagh', '@~<sub>f</sub>+naagh-'],
 "headword":"@~<sub>f</sub>+naagh-",
 "root":['naagh'],
 "cyrillic":"-нāӷ-",
@@ -1056,7 +1056,7 @@ var pbLEX = [
 },
 
 {"UUID":"bf4d3096c9befec7478c972e583ce2d1a4bf3786",
-"search_word":['-naanghite-', 'naanghite'],
+"search_word":['naanghite', '-naanghite-', '@~<sub>f</sub>+naanghite-'],
 "headword":"@~<sub>f</sub>+naanghite-",
 "root":['naanghite'],
 "cyrillic":"-нāнӷиты-",
@@ -1078,7 +1078,7 @@ var pbLEX = [
 },
 
 {"UUID":"a5022a28faa8c26dc2012cb5d9b1f8ce03c4a16a",
-"search_word":['nagh', '-nagh-'],
+"search_word":['-nagh-', 'nagh', '@~<sub>f</sub>+nagh-'],
 "headword":"@~<sub>f</sub>+nagh-",
 "root":['nagh'],
 "cyrillic":"-наӷ-",
@@ -1100,7 +1100,7 @@ var pbLEX = [
 },
 
 {"UUID":"1c69e13b08957de26e3b54deb706eee32efe06cd",
-"search_word":['-nanigh-', 'nanigh'],
+"search_word":['@~<sub>f</sub>+nanigh-', 'nanigh', '-nanigh-'],
 "headword":"@~<sub>f</sub>+nanigh-",
 "root":['nanigh'],
 "cyrillic":"-наниӷ-",
@@ -1122,7 +1122,7 @@ var pbLEX = [
 },
 
 {"UUID":"f315a53e9c06aea2a7c76dc475e7d95123aa82ee",
-"search_word":['nanighqe', '-nanighqe-'],
+"search_word":['-nanighqe-', 'nanighqe', '@~<sub>f</sub>+nanighqe-'],
 "headword":"@~<sub>f</sub>+nanighqe-",
 "root":['nanighqe'],
 "cyrillic":"-наниҳқы-",
@@ -1144,7 +1144,7 @@ var pbLEX = [
 },
 
 {"UUID":"453d161b1baf480ea386e32301a68881c0fc37f2",
-"search_word":['-naq-', 'nagh'],
+"search_word":['nagh', '@~<sub>f</sub>+naq', '-naq-'],
 "headword":"@~<sub>f</sub>+naq",
 "root":['nagh'],
 "cyrillic":"-нақ",
@@ -1166,7 +1166,7 @@ var pbLEX = [
 },
 
 {"UUID":"97e3a5f49de2b4c76d0bba5a8b72fa7f5f27bd91",
-"search_word":['-naqa-', 'naqa'],
+"search_word":['-naqa-', 'naqa', '@~<sub>f</sub>+naqa<sup>e</sup>'],
 "headword":"@~<sub>f</sub>+naqa<sup>e</sup>",
 "root":['naqa'],
 "cyrillic":"-нақаы",
@@ -1188,7 +1188,7 @@ var pbLEX = [
 },
 
 {"UUID":"02b5473fec44f3cad47d1d1ed82ecf5abaff819f",
-"search_word":['-naqe-', 'naqe'],
+"search_word":['@~<sub>f</sub>+naqe-', 'naqe', '-naqe-'],
 "headword":"@~<sub>f</sub>+naqe-",
 "root":['naqe'],
 "cyrillic":"-нақы-",
@@ -1210,7 +1210,7 @@ var pbLEX = [
 },
 
 {"UUID":"cba328c6947669afc6929d8d679f2318eef0edab",
-"search_word":['naqelqusiigh', '-naqelqusiigh-'],
+"search_word":['naqelqusiigh', '@~<sub>f</sub>+naqelqusiigh-', '-naqelqusiigh-'],
 "headword":"@~<sub>f</sub>+naqelqusiigh-",
 "root":['naqelqusiigh'],
 "cyrillic":"-нақыльқусӣӷ-",
@@ -1232,7 +1232,7 @@ var pbLEX = [
 },
 
 {"UUID":"83b151b2464c8324d3e909127ee1850e9c5309b2",
-"search_word":['-naqlaatagh-', 'naqlaatagh'],
+"search_word":['-naqlaatagh-', 'naqlaatagh', '@~<sub>f</sub>+naqlaatagh-'],
 "headword":"@~<sub>f</sub>+naqlaatagh-",
 "root":['naqlaatagh'],
 "cyrillic":"-нақльятāӷ-",
@@ -1254,7 +1254,7 @@ var pbLEX = [
 },
 
 {"UUID":"4887a3c077165d42c80316e9604639416541255b",
-"search_word":['-naqngu-', 'naqngu'],
+"search_word":['-naqngu-', 'naqngu', '@~<sub>f</sub>+naqngu-'],
 "headword":"@~<sub>f</sub>+naqngu-",
 "root":['naqngu'],
 "cyrillic":"-нақңьу-",
@@ -1276,7 +1276,7 @@ var pbLEX = [
 },
 
 {"UUID":"63aace115943fccfeca08f70f4c60495af6a3f43",
-"search_word":['naqute', '-naqute-'],
+"search_word":['naqute', '-naqute-', '@~<sub>f</sub>+naqute-'],
 "headword":"@~<sub>f</sub>+naqute-",
 "root":['naqute'],
 "cyrillic":"-нақуты-",
@@ -1298,7 +1298,7 @@ var pbLEX = [
 },
 
 {"UUID":"edbbfd59b36073df7d544ce6cdd8f17c47f68c0d",
-"search_word":['-naqutke-', 'naqutke'],
+"search_word":['naqutke', '@~<sub>f</sub>+naqutke-', '-naqutke-'],
 "headword":"@~<sub>f</sub>+naqutke-",
 "root":['naqutke'],
 "cyrillic":"-нақуткы-",
@@ -1320,7 +1320,7 @@ var pbLEX = [
 },
 
 {"UUID":"42301bd5703e597375de74a5c0101e459469eff0",
-"search_word":['natke', '-natke-'],
+"search_word":['natke', '@~<sub>f</sub>+natke-', '-natke-'],
 "headword":"@~<sub>f</sub>+natke-",
 "root":['natke'],
 "cyrillic":"-наткы-",
@@ -1342,7 +1342,7 @@ var pbLEX = [
 },
 
 {"UUID":"394a0ae8a2630a5abb24e38840f6865990d01b2c",
-"search_word":['nayagh', '-nayagh-'],
+"search_word":['nayagh', '-nayagh-', '@~<sub>f</sub>+nayagh-'],
 "headword":"@~<sub>f</sub>+nayagh-",
 "root":['nayagh'],
 "cyrillic":"-наяӷ-",
@@ -1364,7 +1364,7 @@ var pbLEX = [
 },
 
 {"UUID":"fd5d3515734716769c2b28205c73252cf8ab90d7",
-"search_word":['-nayuke-', 'nayuke'],
+"search_word":['-nayuke-', '@~<sub>f</sub>+nayuke-', 'nayuke'],
 "headword":"@~<sub>f</sub>+nayuke-",
 "root":['nayuke'],
 "cyrillic":"-наюкы-",
@@ -1386,7 +1386,7 @@ var pbLEX = [
 },
 
 {"UUID":"9618dce8d26c84bd279ffe558c6e6f05eb0f13f3",
-"search_word":['-nga-', 'nga'],
+"search_word":['-nga-', 'nga', '~<sub>f</sub>+nga-'],
 "headword":"~<sub>f</sub>+nga-",
 "root":['nga'],
 "cyrillic":"-ңа-",
@@ -1408,7 +1408,7 @@ var pbLEX = [
 },
 
 {"UUID":"ab17c4995a8fc411c57679f2b2b484b5db59c08e",
-"search_word":['ni', '-ni-'],
+"search_word":['-ni-', 'ni', '@~<sub>f</sub>+ni-<sup>1</sup>'],
 "headword":"@~<sub>f</sub>+ni-<sup>1</sup>",
 "root":['ni'],
 "cyrillic":"-ни-1",
@@ -1430,7 +1430,7 @@ var pbLEX = [
 },
 
 {"UUID":"1026ae9a9d8e7eae1d61bca31f6a0cea4849f5b0",
-"search_word":['niite', '-niite-'],
+"search_word":['niite', '@~<sub>f</sub>+niite-', '-niite-'],
 "headword":"@~<sub>f</sub>+niite-",
 "root":['niite'],
 "cyrillic":"-нӣты-",
@@ -1452,7 +1452,7 @@ var pbLEX = [
 },
 
 {"UUID":"35f957040562325038a164a19407e098e3190076",
-"search_word":['nigh', '-niq-'],
+"search_word":['~<sub>f</sub>+niq', '-niq-', 'nigh'],
 "headword":"~<sub>f</sub>+niq",
 "root":['nigh'],
 "cyrillic":"-ниқ",
@@ -1474,7 +1474,7 @@ var pbLEX = [
 },
 
 {"UUID":"4ff3cab4165e12965e4feaaeb1f7457f0f8cabc9",
-"search_word":['ragh', '-ragh-'],
+"search_word":['-ragh-', '@~<sub>f</sub>+ragh-', 'ragh'],
 "headword":"@~<sub>f</sub>+ragh-",
 "root":['ragh'],
 "cyrillic":"-раӷ-",
@@ -1496,7 +1496,7 @@ var pbLEX = [
 },
 
 {"UUID":"1c602574a18a0b23ac59af1e550686936df98368",
-"search_word":['vig', '-vik-'],
+"search_word":['-vik-', '@~<sub>f</sub>+vik', 'vig'],
 "headword":"@~<sub>f</sub>+vik",
 "root":['vig'],
 "cyrillic":"-вик",
@@ -1518,7 +1518,7 @@ var pbLEX = [
 },
 
 {"UUID":"662d5b1c398d462753f9b9bd7d4fb83359406e82",
-"search_word":['vike', '-vike-'],
+"search_word":['-vike-', '@~<sub>f</sub>+vike-', 'vike'],
 "headword":"@~<sub>f</sub>+vike-",
 "root":['vike'],
 "cyrillic":"-викы-",
@@ -1540,7 +1540,7 @@ var pbLEX = [
 },
 
 {"UUID":"1d2cf7ecd4fb7d0313c02a1a848d144d023c0207",
-"search_word":['yaaghagh', '-yaaghagh-'],
+"search_word":['yaaghagh', '-yaaghagh-', '@~<sub>f</sub>+yaaghagh-'],
 "headword":"@~<sub>f</sub>+yaaghagh-",
 "root":['yaaghagh'],
 "cyrillic":"-я̄ӷаӷ-",
@@ -1562,7 +1562,7 @@ var pbLEX = [
 },
 
 {"UUID":"419c4ce470331a6ebdb64a56a7ccab43ff480f11",
-"search_word":['-yaaghte-', 'yaaghte'],
+"search_word":['@~<sub>f</sub>+yaaghte-', 'yaaghte', '-yaaghte-'],
 "headword":"@~<sub>f</sub>+yaaghte-",
 "root":['yaaghte'],
 "cyrillic":"-я̄ҳты-",
@@ -1584,7 +1584,7 @@ var pbLEX = [
 },
 
 {"UUID":"5b39ba2ffe5d87a75d605ab730f335bc8fd54678",
-"search_word":['-yagh-', 'yagh'],
+"search_word":['@~<sub>f</sub>+yagh-<sup>1</sup>', '-yagh-', 'yagh'],
 "headword":"@~<sub>f</sub>+yagh-<sup>1</sup>",
 "root":['yagh'],
 "cyrillic":"-яӷ-1",
@@ -1606,7 +1606,7 @@ var pbLEX = [
 },
 
 {"UUID":"dfcc6ce21f7f85ae920c895d3d98055131e8cb4c",
-"search_word":['-yagh-', 'yagh'],
+"search_word":['-yagh-', 'yagh', '@~<sub>f</sub>+yagh-<sup>2</sup>'],
 "headword":"@~<sub>f</sub>+yagh-<sup>2</sup>",
 "root":['yagh'],
 "cyrillic":"-яӷ-2",
@@ -1628,7 +1628,7 @@ var pbLEX = [
 },
 
 {"UUID":"2e4ede940c6e0c42b32e6bcd28f36b477148671b",
-"search_word":['-yaghagh-', 'yaghagh'],
+"search_word":['yaghagh', '-yaghagh-', '@~<sub>f</sub>+yaghagh-'],
 "headword":"@~<sub>f</sub>+yaghagh-",
 "root":['yaghagh'],
 "cyrillic":"-яӷаӷ-",
@@ -1650,7 +1650,7 @@ var pbLEX = [
 },
 
 {"UUID":"2807488ac63c9568495dc7fe5779ef16e9aab0c7",
-"search_word":['-yaghaq-', 'yaghagh'],
+"search_word":['-yaghaq-', '@~<sub>f</sub>+yaghaq', 'yaghagh'],
 "headword":"@~<sub>f</sub>+yaghaq",
 "root":['yaghagh'],
 "cyrillic":"-яӷақ",
@@ -1672,7 +1672,7 @@ var pbLEX = [
 },
 
 {"UUID":"718c972389dfa0b75f8a4c53df033c0a1900e515",
-"search_word":['-yaghpete-', 'yaghpete'],
+"search_word":['@~<sub>f</sub>+yaghpete-', '-yaghpete-', 'yaghpete'],
 "headword":"@~<sub>f</sub>+yaghpete-",
 "root":['yaghpete'],
 "cyrillic":"-яҳпыты-",
@@ -1694,7 +1694,7 @@ var pbLEX = [
 },
 
 {"UUID":"ff8b8fa1a0e8b85e7d18f4c72644a59b2366be63",
-"search_word":['-yaghqaa-', 'yaghqaa'],
+"search_word":['@~<sub>f</sub>+yaghqaa-', 'yaghqaa', '-yaghqaa-'],
 "headword":"@~<sub>f</sub>+yaghqaa-",
 "root":['yaghqaa'],
 "cyrillic":"-яҳқā-",
@@ -1716,7 +1716,7 @@ var pbLEX = [
 },
 
 {"UUID":"4c243a24f28b420c3927cf79c50b770905708f5a",
-"search_word":['-yaghqaaghte-', 'yaghqaaghte'],
+"search_word":['yaghqaaghte', '@~<sub>f</sub>+yaghqaaghte-', '-yaghqaaghte-'],
 "headword":"@~<sub>f</sub>+yaghqaaghte-",
 "root":['yaghqaaghte'],
 "cyrillic":"-я̄ҳқаҳты-",
@@ -1738,7 +1738,7 @@ var pbLEX = [
 },
 
 {"UUID":"10f55cb7be9227945f409cb3442afac7519e1cfb",
-"search_word":['-yaghqaq-', 'yaghqagh'],
+"search_word":['yaghqagh', '@~<sub>f</sub>+yaghqaq', '-yaghqaq-'],
 "headword":"@~<sub>f</sub>+yaghqaq",
 "root":['yaghqagh'],
 "cyrillic":"-яҳқақ",
@@ -1760,7 +1760,7 @@ var pbLEX = [
 },
 
 {"UUID":"c5f5e498ed952ae8e0de41eb27c7b57d27ae6f10",
-"search_word":['yaghqaqe', '-yaghqaqe-'],
+"search_word":['yaghqaqe', '-yaghqaqe-', '@~<sub>f</sub>+yaghqaqe-'],
 "headword":"@~<sub>f</sub>+yaghqaqe-",
 "root":['yaghqaqe'],
 "cyrillic":"-яҳқақы-",
@@ -1782,7 +1782,7 @@ var pbLEX = [
 },
 
 {"UUID":"0e17b693169694b02162222ac82d5e68f6d7203d",
-"search_word":['-yaghtugh-', 'yaghtugh'],
+"search_word":['@~<sub>f</sub>+yaghtugh-', '-yaghtugh-', 'yaghtugh'],
 "headword":"@~<sub>f</sub>+yaghtugh-",
 "root":['yaghtugh'],
 "cyrillic":"-яҳтуӷ-",
@@ -1804,7 +1804,7 @@ var pbLEX = [
 },
 
 {"UUID":"4a7bf29e0cea0a981f4e5a9d50e24bee2de98c88",
-"search_word":['yagute', '-yagute-'],
+"search_word":['@~<sub>f</sub>+yagute-', '-yagute-', 'yagute'],
 "headword":"@~<sub>f</sub>+yagute-",
 "root":['yagute'],
 "cyrillic":"-ягуты-",
@@ -1826,7 +1826,7 @@ var pbLEX = [
 },
 
 {"UUID":"27564505bb631df78719a83d878ea9a06e8bb4e5",
-"search_word":['yaquna', '-yaquna-'],
+"search_word":['yaquna', '-yaquna-', '@~<sub>f</sub>+yaquna-'],
 "headword":"@~<sub>f</sub>+yaquna-",
 "root":['yaquna'],
 "cyrillic":"-яқуна-",
@@ -1848,7 +1848,7 @@ var pbLEX = [
 },
 
 {"UUID":"c00b705f1baa2c68b5854455ae3f8ffa317d40a5",
-"search_word":['-yug-', 'yug'],
+"search_word":['@~<sub>f</sub>+yug-', '-yug-', 'yug'],
 "headword":"@~<sub>f</sub>+yug-",
 "root":['yug'],
 "cyrillic":"-юг-",
@@ -1870,7 +1870,7 @@ var pbLEX = [
 },
 
 {"UUID":"aaa8d913a7137de2ef91e1089df66f943b9e7ed9",
-"search_word":['yuggaagh', '-yuggaagh-'],
+"search_word":['-yuggaagh-', '@~<sub>f</sub>+yuggaagh-', 'yuggaagh'],
 "headword":"@~<sub>f</sub>+yuggaagh-",
 "root":['yuggaagh'],
 "cyrillic":"-ю̄хāӷ-",
@@ -1892,7 +1892,7 @@ var pbLEX = [
 },
 
 {"UUID":"090cb00b3b8ff75cec95fe4a885fdee842664651",
-"search_word":['yuggaagh', '-yuggaaq-'],
+"search_word":['-yuggaaq-', '@~<sub>f</sub>+yuggaaq', 'yuggaagh'],
 "headword":"@~<sub>f</sub>+yuggaaq",
 "root":['yuggaagh'],
 "cyrillic":"-юхāқ",
@@ -1914,7 +1914,7 @@ var pbLEX = [
 },
 
 {"UUID":"49e7ddd3a849aa5b3b78493f3a95df1597049f94",
-"search_word":['yugnagh', '-yugnagh-'],
+"search_word":['yugnagh', '@~<sub>f</sub>+yugnagh-', '-yugnagh-'],
 "headword":"@~<sub>f</sub>+yugnagh-",
 "root":['yugnagh'],
 "cyrillic":"-югнаҳқы-",
@@ -1936,7 +1936,7 @@ var pbLEX = [
 },
 
 {"UUID":"1a1910db5c66dd608e9cc609b86c4aa3d4b6dc68",
-"search_word":['yuguma', '-yuguma-'],
+"search_word":['@~<sub>f</sub>+yuguma-', '-yuguma-', 'yuguma'],
 "headword":"@~<sub>f</sub>+yuguma-",
 "root":['yuguma'],
 "cyrillic":"-югума-",
@@ -1958,7 +1958,7 @@ var pbLEX = [
 },
 
 {"UUID":"138c2bfe83ceba5173ea89a6a3d808a76f28c56f",
-"search_word":['-yukagh-', 'yukagh'],
+"search_word":['yukagh', '@~<sub>f</sub>+yukagh-', '-yukagh-'],
 "headword":"@~<sub>f</sub>+yukagh-",
 "root":['yukagh'],
 "cyrillic":"-юкаӷ-",
@@ -1980,7 +1980,7 @@ var pbLEX = [
 },
 
 {"UUID":"35abbe00db8fb21c83adcf3319da2a421ce5c2f3",
-"search_word":['yuke', '-yuke-'],
+"search_word":['yuke', '-yuke-', '@~<sub>f</sub>+yuke-<sup>1</sup>'],
 "headword":"@~<sub>f</sub>+yuke-<sup>1</sup>",
 "root":['yuke'],
 "cyrillic":"-юкы-1",
@@ -2002,7 +2002,7 @@ var pbLEX = [
 },
 
 {"UUID":"969b26fe0fe8a317c9ecfdc4d0a5f2621d618799",
-"search_word":['yuke', '-yuke-'],
+"search_word":['yuke', '@~<sub>f</sub>+yuke-<sup>2</sup>', '-yuke-'],
 "headword":"@~<sub>f</sub>+yuke-<sup>2</sup>",
 "root":['yuke'],
 "cyrillic":"-юкы-2",
@@ -2024,7 +2024,7 @@ var pbLEX = [
 },
 
 {"UUID":"0a2ddfc3a17e853f3d1baa30689d6a67b2085ef6",
-"search_word":['-yuneghtu-', 'yuneghtu'],
+"search_word":['@~<sub>f</sub>+yuneghtu-', '-yuneghtu-', 'yuneghtu'],
 "headword":"@~<sub>f</sub>+yuneghtu-",
 "root":['yuneghtu'],
 "cyrillic":"-юныҳту-",
@@ -2046,7 +2046,7 @@ var pbLEX = [
 },
 
 {"UUID":"061241b5aa6c267efffabdb3a3e229c74c9f49f8",
-"search_word":['yuwhaagh', '-yuwhaagh-'],
+"search_word":['-yuwhaagh-', 'yuwhaagh', '@~<sub>f</sub>+yuwhaagh-'],
 "headword":"@~<sub>f</sub>+yuwhaagh-",
 "root":['yuwhaagh'],
 "cyrillic":"-ю̄ӱьāӷ-",
@@ -2068,7 +2068,7 @@ var pbLEX = [
 },
 
 {"UUID":"c26b7643f92501df89df9e31cbe65208b9b1b262",
-"search_word":['yuwhaagh', '-yuwhaaq-'],
+"search_word":['@~<sub>f</sub>+yuwhaaq', 'yuwhaagh', '-yuwhaaq-'],
 "headword":"@~<sub>f</sub>+yuwhaaq",
 "root":['yuwhaagh'],
 "cyrillic":"-юӱьāқ",
@@ -2090,7 +2090,7 @@ var pbLEX = [
 },
 
 {"UUID":"635363be06b1d7df1a5c5a717490fdabc601e7d2",
-"search_word":['fkagh', '-fkagh-'],
+"search_word":['fkagh', '?fkagh-', '-fkagh-'],
 "headword":"?fkagh-",
 "root":['fkagh'],
 "cyrillic":"-фкаӷ-",
@@ -2112,7 +2112,7 @@ var pbLEX = [
 },
 
 {"UUID":"adf5e8a9182ce41283fb24db77165c45b5a4f3de",
-"search_word":['ngiighhagh*', '-ngiighhaq-'],
+"search_word":['-ngiighhaq-', '~<sub>f</sub>ngiighhaq*', 'ngiighhagh*'],
 "headword":"~<sub>f</sub>ngiighhaq*",
 "root":['ngiighhagh*'],
 "cyrillic":"-ңӣҳақ",
@@ -2134,7 +2134,7 @@ var pbLEX = [
 },
 
 {"UUID":"c81126068d62a836b0f5b7fab35a6296fd7f7780",
-"search_word":['-fqaa-', '-fqagh-', 'fqagh', 'fqaa'],
+"search_word":['-fqaa-', 'fqagh', '–fqagh,–fqaa-', 'fqaa', '-fqagh-'],
 "headword":"–fqagh,–fqaa-",
 "root":['fqagh', 'fqaa'],
 "cyrillic":"-фқаӷ- - -фқā-",
@@ -2156,7 +2156,7 @@ var pbLEX = [
 },
 
 {"UUID":"7a889d1f46ade216c083bddeeb4e3a9067b68dde",
-"search_word":['-fte-', 'fte', 'pete', '-pete-'],
+"search_word":['+fte,+pete-', 'fte', '-fte-', 'pete', '-pete-'],
 "headword":"+fte,+pete-",
 "root":['fte', 'pete'],
 "cyrillic":"-фты- - -пыты-",
@@ -2178,7 +2178,7 @@ var pbLEX = [
 },
 
 {"UUID":"02bd5007bdc76038888cae46eac019e1aa0cee6b",
-"search_word":['-ughtagh-', 'ughtagh'],
+"search_word":['ughtagh', '-ughtagh-', '~<sub>f</sub>ughtagh-'],
 "headword":"~<sub>f</sub>ughtagh-",
 "root":['ughtagh'],
 "cyrillic":"-уҳтаӷ-",
@@ -2200,7 +2200,7 @@ var pbLEX = [
 },
 
 {"UUID":"259223ec39ccea2e9623b60de33e4e78db55ce46",
-"search_word":['aqe', '-gaqe-', '-aqe-', 'gaqe'],
+"search_word":['-gaqe-', 'aqe', '-aqe-', '~+(g)aqe-', 'gaqe'],
 "headword":"~+(g)aqe-",
 "root":['aqe', 'gaqe'],
 "cyrillic":"-(г)ақы-",
@@ -2222,7 +2222,7 @@ var pbLEX = [
 },
 
 {"UUID":"267baefb4a0b30c42fffc6758edee389b78df384",
-"search_word":['gkaa', '-kaa-', 'kaa', '-gkaa-'],
+"search_word":['gkaa', '-kaa-', '@~–(g)kaa-', '-gkaa-', 'kaa'],
 "headword":"@~–(g)kaa-",
 "root":['gkaa', 'kaa'],
 "cyrillic":"-(х)кā-",
@@ -2244,7 +2244,7 @@ var pbLEX = [
 },
 
 {"UUID":"a4d32c2b72999519b5a41f3b36ee90e8047ab11e",
-"search_word":['-kaayagh-', 'gkaayagh', 'kaayagh', '-gkaayagh-'],
+"search_word":['-kaayagh-', '-gkaayagh-', 'kaayagh', '~–(g)kaayagh-', 'gkaayagh'],
 "headword":"~–(g)kaayagh-",
 "root":['gkaayagh', 'kaayagh'],
 "cyrillic":"-(х)кāяӷ-",
@@ -2266,7 +2266,7 @@ var pbLEX = [
 },
 
 {"UUID":"a3d9f1783d65e1e6559fe6738f00edc4bda5b381",
-"search_word":['-gka-', '-ka-', 'ka', 'gka'],
+"search_word":['-ka-', '-gka-', 'gka', 'ka', '@~–(g)ka<sup>e</sup>'],
 "headword":"@~–(g)ka<sup>e</sup>",
 "root":['gka', 'ka'],
 "cyrillic":"-(х)каы",
@@ -2288,7 +2288,7 @@ var pbLEX = [
 },
 
 {"UUID":"ed32ecb39f00fd09ff636b7a302b4a63cdddb98f",
-"search_word":['kagh', 'gkagh', '-gkaq-', '-kaq-'],
+"search_word":['gkagh', '~–(g)kaq', '-gkaq-', 'kagh', '-kaq-'],
 "headword":"~–(g)kaq",
 "root":['gkagh', 'kagh'],
 "cyrillic":"-(х)кақ",
@@ -2310,11 +2310,11 @@ var pbLEX = [
 },
 
 {"UUID":"8f35e5e425dcfe5d49430665acb95bc6f74e064f",
-"search_word":['-kaqe-', '-gkaqe-', 'gkaqe', 'kaqe'],
+"search_word":['-gkaqe-', '@~–(g)kaqe-', '-kaqe-', 'kaqe', 'gkaqe'],
 "headword":"@~–(g)kaqe-",
-"root":['gkaqe', 'kaqe'],
+"root":['kaqe', 'gkaqe'],
 "cyrillic":"-(х)кāқы-",
-"ipa":['xkɑqə', 'kɑqə'],
+"ipa":['kɑqə', 'xkɑqə'],
 "jacobson":"-ø[πr62s-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -2332,11 +2332,11 @@ var pbLEX = [
 },
 
 {"UUID":"d3baa4d19bb96dc19b71ec728e3c5c7eecd1ed89",
-"search_word":['-kaqsagh-', 'gkaqsagh', '-gkaqsagh-', 'kaqsagh'],
+"search_word":['-kaqsagh-', '-gkaqsagh-', 'kaqsagh', '~–(g)kaqsagh-', 'gkaqsagh'],
 "headword":"~–(g)kaqsagh-",
-"root":['gkaqsagh', 'kaqsagh'],
+"root":['kaqsagh', 'gkaqsagh'],
 "cyrillic":"-(х)кақсяӷ-",
-"ipa":['xkɑqsɑʁ', 'kɑqsɑʁ'],
+"ipa":['kɑqsɑʁ', 'xkɑqsɑʁ'],
 "jacobson":"-ø[πrf2cz4-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -2354,11 +2354,11 @@ var pbLEX = [
 },
 
 {"UUID":"af3e653d2f08bfa9fa576bf06a07768f0218be6f",
-"search_word":['gkayugu', '-gkayugu-', '-kayugu-', 'kayugu'],
+"search_word":['gkayugu', '~–(g)kayugu-', '-kayugu-', '-gkayugu-', 'kayugu'],
 "headword":"~–(g)kayugu-",
-"root":['gkayugu', 'kayugu'],
+"root":['kayugu', 'gkayugu'],
 "cyrillic":"-(х)каюгу-",
-"ipa":['xkɑjuɣu', 'kɑjuɣu'],
+"ipa":['kɑjuɣu', 'xkɑjuɣu'],
 "jacobson":"-ø[πrf/ue-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -2376,11 +2376,11 @@ var pbLEX = [
 },
 
 {"UUID":"26f8c8d7ad911abe039a50d9d7cf9a467bfe48c0",
-"search_word":['gkayugughte', '-gkayugughte-', 'kayugughte', '-kayugughte-'],
+"search_word":['-kayugughte-', '~–(g)kayugughte-', 'gkayugughte', '-gkayugughte-', 'kayugughte'],
 "headword":"~–(g)kayugughte-",
-"root":['kayugughte', 'gkayugughte'],
+"root":['gkayugughte', 'kayugughte'],
 "cyrillic":"-(х)каюгуҳты-",
-"ipa":['kɑjuɣuχtə', 'xkɑjuɣuχtə'],
+"ipa":['xkɑjuɣuχtə', 'kɑjuɣuχtə'],
 "jacobson":"-ø[πrf/ue5ns-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -2398,11 +2398,11 @@ var pbLEX = [
 },
 
 {"UUID":"41c37b2e1d916d1f398dc05481495f70fd1882eb",
-"search_word":['gkayug', '-kayuk-', 'kayug', '-gkayuk-'],
+"search_word":['gkayug', '-gkayuk-', 'kayug', '-kayuk-', '~–(g)kayuk'],
 "headword":"~–(g)kayuk",
-"root":['kayug', 'gkayug'],
+"root":['gkayug', 'kayug'],
 "cyrillic":"-(х)каюк",
-"ipa":['kɑjuk', 'xkɑjuk'],
+"ipa":['xkɑjuk', 'kɑjuk'],
 "jacobson":"-ø[πrf/r",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -2420,7 +2420,7 @@ var pbLEX = [
 },
 
 {"UUID":"2676b21c2109d365cf9c8b3cbbc1c4fbbf980ba9",
-"search_word":['gaq', '-gaq-'],
+"search_word":['-gaq-', 'gaq', '-gaq*'],
 "headword":"-gaq*",
 "root":['gaq'],
 "cyrillic":"",
@@ -2442,7 +2442,7 @@ var pbLEX = [
 },
 
 {"UUID":"0647a4cd06d279e6248d6dbe33d682d86f96d6fc",
-"search_word":['-ggalek-', 'ggalek'],
+"search_word":['-ggalek', '-ggalek-', 'ggalek'],
 "headword":"-ggalek",
 "root":['ggalek'],
 "cyrillic":"",
@@ -2464,7 +2464,7 @@ var pbLEX = [
 },
 
 {"UUID":"44bdda837a13ba9bf41705537c2aeb3f4c918442",
-"search_word":['-ggaq-', 'ggaq'],
+"search_word":['-ggaq-', '-ggaq*', 'ggaq'],
 "headword":"-ggaq*",
 "root":['ggaq'],
 "cyrillic":"",
@@ -2486,11 +2486,11 @@ var pbLEX = [
 },
 
 {"UUID":"d431c21346a27a1273bf0f9ce2f7b900b20909dd",
-"search_word":['-ghli-', '-i-', 'i', 'ghli'],
+"search_word":['ghli', '-i-', '?(gh/l)i-', '-ghli-', 'i'],
 "headword":"?(gh/l)i-",
-"root":['i', 'ghli'],
+"root":['ghli', 'i'],
 "cyrillic":"-(ӷ-л)и-",
-"ipa":['i', 'ʁli'],
+"ipa":['ʁli', 'i'],
 "jacobson":"-ø4-kπb-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -2508,7 +2508,7 @@ var pbLEX = [
 },
 
 {"UUID":"323d9201ec87985f5df2c945ceda8a2dc43dd82e",
-"search_word":['ghagh*', '-ghaq-'],
+"search_word":['ghagh*', '–ghaq*', '-ghaq-'],
 "headword":"–ghaq*",
 "root":['ghagh*'],
 "cyrillic":"-ӷақ",
@@ -2530,7 +2530,7 @@ var pbLEX = [
 },
 
 {"UUID":"900beb0c2b18415157aa8b1efae6933f31e500c2",
-"search_word":['-ghha-', 'ghha'],
+"search_word":['ghha', '-ghha-'],
 "headword":"-ghha-",
 "root":['ghha'],
 "cyrillic":"",
@@ -2552,7 +2552,7 @@ var pbLEX = [
 },
 
 {"UUID":"12c6a102f8c06f4e780046c0d129c2122c947bca",
-"search_word":['-ghhaq-', 'ghhagh*'],
+"search_word":['–ghhaq*', '-ghhaq-', 'ghhagh*'],
 "headword":"–ghhaq*",
 "root":['ghhagh*'],
 "cyrillic":"-ҳақ",
@@ -2574,7 +2574,7 @@ var pbLEX = [
 },
 
 {"UUID":"b615cb13eedad51a58d2cb847ad334f4e3ad253c",
-"search_word":['ghi', '-ghi-'],
+"search_word":['-ghi-', 'ghi'],
 "headword":"-ghi-",
 "root":['ghi'],
 "cyrillic":"",
@@ -2596,7 +2596,7 @@ var pbLEX = [
 },
 
 {"UUID":"d12e65885b1c7b409cbc81a8c2cb02c4d392dbf1",
-"search_word":['-ghllag-', 'ghllag'],
+"search_word":['-ghllag-', 'ghllag', '–ghllag-'],
 "headword":"–ghllag-",
 "root":['ghllag'],
 "cyrillic":"-ҳльаг-",
@@ -2618,7 +2618,7 @@ var pbLEX = [
 },
 
 {"UUID":"fde8ad281b2921eb46ddfe9af7b1046d2061207a",
-"search_word":['ghllagu', '-ghllagu-'],
+"search_word":['ghllagu', '-ghllagu-', '–ghllagu-'],
 "headword":"–ghllagu-",
 "root":['ghllagu'],
 "cyrillic":"-ҳльагу-",
@@ -2640,7 +2640,7 @@ var pbLEX = [
 },
 
 {"UUID":"409f13693159fb91748355eb345a764ad6f543eb",
-"search_word":['ghllag', '-ghllak-'],
+"search_word":['ghllag', '-ghllak-', '–ghllak'],
 "headword":"–ghllak",
 "root":['ghllag'],
 "cyrillic":"-ҳльак",
@@ -2662,7 +2662,7 @@ var pbLEX = [
 },
 
 {"UUID":"996222925f6b6692157ec3bd4b9d8465472c249a",
-"search_word":['-ghnaggaq-', 'ghnaggagh*'],
+"search_word":['–ghnaggaq*', '-ghnaggaq-', 'ghnaggagh*'],
 "headword":"–ghnaggaq*",
 "root":['ghnaggagh*'],
 "cyrillic":"-ӷнахақ",
@@ -2684,7 +2684,7 @@ var pbLEX = [
 },
 
 {"UUID":"2f254ecc97a8d6ea7c6c9a62af8ce5cc2ab979ff",
-"search_word":['-ghpagte-', 'ghpagte'],
+"search_word":['ghpagte', '@–ghpagte-', '-ghpagte-'],
 "headword":"@–ghpagte-",
 "root":['ghpagte'],
 "cyrillic":"-ҳпахты-",
@@ -2706,7 +2706,7 @@ var pbLEX = [
 },
 
 {"UUID":"a5fd738f06cd3086a30201dc05fcdcfe02500083",
-"search_word":['-ghpak-', 'ghpag'],
+"search_word":['–ghpak', '-ghpak-', 'ghpag'],
 "headword":"–ghpak",
 "root":['ghpag'],
 "cyrillic":"-ҳпак",
@@ -2728,7 +2728,7 @@ var pbLEX = [
 },
 
 {"UUID":"0d0122bee9491f043cd1e3008c26862418d5d1bf",
-"search_word":['ghpe', '-ghpe-'],
+"search_word":['-ghpe-', 'ghpe'],
 "headword":"-ghpe-",
 "root":['ghpe'],
 "cyrillic":"",
@@ -2750,7 +2750,7 @@ var pbLEX = [
 },
 
 {"UUID":"d63ffcc8253b51fa729131dfbfb825ea47099183",
-"search_word":['-ghqe-', 'ghqe'],
+"search_word":['-ghqe-', '–ghqe-<sup>1</sup>', 'ghqe'],
 "headword":"–ghqe-<sup>1</sup>",
 "root":['ghqe'],
 "cyrillic":"-ҳқы-1",
@@ -2772,7 +2772,7 @@ var pbLEX = [
 },
 
 {"UUID":"e141e5d048eb7a5b7b8751f0eb9267548519945c",
-"search_word":['-ghqe-', 'ghqe'],
+"search_word":['-ghqe-', 'ghqe', '–ghqe-<sup>2</sup>'],
 "headword":"–ghqe-<sup>2</sup>",
 "root":['ghqe'],
 "cyrillic":"-ҳқы-2",
@@ -2794,7 +2794,7 @@ var pbLEX = [
 },
 
 {"UUID":"de6eb813da3b3d0148da81587f2b9bf560bad14f",
-"search_word":['-ghqe-', 'ghqe'],
+"search_word":['-ghqe-', '–ghqe-<sup>3</sup>', 'ghqe'],
 "headword":"–ghqe-<sup>3</sup>",
 "root":['ghqe'],
 "cyrillic":"-ҳқы-3",
@@ -2816,7 +2816,7 @@ var pbLEX = [
 },
 
 {"UUID":"43654bf577d58add82c9ffea4d65fb2d473fa039",
-"search_word":['ghqu', '-ghqu-'],
+"search_word":['–ghqu-', 'ghqu', '-ghqu-'],
 "headword":"–ghqu-",
 "root":['ghqu'],
 "cyrillic":"-ҳқы-",
@@ -2838,7 +2838,7 @@ var pbLEX = [
 },
 
 {"UUID":"63204bb4d4dd8d47c803fb70037d30e21a4b7b70",
-"search_word":['-ghquute-', 'ghquute'],
+"search_word":['ghquute', '–ghquute-', '-ghquute-'],
 "headword":"–ghquute-",
 "root":['ghquute'],
 "cyrillic":"-ҳқӯты-",
@@ -2860,7 +2860,7 @@ var pbLEX = [
 },
 
 {"UUID":"1b505dcf9ef49e70a67e3dcf0a1b89dd0aa2c59b",
-"search_word":['ghraag', '-ghraag-'],
+"search_word":['-ghraag-', 'ghraag', '–ghraag-'],
 "headword":"–ghraag-",
 "root":['ghraag'],
 "cyrillic":"-ӷрāг-",
@@ -2882,7 +2882,7 @@ var pbLEX = [
 },
 
 {"UUID":"0159ee06735a274d1f3305e1bc3851549e679649",
-"search_word":['ghrug', '-ghrug-'],
+"search_word":['-ghrug-', 'ghrug', '–ghrug-'],
 "headword":"–ghrug-",
 "root":['ghrug'],
 "cyrillic":"-ӷруг-",
@@ -2904,7 +2904,7 @@ var pbLEX = [
 },
 
 {"UUID":"6a5003995610305e24b4402150292f76b4885028",
-"search_word":['ghrugllag', '-ghrugllak-'],
+"search_word":['-ghrugllak-', 'ghrugllag', '–ghrugllak'],
 "headword":"–ghrugllak",
 "root":['ghrugllag'],
 "cyrillic":"-ӷрухльак",
@@ -2926,7 +2926,7 @@ var pbLEX = [
 },
 
 {"UUID":"11223c47eb9ceb5875b61818923043e989c25ca6",
-"search_word":['ghrug', '-ghruk-'],
+"search_word":['–ghruk', 'ghrug', '-ghruk-'],
 "headword":"–ghruk",
 "root":['ghrug'],
 "cyrillic":"-ӷрук",
@@ -2948,7 +2948,7 @@ var pbLEX = [
 },
 
 {"UUID":"3d8a66149b3c7d20d17a123d6c9abb02b9131cce",
-"search_word":['-ghrukutaaghllak-', 'ghrukutaaghllag'],
+"search_word":['-ghrukutaaghllak-', 'ghrukutaaghllag', '–ghrukutaaghllak'],
 "headword":"–ghrukutaaghllak",
 "root":['ghrukutaaghllag'],
 "cyrillic":"-ӷрукутāҳльяқ",
@@ -2970,7 +2970,7 @@ var pbLEX = [
 },
 
 {"UUID":"9afa0a1d268f71be501b63ef56f34f0e148a37bc",
-"search_word":['-ghrukutaaq-', 'ghrukutaagh'],
+"search_word":['-ghrukutaaq-', '–ghrukutaaq', 'ghrukutaagh'],
 "headword":"–ghrukutaaq",
 "root":['ghrukutaagh'],
 "cyrillic":"-ӷрукутāқ",
@@ -2992,7 +2992,7 @@ var pbLEX = [
 },
 
 {"UUID":"cfd752fff7dfaf16d8037152afd2a4704120333a",
-"search_word":['ghrupag', '-ghrupak-'],
+"search_word":['-ghrupak-', '–ghrupak', 'ghrupag'],
 "headword":"–ghrupak",
 "root":['ghrupag'],
 "cyrillic":"-ӷрупак",
@@ -3014,7 +3014,7 @@ var pbLEX = [
 },
 
 {"UUID":"9eec4ec52d89281141ac205974e89cb323c2b1f5",
-"search_word":['ghsi', '-ghsi-'],
+"search_word":['ghsi', '-ghsi-', '+ghsi'],
 "headword":"+ghsi",
 "root":['ghsi'],
 "cyrillic":"-ҳси",
@@ -3036,7 +3036,7 @@ var pbLEX = [
 },
 
 {"UUID":"0fb6bfeb92cc0fd3e0b7d6e4d44647fe1735443f",
-"search_word":['ghte', '-ghte-'],
+"search_word":['–ghte-', 'ghte', '-ghte-'],
 "headword":"–ghte-",
 "root":['ghte'],
 "cyrillic":"-ҳты-",
@@ -3058,11 +3058,11 @@ var pbLEX = [
 },
 
 {"UUID":"38cbe87b858e1486476eb7311f07b5001f7d3dd5",
-"search_word":['ghwngwwaagh', '-ghwngwwaagh-', 'aagh', '-aagh-'],
+"search_word":['-ghwngwwaagh-', '~–(ghw/ngw/w)aagh-<sup>1</sup>', '-aagh-', 'aagh', 'ghwngwwaagh'],
 "headword":"~–(ghw/ngw/w)aagh-<sup>1</sup>",
-"root":['ghwngwwaagh', 'aagh'],
+"root":['aagh', 'ghwngwwaagh'],
 "cyrillic":"-(ӷӱ-ңӱ-ӱ)āӷ-1",
-"ipa":['ʁʷŋʷɣʷɑːʁ', 'ɑːʁ'],
+"ipa":['ɑːʁ', 'ʁʷŋʷɣʷɑːʁ'],
 "jacobson":"-ø41-31-1π64-<sup>¡</sup>",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -3080,11 +3080,11 @@ var pbLEX = [
 },
 
 {"UUID":"e3403e44247254933375959d44b3905552f14c8f",
-"search_word":['ghwngwwaagh', '-ghwngwwaagh-', 'aagh', '-aagh-'],
+"search_word":['~–(ghw/ngw/w)aagh-<sup>2</sup>', '-ghwngwwaagh-', '-aagh-', 'aagh', 'ghwngwwaagh'],
 "headword":"~–(ghw/ngw/w)aagh-<sup>2</sup>",
-"root":['ghwngwwaagh', 'aagh'],
+"root":['aagh', 'ghwngwwaagh'],
 "cyrillic":"-(ӷӱ-ңӱ-ӱ)āӷ-2",
-"ipa":['ʁʷŋʷɣʷɑːʁ', 'ɑːʁ'],
+"ipa":['ɑːʁ', 'ʁʷŋʷɣʷɑːʁ'],
 "jacobson":"-ø41-31-1π64-<sup>™</sup>",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -3102,7 +3102,7 @@ var pbLEX = [
 },
 
 {"UUID":"623af4435d0063ae563fea14449d315cff99ab05",
-"search_word":['-aaq-', '-ghwngwwaaq-', 'ghwngwwaagh', 'aagh'],
+"search_word":['~–(ghw/ngw/w)aaq', '-ghwngwwaaq-', '-aaq-', 'aagh', 'ghwngwwaagh'],
 "headword":"~–(ghw/ngw/w)aaq",
 "root":['ghwngwwaagh', 'aagh'],
 "cyrillic":"-(ӷӱ-ңӱ-ӱ)āқ",
@@ -3124,7 +3124,7 @@ var pbLEX = [
 },
 
 {"UUID":"746383745e391782376d284864e07d9ecb92266f",
-"search_word":['-ghwaagh-', 'ghwaagh'],
+"search_word":['-ghwaagh-', '-ghwaagh-<sup>1</sup>', 'ghwaagh'],
 "headword":"-ghwaagh-<sup>1</sup>",
 "root":['ghwaagh'],
 "cyrillic":"",
@@ -3146,7 +3146,7 @@ var pbLEX = [
 },
 
 {"UUID":"2c0565ed4f7d24988467a1807e20c157da6c7759",
-"search_word":['-ghwaagh-', 'ghwaagh'],
+"search_word":['-ghwaagh-', 'ghwaagh', '-ghwaagh-<sup>2</sup>'],
 "headword":"-ghwaagh-<sup>2</sup>",
 "root":['ghwaagh'],
 "cyrillic":"",
@@ -3168,7 +3168,7 @@ var pbLEX = [
 },
 
 {"UUID":"3ad9d110cf0bc79b10589d61ca12542babcc338c",
-"search_word":['-ghwaaq-', 'ghwaaq'],
+"search_word":['-ghwaaq', '-ghwaaq-', 'ghwaaq'],
 "headword":"-ghwaaq",
 "root":['ghwaaq'],
 "cyrillic":"",
@@ -3212,7 +3212,7 @@ var pbLEX = [
 },
 
 {"UUID":"22c62e59a93012a3dceaef565803701e3b1ce4b7",
-"search_word":['gllag', '-gllag-'],
+"search_word":['-gllag-', 'gllag'],
 "headword":"-gllag-",
 "root":['gllag'],
 "cyrillic":"",
@@ -3256,7 +3256,7 @@ var pbLEX = [
 },
 
 {"UUID":"5b5205d1138a05cd18d28c79cf9e8d77ad5c5bff",
-"search_word":['-gllak-', 'gllak'],
+"search_word":['-gllak', '-gllak-', 'gllak'],
 "headword":"-gllak",
 "root":['gllak'],
 "cyrillic":"",
@@ -3278,7 +3278,7 @@ var pbLEX = [
 },
 
 {"UUID":"03550dab37169fd47330ae519fad916eac9e9863",
-"search_word":['gnaggaq', '-gnaggaq-'],
+"search_word":['gnaggaq', '-gnaggaq-', '-gnaggaq*'],
 "headword":"-gnaggaq*",
 "root":['gnaggaq'],
 "cyrillic":"",
@@ -3300,7 +3300,7 @@ var pbLEX = [
 },
 
 {"UUID":"4161dff611419e4f166111aa4a568bdb1a92b870",
-"search_word":['gnegh', '-gneq-'],
+"search_word":['-gneq-', 'gnegh', '–gneq'],
 "headword":"–gneq",
 "root":['gnegh'],
 "cyrillic":"-гнық",
@@ -3322,7 +3322,7 @@ var pbLEX = [
 },
 
 {"UUID":"bb8797ff9ffe1277186ed4dfa671acbedc55caaf",
-"search_word":['-gpagte-', 'gpagte'],
+"search_word":['gpagte', '-gpagte-'],
 "headword":"-gpagte-",
 "root":['gpagte'],
 "cyrillic":"",
@@ -3344,7 +3344,7 @@ var pbLEX = [
 },
 
 {"UUID":"3ef13657b522993d15f2a645a16627818a66b203",
-"search_word":['gpak', '-gpak-'],
+"search_word":['gpak', '-gpak', '-gpak-'],
 "headword":"-gpak",
 "root":['gpak'],
 "cyrillic":"",
@@ -3366,7 +3366,7 @@ var pbLEX = [
 },
 
 {"UUID":"4fa7b09067e144b3a55b239750419572e795403c",
-"search_word":['-gpe-', 'gpe'],
+"search_word":['-gpe-', '–gpe-', 'gpe'],
 "headword":"–gpe-",
 "root":['gpe'],
 "cyrillic":"-хпы-",
@@ -3388,7 +3388,7 @@ var pbLEX = [
 },
 
 {"UUID":"7437df09eb51ef564f25e4542896cfd9d35283ac",
-"search_word":['graag', '-graag-'],
+"search_word":['-graag-', 'graag'],
 "headword":"-graag-",
 "root":['graag'],
 "cyrillic":"",
@@ -3410,7 +3410,7 @@ var pbLEX = [
 },
 
 {"UUID":"410beac1cf8950d32fb16cc491241fa657aa0e22",
-"search_word":['grug', '-grug-'],
+"search_word":['-grug-', 'grug'],
 "headword":"-grug-",
 "root":['grug'],
 "cyrillic":"",
@@ -3432,7 +3432,7 @@ var pbLEX = [
 },
 
 {"UUID":"91c0d237127484f0f0dbbc2b794e7724016ea26f",
-"search_word":['grugllak', '-grugllak-'],
+"search_word":['-grugllak-', 'grugllak', '-grugllak'],
 "headword":"-grugllak",
 "root":['grugllak'],
 "cyrillic":"",
@@ -3454,7 +3454,7 @@ var pbLEX = [
 },
 
 {"UUID":"670238fd6ef30815d1cc58214cce095e595c051c",
-"search_word":['-gruk-', 'gruk'],
+"search_word":['gruk', '-gruk-', '-gruk'],
 "headword":"-gruk",
 "root":['gruk'],
 "cyrillic":"",
@@ -3476,7 +3476,7 @@ var pbLEX = [
 },
 
 {"UUID":"538ba5105b4663dabb1f8c00a70b0bdc8ca73848",
-"search_word":['grukutaaghllak', '-grukutaaghllak-'],
+"search_word":['-grukutaaghllak-', '-grukutaaghllak', 'grukutaaghllak'],
 "headword":"-grukutaaghllak",
 "root":['grukutaaghllak'],
 "cyrillic":"",
@@ -3498,7 +3498,7 @@ var pbLEX = [
 },
 
 {"UUID":"2f80c350e64a4aa5e8e45712a184bbe94eec02e0",
-"search_word":['-grukutaaq-', 'grukutaaq'],
+"search_word":['grukutaaq', '-grukutaaq', '-grukutaaq-'],
 "headword":"-grukutaaq",
 "root":['grukutaaq'],
 "cyrillic":"",
@@ -3520,7 +3520,7 @@ var pbLEX = [
 },
 
 {"UUID":"d2130d9b3bd6bdfa849fc5c9480a5bb601087928",
-"search_word":['-grupak-', 'grupak'],
+"search_word":['-grupak', '-grupak-', 'grupak'],
 "headword":"-grupak",
 "root":['grupak'],
 "cyrillic":"",
@@ -3542,7 +3542,7 @@ var pbLEX = [
 },
 
 {"UUID":"b1f96f8582c94464b025e320864d44acd68fe6bc",
-"search_word":['i', '-i-'],
+"search_word":['-i-', 'i'],
 "headword":"-i-",
 "root":['i'],
 "cyrillic":"",
@@ -3564,7 +3564,7 @@ var pbLEX = [
 },
 
 {"UUID":"a835bbfe0169f073fca1b653e269e0b4d3b385f9",
-"search_word":['i', '-i-'],
+"search_word":['~+i-<sup>1</sup>', '-i-', 'i'],
 "headword":"~+i-<sup>1</sup>",
 "root":['i'],
 "cyrillic":"-и-1",
@@ -3586,7 +3586,7 @@ var pbLEX = [
 },
 
 {"UUID":"f67c3a57536dda1c9c391c936f58151cbca064ae",
-"search_word":['i', '-i-'],
+"search_word":['-i-', 'i', '––i-<sup>2</sup>'],
 "headword":"––i-<sup>2</sup>",
 "root":['i'],
 "cyrillic":"-и-2",
@@ -3608,7 +3608,7 @@ var pbLEX = [
 },
 
 {"UUID":"69a6bd407e217714d1c4a2620cb878eec6e17a01",
-"search_word":['ighute', '-ighute-'],
+"search_word":['-ighute-', 'ighute', '-i:ghute-'],
 "headword":"-i:ghute-",
 "root":['ighute'],
 "cyrillic":"",
@@ -3630,11 +3630,11 @@ var pbLEX = [
 },
 
 {"UUID":"91eaded8d526c9e96c6301befa55bfca22a0d7e8",
-"search_word":['-ma-', 'iuma', 'ma', '-iuma-'],
+"search_word":['iuma', 'ma', '-iuma-', '@~:(i/u)ma-', '-ma-'],
 "headword":"@~:(i/u)ma-",
-"root":['iuma', 'ma'],
+"root":['ma', 'iuma'],
 "cyrillic":"-(и-у)ма-",
-"ipa":['iumɑ', 'mɑ'],
+"ipa":['mɑ', 'iumɑ'],
 "jacobson":"-øb-eπvf-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -3652,7 +3652,7 @@ var pbLEX = [
 },
 
 {"UUID":"b9d7fa7b5ccb264d0ff840c0b4e667bffdb058b4",
-"search_word":['-iumafte-', '-mafte-', 'iumafte', 'mafte'],
+"search_word":['iumafte', '-iumafte-', '-mafte-', '@~:(i/u)mafte-', 'mafte'],
 "headword":"@~:(i/u)mafte-",
 "root":['iumafte', 'mafte'],
 "cyrillic":"-(и-у)мафты-",
@@ -3674,11 +3674,11 @@ var pbLEX = [
 },
 
 {"UUID":"88b07d179385b48d759f7c0403cded5a3e3b146d",
-"search_word":['iumagh', 'magh', '-magh-', '-iumagh-'],
+"search_word":['iumagh', '@~:(i/u)magh-', '-iumagh-', 'magh', '-magh-'],
 "headword":"@~:(i/u)magh-",
-"root":['magh', 'iumagh'],
+"root":['iumagh', 'magh'],
 "cyrillic":"-(и-у)маӷ-",
-"ipa":['mɑʁ', 'iumɑʁ'],
+"ipa":['iumɑʁ', 'mɑʁ'],
 "jacobson":"-øb-eπvf4-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -3696,11 +3696,11 @@ var pbLEX = [
 },
 
 {"UUID":"c5bfd43ea47f51947ed87c737dfe087837ecf553",
-"search_word":['-iuman-', 'mate', '-man-', 'iumate'],
+"search_word":['-man-', '-iuman-', 'iumate', 'mate', '@~:(i/u)man'],
 "headword":"@~:(i/u)man",
-"root":['mate', 'iumate'],
+"root":['iumate', 'mate'],
 "cyrillic":"-(и-у)ман",
-"ipa":['mɑn', 'iumɑn'],
+"ipa":['iumɑn', 'mɑn'],
 "jacobson":"-øb-eπvfy",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -3718,11 +3718,11 @@ var pbLEX = [
 },
 
 {"UUID":"d235a006711cc8e381d9259fa43aca70c85a025f",
-"search_word":['-iumanginagh-', 'iumanginagh', 'manginagh', '-manginagh-'],
+"search_word":['iumanginagh', 'manginagh', '-manginagh-', '@~:(i/u)manginagh-', '-iumanginagh-'],
 "headword":"@~:(i/u)manginagh-",
-"root":['manginagh', 'iumanginagh'],
+"root":['iumanginagh', 'manginagh'],
 "cyrillic":"-(и-у)маңинаӷ-",
-"ipa":['mɑŋinɑʁ', 'iumɑŋinɑʁ'],
+"ipa":['iumɑŋinɑʁ', 'mɑŋinɑʁ'],
 "jacobson":"-øb-eπvf3byf4-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -3740,7 +3740,7 @@ var pbLEX = [
 },
 
 {"UUID":"76ff667534f066683b999734a4e3ea57676fb66d",
-"search_word":['iumangite', '-iumangite-', 'mangite', '-mangite-'],
+"search_word":['iumangite', 'mangite', '@~:(i/u)mangite-', '-mangite-', '-iumangite-'],
 "headword":"@~:(i/u)mangite-",
 "root":['iumangite', 'mangite'],
 "cyrillic":"-(и-у)маңиты-",
@@ -3784,7 +3784,7 @@ var pbLEX = [
 },
 
 {"UUID":"14c990625e2f5b108bb7f85a43f1f4f9075e060f",
-"search_word":['-igh-', 'igh'],
+"search_word":['igh', '––igh-', '-igh-'],
 "headword":"––igh-",
 "root":['igh'],
 "cyrillic":"-иӷ-",
@@ -3806,7 +3806,7 @@ var pbLEX = [
 },
 
 {"UUID":"e616c03b8b6ac12ab9086f7aadbd7d2514f459f6",
-"search_word":['-igh-', 'igh'],
+"search_word":['igh', '-igh-'],
 "headword":"-igh-",
 "root":['igh'],
 "cyrillic":"",
@@ -3828,7 +3828,7 @@ var pbLEX = [
 },
 
 {"UUID":"94a0b7e8a8f09a14a78c7e181fcd22c30cff457e",
-"search_word":['ii', '-ii-'],
+"search_word":['––ii-', '-ii-', 'ii'],
 "headword":"––ii-",
 "root":['ii'],
 "cyrillic":"-ӣ-",
@@ -3850,7 +3850,7 @@ var pbLEX = [
 },
 
 {"UUID":"b0b2d77ed440efcb4472a6ad41ea576ddb79908f",
-"search_word":['iigh', '-iigh-'],
+"search_word":['iigh', '––iigh-', '-iigh-'],
 "headword":"––iigh-",
 "root":['iigh'],
 "cyrillic":"-ӣӷ-",
@@ -3872,7 +3872,7 @@ var pbLEX = [
 },
 
 {"UUID":"6e03b6e5f91fea1dfe9cb5f072eb0058bf5fbfbb",
-"search_word":['-iiraagh-', 'iiraagh'],
+"search_word":['+iiraagh-', '-iiraagh-', 'iiraagh'],
 "headword":"+iiraagh-",
 "root":['iiraagh'],
 "cyrillic":"-ӣрāӷ-",
@@ -3894,7 +3894,7 @@ var pbLEX = [
 },
 
 {"UUID":"d3d32c6cea980dac384a9f4baa1ca4e6e9509ec8",
-"search_word":['-iitaq-', 'iitaq'],
+"search_word":['-iitaq-', '-iitaq', 'iitaq'],
 "headword":"-iitaq",
 "root":['iitaq'],
 "cyrillic":"",
@@ -3960,7 +3960,7 @@ var pbLEX = [
 },
 
 {"UUID":"2ba14484749357c9144f9fe5d74a03870003b25b",
-"search_word":['-imagh-', 'imagh'],
+"search_word":['imagh', '-imagh-'],
 "headword":"-imagh-",
 "root":['imagh'],
 "cyrillic":"",
@@ -3982,7 +3982,7 @@ var pbLEX = [
 },
 
 {"UUID":"3d7c914c6118e5aeb5dcfaa78f528e2e8f05afc7",
-"search_word":['iman', '-iman-'],
+"search_word":['-iman', '-iman-', 'iman'],
 "headword":"-iman",
 "root":['iman'],
 "cyrillic":"",
@@ -4004,7 +4004,7 @@ var pbLEX = [
 },
 
 {"UUID":"50252227d7fcf5c06706967356e3ff362feeadd1",
-"search_word":['imanginagh', '-imanginagh-'],
+"search_word":['-imanginagh-', 'imanginagh'],
 "headword":"-imanginagh-",
 "root":['imanginagh'],
 "cyrillic":"",
@@ -4070,7 +4070,7 @@ var pbLEX = [
 },
 
 {"UUID":"a083f3b117311778310edea222797e42e7eeeda8",
-"search_word":['inaq', '-inaq-'],
+"search_word":['-inaq*', 'inaq', '-inaq-'],
 "headword":"-inaq*",
 "root":['inaq'],
 "cyrillic":"",
@@ -4092,7 +4092,7 @@ var pbLEX = [
 },
 
 {"UUID":"1d3e9a57846e9c10d67f6ca83f7d3524a35d6ba7",
-"search_word":['-iqe-', 'iqe'],
+"search_word":['––iqe-', '-iqe-', 'iqe'],
 "headword":"––iqe-",
 "root":['iqe'],
 "cyrillic":"-иқы-",
@@ -4136,7 +4136,7 @@ var pbLEX = [
 },
 
 {"UUID":"33573b14582aff0c4750addc427d06e0ba726a15",
-"search_word":['-isug-', 'isug'],
+"search_word":['isug', '-isug-'],
 "headword":"-isug-",
 "root":['isug'],
 "cyrillic":"",
@@ -4158,7 +4158,7 @@ var pbLEX = [
 },
 
 {"UUID":"6e2aa924a29ad8849980346747db192510b94089",
-"search_word":['kaa', '-kaa-'],
+"search_word":['-kaa-', 'kaa'],
 "headword":"-kaa-",
 "root":['kaa'],
 "cyrillic":"",
@@ -4202,7 +4202,7 @@ var pbLEX = [
 },
 
 {"UUID":"e4ff30b63e8bc9f151f2f97db5957e1ab68df262",
-"search_word":['-ka-', 'ka'],
+"search_word":['-ka-', '-ka<sup>e</sup>', 'ka'],
 "headword":"-ka<sup>e</sup>",
 "root":['ka'],
 "cyrillic":"",
@@ -4224,7 +4224,7 @@ var pbLEX = [
 },
 
 {"UUID":"8cece3db9cf05017126e088ecf99b1d3f7ed24d9",
-"search_word":['kagh', '-kagh-'],
+"search_word":['-kagh-', 'kagh'],
 "headword":"-kagh-",
 "root":['kagh'],
 "cyrillic":"",
@@ -4246,7 +4246,7 @@ var pbLEX = [
 },
 
 {"UUID":"c6d39affe9ed8a9a931304f81cd6f912f9034b7e",
-"search_word":['-kaghaq-', 'kaghagh'],
+"search_word":['-kaghaq-', '@kaghaq', 'kaghagh'],
 "headword":"@kaghaq",
 "root":['kaghagh'],
 "cyrillic":"-каӷақ",
@@ -4268,7 +4268,7 @@ var pbLEX = [
 },
 
 {"UUID":"91a861c91af37af0aa5cbdea1e1ba1a1bef37370",
-"search_word":['-kaghaqe-', 'kaghaqe'],
+"search_word":['kaghaqe', '-kaghaqe-'],
 "headword":"-kaghaqe-",
 "root":['kaghaqe'],
 "cyrillic":"",
@@ -4290,7 +4290,7 @@ var pbLEX = [
 },
 
 {"UUID":"b7de48587a0e73a2704e74f19121296dd6b2c285",
-"search_word":['kaghqagh', '-kaghqaq-'],
+"search_word":['~–kaghqaq', '-kaghqaq-', 'kaghqagh'],
 "headword":"~–kaghqaq",
 "root":['kaghqagh'],
 "cyrillic":"-каҳкақ",
@@ -4312,7 +4312,7 @@ var pbLEX = [
 },
 
 {"UUID":"30054883e8edcf9b7bb1b9c28e5ca96a2da05810",
-"search_word":['-kaghtagh-', 'kaghtagh'],
+"search_word":['kaghtagh', '-kaghtagh-'],
 "headword":"-kaghtagh-",
 "root":['kaghtagh'],
 "cyrillic":"",
@@ -4334,7 +4334,7 @@ var pbLEX = [
 },
 
 {"UUID":"ba52bcf4765b8186245c43a5c5f543a8fc3c041c",
-"search_word":['kaghtagh', '-kaghtaq-'],
+"search_word":['+kaghtaq', 'kaghtagh', '-kaghtaq-'],
 "headword":"+kaghtaq",
 "root":['kaghtagh'],
 "cyrillic":"-каҳтақ",
@@ -4356,7 +4356,7 @@ var pbLEX = [
 },
 
 {"UUID":"2e507cdc2646bc63174ace377bf2030e9128b4d7",
-"search_word":['-kaghte-', 'kaghte'],
+"search_word":['~–kaghte-', 'kaghte', '-kaghte-'],
 "headword":"~–kaghte-",
 "root":['kaghte'],
 "cyrillic":"-каҳты-",
@@ -4378,7 +4378,7 @@ var pbLEX = [
 },
 
 {"UUID":"59c2c3190f043f67230dd7878f93ca63674c9bf2",
-"search_word":['-kanigh-', 'kanigh'],
+"search_word":['~–kanigh-', 'kanigh', '-kanigh-'],
 "headword":"~–kanigh-",
 "root":['kanigh'],
 "cyrillic":"-каниӷ-",
@@ -4400,7 +4400,7 @@ var pbLEX = [
 },
 
 {"UUID":"c856e3daef0fd45993c2a9b20513119d05e0f6df",
-"search_word":['kagh', '-kaq-'],
+"search_word":['+kaq', '-kaq-', 'kagh'],
 "headword":"+kaq",
 "root":['kagh'],
 "cyrillic":"-кақ",
@@ -4422,7 +4422,7 @@ var pbLEX = [
 },
 
 {"UUID":"17f2897ec37d79d7d5af20bd660f19fbd5e00e9c",
-"search_word":['-kaq-', 'kaq'],
+"search_word":['-kaq-', '-kaq', 'kaq'],
 "headword":"-kaq",
 "root":['kaq'],
 "cyrillic":"",
@@ -4444,7 +4444,7 @@ var pbLEX = [
 },
 
 {"UUID":"31bbaa61dbf449c2e70c2e3f7e60cad502a29bbc",
-"search_word":['-kaqe-', 'kaqe'],
+"search_word":['kaqe', '-kaqe-'],
 "headword":"-kaqe-",
 "root":['kaqe'],
 "cyrillic":"",
@@ -4488,7 +4488,7 @@ var pbLEX = [
 },
 
 {"UUID":"c9b184d3dcdf7f5b905c9fcc8eccd68284cf6013",
-"search_word":['-kaqu-', 'kaqu'],
+"search_word":['kaqu', '-kaqu-'],
 "headword":"-kaqu-",
 "root":['kaqu'],
 "cyrillic":"",
@@ -4510,7 +4510,7 @@ var pbLEX = [
 },
 
 {"UUID":"aab51cd3e48d078664affe973c542556cdbb12a4",
-"search_word":['-kataghagh-', 'kataghagh'],
+"search_word":['-kataghagh-', '~–kataghagh-', 'kataghagh'],
 "headword":"~–kataghagh-",
 "root":['kataghagh'],
 "cyrillic":"-катаӷаӷ-",
@@ -4532,7 +4532,7 @@ var pbLEX = [
 },
 
 {"UUID":"def731ccd298f4f2f187e00380cda34c55eb1c2b",
-"search_word":['kayugu', '-kayugu-'],
+"search_word":['-kayugu-', 'kayugu'],
 "headword":"-kayugu-",
 "root":['kayugu'],
 "cyrillic":"",
@@ -4554,7 +4554,7 @@ var pbLEX = [
 },
 
 {"UUID":"6e658562c32ecf66cf9ba24c8178031d350bddd6",
-"search_word":['kayugughte', '-kayugughte-'],
+"search_word":['-kayugughte-', 'kayugughte'],
 "headword":"-kayugughte-",
 "root":['kayugughte'],
 "cyrillic":"",
@@ -4576,7 +4576,7 @@ var pbLEX = [
 },
 
 {"UUID":"be9ba1873d604d33bd59320d65976286103f1223",
-"search_word":['kayuk', '-kayuk-'],
+"search_word":['-kayuk-', '-kayuk', 'kayuk'],
 "headword":"-kayuk",
 "root":['kayuk'],
 "cyrillic":"",
@@ -4598,7 +4598,7 @@ var pbLEX = [
 },
 
 {"UUID":"bf650097941fd44e1014a4e68e5ccd07feabe2bf",
-"search_word":['-ke-', 'ke'],
+"search_word":['-ke-', '~–ke-<sup>1</sup>', 'ke'],
 "headword":"~–ke-<sup>1</sup>",
 "root":['ke'],
 "cyrillic":"-кы-1",
@@ -4620,7 +4620,7 @@ var pbLEX = [
 },
 
 {"UUID":"2e7423d861af6e1ebdb6435c4de877605a6a6d65",
-"search_word":['-ke-', 'ke'],
+"search_word":['-ke-', '~–ke-<sup>2</sup>', 'ke'],
 "headword":"~–ke-<sup>2</sup>",
 "root":['ke'],
 "cyrillic":"-кы-2",
@@ -4642,11 +4642,11 @@ var pbLEX = [
 },
 
 {"UUID":"8b4dcea5a35471508777c3021d35125ff28b6513",
-"search_word":['-kestaaghhaa-', 'kestaaghhaa', 'staaghhaa', '-staaghhaa-'],
+"search_word":['-kestaaghhaa-', '?(ke)staaghhaa-', 'kestaaghhaa', '-staaghhaa-', 'staaghhaa'],
 "headword":"?(ke)staaghhaa-",
-"root":['kestaaghhaa', 'staaghhaa'],
+"root":['staaghhaa', 'kestaaghhaa'],
 "cyrillic":"-(кы)стāҳā-",
-"ipa":['kəstɑːχɑː', 'stɑːχɑː'],
+"ipa":['stɑːχɑː', 'kəstɑːχɑː'],
 "jacobson":"-ørsπcn656-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -4664,7 +4664,7 @@ var pbLEX = [
 },
 
 {"UUID":"baa7aa712d505e38268842a86ce2e76f32054659",
-"search_word":['kestaaghhagh*', '-kestaaghhaq-', '-staaghhaq-', 'staaghhagh*'],
+"search_word":['staaghhagh*', 'kestaaghhagh*', '?(ke)staaghhaq*', '-staaghhaq-', '-kestaaghhaq-'],
 "headword":"?(ke)staaghhaq*",
 "root":['staaghhagh*', 'kestaaghhagh*'],
 "cyrillic":"-(кы)стāҳақ",
@@ -4686,11 +4686,11 @@ var pbLEX = [
 },
 
 {"UUID":"e1555af6a66ff84d4a29ed8aea76f7486842d397",
-"search_word":['-kestaaq-', 'kestaagh', 'staagh', '-staaq-'],
+"search_word":['-staaq-', '?(ke)staaq', 'kestaagh', 'staagh', '-kestaaq-'],
 "headword":"?(ke)staaq",
-"root":['staagh', 'kestaagh'],
+"root":['kestaagh', 'staagh'],
 "cyrillic":"-(кы)стāқ",
-"ipa":['stɑːq', 'kəstɑːq'],
+"ipa":['kəstɑːq', 'stɑːq'],
 "jacobson":"-ørsπcn62",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -4708,7 +4708,7 @@ var pbLEX = [
 },
 
 {"UUID":"e32bc88acd83c4f1bea6b52597f8790e2004f8c2",
-"search_word":['-keghtaq-', 'keghtagh'],
+"search_word":['keghtagh', '+keghtaq', '-keghtaq-'],
 "headword":"+keghtaq",
 "root":['keghtagh'],
 "cyrillic":"-кыҳтақ",
@@ -4730,7 +4730,7 @@ var pbLEX = [
 },
 
 {"UUID":"fde4b18d7f4d3ecbe35fd92b0bb411854bd283cc",
-"search_word":['-kegtaq-', 'kegtagh'],
+"search_word":['-kegtaq-', '~–kegtaq', 'kegtagh'],
 "headword":"~–kegtaq",
 "root":['kegtagh'],
 "cyrillic":"-кыхтақ",
@@ -4752,7 +4752,7 @@ var pbLEX = [
 },
 
 {"UUID":"45b91aff6e6f408bba79ece260b761e7cc0dda5d",
-"search_word":['kegte', '-kegte-'],
+"search_word":['~–kegte-', '-kegte-', 'kegte'],
 "headword":"~–kegte-",
 "root":['kegte'],
 "cyrillic":"-кыхты-",
@@ -4774,7 +4774,7 @@ var pbLEX = [
 },
 
 {"UUID":"2dfb3fe14f18a993b8d616cf6fa2f866feaa5acd",
-"search_word":['kenghhagh*', '-kenghhaq-'],
+"search_word":['kenghhagh*', '~–kenghhaq*', '-kenghhaq-'],
 "headword":"~–kenghhaq*",
 "root":['kenghhagh*'],
 "cyrillic":"-кынҳақ",
@@ -4796,7 +4796,7 @@ var pbLEX = [
 },
 
 {"UUID":"359fd168727d5c7b9a88e868a84a5096fd077cde",
-"search_word":['-ketagh-', 'ketagh'],
+"search_word":['-ketagh-', '~–ketagh-', 'ketagh'],
 "headword":"~–ketagh-",
 "root":['ketagh'],
 "cyrillic":"-кытаӷ-",
@@ -4818,7 +4818,7 @@ var pbLEX = [
 },
 
 {"UUID":"4c3126a6a848d2b9a76525b04e2992ba5af83894",
-"search_word":['kiinagh', '-kiinagh-'],
+"search_word":['-kiinagh-', 'kiinagh'],
 "headword":"-kiinagh-",
 "root":['kiinagh'],
 "cyrillic":"-қӣнаӷ-",
@@ -4840,7 +4840,7 @@ var pbLEX = [
 },
 
 {"UUID":"92eb1f82ed3d2180c324a98995634f6d6d6a4ff3",
-"search_word":['-kinghaq-', 'kinghaq'],
+"search_word":['-kinghaq-', 'kinghaq', '-kinghaq'],
 "headword":"-kinghaq",
 "root":['kinghaq'],
 "cyrillic":"",
@@ -4862,7 +4862,7 @@ var pbLEX = [
 },
 
 {"UUID":"5eac1bc72f61ea061fd6f2639a961d705367d05a",
-"search_word":['kliq', '-kliq-'],
+"search_word":['kliq', '-kliq*', '-kliq-'],
 "headword":"-kliq*",
 "root":['kliq'],
 "cyrillic":"",
@@ -4906,7 +4906,7 @@ var pbLEX = [
 },
 
 {"UUID":"c4240adb834ed962cc298e92cb6787cca4457a28",
-"search_word":['krag', '-krak-'],
+"search_word":['–krak', 'krag', '-krak-'],
 "headword":"–krak",
 "root":['krag'],
 "cyrillic":"-крак",
@@ -4928,7 +4928,7 @@ var pbLEX = [
 },
 
 {"UUID":"2ad911e9907bb0ca87e13d0291ff6e3eacc06227",
-"search_word":['kraq', '-kraq-'],
+"search_word":['kraq', '-kraq-', '-kraq'],
 "headword":"-kraq",
 "root":['kraq'],
 "cyrillic":"",
@@ -4950,7 +4950,7 @@ var pbLEX = [
 },
 
 {"UUID":"1f2b591dd21017d31a0249d2b025e9037a07f8f2",
-"search_word":['krug', '-krug-'],
+"search_word":['-krug-', 'krug'],
 "headword":"-krug-",
 "root":['krug'],
 "cyrillic":"",
@@ -4972,7 +4972,7 @@ var pbLEX = [
 },
 
 {"UUID":"636b4f6cc41948bcc457a5a9179e7ba793ae1d68",
-"search_word":['-kruk-', 'kruk'],
+"search_word":['-kruk-', '-kruk', 'kruk'],
 "headword":"-kruk",
 "root":['kruk'],
 "cyrillic":"",
@@ -4994,7 +4994,7 @@ var pbLEX = [
 },
 
 {"UUID":"287bda0020d2c82809f29ce47e2351c5622c70a6",
-"search_word":['-ksagute-', 'ksagute'],
+"search_word":['-ksagute-', '–ksagute-', 'ksagute'],
 "headword":"–ksagute-",
 "root":['ksagute'],
 "cyrillic":"-ксягуты-",
@@ -5016,7 +5016,7 @@ var pbLEX = [
 },
 
 {"UUID":"5cfb14e7f0d68496a1c11e4e90a7b8abe5f75763",
-"search_word":['-kumtaaq-', 'kumtaaq'],
+"search_word":['-kumtaaq-', '-kumtaaq', 'kumtaaq'],
 "headword":"-kumtaaq",
 "root":['kumtaaq'],
 "cyrillic":"",
@@ -5038,7 +5038,7 @@ var pbLEX = [
 },
 
 {"UUID":"07c1feac1cb4fd368c06ae28edc3b53d93c4d37a",
-"search_word":['kute', '-kun-'],
+"search_word":['-kun-', '–kun', 'kute'],
 "headword":"–kun",
 "root":['kute'],
 "cyrillic":"-кун",
@@ -5060,7 +5060,7 @@ var pbLEX = [
 },
 
 {"UUID":"93483c1eae59957ae97d096ce0ec0d16bad15c2d",
-"search_word":['kusiigh', '-kusiigh-'],
+"search_word":['–kusiigh-', '-kusiigh-', 'kusiigh'],
 "headword":"–kusiigh-",
 "root":['kusiigh'],
 "cyrillic":"-кусӣӷ-",
@@ -5082,7 +5082,7 @@ var pbLEX = [
 },
 
 {"UUID":"85aaeb8883652d120d90c890edec67c405350e71",
-"search_word":['kutaq', '-kutaq-'],
+"search_word":['kutaq', '-kutaq', '-kutaq-'],
 "headword":"-kutaq",
 "root":['kutaq'],
 "cyrillic":"",
@@ -5104,7 +5104,7 @@ var pbLEX = [
 },
 
 {"UUID":"3df084beafbd67e10dd9b459fe9bbd42296fb9ba",
-"search_word":['kuvinghagh', '-kuvinghaq-'],
+"search_word":['-kuvinghaq-', '–kuvinghaq', 'kuvinghagh'],
 "headword":"–kuvinghaq",
 "root":['kuvinghagh'],
 "cyrillic":"-кувинӷақ",
@@ -5126,7 +5126,7 @@ var pbLEX = [
 },
 
 {"UUID":"7e5de63b811a0243798dbdfa36ea771e389dd080",
-"search_word":['kwaagh', '-kwaaq-'],
+"search_word":['kwaagh', '-kwaaq-', '?kwaaq'],
 "headword":"?kwaaq",
 "root":['kwaagh'],
 "cyrillic":"-кӱāқ",
@@ -5148,7 +5148,7 @@ var pbLEX = [
 },
 
 {"UUID":"e1daf38ee737c659bb03693b2eed0cb27a056d59",
-"search_word":['-kwaaqun-', 'kwaaqun'],
+"search_word":['kwaaqun', '-kwaaqun-', '-kwaaqun'],
 "headword":"-kwaaqun",
 "root":['kwaaqun'],
 "cyrillic":"",
@@ -5170,7 +5170,7 @@ var pbLEX = [
 },
 
 {"UUID":"b1042cc65d135b094ea256044b3a7f540c1f03a1",
-"search_word":['-laaghigate-', 'laaghigate'],
+"search_word":['@+laaghigate-', '-laaghigate-', 'laaghigate'],
 "headword":"@+laaghigate-",
 "root":['laaghigate'],
 "cyrillic":"-ля̄ӷигаты-",
@@ -5192,7 +5192,7 @@ var pbLEX = [
 },
 
 {"UUID":"bf398d0116400171741736372fbe218bf6d0b25b",
-"search_word":['-laaq-', 'laagh'],
+"search_word":['-laaq-', 'laagh', '–laaq'],
 "headword":"–laaq",
 "root":['laagh'],
 "cyrillic":"-ля̄қ",
@@ -5214,7 +5214,7 @@ var pbLEX = [
 },
 
 {"UUID":"e89e19219c52f3d947874df4100628fa36650a3f",
-"search_word":['laataqu', '-laataqu-'],
+"search_word":['+laataqu-', 'laataqu', '-laataqu-'],
 "headword":"+laataqu-",
 "root":['laataqu'],
 "cyrillic":"-ля̄тақу-",
@@ -5236,7 +5236,7 @@ var pbLEX = [
 },
 
 {"UUID":"882a41b4be99438087cc2c0465c88da1ee97fbbc",
-"search_word":['-lek-', 'leg'],
+"search_word":['–lek', 'leg', '-lek-'],
 "headword":"–lek",
 "root":['leg'],
 "cyrillic":"-лык",
@@ -5258,7 +5258,7 @@ var pbLEX = [
 },
 
 {"UUID":"c72c5c812f458d0bd56cf9b7e1f03c86fd48a6a6",
-"search_word":['-lghaa-', 'lghaa'],
+"search_word":['-lghaa-', '@lghaa-', 'lghaa'],
 "headword":"@lghaa-",
 "root":['lghaa'],
 "cyrillic":"-лӷā-",
@@ -5280,7 +5280,7 @@ var pbLEX = [
 },
 
 {"UUID":"d0755b17547205c66fe89458964f765d6bbf5dda",
-"search_word":['lghagh', '-lghaq-'],
+"search_word":['-lghaq-', '–lghaq', 'lghagh'],
 "headword":"–lghaq",
 "root":['lghagh'],
 "cyrillic":"-лӷақ",
@@ -5302,7 +5302,7 @@ var pbLEX = [
 },
 
 {"UUID":"de0e8c02ff8cfe978e58938b8a6fd17bb5376c08",
-"search_word":['lghii', '-lghii-'],
+"search_word":['-lghii-', '@–lghii', 'lghii'],
 "headword":"@–lghii",
 "root":['lghii'],
 "cyrillic":"-лӷӣ",
@@ -5324,7 +5324,7 @@ var pbLEX = [
 },
 
 {"UUID":"96e9443b8e6039a2c3dc875a88536a4369cc5333",
-"search_word":['-lghun-', 'lghute'],
+"search_word":['–lghun', '-lghun-', 'lghute'],
 "headword":"–lghun",
 "root":['lghute'],
 "cyrillic":"-лӷун",
@@ -5346,7 +5346,7 @@ var pbLEX = [
 },
 
 {"UUID":"dade58b6f756ca218000ea0d215834b324da0f26",
-"search_word":['lghutagh', '-lghutaq-'],
+"search_word":['-lghutaq-', '–lghutaq', 'lghutagh'],
 "headword":"–lghutaq",
 "root":['lghutagh'],
 "cyrillic":"-лӷутақ",
@@ -5368,7 +5368,7 @@ var pbLEX = [
 },
 
 {"UUID":"db163371d13191a9e312f6c1205b5505c45327bd",
-"search_word":['-lgigh-', 'lgigh'],
+"search_word":['-lgigh-', 'lgigh', '–lgigh-'],
 "headword":"–lgigh-",
 "root":['lgigh'],
 "cyrillic":"-лгиӷ-",
@@ -5390,7 +5390,7 @@ var pbLEX = [
 },
 
 {"UUID":"7fa3bdcdd86965b32b6c021f015f4729c9f9dbcf",
-"search_word":['-lgu-', 'lgu'],
+"search_word":['-lgu-', 'lgu', '–lgu-'],
 "headword":"–lgu-",
 "root":['lgu'],
 "cyrillic":"-лгу-",
@@ -5412,7 +5412,7 @@ var pbLEX = [
 },
 
 {"UUID":"2451c5fe12d327b0b7e37065e209a175db209775",
-"search_word":['-lgun-', 'lgute'],
+"search_word":['-lgun-', 'lgute', '–lgun'],
 "headword":"–lgun",
 "root":['lgute'],
 "cyrillic":"-лгун",
@@ -5434,7 +5434,7 @@ var pbLEX = [
 },
 
 {"UUID":"d6d0fe351b8e5f4972ac89e84a206850e16059c8",
-"search_word":['-lgusigh-', 'lgusigh'],
+"search_word":['–lgusigh-', 'lgusigh', '-lgusigh-'],
 "headword":"–lgusigh-",
 "root":['lgusigh'],
 "cyrillic":"-лгусиӷ-",
@@ -5456,7 +5456,7 @@ var pbLEX = [
 },
 
 {"UUID":"779ff02d81f07ddab50afb3ce6b8f8a9df5d5de2",
-"search_word":['lgute', '-lgute-'],
+"search_word":['-lgute-', '–lgute-', 'lgute'],
 "headword":"–lgute-",
 "root":['lgute'],
 "cyrillic":"-лгуты-",
@@ -5478,7 +5478,7 @@ var pbLEX = [
 },
 
 {"UUID":"4683cadb5c6720e0c8698fd5ff76fc3034a9fd73",
-"search_word":['-lgutke-', 'lgutke'],
+"search_word":['–lgutke-', '-lgutke-', 'lgutke'],
 "headword":"–lgutke-",
 "root":['lgutke'],
 "cyrillic":"-лгуткы-",
@@ -5500,7 +5500,7 @@ var pbLEX = [
 },
 
 {"UUID":"3efa43a3c4ec67b8bb4010e761d44fb89c010e1d",
-"search_word":['-li-', 'li'],
+"search_word":['-li-', '–li-', 'li'],
 "headword":"–li-",
 "root":['li'],
 "cyrillic":"-ли-",
@@ -5544,7 +5544,7 @@ var pbLEX = [
 },
 
 {"UUID":"fa8add871fbe6e16bf0cc18095db6f64492753e3",
-"search_word":['-ligh-', 'ligh'],
+"search_word":['-ligh-', 'ligh', '–ligh-'],
 "headword":"–ligh-",
 "root":['ligh'],
 "cyrillic":"-лиӷ-",
@@ -5566,7 +5566,7 @@ var pbLEX = [
 },
 
 {"UUID":"1c4112ad7af36d1d917b07cc5552cb60a6ce44d6",
-"search_word":['-lighneq-', 'lighnegh'],
+"search_word":['-lighneq-', 'lighnegh', '?lighneq'],
 "headword":"?lighneq",
 "root":['lighnegh'],
 "cyrillic":"-лиӷнық",
@@ -5588,7 +5588,7 @@ var pbLEX = [
 },
 
 {"UUID":"e2cd1a55c778e5023780d18cfe08a47b52394601",
-"search_word":['-lighpigaq-', 'lighpigagh'],
+"search_word":['?lighpigaq', '-lighpigaq-', 'lighpigagh'],
 "headword":"?lighpigaq",
 "root":['lighpigagh'],
 "cyrillic":"-лиҳпигақ",
@@ -5610,7 +5610,7 @@ var pbLEX = [
 },
 
 {"UUID":"121761066d897ac38dbe362695cdd11e7588153b",
-"search_word":['liigh', '-liigh-'],
+"search_word":['–liigh-', '-liigh-', 'liigh'],
 "headword":"–liigh-",
 "root":['liigh'],
 "cyrillic":"-лӣӷ-",
@@ -5632,7 +5632,7 @@ var pbLEX = [
 },
 
 {"UUID":"68191579de753d7efdd86d1ca9ff2632bbce4110",
-"search_word":['-liite-', 'liite'],
+"search_word":['–liite-', 'liite', '-liite-'],
 "headword":"–liite-",
 "root":['liite'],
 "cyrillic":"-лӣты-",
@@ -5654,7 +5654,7 @@ var pbLEX = [
 },
 
 {"UUID":"6e4dc84fee652cc9150f4dc4e21b9e37bfa7a207",
-"search_word":['-linghaq-', 'linghagh*'],
+"search_word":['-linghaq-', '–linghaq*', 'linghagh*'],
 "headword":"–linghaq*",
 "root":['linghagh*'],
 "cyrillic":"-линӷақ",
@@ -5676,7 +5676,7 @@ var pbLEX = [
 },
 
 {"UUID":"d90ce147c7d08157a237db9eec5f8b211c38cb51",
-"search_word":['lipag', '-lipag-'],
+"search_word":['–lipag-', '-lipag-', 'lipag'],
 "headword":"–lipag-",
 "root":['lipag'],
 "cyrillic":"-липаг-",
@@ -5698,7 +5698,7 @@ var pbLEX = [
 },
 
 {"UUID":"f0c90daa188bd9aa0410c693292673ffe9aecf03",
-"search_word":['-liq-', 'ligh'],
+"search_word":['ligh', '?liq', '-liq-'],
 "headword":"?liq",
 "root":['ligh'],
 "cyrillic":"-лиқ",
@@ -5720,7 +5720,7 @@ var pbLEX = [
 },
 
 {"UUID":"39345c486d7e2edb0f94299997931521fb063869",
-"search_word":['-liqe-', 'liqe'],
+"search_word":['–liqe-', '-liqe-', 'liqe'],
 "headword":"–liqe-",
 "root":['liqe'],
 "cyrillic":"-лиқы-",
@@ -5742,7 +5742,7 @@ var pbLEX = [
 },
 
 {"UUID":"d7f7be8289c175e920642186e13e285e33df2b06",
-"search_word":['-llaag-', 'llaag'],
+"search_word":['llaag', '-llaag-', '–llaag-'],
 "headword":"–llaag-",
 "root":['llaag'],
 "cyrillic":"-лья̄г-",
@@ -5764,7 +5764,7 @@ var pbLEX = [
 },
 
 {"UUID":"5fe70f183ad619378160f920b424db6f76419152",
-"search_word":['-llaak-', 'llaag'],
+"search_word":['-llaak-', 'llaag', '–llaak'],
 "headword":"–llaak",
 "root":['llaag'],
 "cyrillic":"-лья̄к",
@@ -5786,7 +5786,7 @@ var pbLEX = [
 },
 
 {"UUID":"5c542f69d49d027aaf6813ea34da05334c9df352",
-"search_word":['llegagh', '-llegagh-'],
+"search_word":['-llegagh-', 'llegagh', '–llegagh-'],
 "headword":"–llegagh-",
 "root":['llegagh'],
 "cyrillic":"-льыгаӷ-",
@@ -5808,7 +5808,7 @@ var pbLEX = [
 },
 
 {"UUID":"b8d5f7ba874fabc666ce74ca7eaac62bb882b02d",
-"search_word":['llegagh*', '-llegaq-'],
+"search_word":['-llegaq-', '–llegaq*', 'llegagh*'],
 "headword":"–llegaq*",
 "root":['llegagh*'],
 "cyrillic":"-льыгақ",
@@ -5830,7 +5830,7 @@ var pbLEX = [
 },
 
 {"UUID":"619a75f5ddd39fccbdc568585ed03a106dc36ee1",
-"search_word":['-lleghpigaq-', 'lleghpigagh'],
+"search_word":['lleghpigagh', '-lleghpigaq-', '–lleghpigaq'],
 "headword":"–lleghpigaq",
 "root":['lleghpigagh'],
 "cyrillic":"-дьыҳпигақ",
@@ -5852,7 +5852,7 @@ var pbLEX = [
 },
 
 {"UUID":"4ee4543c1f2240f81c926ceab8e1d7841190c43c",
-"search_word":['-lleghqaq-', 'lleghqagh'],
+"search_word":['-lleghqaq-', '–lleghqaq', 'lleghqagh'],
 "headword":"–lleghqaq",
 "root":['lleghqagh'],
 "cyrillic":"-льыҳқақ",
@@ -5874,7 +5874,7 @@ var pbLEX = [
 },
 
 {"UUID":"e88e77ad7721632cf63e601a1189d570a0348b51",
-"search_word":['lleghqiite', '-lleghqiite-'],
+"search_word":['lleghqiite', '-lleghqiite-', '?lleghqiite-'],
 "headword":"?lleghqiite-",
 "root":['lleghqiite'],
 "cyrillic":"-льыҳқӣты-",
@@ -5896,7 +5896,7 @@ var pbLEX = [
 },
 
 {"UUID":"69471a814fa8ccdf03fd1352768625128d04046f",
-"search_word":['-llek-', 'lleg'],
+"search_word":['–llek', '-llek-', 'lleg'],
 "headword":"–llek",
 "root":['lleg'],
 "cyrillic":"-льык",
@@ -5918,7 +5918,7 @@ var pbLEX = [
 },
 
 {"UUID":"561da2fd024ebb917f9923df9214ece52ece4b60",
-"search_word":['-lleq-', 'llegh'],
+"search_word":['–lleq<sup>1</sup>', 'llegh', '-lleq-'],
 "headword":"–lleq<sup>1</sup>",
 "root":['llegh'],
 "cyrillic":"-льық1",
@@ -5940,7 +5940,7 @@ var pbLEX = [
 },
 
 {"UUID":"afb5b139ce2b0b85e1d95e42d43e8dff7ee42731",
-"search_word":['-lleq-', 'llegh'],
+"search_word":['–lleq<sup>2</sup>', 'llegh', '-lleq-'],
 "headword":"–lleq<sup>2</sup>",
 "root":['llegh'],
 "cyrillic":"-льық2",
@@ -5962,7 +5962,7 @@ var pbLEX = [
 },
 
 {"UUID":"ab1fa2c34c1df5c3c8a0b9b0503d9bd576b20eca",
-"search_word":['-lleqe-', 'lleqe'],
+"search_word":['@+lleqe-', 'lleqe', '-lleqe-'],
 "headword":"@+lleqe-",
 "root":['lleqe'],
 "cyrillic":"-льықы-",
@@ -5984,7 +5984,7 @@ var pbLEX = [
 },
 
 {"UUID":"a68ae018dba5e52c52dfee10b7bba244f29d7d5a",
-"search_word":['-llgaq-', 'llgagh'],
+"search_word":['llgagh', '-llgaq-', '–llgaq'],
 "headword":"–llgaq",
 "root":['llgagh'],
 "cyrillic":"-льхақ",
@@ -6006,7 +6006,7 @@ var pbLEX = [
 },
 
 {"UUID":"ff41c7c1b4d87c49a7e50183af17b0aaf8c2eb71",
-"search_word":['llghite', '-llghite-'],
+"search_word":['-llghite-', 'llghite', '–llghite-'],
 "headword":"–llghite-",
 "root":['llghite'],
 "cyrillic":"-льҳиты-",
@@ -6028,7 +6028,7 @@ var pbLEX = [
 },
 
 {"UUID":"8e895ffd86fc4799e86127a42413f9b8c2c88cc7",
-"search_word":['llgiite', '-llgiite-'],
+"search_word":['llgiite', '–llgiite-', '-llgiite-'],
 "headword":"–llgiite-",
 "root":['llgiite'],
 "cyrillic":"-льхӣты-",
@@ -6050,7 +6050,7 @@ var pbLEX = [
 },
 
 {"UUID":"6cfda61279df560b64f309224d4119f557905c0b",
-"search_word":['-llgilliqe-', 'llgilliqe'],
+"search_word":['–llgilliqe-', 'llgilliqe', '-llgilliqe-'],
 "headword":"–llgilliqe-",
 "root":['llgilliqe'],
 "cyrillic":"-льильиқы-",
@@ -6072,7 +6072,7 @@ var pbLEX = [
 },
 
 {"UUID":"2d41f2674fdc55c8c930a838c665eb42a907a3ec",
-"search_word":['-llgite-', 'llgite'],
+"search_word":['–llgite-', 'llgite', '-llgite-'],
 "headword":"–llgite-",
 "root":['llgite'],
 "cyrillic":"-льиты-",
@@ -6094,7 +6094,7 @@ var pbLEX = [
 },
 
 {"UUID":"55aea9413f3d99f9c45a390376f4fffaaa3bd4fd",
-"search_word":['llgu', '-llgu-'],
+"search_word":['llgu', '-llgu-', '–llgu-'],
 "headword":"–llgu-",
 "root":['llgu'],
 "cyrillic":"-льху-",
@@ -6116,7 +6116,7 @@ var pbLEX = [
 },
 
 {"UUID":"14fbeaef8831f4edb614b73771c4849ffed5f05c",
-"search_word":['-lliighagh-', 'lliighagh'],
+"search_word":['-lliighagh-', '?lliighagh-', 'lliighagh'],
 "headword":"?lliighagh-",
 "root":['lliighagh'],
 "cyrillic":"-льӣӷаӷ-",
@@ -6138,7 +6138,7 @@ var pbLEX = [
 },
 
 {"UUID":"d62b603f1d0b36af253be36e12b93eb6b86f5440",
-"search_word":['-lliqe-', 'lliqe'],
+"search_word":['lliqe', '±lliqe-', '-lliqe-'],
 "headword":"±lliqe-",
 "root":['lliqe'],
 "cyrillic":"-лиқы-",
@@ -6160,7 +6160,7 @@ var pbLEX = [
 },
 
 {"UUID":"ceafc0020ada4f97a2b83ab22af2fa8adf792eec",
-"search_word":['-llug-', 'llug'],
+"search_word":['±llug-', 'llug', '-llug-'],
 "headword":"±llug-",
 "root":['llug'],
 "cyrillic":"-льюг-",
@@ -6182,7 +6182,7 @@ var pbLEX = [
 },
 
 {"UUID":"891b02e76d95143a8fd270bfd0bbac20fc6ed558",
-"search_word":['lluggagh', '-lluggaq-'],
+"search_word":['±lluggaq', '-lluggaq-', 'lluggagh'],
 "headword":"±lluggaq",
 "root":['lluggagh'],
 "cyrillic":"-льюхақ",
@@ -6204,7 +6204,7 @@ var pbLEX = [
 },
 
 {"UUID":"11e591fc0e5e3575a64ad989521ef1f830e6bb1c",
-"search_word":['llug', '-lluk-'],
+"search_word":['±lluk', 'llug', '-lluk-'],
 "headword":"±lluk",
 "root":['llug'],
 "cyrillic":"-льюк",
@@ -6226,7 +6226,7 @@ var pbLEX = [
 },
 
 {"UUID":"433bbc6310b9eb84266f3b52ca6c7476b4fb5e86",
-"search_word":['-lqiinagh-', 'lqiinagh'],
+"search_word":['lqiinagh', '–lqiinagh-', '-lqiinagh-'],
 "headword":"–lqiinagh-",
 "root":['lqiinagh'],
 "cyrillic":"-льқӣнаӷ-",
@@ -6248,7 +6248,7 @@ var pbLEX = [
 },
 
 {"UUID":"abcdcdb779cdd06fe46bad32d1a339d6d5f517db",
-"search_word":['lqinagh', '-lqinagh-'],
+"search_word":['–lqinagh-', '-lqinagh-', 'lqinagh'],
 "headword":"–lqinagh-",
 "root":['lqinagh'],
 "cyrillic":"-льқинаӷ-",
@@ -6270,7 +6270,7 @@ var pbLEX = [
 },
 
 {"UUID":"80dac7bffdcb35eaae370da5aa6e62d8c276db7b",
-"search_word":['lqusiigh', '-lqusiigh-'],
+"search_word":['–lqusiigh-', '-lqusiigh-', 'lqusiigh'],
 "headword":"–lqusiigh-",
 "root":['lqusiigh'],
 "cyrillic":"-льқусӣӷ-",
@@ -6292,7 +6292,7 @@ var pbLEX = [
 },
 
 {"UUID":"7c421cb2aa6582302a169720b4f82b3527ef35f5",
-"search_word":['-lqusiq-', 'lqusigh'],
+"search_word":['lqusigh', '–lqusiq', '-lqusiq-'],
 "headword":"–lqusiq",
 "root":['lqusigh'],
 "cyrillic":"-льқусиқ",
@@ -6314,7 +6314,7 @@ var pbLEX = [
 },
 
 {"UUID":"89541291f7127ebd774e0f96b66350bb0eb3c06a",
-"search_word":['lqwaagh', '-lqwaaq-'],
+"search_word":['-lqwaaq-', '–lqwaaq', 'lqwaagh'],
 "headword":"–lqwaaq",
 "root":['lqwaagh'],
 "cyrillic":"-льқӱāқ",
@@ -6336,7 +6336,7 @@ var pbLEX = [
 },
 
 {"UUID":"6a0a0bd8c96ef5007125e31122f5d642110f51e3",
-"search_word":['-lugh-', 'lugh'],
+"search_word":['lugh', '@+lugh-', '-lugh-'],
 "headword":"@+lugh-",
 "root":['lugh'],
 "cyrillic":"-люӷ-",
@@ -6358,7 +6358,7 @@ var pbLEX = [
 },
 
 {"UUID":"5ae80b27c9007d4819e2a9b32dd7209762df7cad",
-"search_word":['lugpigagh', '-lugpigaq-'],
+"search_word":['–lugpigaq', 'lugpigagh', '-lugpigaq-'],
 "headword":"–lugpigaq",
 "root":['lugpigagh'],
 "cyrillic":"-люхпигақ",
@@ -6380,7 +6380,7 @@ var pbLEX = [
 },
 
 {"UUID":"b70cc6478765ca0e06b6ecea77d5cbb3edd7a328",
-"search_word":['lug', '-luk-'],
+"search_word":['–luk', 'lug', '-luk-'],
 "headword":"–luk",
 "root":['lug'],
 "cyrillic":"-люк",
@@ -6468,7 +6468,7 @@ var pbLEX = [
 },
 
 {"UUID":"6c3742986705607fcf2bab33b483227bde9c2252",
-"search_word":['man', '-man-'],
+"search_word":['-man', '-man-', 'man'],
 "headword":"-man",
 "root":['man'],
 "cyrillic":"",
@@ -6512,7 +6512,7 @@ var pbLEX = [
 },
 
 {"UUID":"b19ce6c1e1c9097df54ecff72fe72c49f8e9dd64",
-"search_word":['mangite', '-mangite-'],
+"search_word":['-mangite-', 'mangite'],
 "headword":"-mangite-",
 "root":['mangite'],
 "cyrillic":"",
@@ -6534,7 +6534,7 @@ var pbLEX = [
 },
 
 {"UUID":"2ce5322a73b64b4bd78646cc4b5c1172ea3a56bf",
-"search_word":['-mete-', 'mete'],
+"search_word":['-mete-', 'mete', '+mete-<sup>1</sup>'],
 "headword":"+mete-<sup>1</sup>",
 "root":['mete'],
 "cyrillic":"-мыты-1",
@@ -6556,7 +6556,7 @@ var pbLEX = [
 },
 
 {"UUID":"218353310a8f50b9292a382ffc5c8e951e57609d",
-"search_word":['-mlaagh-', 'mlaagh'],
+"search_word":['–mlaagh-', '-mlaagh-', 'mlaagh'],
 "headword":"–mlaagh-",
 "root":['mlaagh'],
 "cyrillic":"-мля̄ӷ-",
@@ -6578,7 +6578,7 @@ var pbLEX = [
 },
 
 {"UUID":"3419269f46d9eba0bd9662f11e38a9252681332b",
-"search_word":['mlaagh', '-mlaaq-'],
+"search_word":['–mlaaq', '-mlaaq-', 'mlaagh'],
 "headword":"–mlaaq",
 "root":['mlaagh'],
 "cyrillic":"-мля̄қ",
@@ -6600,7 +6600,7 @@ var pbLEX = [
 },
 
 {"UUID":"a1c2ef9866b2fa411333327b70658d4e45811c53",
-"search_word":['-mlegagh-', 'mlegagh'],
+"search_word":['mlegagh', '-mlegagh-', '–mlegagh-'],
 "headword":"–mlegagh-",
 "root":['mlegagh'],
 "cyrillic":"-млыӷаӷ-",
@@ -6622,7 +6622,7 @@ var pbLEX = [
 },
 
 {"UUID":"c4f82d3fcfb135d01717f461bab9b389b5ce381b",
-"search_word":['-mleghaq-', 'mleghagh'],
+"search_word":['-mleghaq-', 'mleghagh', '–mleghaq'],
 "headword":"–mleghaq",
 "root":['mleghagh'],
 "cyrillic":"-млыӷақ",
@@ -6644,7 +6644,7 @@ var pbLEX = [
 },
 
 {"UUID":"a681bb415f23679482062d30071073d5ac8b2d34",
-"search_word":['mraagh', '-mraagh-'],
+"search_word":['-mraagh-', '–mraagh-', 'mraagh'],
 "headword":"–mraagh-",
 "root":['mraagh'],
 "cyrillic":"-мрāӷ-",
@@ -6666,7 +6666,7 @@ var pbLEX = [
 },
 
 {"UUID":"63c326a9d02dec038b6d13487a9380a0e1746b74",
-"search_word":['mraagh', '-mraaq-'],
+"search_word":['–mraaq', '-mraaq-', 'mraagh'],
 "headword":"–mraaq",
 "root":['mraagh'],
 "cyrillic":"-мрāқ",
@@ -6688,7 +6688,7 @@ var pbLEX = [
 },
 
 {"UUID":"631dbd250e9013a0b7714d10401948d810249fce",
-"search_word":['mreghagh', '-mreghagh-'],
+"search_word":['-mreghagh-', '–mreghagh-', 'mreghagh'],
 "headword":"–mreghagh-",
 "root":['mreghagh'],
 "cyrillic":"-мрыӷаӷ-",
@@ -6710,7 +6710,7 @@ var pbLEX = [
 },
 
 {"UUID":"18ff1fda7c0585cea701d9a75b0cfa5d3d3c0acf",
-"search_word":['-mreghaq-', 'mreghagh'],
+"search_word":['-mreghaq-', '–mreghaq', 'mreghagh'],
 "headword":"–mreghaq",
 "root":['mreghagh'],
 "cyrillic":"-мрыӷақ",
@@ -6732,7 +6732,7 @@ var pbLEX = [
 },
 
 {"UUID":"52c126a18d5ed1880cfd3de6a390b40fff299b1f",
-"search_word":['-mrugnite-', 'mrugnite'],
+"search_word":['-mrugnite-', '–mrugnite-', 'mrugnite'],
 "headword":"–mrugnite-",
 "root":['mrugnite'],
 "cyrillic":"-мругниты-",
@@ -6754,7 +6754,7 @@ var pbLEX = [
 },
 
 {"UUID":"695257e207a3245ca97dd653b02a8dad2a841c00",
-"search_word":['-msiigh-', 'msiigh'],
+"search_word":['–msiigh-', 'msiigh', '-msiigh-'],
 "headword":"–msiigh-",
 "root":['msiigh'],
 "cyrillic":"-мсӣӷ-",
@@ -6776,7 +6776,7 @@ var pbLEX = [
 },
 
 {"UUID":"cbba28defeff56bc3d9bbf53e1cf40209ca0db77",
-"search_word":['msiigh', '-msiiq-'],
+"search_word":['msiigh', '–msiiq', '-msiiq-'],
 "headword":"–msiiq",
 "root":['msiigh'],
 "cyrillic":"-мсӣқ",
@@ -6798,7 +6798,7 @@ var pbLEX = [
 },
 
 {"UUID":"b8bd4a4a63055b45902424726e8c5cb09a388f8e",
-"search_word":['-msug-', 'msug'],
+"search_word":['msug', '-msug-', '–msug-'],
 "headword":"–msug-",
 "root":['msug'],
 "cyrillic":"-мсюг-",
@@ -6820,7 +6820,7 @@ var pbLEX = [
 },
 
 {"UUID":"c3c0bd9edae36a121726de4c7e258156e1f5923f",
-"search_word":['-msuggaq-', 'msuggagh*'],
+"search_word":['–msuggaq*', '-msuggaq-', 'msuggagh*'],
 "headword":"–msuggaq*",
 "root":['msuggagh*'],
 "cyrillic":"-мсюхақ",
@@ -6842,7 +6842,7 @@ var pbLEX = [
 },
 
 {"UUID":"0443465ebad9c663b41d788fee355f1748117dd2",
-"search_word":['msuggiite', '-msuggiite-'],
+"search_word":['msuggiite', '-msuggiite-', '–msuggiite-'],
 "headword":"–msuggiite-",
 "root":['msuggiite'],
 "cyrillic":"-мсюхӣты-",
@@ -6864,7 +6864,7 @@ var pbLEX = [
 },
 
 {"UUID":"b0cd1a1adcaedb71754cb591aeddc2d4b817893c",
-"search_word":['-mzaagh-', 'mzaagh'],
+"search_word":['–mzaagh-', '-mzaagh-', 'mzaagh'],
 "headword":"–mzaagh-",
 "root":['mzaagh'],
 "cyrillic":"-мзя̄ӷ-",
@@ -6886,7 +6886,7 @@ var pbLEX = [
 },
 
 {"UUID":"d23695154d43291ab9f633c192f99aa662844dc6",
-"search_word":['-mzaaq-', 'mzaagh'],
+"search_word":['–mzaaq', '-mzaaq-', 'mzaagh'],
 "headword":"–mzaaq",
 "root":['mzaagh'],
 "cyrillic":"-мзя̄қ",
@@ -6908,7 +6908,7 @@ var pbLEX = [
 },
 
 {"UUID":"e921c7e98ff33052de27b1206a9409c4900b8b90",
-"search_word":['-mzegagh-', 'mzegagh'],
+"search_word":['mzegagh', '-mzegagh-', '–mzegagh-'],
 "headword":"–mzegagh-",
 "root":['mzegagh'],
 "cyrillic":"-мзыӷаӷ-",
@@ -6930,7 +6930,7 @@ var pbLEX = [
 },
 
 {"UUID":"ec56b424d31eec2f40939179e26e0e0b051d6593",
-"search_word":['mzeghagh', '-mzeghaq-'],
+"search_word":['-mzeghaq-', '–mzeghaq', 'mzeghagh'],
 "headword":"–mzeghaq",
 "root":['mzeghagh'],
 "cyrillic":"-мзыӷақ",
@@ -6952,7 +6952,7 @@ var pbLEX = [
 },
 
 {"UUID":"070bb3b0af1c05dd6f1b18bb461b51e0003a119e",
-"search_word":['-n-', 'n'],
+"search_word":['-n', 'n', '-n-'],
 "headword":"-n",
 "root":['n'],
 "cyrillic":"",
@@ -6974,7 +6974,7 @@ var pbLEX = [
 },
 
 {"UUID":"2fa7c770f88da85b77c0ec5297826e3cbffd2dc4",
-"search_word":['-neq-', 'negh'],
+"search_word":['@~+neq<sup>2</sup>', '-neq-', 'negh'],
 "headword":"@~+neq<sup>2</sup>",
 "root":['negh'],
 "cyrillic":"-нық2",
@@ -6996,7 +6996,7 @@ var pbLEX = [
 },
 
 {"UUID":"3166d6d12f638329f739a4c514a7e186105fb64e",
-"search_word":['-neq-', 'negh'],
+"search_word":['?neq<sup>3</sup>', '-neq-', 'negh'],
 "headword":"?neq<sup>3</sup>",
 "root":['negh'],
 "cyrillic":"-нық3",
@@ -7018,7 +7018,7 @@ var pbLEX = [
 },
 
 {"UUID":"dbf23b88270fe768b0e22ac737ec19a25bd0991f",
-"search_word":['-ngighute-', 'ighute', 'ngighute', '-ighute-'],
+"search_word":['-ighute-', 'ighute', '-ngighute-', '~:(ng)i:ghute-', 'ngighute'],
 "headword":"~:(ng)i:ghute-",
 "root":['ighute', 'ngighute'],
 "cyrillic":"-(ң)иӷуты-",
@@ -7040,7 +7040,7 @@ var pbLEX = [
 },
 
 {"UUID":"75d40996a69b53f968926fcf75d082d9ab08e6ba",
-"search_word":['ngigate', '-ngigate-', '-igate-', 'igate'],
+"search_word":['ngigate', '-igate-', '@~:(ng)igate-', 'igate', '-ngigate-'],
 "headword":"@~:(ng)igate-",
 "root":['igate', 'ngigate'],
 "cyrillic":"-(ң)игаты-",
@@ -7062,7 +7062,7 @@ var pbLEX = [
 },
 
 {"UUID":"dd417b6388a0a2f8e7f7b45f98dc705f81a7a351",
-"search_word":['ngigh', '-ngigh-', '-igh-', 'igh'],
+"search_word":['-ngigh-', '~:(ng)igh-', 'ngigh', '-igh-', 'igh'],
 "headword":"~:(ng)igh-",
 "root":['igh', 'ngigh'],
 "cyrillic":"-(ң)игиӷ-",
@@ -7084,11 +7084,11 @@ var pbLEX = [
 },
 
 {"UUID":"f7946891052cbc635a1bc76cf28ba93de61bb91e",
-"search_word":['ngiitagh', '-iitaq-', 'iitagh', '-ngiitaq-'],
+"search_word":['-iitaq-', '~:(ng)iitaq', '-ngiitaq-', 'ngiitagh', 'iitagh'],
 "headword":"~:(ng)iitaq",
-"root":['iitagh', 'ngiitagh'],
+"root":['ngiitagh', 'iitagh'],
 "cyrillic":"-(ң)ӣтақ",
-"ipa":['iːtɑq', 'ŋiːtɑq'],
+"ipa":['ŋiːtɑq', 'iːtɑq'],
 "jacobson":"-ø3π7nf2",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -7106,11 +7106,11 @@ var pbLEX = [
 },
 
 {"UUID":"c61c9a01d65686bdccac4c7e1b9b5cdaa6a2ffd6",
-"search_word":['-nginagh-', 'inagh', 'nginagh', '-inagh-'],
+"search_word":[':(ng)inagh-', 'inagh', '-nginagh-', '-inagh-', 'nginagh'],
 "headword":":(ng)inagh-",
-"root":['inagh', 'nginagh'],
+"root":['nginagh', 'inagh'],
 "cyrillic":"-(ң)инаӷ-",
-"ipa":['inɑʁ', 'ŋinɑʁ'],
+"ipa":['ŋinɑʁ', 'inɑʁ'],
 "jacobson":"-ø3πbyf4-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -7128,7 +7128,7 @@ var pbLEX = [
 },
 
 {"UUID":"72a6d0ca47e03d4f51b96951952facef737c769d",
-"search_word":['inagh*', 'nginagh*', '-nginaq-', '-inaq-'],
+"search_word":['inagh*', 'nginagh*', '-nginaq-', '~:(ng)inaq*', '-inaq-'],
 "headword":"~:(ng)inaq*",
 "root":['inagh*', 'nginagh*'],
 "cyrillic":"-(ң)инақ",
@@ -7150,11 +7150,11 @@ var pbLEX = [
 },
 
 {"UUID":"092619c80f90bf81999dd26677a5938ece972416",
-"search_word":['-ngisag-', 'isag', 'ngisag', '-isag-'],
+"search_word":['-isag-', 'ngisag', 'isag', '-ngisag-', '~:(ng)isag-'],
 "headword":"~:(ng)isag-",
-"root":['isag', 'ngisag'],
+"root":['ngisag', 'isag'],
 "cyrillic":"-(ң)исаг-",
-"ipa":['isɑɣ', 'ŋisɑɣ'],
+"ipa":['ŋisɑɣ', 'isɑɣ'],
 "jacobson":"-ø3πbcfu-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -7172,11 +7172,11 @@ var pbLEX = [
 },
 
 {"UUID":"a76b4ec753da2c3eeca454f90fd625c3e7b08255",
-"search_word":['ngisug', '-ngisug-', '-isug-', 'isug'],
+"search_word":['-ngisug-', '~:(ng)isug-', 'ngisug', '-isug-', 'isug'],
 "headword":"~:(ng)isug-",
-"root":['ngisug', 'isug'],
+"root":['isug', 'ngisug'],
 "cyrillic":"-(ң)исуг-",
-"ipa":['ŋisuɣ', 'isuɣ'],
+"ipa":['isuɣ', 'ŋisuɣ'],
 "jacobson":"-ø3πbceu-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -7194,7 +7194,7 @@ var pbLEX = [
 },
 
 {"UUID":"039db2ac95dc3a6c1e66117b941900523682d443",
-"search_word":['ngite', 'ite', '-ite-', '-ngite-'],
+"search_word":['-ngite-', 'ngite', '~:(ng)ite-', 'ite', '-ite-'],
 "headword":"~:(ng)ite-",
 "root":['ngite', 'ite'],
 "cyrillic":"-(ң)иты-",
@@ -7216,7 +7216,7 @@ var pbLEX = [
 },
 
 {"UUID":"039db2ac95dc3a6c1e66117b941900523682d443",
-"search_word":['ngite', 'ite', '-ite-', '-ngite-'],
+"search_word":['-ngite-', 'ngite', '~:(ng)ite-', 'ite', '-ite-'],
 "headword":"~:(ng)ite-",
 "root":['ngite', 'ite'],
 "cyrillic":"",
@@ -7238,7 +7238,7 @@ var pbLEX = [
 },
 
 {"UUID":"40223f221ad107bfca133bf602b9b6f3a9a1b4f9",
-"search_word":['-ngu-', 'u', 'ngu', '-u-'],
+"search_word":['-u-', '~:(ng)u-', 'ngu', '-ngu-', 'u'],
 "headword":"~:(ng)u-",
 "root":['u', 'ngu'],
 "cyrillic":"-(ң)у-",
@@ -7260,11 +7260,11 @@ var pbLEX = [
 },
 
 {"UUID":"2e4ac76b13e3e2febebdf032421a0a58bbd6117c",
-"search_word":['-ughte-', 'ngughte', 'ughte', '-ngughte-'],
+"search_word":['-ngughte-', 'ughte', 'ngughte', '~:(ng)ughte-', '-ughte-'],
 "headword":"~:(ng)ughte-",
-"root":['ngughte', 'ughte'],
+"root":['ughte', 'ngughte'],
 "cyrillic":"-(ң)уҳты-",
-"ipa":['ŋuχtə', 'uχtə'],
+"ipa":['uχtə', 'ŋuχtə'],
 "jacobson":"-ø3πe5ns-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -7282,7 +7282,7 @@ var pbLEX = [
 },
 
 {"UUID":"1759d4b573357fed4fd4e67e42c4614a4188e882",
-"search_word":['ngagh', '-ngagh-'],
+"search_word":['ngagh', '–ngagh-', '-ngagh-'],
 "headword":"–ngagh-",
 "root":['ngagh'],
 "cyrillic":"-ңаӷ-",
@@ -7304,7 +7304,7 @@ var pbLEX = [
 },
 
 {"UUID":"fd60ec18b00587da0730f0fb87514ee29dbe7a4b",
-"search_word":['-nge-', 'nge'],
+"search_word":['–nge-', '-nge-', 'nge'],
 "headword":"–nge-",
 "root":['nge'],
 "cyrillic":"-ңы-",
@@ -7326,7 +7326,7 @@ var pbLEX = [
 },
 
 {"UUID":"ead7adb080ad8b7995e20b28f613ce0139baeb0f",
-"search_word":['-ngeltagh-', 'ngestagh', '-ngertagh-', 'ngeltagh', '-ngestagh-', 'ngertagh'],
+"search_word":['ngeltagh', '-ngertagh-', 'ngestagh', 'ngertagh', '–ngestagh-, –ngeltagh-, –ngertagh-', '-ngestagh-', '-ngeltagh-'],
 "headword":"–ngestagh-, –ngeltagh-, –ngertagh-",
 "root":['ngeltagh', 'ngestagh', 'ngertagh'],
 "cyrillic":"-ңыстақ, -ңыльтақ, -ңыштақ",
@@ -7348,7 +7348,7 @@ var pbLEX = [
 },
 
 {"UUID":"b455f16128b4e49ba3914d27f937e58b0a46f170",
-"search_word":['ngestagh', '-ngertaq-', '-ngestaq-', 'ngeltagh', 'ngertagh', '-ngeltaq-'],
+"search_word":['–ngestaq, –ngeltaq, –ngertaq', '-ngestaq-', 'ngeltagh', '-ngertaq-', '-ngeltaq-', 'ngertagh', 'ngestagh'],
 "headword":"–ngestaq, –ngeltaq, –ngertaq",
 "root":['ngeltagh', 'ngestagh', 'ngertagh'],
 "cyrillic":"-ңыстақ, -ңыльтақ, -ңыштақ",
@@ -7370,7 +7370,7 @@ var pbLEX = [
 },
 
 {"UUID":"54b3dd181be17a8140abb570fa9cceccac8feaf9",
-"search_word":['-nghhaq-', 'nghhagh'],
+"search_word":['-nghhaq-', '@–nghhaq', 'nghhagh'],
 "headword":"@–nghhaq",
 "root":['nghhagh'],
 "cyrillic":"-нҳақ",
@@ -7392,7 +7392,7 @@ var pbLEX = [
 },
 
 {"UUID":"01922ba820f6f9c97ca852a68cfd72723e485acf",
-"search_word":['nghiighte', '-nghiighte-'],
+"search_word":['-nghiighte-', 'nghiighte', '@–nghiighte-'],
 "headword":"@–nghiighte-",
 "root":['nghiighte'],
 "cyrillic":"-нӷӣҳты-",
@@ -7414,7 +7414,7 @@ var pbLEX = [
 },
 
 {"UUID":"60e8bf54fbfc7c11b8f8ddc584424fa1f7f0ee20",
-"search_word":['nghite', '-nghite-'],
+"search_word":['@–nghite-', 'nghite', '-nghite-'],
 "headword":"@–nghite-",
 "root":['nghite'],
 "cyrillic":"-нӷиты-",
@@ -7436,7 +7436,7 @@ var pbLEX = [
 },
 
 {"UUID":"a9a42c7a36ce0de78cd09d92e1e87069c66fe780",
-"search_word":['-ngllagh-', 'ngllagh'],
+"search_word":['–ngllagh-', '-ngllagh-', 'ngllagh'],
 "headword":"–ngllagh-",
 "root":['ngllagh'],
 "cyrillic":"-ңльаӷ-",
@@ -7458,7 +7458,7 @@ var pbLEX = [
 },
 
 {"UUID":"e17e692241abdda846f61d1fda90d98f9b38a775",
-"search_word":['-ngsi-', 'ngsi'],
+"search_word":['–ngsi-', 'ngsi', '-ngsi-'],
 "headword":"–ngsi-",
 "root":['ngsi'],
 "cyrillic":"-ңси-",
@@ -7480,7 +7480,7 @@ var pbLEX = [
 },
 
 {"UUID":"d9dd52fe26bcca0e0ba219be0b17223e81053479",
-"search_word":['-ngu-', 'ngu'],
+"search_word":['–ngu-', '-ngu-', 'ngu'],
 "headword":"–ngu-",
 "root":['ngu'],
 "cyrillic":"-ңу-",
@@ -7502,7 +7502,7 @@ var pbLEX = [
 },
 
 {"UUID":"56ec177faa04e3d8f2aa6756be4bacdbafa6b6fb",
-"search_word":['-nguq-', 'ngugh*'],
+"search_word":['–nguq*', '-nguq-', 'ngugh*'],
 "headword":"–nguq*",
 "root":['ngugh*'],
 "cyrillic":"-ңуқ",
@@ -7524,7 +7524,7 @@ var pbLEX = [
 },
 
 {"UUID":"bd81e109aba249bc492eeb850aa72566492088a4",
-"search_word":['ngwaagh', '-ngwaagh-'],
+"search_word":['-ngwaagh-', 'ngwaagh', '-ngwaagh-<sup>1</sup>'],
 "headword":"-ngwaagh-<sup>1</sup>",
 "root":['ngwaagh'],
 "cyrillic":"",
@@ -7546,7 +7546,7 @@ var pbLEX = [
 },
 
 {"UUID":"b05f7de5ed40a1b3db0992ed9675cc6c7d995732",
-"search_word":['ngwaagh', '-ngwaagh-'],
+"search_word":['-ngwaagh-', 'ngwaagh', '-ngwaagh-<sup>2</sup>'],
 "headword":"-ngwaagh-<sup>2</sup>",
 "root":['ngwaagh'],
 "cyrillic":"",
@@ -7568,7 +7568,7 @@ var pbLEX = [
 },
 
 {"UUID":"85d669564117f23892a893c983777575c44f25db",
-"search_word":['-ngwaaq-', 'ngwaaq'],
+"search_word":['-ngwaaq', '-ngwaaq-', 'ngwaaq'],
 "headword":"-ngwaaq",
 "root":['ngwaaq'],
 "cyrillic":"",
@@ -7590,7 +7590,7 @@ var pbLEX = [
 },
 
 {"UUID":"9354c96a340a0e04c4c5347592cff72aaef497b5",
-"search_word":['ni', '-ni-'],
+"search_word":['+ni<sup>2</sup>', '-ni-', 'ni'],
 "headword":"+ni<sup>2</sup>",
 "root":['ni'],
 "cyrillic":"-ни2",
@@ -7612,7 +7612,7 @@ var pbLEX = [
 },
 
 {"UUID":"ed5eec40d80e9dc00f07654bc7581a9518b8f8ae",
-"search_word":['-niigh-', 'niigh'],
+"search_word":['niigh', '-niigh-', '+niigh-'],
 "headword":"+niigh-",
 "root":['niigh'],
 "cyrillic":"-нӣӷ-",
@@ -7634,7 +7634,7 @@ var pbLEX = [
 },
 
 {"UUID":"e176c03721a33d66785be83c09ddf49a205dfbb5",
-"search_word":['nite', '-nite-'],
+"search_word":['-nite-', 'nite', '+nite-<sup>1</sup>'],
 "headword":"+nite-<sup>1</sup>",
 "root":['nite'],
 "cyrillic":"-ниты-1",
@@ -7656,7 +7656,7 @@ var pbLEX = [
 },
 
 {"UUID":"127245856f17e6847d5fecc09fd752b2e3498bc5",
-"search_word":['nite', '-nite-'],
+"search_word":['-nite-', 'nite', '%nite-<sup>2</sup>'],
 "headword":"%nite-<sup>2</sup>",
 "root":['nite'],
 "cyrillic":"-ниты-",
@@ -7678,11 +7678,11 @@ var pbLEX = [
 },
 
 {"UUID":"ec8d411e23d7a34ec97d240e7a82d157404e8c03",
-"search_word":['nkut', '-nkut-', 'nkuk', '-nkuk-'],
+"search_word":['-nkut-', '-nkuk, -nkut', '-nkuk-', 'nkuk', 'nkut'],
 "headword":"-nkuk, -nkut",
-"root":['nkut', 'nkuk'],
+"root":['nkuk', 'nkut'],
 "cyrillic":"",
-"ipa":['nkut', 'nkuk'],
+"ipa":['nkuk', 'nkut'],
 "jacobson":"",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -7700,7 +7700,7 @@ var pbLEX = [
 },
 
 {"UUID":"997005e8ef8b38be437b80a6b5844d60ebcbe18a",
-"search_word":['-nqegsagh-', 'nqegsagh'],
+"search_word":['nqegsagh', '-nqegsagh-', '@–nqegsagh-'],
 "headword":"@–nqegsagh-",
 "root":['nqegsagh'],
 "cyrillic":"-нқыхсаӷ-",
@@ -7722,7 +7722,7 @@ var pbLEX = [
 },
 
 {"UUID":"b2bead0afc37c20326dc73e32b083305d8956c93",
-"search_word":['nqegsi', '-nqegsi-'],
+"search_word":['@–nqegsi-', 'nqegsi', '-nqegsi-'],
 "headword":"@–nqegsi-",
 "root":['nqegsi'],
 "cyrillic":"-нқыхси-",
@@ -7744,7 +7744,7 @@ var pbLEX = [
 },
 
 {"UUID":"dcff291caa6494f7903e2f7db47fbefef08afd0b",
-"search_word":['-nqegtaq-', 'nqegtagh'],
+"search_word":['-nqegtaq-', '@–nqegtaq', 'nqegtagh'],
 "headword":"@–nqegtaq",
 "root":['nqegtagh'],
 "cyrillic":"-нқыхтақ",
@@ -7766,7 +7766,7 @@ var pbLEX = [
 },
 
 {"UUID":"741be3229f3633db5e88d371900bdbc7ac5b0396",
-"search_word":['-nqegte-', 'nqegte'],
+"search_word":['-nqegte-', 'nqegte', '@–nqegte-'],
 "headword":"@–nqegte-",
 "root":['nqegte'],
 "cyrillic":"-нқыхты-",
@@ -7788,7 +7788,7 @@ var pbLEX = [
 },
 
 {"UUID":"d3713bf0794a5587ddd288b0a7ac1e05c0d5d2af",
-"search_word":['-nqigte-', 'nqigte'],
+"search_word":['nqigte', '-nqigte-', '@–nqigte-'],
 "headword":"@–nqigte-",
 "root":['nqigte'],
 "cyrillic":"-нқихты-",
@@ -7810,7 +7810,7 @@ var pbLEX = [
 },
 
 {"UUID":"e87a64f47989e8db45a34f18901afe74c9cb90cc",
-"search_word":['-nte-', 'nte'],
+"search_word":['+nte-', 'nte', '-nte-'],
 "headword":"+nte-",
 "root":['nte'],
 "cyrillic":"-нты-",
@@ -7832,7 +7832,7 @@ var pbLEX = [
 },
 
 {"UUID":"275a73015f9d65078ca388cc641ff8bcf6dd04d6",
-"search_word":['-pag-', 'pag'],
+"search_word":['±pag-', 'pag', '-pag-'],
 "headword":"±pag-",
 "root":['pag'],
 "cyrillic":"-паг-",
@@ -7854,7 +7854,7 @@ var pbLEX = [
 },
 
 {"UUID":"8ec8619c8a39b3d77061096c4ee15b75163f8f01",
-"search_word":['vagaatagh', '-vagaatagh-', 'pagaatagh', '-pagaatagh-'],
+"search_word":['+pagaatagh-,~<sub>sf</sub>vagaatagh-', '-vagaatagh-', 'vagaatagh', 'pagaatagh', '-pagaatagh-'],
 "headword":"+pagaatagh-,~<sub>sf</sub>vagaatagh-",
 "root":['vagaatagh', 'pagaatagh'],
 "cyrillic":"-пагāтаӷ- -вагāтаӷ-",
@@ -7876,7 +7876,7 @@ var pbLEX = [
 },
 
 {"UUID":"60c3c2745a3b120f6c7c6d01e60e0639f131d1c0",
-"search_word":['-pagigate-', 'pagigate'],
+"search_word":['pagigate', '-pagigate-', '–pagigate-'],
 "headword":"–pagigate-",
 "root":['pagigate'],
 "cyrillic":"-пагигаты-",
@@ -7898,7 +7898,7 @@ var pbLEX = [
 },
 
 {"UUID":"f6a78df5f99d057a86e0e25d2831ef8f1291f48d",
-"search_word":['pagite', '-pagite-'],
+"search_word":['–pagite-', '-pagite-', 'pagite'],
 "headword":"–pagite-",
 "root":['pagite'],
 "cyrillic":"-пагиты-",
@@ -7920,7 +7920,7 @@ var pbLEX = [
 },
 
 {"UUID":"ac56e85b185ac1875829adcede3ec4b2da702f62",
-"search_word":['pagnite', '-pagnite-'],
+"search_word":['-pagnite-', 'pagnite', '+pagnite-'],
 "headword":"+pagnite-",
 "root":['pagnite'],
 "cyrillic":"-пагниты-",
@@ -7942,7 +7942,7 @@ var pbLEX = [
 },
 
 {"UUID":"35322af1307a620d8313e68f925bf3c6faf3c0a4",
-"search_word":['-pagunghite-', 'pagunghite'],
+"search_word":['-pagunghite-', 'pagunghite', '±pagunghite-'],
 "headword":"±pagunghite-",
 "root":['pagunghite'],
 "cyrillic":"-пагунӷиты-",
@@ -7964,11 +7964,11 @@ var pbLEX = [
 },
 
 {"UUID":"38138b538a4ff54dc35452ff285499f2f20a63ca",
-"search_word":['-palluq-', 'vallugh', 'pallugh', '-valluq-'],
+"search_word":['vallugh', '-palluq-', '+palluq,~<sub>f</sub>valluq', 'pallugh', '-valluq-'],
 "headword":"+palluq,~<sub>f</sub>valluq",
-"root":['vallugh', 'pallugh'],
+"root":['pallugh', 'vallugh'],
 "cyrillic":"-пальюқ -вальюқ",
-"ipa":['vɑɬuq', 'pɑɬuq'],
+"ipa":['pɑɬuq', 'vɑɬuq'],
 "jacobson":"-gfk]/2 -dfk]/2",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -7986,7 +7986,7 @@ var pbLEX = [
 },
 
 {"UUID":"0afff528d1cbf3cc33f934b69a7c4ce66d137351",
-"search_word":['panghite', '-panghite-'],
+"search_word":['-panghite-', '±panghite-', 'panghite'],
 "headword":"±panghite-",
 "root":['panghite'],
 "cyrillic":"-панӷиты-",
@@ -8008,7 +8008,7 @@ var pbLEX = [
 },
 
 {"UUID":"72010f39fa016022839292e7e57ad2f2d4cc2eea",
-"search_word":['penaagh', '-penaaq-'],
+"search_word":['penaagh', '–penaaq', '-penaaq-'],
 "headword":"–penaaq",
 "root":['penaagh'],
 "cyrillic":"-пынāқ",
@@ -8030,7 +8030,7 @@ var pbLEX = [
 },
 
 {"UUID":"35f10a5376be82fe5500e599e10b117af7743e8c",
-"search_word":['peragh', '-peraq-'],
+"search_word":['peragh', '–peraq', '-peraq-'],
 "headword":"–peraq",
 "root":['peragh'],
 "cyrillic":"-пырақ",
@@ -8052,7 +8052,7 @@ var pbLEX = [
 },
 
 {"UUID":"63d80a7bf33cdadad9fd1e0eb89fdee9645bf562",
-"search_word":['-perewaaq-', 'perewaagh'],
+"search_word":['–perewaaq', 'perewaagh', '-perewaaq-'],
 "headword":"–perewaaq",
 "root":['perewaagh'],
 "cyrillic":"-пырыӱāқ",
@@ -8074,7 +8074,7 @@ var pbLEX = [
 },
 
 {"UUID":"1be86bedae3eb7bd1a54b5d3f771a99d416f1a01",
-"search_word":['perug', '-peruk-'],
+"search_word":['-peruk-', 'perug', '–peruk'],
 "headword":"–peruk",
 "root":['perug'],
 "cyrillic":"-пырук",
@@ -8096,7 +8096,7 @@ var pbLEX = [
 },
 
 {"UUID":"e9a6753687405378454da6c7910190d85a73a234",
-"search_word":['pestaagh', '-pestaagh-'],
+"search_word":['pestaagh', '-pestaagh-', '–pestaagh-'],
 "headword":"–pestaagh-",
 "root":['pestaagh'],
 "cyrillic":"-пыстāӷ-",
@@ -8118,7 +8118,7 @@ var pbLEX = [
 },
 
 {"UUID":"0bc5e8def9629d2c14c78702f4326a5be9a65a61",
-"search_word":['pestaagh', '-pestaaq-'],
+"search_word":['pestaagh', '–pestaaq', '-pestaaq-'],
 "headword":"–pestaaq",
 "root":['pestaagh'],
 "cyrillic":"-пыстāқ",
@@ -8162,7 +8162,7 @@ var pbLEX = [
 },
 
 {"UUID":"890e0f046f430ea59e2178c246be4d494201d3ad",
-"search_word":['pigagh*', '-pigaq-'],
+"search_word":['+pigaq*', 'pigagh*', '-pigaq-'],
 "headword":"+pigaq*",
 "root":['pigagh*'],
 "cyrillic":"-пмгақ",
@@ -8184,7 +8184,7 @@ var pbLEX = [
 },
 
 {"UUID":"a9f144381b2b86c3fcce55e7697912b05bff4bd6",
-"search_word":['-pigesnagh-', 'pigesnagh'],
+"search_word":['pigesnagh', '-pigesnagh-', '–pigesnagh-'],
 "headword":"–pigesnagh-",
 "root":['pigesnagh'],
 "cyrillic":"-пигысньаӷ-",
@@ -8206,7 +8206,7 @@ var pbLEX = [
 },
 
 {"UUID":"62cc5fe2b58b575ba407ed89e04f9caad7389009",
-"search_word":['pigte', '-pigte-'],
+"search_word":['-pigte-', 'pigte', '–pigte-'],
 "headword":"–pigte-",
 "root":['pigte'],
 "cyrillic":"-пихты-",
@@ -8228,7 +8228,7 @@ var pbLEX = [
 },
 
 {"UUID":"dfc0ef38b6d063ff9eeb24efc30a3d62e4b748aa",
-"search_word":['pigu', '-pigu-'],
+"search_word":['pigu', '–pigu-', '-pigu-'],
 "headword":"–pigu-",
 "root":['pigu'],
 "cyrillic":"-ригу-",
@@ -8250,7 +8250,7 @@ var pbLEX = [
 },
 
 {"UUID":"d7ef08d72a0a5c8eb633ec3d9a7195afbf5d508d",
-"search_word":['pig', '-pik-'],
+"search_word":['–pik', 'pig', '-pik-'],
 "headword":"–pik",
 "root":['pig'],
 "cyrillic":"-пик",
@@ -8272,7 +8272,7 @@ var pbLEX = [
 },
 
 {"UUID":"e12a0fb2671f5e44915f7ba3499cdd756bbd1ab1",
-"search_word":['uute', '-uute-', 'qtuute', '-qtuute-'],
+"search_word":['-uute-', 'uute', '~+(q/t)uute-', '-qtuute-', 'qtuute'],
 "headword":"~+(q/t)uute-",
 "root":['uute', 'qtuute'],
 "cyrillic":"-(қ-т)ӯты-",
@@ -8338,7 +8338,7 @@ var pbLEX = [
 },
 
 {"UUID":"6bd668a9bce4133b9dbe4779cdaa0b6eb8037e30",
-"search_word":['qa', '-qa-'],
+"search_word":['-qa-', 'qa', '-qa<sup>e</sup>'],
 "headword":"-qa<sup>e</sup>",
 "root":['qa'],
 "cyrillic":"",
@@ -8360,7 +8360,7 @@ var pbLEX = [
 },
 
 {"UUID":"809707c09a22c805b9350db7616a9f30d362331f",
-"search_word":['qagh', '-qagh-'],
+"search_word":['qagh', '-qagh-', '~–qagh-'],
 "headword":"~–qagh-",
 "root":['qagh'],
 "cyrillic":"-қаӷ-",
@@ -8382,7 +8382,7 @@ var pbLEX = [
 },
 
 {"UUID":"7aa90ff4cdf1d42f1dd038e1c25f2704e42d8f29",
-"search_word":['qaghaqe', '-qaghaqe-'],
+"search_word":['-qaghaqe-', 'qaghaqe', '~–qaghaqe-'],
 "headword":"~–qaghaqe-",
 "root":['qaghaqe'],
 "cyrillic":"-қаӷақы-",
@@ -8404,7 +8404,7 @@ var pbLEX = [
 },
 
 {"UUID":"3065592534c68df220f973b3b9c84efb1dae87ae",
-"search_word":['-qaghqaq-', 'qaghqaq'],
+"search_word":['-qaghqaq-', 'qaghqaq', '-qaghqaq'],
 "headword":"-qaghqaq",
 "root":['qaghqaq'],
 "cyrillic":"",
@@ -8426,7 +8426,7 @@ var pbLEX = [
 },
 
 {"UUID":"1be34dcee092081043deba2ec45ff6aac7ed3a78",
-"search_word":['qaghtagh', '-qaghtagh-'],
+"search_word":['qaghtagh', '~–qaghtagh-', '-qaghtagh-'],
 "headword":"~–qaghtagh-",
 "root":['qaghtagh'],
 "cyrillic":"-қаҳтаӷ-",
@@ -8448,7 +8448,7 @@ var pbLEX = [
 },
 
 {"UUID":"ce14e8e3b6eb6d000100930f94fb83b1a5150dc7",
-"search_word":['-qaghte-', 'qaghte'],
+"search_word":['qaghte', '-qaghte-', '~–qaghte-'],
 "headword":"~–qaghte-",
 "root":['qaghte'],
 "cyrillic":"-қаҳты-",
@@ -8470,7 +8470,7 @@ var pbLEX = [
 },
 
 {"UUID":"7fc1ae4765ac252c3d24efe6306840758f129ff0",
-"search_word":['-qaghte-', 'qaghte'],
+"search_word":['qaghte', '-qaghte-'],
 "headword":"-qaghte-",
 "root":['qaghte'],
 "cyrillic":"",
@@ -8492,7 +8492,7 @@ var pbLEX = [
 },
 
 {"UUID":"f5a84ff174ba9e85ced7bd75f9401915ad7d6cea",
-"search_word":['-qanigh-', 'qanigh'],
+"search_word":['qanigh', '-qanigh-'],
 "headword":"-qanigh-",
 "root":['qanigh'],
 "cyrillic":"",
@@ -8514,7 +8514,7 @@ var pbLEX = [
 },
 
 {"UUID":"19ce74075a2b3f6107383670e7c7601516baf3f8",
-"search_word":['-qaq-', 'qagh'],
+"search_word":['qagh', '-qaq-', '+qaq'],
 "headword":"+qaq",
 "root":['qagh'],
 "cyrillic":"-қақ",
@@ -8536,7 +8536,7 @@ var pbLEX = [
 },
 
 {"UUID":"75004e3249616e932551dac274d93f642e626db7",
-"search_word":['qaq', '-qaq-'],
+"search_word":['qaq', '-qaq', '-qaq-'],
 "headword":"-qaq",
 "root":['qaq'],
 "cyrillic":"",
@@ -8558,7 +8558,7 @@ var pbLEX = [
 },
 
 {"UUID":"3cee6f32a507474182b74b304774d2bdec7e1bfb",
-"search_word":['qaq', '-qaq-'],
+"search_word":['qaq', '-qaq', '-qaq-'],
 "headword":"-qaq",
 "root":['qaq'],
 "cyrillic":"",
@@ -8580,7 +8580,7 @@ var pbLEX = [
 },
 
 {"UUID":"d1d900362c01a0ed4687fc9b411fd5a8bef14086",
-"search_word":['qaqe', '-qaqe-'],
+"search_word":['-qaqe-', 'qaqe'],
 "headword":"-qaqe-",
 "root":['qaqe'],
 "cyrillic":"",
@@ -8602,7 +8602,7 @@ var pbLEX = [
 },
 
 {"UUID":"73a065e0c38e301eaf20f774c417bfbf2e997ee7",
-"search_word":['-qaqsagh-', 'qaqsagh'],
+"search_word":['qaqsagh', '-qaqsagh-'],
 "headword":"-qaqsagh-",
 "root":['qaqsagh'],
 "cyrillic":"",
@@ -8624,7 +8624,7 @@ var pbLEX = [
 },
 
 {"UUID":"0e44efa990564eebc2365e295e94515a08f77d74",
-"search_word":['-qaqu-', 'qaqu'],
+"search_word":['–qaqu-', '-qaqu-', 'qaqu'],
 "headword":"–qaqu-",
 "root":['qaqu'],
 "cyrillic":"-қақу-",
@@ -8668,7 +8668,7 @@ var pbLEX = [
 },
 
 {"UUID":"cd929da68eff0b98ee47c51429aecc04f9851fe1",
-"search_word":['qayugu', '-qayugu-'],
+"search_word":['-qayugu-', 'qayugu'],
 "headword":"-qayugu-",
 "root":['qayugu'],
 "cyrillic":"",
@@ -8690,7 +8690,7 @@ var pbLEX = [
 },
 
 {"UUID":"552e08ee042fed605ad2a445a8f1a3f12de25c1b",
-"search_word":['qayugughte', '-qayugughte-'],
+"search_word":['-qayugughte-', 'qayugughte'],
 "headword":"-qayugughte-",
 "root":['qayugughte'],
 "cyrillic":"",
@@ -8712,7 +8712,7 @@ var pbLEX = [
 },
 
 {"UUID":"d4ca136fbc59c5543906738e8d0b5aff83b014b0",
-"search_word":['-qayuk-', 'qayuk'],
+"search_word":['qayuk', '-qayuk-', '-qayuk'],
 "headword":"-qayuk",
 "root":['qayuk'],
 "cyrillic":"",
@@ -8734,7 +8734,7 @@ var pbLEX = [
 },
 
 {"UUID":"924645ad2f7441cf4746001baac44eafdd2f0379",
-"search_word":['-qe-', 'qe'],
+"search_word":['-qe-<sup>1</sup>', '-qe-', 'qe'],
 "headword":"-qe-<sup>1</sup>",
 "root":['qe'],
 "cyrillic":"",
@@ -8756,7 +8756,7 @@ var pbLEX = [
 },
 
 {"UUID":"dfd3712144b782189a3341006d29dcd16717d93d",
-"search_word":['-qe-', 'qe'],
+"search_word":['-qe-<sup>2</sup>', '-qe-', 'qe'],
 "headword":"-qe-<sup>2</sup>",
 "root":['qe'],
 "cyrillic":"",
@@ -8778,7 +8778,7 @@ var pbLEX = [
 },
 
 {"UUID":"8cea4c29463e8d7a7171a8af54ebbd99107141b5",
-"search_word":['-qegtaq-', 'qegtaq'],
+"search_word":['-qegtaq-', '-qegtaq', 'qegtaq'],
 "headword":"-qegtaq",
 "root":['qegtaq'],
 "cyrillic":"",
@@ -8800,7 +8800,7 @@ var pbLEX = [
 },
 
 {"UUID":"9f74398f79d508a1f89b211ef048b10a7c61ec55",
-"search_word":['qegte', '-qegte-'],
+"search_word":['-qegte-', 'qegte'],
 "headword":"-qegte-",
 "root":['qegte'],
 "cyrillic":"",
@@ -8822,7 +8822,7 @@ var pbLEX = [
 },
 
 {"UUID":"bd5725a3af747a12f502e6a174db3c61db282fea",
-"search_word":['-qenghhaq-', 'qenghhaq'],
+"search_word":['-qenghhaq-', '-qenghhaq*', 'qenghhaq'],
 "headword":"-qenghhaq*",
 "root":['qenghhaq'],
 "cyrillic":"",
@@ -8844,7 +8844,7 @@ var pbLEX = [
 },
 
 {"UUID":"5ed0df14eb9338d0b86b2a28b0701e200d82a21f",
-"search_word":['-qestagh-', 'qestagh'],
+"search_word":['qestagh', '-qestagh-'],
 "headword":"-qestagh-",
 "root":['qestagh'],
 "cyrillic":"",
@@ -8888,7 +8888,7 @@ var pbLEX = [
 },
 
 {"UUID":"67ee4d04b15b09e5af0c0a5e0d417e8b915769b1",
-"search_word":['qiinagh', '-qiinagh-'],
+"search_word":['~–qiinagh-', 'qiinagh', '-qiinagh-'],
 "headword":"~–qiinagh-",
 "root":['qiinagh'],
 "cyrillic":"-қӣнаӷ-",
@@ -8910,7 +8910,7 @@ var pbLEX = [
 },
 
 {"UUID":"3da880ee15c901d739c3bd7a326b65486741a893",
-"search_word":['qinghagh', '-qinghaq-'],
+"search_word":['-qinghaq-', '–qinghaq', 'qinghagh'],
 "headword":"–qinghaq",
 "root":['qinghagh'],
 "cyrillic":"-қинӷақ",
@@ -8932,7 +8932,7 @@ var pbLEX = [
 },
 
 {"UUID":"a91b8d70585c90f3e895028700d05a37fede1ba9",
-"search_word":['qite', '-qite-'],
+"search_word":['qite', '-qite-', '~–qite-'],
 "headword":"~–qite-",
 "root":['qite'],
 "cyrillic":"-қиты-",
@@ -8954,7 +8954,7 @@ var pbLEX = [
 },
 
 {"UUID":"e6868a267be0c52deb98eca6aa869d4cf8fc9908",
-"search_word":['qligh*', '-qliq-'],
+"search_word":['–qliq*', '-qliq-', 'qligh*'],
 "headword":"–qliq*",
 "root":['qligh*'],
 "cyrillic":"-қльиқ",
@@ -8976,7 +8976,7 @@ var pbLEX = [
 },
 
 {"UUID":"5333d27ee9c27c2e3afb9a18442feb5857f4b3d5",
-"search_word":['qragh', '-qragh-'],
+"search_word":['qragh', '–qragh-', '-qragh-'],
 "headword":"–qragh-",
 "root":['qragh'],
 "cyrillic":"-қшаӷ-",
@@ -8998,7 +8998,7 @@ var pbLEX = [
 },
 
 {"UUID":"1071d1e448fb4cd32201881b7ef3b5e2a4205a98",
-"search_word":['qrak', '-qrak-'],
+"search_word":['qrak', '-qrak-', '-qrak'],
 "headword":"-qrak",
 "root":['qrak'],
 "cyrillic":"",
@@ -9020,7 +9020,7 @@ var pbLEX = [
 },
 
 {"UUID":"7ab3579a233d6493056d0c60f1c203c07ca0e347",
-"search_word":['-qraq-', 'qragh'],
+"search_word":['qragh', '-qraq-', '–qraq'],
 "headword":"–qraq",
 "root":['qragh'],
 "cyrillic":"-қшақ",
@@ -9042,7 +9042,7 @@ var pbLEX = [
 },
 
 {"UUID":"0a9f657fb4a14637077bf9e56cd105d01dd4c8f0",
-"search_word":['-qrug-', 'qrug'],
+"search_word":['qrug', '-qrug-', '–qrug-'],
 "headword":"–qrug-",
 "root":['qrug'],
 "cyrillic":"-қшуг-",
@@ -9064,7 +9064,7 @@ var pbLEX = [
 },
 
 {"UUID":"7c28b2a8ece75bcfe81821773c745e1b457c4a83",
-"search_word":['qrug', '-qruk-'],
+"search_word":['qrug', '–qruk', '-qruk-'],
 "headword":"–qruk",
 "root":['qrug'],
 "cyrillic":"-қшук",
@@ -9108,7 +9108,7 @@ var pbLEX = [
 },
 
 {"UUID":"15477d337af067b80e40009d9098c9389e8e1b56",
-"search_word":['-qu-', 'qu'],
+"search_word":['?qu-<sup>1</sup>', '-qu-', 'qu'],
 "headword":"?qu-<sup>1</sup>",
 "root":['qu'],
 "cyrillic":"-қу-1",
@@ -9130,7 +9130,7 @@ var pbLEX = [
 },
 
 {"UUID":"4ea9f6379cd8522083c01cb270c455791ace4bb4",
-"search_word":['-qu-', 'qu'],
+"search_word":['-qu-', '–qu-<sup>2</sup>', 'qu'],
 "headword":"–qu-<sup>2</sup>",
 "root":['qu'],
 "cyrillic":"-қу-2",
@@ -9152,7 +9152,7 @@ var pbLEX = [
 },
 
 {"UUID":"dce8392580da4a209282dab9a80cfaf472a9a99c",
-"search_word":['qugh', '-qugh-'],
+"search_word":['qugh', '-qugh-', '@qugh-'],
 "headword":"@qugh-",
 "root":['qugh'],
 "cyrillic":"-қуӷ-",
@@ -9174,7 +9174,7 @@ var pbLEX = [
 },
 
 {"UUID":"0dda2c3af92757ee8926c0800eadde113c76832b",
-"search_word":['qumtaagh', '-qumtaaq-'],
+"search_word":['~–qumtaaq', '-qumtaaq-', 'qumtaagh'],
 "headword":"~–qumtaaq",
 "root":['qumtaagh'],
 "cyrillic":"-қумтāқ",
@@ -9196,7 +9196,7 @@ var pbLEX = [
 },
 
 {"UUID":"0c4885de201ce7890cfadb8d67173d22a7768cfa",
-"search_word":['qun', '-qun-'],
+"search_word":['-qun', 'qun', '-qun-'],
 "headword":"-qun",
 "root":['qun'],
 "cyrillic":"",
@@ -9218,7 +9218,7 @@ var pbLEX = [
 },
 
 {"UUID":"62ced912a6599d156b34e615bf10e42d341e86e0",
-"search_word":['-quq-', 'qugh'],
+"search_word":['?quq', '-quq-', 'qugh'],
 "headword":"?quq",
 "root":['qugh'],
 "cyrillic":"-қуқ",
@@ -9262,7 +9262,7 @@ var pbLEX = [
 },
 
 {"UUID":"71caf7f734483b151b6939fda15b3c8525c97ca7",
-"search_word":['qutagh', '-qutaq-'],
+"search_word":['?qutaq', '-qutaq-', 'qutagh'],
 "headword":"?qutaq",
 "root":['qutagh'],
 "cyrillic":"-қутақ",
@@ -9284,7 +9284,7 @@ var pbLEX = [
 },
 
 {"UUID":"0ba89d0856a7b3e2da2a6949f98fe7fda721fc27",
-"search_word":['quute', '-quute-'],
+"search_word":['-quute-', 'quute'],
 "headword":"-quute-",
 "root":['quute'],
 "cyrillic":"",
@@ -9306,7 +9306,7 @@ var pbLEX = [
 },
 
 {"UUID":"fa73073af900aaa3a0c97bae0b04b50975585d84",
-"search_word":['-quvinghaq-', 'quvinghaq'],
+"search_word":['-quvinghaq', 'quvinghaq', '-quvinghaq-'],
 "headword":"-quvinghaq",
 "root":['quvinghaq'],
 "cyrillic":"",
@@ -9328,7 +9328,7 @@ var pbLEX = [
 },
 
 {"UUID":"ff1053f5d177f78aa3949b27bc4e766e45d03fda",
-"search_word":['qwaagh', '-qwaaq-'],
+"search_word":['qwaagh', '?qwaaq', '-qwaaq-'],
 "headword":"?qwaaq",
 "root":['qwaagh'],
 "cyrillic":"",
@@ -9350,7 +9350,7 @@ var pbLEX = [
 },
 
 {"UUID":"92a48130acec511a0930a17b4c342ebccdbf9b61",
-"search_word":['-qwaaqun-', 'qwaaqute'],
+"search_word":['-qwaaqun-', '–qwaaqun', 'qwaaqute'],
 "headword":"–qwaaqun",
 "root":['qwaaqute'],
 "cyrillic":"-қӱāқун",
@@ -9372,7 +9372,7 @@ var pbLEX = [
 },
 
 {"UUID":"3c768b10a0fb85b3e4fc7f6080258e86728e7cb5",
-"search_word":['-raaghaq-', 'raaghagh'],
+"search_word":['+raaghaq', '-raaghaq-', 'raaghagh'],
 "headword":"+raaghaq",
 "root":['raaghagh'],
 "cyrillic":"-рāӷақ",
@@ -9394,7 +9394,7 @@ var pbLEX = [
 },
 
 {"UUID":"d7d91be0d700c272009642f0b8ca19852634f62c",
-"search_word":['-raaghinaq-', 'raaghinagh*'],
+"search_word":['raaghinagh*', '-raaghinaq-', '–raaghinaq*'],
 "headword":"–raaghinaq*",
 "root":['raaghinagh*'],
 "cyrillic":"-рāӷинақ",
@@ -9416,7 +9416,7 @@ var pbLEX = [
 },
 
 {"UUID":"b33cfb5071b7d89da848c50cb55370bba7f2b232",
-"search_word":['-raak-', 'raag'],
+"search_word":['+raak', '-raak-', 'raag'],
 "headword":"+raak",
 "root":['raag'],
 "cyrillic":"-рāк",
@@ -9438,7 +9438,7 @@ var pbLEX = [
 },
 
 {"UUID":"f48c3a40973c9a9bd7a16685e10fef50fb34be91",
-"search_word":['raagh', '-raaq-'],
+"search_word":['raagh', '-raaq-', '–raaq'],
 "headword":"–raaq",
 "root":['raagh'],
 "cyrillic":"-рāқ",
@@ -9460,7 +9460,7 @@ var pbLEX = [
 },
 
 {"UUID":"b34384e35bb3c6a82014266c2c7df3ce85dc56cc",
-"search_word":['-raghaq-', 'raghagh'],
+"search_word":['raghagh', '-raghaq-', '+raghaq'],
 "headword":"+raghaq",
 "root":['raghagh'],
 "cyrillic":"-раӷақ",
@@ -9482,7 +9482,7 @@ var pbLEX = [
 },
 
 {"UUID":"77e28cd6215f189fe1f51989c3c1268dae1bf68f",
-"search_word":['-rkaggaq-', 'rkaggagh'],
+"search_word":['rkaggagh', '–rkaggaq', '-rkaggaq-'],
 "headword":"–rkaggaq",
 "root":['rkaggagh'],
 "cyrillic":"-шкахақ",
@@ -9504,7 +9504,7 @@ var pbLEX = [
 },
 
 {"UUID":"4ef8371737e3e231b8d5238ed2a1a72f60232e22",
-"search_word":['-rkapik-', 'rkapig'],
+"search_word":['rkapig', '–rkapik', '-rkapik-'],
 "headword":"–rkapik",
 "root":['rkapig'],
 "cyrillic":"-шкапик",
@@ -9526,7 +9526,7 @@ var pbLEX = [
 },
 
 {"UUID":"b6a0c0aeb409ec7a54fa8888b60366f03b551fad",
-"search_word":['rqwaagh', '-rqwaaq-'],
+"search_word":['-rqwaaq-', '–rqwaaq', 'rqwaagh'],
 "headword":"–rqwaaq",
 "root":['rqwaagh'],
 "cyrillic":"-шқӱāқ",
@@ -9548,7 +9548,7 @@ var pbLEX = [
 },
 
 {"UUID":"4c1be12b4d493ab7a1d868eed27455a13bf27e5c",
-"search_word":['-rraak-', 'rraag'],
+"search_word":['rraag', '-rraak-', '–rraak'],
 "headword":"–rraak",
 "root":['rraag'],
 "cyrillic":"-шāк",
@@ -9570,11 +9570,11 @@ var pbLEX = [
 },
 
 {"UUID":"55bbe8ba2fd773ed4b924266cf82486ca46f0684",
-"search_word":['-ta-', 'sta', 'ta', '-sta-'],
+"search_word":['+(s)ta', 'ta', 'sta', '-sta-', '-ta-'],
 "headword":"+(s)ta",
-"root":['sta', 'ta'],
+"root":['ta', 'sta'],
 "cyrillic":"-(с)та",
-"ipa":['stɑ', 'tɑ'],
+"ipa":['tɑ', 'stɑ'],
 "jacobson":"-øcπnf",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -9592,7 +9592,7 @@ var pbLEX = [
 },
 
 {"UUID":"f89c63c9421aabdb4a637b877f56a7400f23018e",
-"search_word":['-saag-', 'saag'],
+"search_word":['saag', '–saag-', '-saag-'],
 "headword":"–saag-",
 "root":['saag'],
 "cyrillic":"-ся̄г-",
@@ -9614,7 +9614,7 @@ var pbLEX = [
 },
 
 {"UUID":"731a7e07ad39b146017d099660dd214bda9de33e",
-"search_word":['-saag-', 'saag'],
+"search_word":['saag', '-saag-'],
 "headword":"-saag-",
 "root":['saag'],
 "cyrillic":"",
@@ -9658,7 +9658,7 @@ var pbLEX = [
 },
 
 {"UUID":"7c203945d683063cb5ee01e9dc977a87737333e7",
-"search_word":['-sagh-', 'sagh'],
+"search_word":['sagh', '+sagh-', '-sagh-'],
 "headword":"+sagh-",
 "root":['sagh'],
 "cyrillic":"-сяӷ-",
@@ -9680,7 +9680,7 @@ var pbLEX = [
 },
 
 {"UUID":"9d0f4a8abac8dc0b637b6816ea7f726e1b4508d2",
-"search_word":['-sagh-', 'sagh'],
+"search_word":['sagh', '-sagh-<sup>1</sup>', '-sagh-'],
 "headword":"-sagh-<sup>1</sup>",
 "root":['sagh'],
 "cyrillic":"-яӷ-1",
@@ -9702,7 +9702,7 @@ var pbLEX = [
 },
 
 {"UUID":"d360336fe22d44e974d943d8c19d95554c699610",
-"search_word":['-sagh-', 'sagh'],
+"search_word":['-sagh-<sup>2</sup>', 'sagh', '-sagh-'],
 "headword":"-sagh-<sup>2</sup>",
 "root":['sagh'],
 "cyrillic":"",
@@ -9724,7 +9724,7 @@ var pbLEX = [
 },
 
 {"UUID":"03cbb388687a687d5a1cea67fe0823bf2ca0dde9",
-"search_word":['saghagh', '-saghagh-'],
+"search_word":['-saghagh-', 'saghagh', '+saghagh-'],
 "headword":"+saghagh-",
 "root":['saghagh'],
 "cyrillic":"-сяӷаӷ-",
@@ -9746,7 +9746,7 @@ var pbLEX = [
 },
 
 {"UUID":"2ebb58ff1f4455a401b8a9da2bc326c34134012c",
-"search_word":['saghagh', '-saghagh-'],
+"search_word":['-saghagh-', 'saghagh'],
 "headword":"-saghagh-",
 "root":['saghagh'],
 "cyrillic":"-яӷаӷ-",
@@ -9768,7 +9768,7 @@ var pbLEX = [
 },
 
 {"UUID":"ceb85c0d4c93f67e15b3054e3522286b3cab1a24",
-"search_word":['-saghaq-', 'saghaq'],
+"search_word":['-saghaq-', 'saghaq', '-saghaq'],
 "headword":"-saghaq",
 "root":['saghaq'],
 "cyrillic":"",
@@ -9790,7 +9790,7 @@ var pbLEX = [
 },
 
 {"UUID":"3a05f0edc6754a9c3b2dd87a5ea307e261504dea",
-"search_word":['saghpete', '-saghpete-'],
+"search_word":['-saghpete-', 'saghpete'],
 "headword":"-saghpete-",
 "root":['saghpete'],
 "cyrillic":"",
@@ -9834,7 +9834,7 @@ var pbLEX = [
 },
 
 {"UUID":"3f55a35eb718882837f45c3cb535cf18c79540e8",
-"search_word":['-saghqaaghte-', 'saghqaaghte'],
+"search_word":['saghqaaghte', '-saghqaaghte-'],
 "headword":"-saghqaaghte-",
 "root":['saghqaaghte'],
 "cyrillic":"",
@@ -9856,7 +9856,7 @@ var pbLEX = [
 },
 
 {"UUID":"e44f818be75bb81ccd14eb3eb5105ddd299510f5",
-"search_word":['saghqaq', '-saghqaq-'],
+"search_word":['-saghqaq', 'saghqaq', '-saghqaq-'],
 "headword":"-saghqaq",
 "root":['saghqaq'],
 "cyrillic":"",
@@ -9900,7 +9900,7 @@ var pbLEX = [
 },
 
 {"UUID":"3fd538563241e02281e1606adb6f6583a28899ea",
-"search_word":['-saghtugh-', 'saghtugh'],
+"search_word":['-saghtugh-', 'saghtugh', '+saghtugh-'],
 "headword":"+saghtugh-",
 "root":['saghtugh'],
 "cyrillic":"-сяҳтуӷ-",
@@ -9966,7 +9966,7 @@ var pbLEX = [
 },
 
 {"UUID":"bd0bbec41682777fa09f6a84fc0579166452af22",
-"search_word":['sag', '-sak-'],
+"search_word":['-sak-', '–sak', 'sag'],
 "headword":"–sak",
 "root":['sag'],
 "cyrillic":"-сяк",
@@ -9988,7 +9988,7 @@ var pbLEX = [
 },
 
 {"UUID":"b35a0ab9da73c1736cf685297e3e19c3c45366b1",
-"search_word":['-saq-', 'saq'],
+"search_word":['saq', '-saq-', '-saq'],
 "headword":"-saq",
 "root":['saq'],
 "cyrillic":"",
@@ -10010,7 +10010,7 @@ var pbLEX = [
 },
 
 {"UUID":"560da2c5a8f030a8e61f84e50dc7941023b857c7",
-"search_word":['-saquna-', 'saquna'],
+"search_word":['saquna', '-saquna-'],
 "headword":"-saquna-",
 "root":['saquna'],
 "cyrillic":"",
@@ -10032,7 +10032,7 @@ var pbLEX = [
 },
 
 {"UUID":"c9acefd2ffa883d409276513151a510a8db91fb2",
-"search_word":['-seghagh-', 'seghagh'],
+"search_word":['seghagh', '+seghagh-', '-seghagh-'],
 "headword":"+seghagh-",
 "root":['seghagh'],
 "cyrillic":"-сыӷаӷ-",
@@ -10054,11 +10054,11 @@ var pbLEX = [
 },
 
 {"UUID":"37e5985d99b91c1514a62e516bb0f5e1d6c7d01d",
-"search_word":['-ghha-', 'gga', '-gga-', 'ghha'],
+"search_word":['-gga-', 'ghha', 'gga', '~<sub>sf</sub>–gga-,~<sub>sf</sub>–ghha-', '-ghha-'],
 "headword":"~<sub>sf</sub>–gga-,~<sub>sf</sub>–ghha-",
-"root":['gga', 'ghha'],
+"root":['ghha', 'gga'],
 "cyrillic":"-хā- - -ҳā-",
-"ipa":['xɑ', 'χɑ'],
+"ipa":['χɑ', 'xɑ'],
 "jacobson":"-[6- - -56-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -10076,7 +10076,7 @@ var pbLEX = [
 },
 
 {"UUID":"989f050125c631830b8f1f33251564314412d9bb",
-"search_word":['ghhaleg', '-ghhalek-'],
+"search_word":['-ghhalek-', '~<sub>sf</sub>–ghhalek', 'ghhaleg'],
 "headword":"~<sub>sf</sub>–ghhalek",
 "root":['ghhaleg'],
 "cyrillic":"-ҳалык",
@@ -10098,7 +10098,7 @@ var pbLEX = [
 },
 
 {"UUID":"bc986385e2a705b7fe884d9871b0fb4b8dd52ecf",
-"search_word":['-sqe-', 'sqe', '-esqe-', 'esqe'],
+"search_word":['-esqe-', 'sqe', '~<sub>sf</sub>:(e)sqe-', 'esqe', '-sqe-'],
 "headword":"~<sub>sf</sub>:(e)sqe-",
 "root":['sqe', 'esqe'],
 "cyrillic":"-(ы)сқы-",
@@ -10120,7 +10120,7 @@ var pbLEX = [
 },
 
 {"UUID":"9aac14f3e3cc0b26344aafef7182a2af0ee7253c",
-"search_word":['si', '-si-'],
+"search_word":['+si-<sup>1</sup>', 'si', '-si-'],
 "headword":"+si-<sup>1</sup>",
 "root":['si'],
 "cyrillic":"-си-1",
@@ -10142,7 +10142,7 @@ var pbLEX = [
 },
 
 {"UUID":"9e6d5fe48eae86cd2f4abc99f0e7371c0b797c56",
-"search_word":['si', '-si-'],
+"search_word":['si', '-si-', '+si-<sup>2</sup>'],
 "headword":"+si-<sup>2</sup>",
 "root":['si'],
 "cyrillic":"-си-2",
@@ -10186,7 +10186,7 @@ var pbLEX = [
 },
 
 {"UUID":"ef78a8b3e936f06c341a9c97bf96a3810c475e36",
-"search_word":['-sigh-', 'sigh'],
+"search_word":['-sigh-', '+sigh-', 'sigh'],
 "headword":"+sigh-",
 "root":['sigh'],
 "cyrillic":"-сиӷ-",
@@ -10208,7 +10208,7 @@ var pbLEX = [
 },
 
 {"UUID":"9b0babf5481c365660ea92ad93e52d9dd6e48323",
-"search_word":['sighagh', '-sighagh-'],
+"search_word":['sighagh', '-sighagh-', '+sighagh-'],
 "headword":"+sighagh-",
 "root":['sighagh'],
 "cyrillic":"-сиӷаӷ-",
@@ -10230,7 +10230,7 @@ var pbLEX = [
 },
 
 {"UUID":"541cdc448568d67ca013a0afce122905859eab54",
-"search_word":['-sighwaagh-', 'sighwaagh'],
+"search_word":['-sighwaagh-', '–sighwaagh-', 'sighwaagh'],
 "headword":"–sighwaagh-",
 "root":['sighwaagh'],
 "cyrillic":"-сиӷӱāӷ-",
@@ -10252,7 +10252,7 @@ var pbLEX = [
 },
 
 {"UUID":"61adf16f76dc0cc391fcb4a3176b23405da8b8e4",
-"search_word":['siigh', '-siigh-'],
+"search_word":['siigh', '-siigh-', '+siigh-'],
 "headword":"+siigh-",
 "root":['siigh'],
 "cyrillic":"-сӣӷ-",
@@ -10274,7 +10274,7 @@ var pbLEX = [
 },
 
 {"UUID":"2967f3fba47cbc4b12b152d957f1d815181ef39d",
-"search_word":['-siilliqe-', 'siilliqe'],
+"search_word":['siilliqe', '-siilliqe-'],
 "headword":"-siilliqe-",
 "root":['siilliqe'],
 "cyrillic":"",
@@ -10296,7 +10296,7 @@ var pbLEX = [
 },
 
 {"UUID":"82b81a319a5344877b67f3e974884903943020ca",
-"search_word":['siigh', '-siiq-'],
+"search_word":['–siiq', '-siiq-', 'siigh'],
 "headword":"–siiq",
 "root":['siigh'],
 "cyrillic":"-сӣқ",
@@ -10340,7 +10340,7 @@ var pbLEX = [
 },
 
 {"UUID":"abbfecc63156d45d81d3885717402738dec6a448",
-"search_word":['-siq-', 'sigh'],
+"search_word":['-siq-', '?siq', 'sigh'],
 "headword":"?siq",
 "root":['sigh'],
 "cyrillic":"-сиқ",
@@ -10362,7 +10362,7 @@ var pbLEX = [
 },
 
 {"UUID":"e255e6da852725d9b61e5e20f6f8c730430bb30d",
-"search_word":['-siq-', 'siq'],
+"search_word":['-siq', 'siq', '-siq-'],
 "headword":"-siq",
 "root":['siq'],
 "cyrillic":"",
@@ -10384,7 +10384,7 @@ var pbLEX = [
 },
 
 {"UUID":"6e5fc36b77d3841af544b8f39efae5101657149c",
-"search_word":['sluvegagh', '-sluvegaq-'],
+"search_word":['–sluvegaq', '-sluvegaq-', 'sluvegagh'],
 "headword":"–sluvegaq",
 "root":['sluvegagh'],
 "cyrillic":"-сльювгақ",
@@ -10450,7 +10450,7 @@ var pbLEX = [
 },
 
 {"UUID":"ac0c3e52c402672a0cd72c1deb5bfbac78a69a2c",
-"search_word":['-sngwaaghaq-', 'sngwaaghagh'],
+"search_word":['-sngwaaghaq-', '–sngwaaghaq', 'sngwaaghagh'],
 "headword":"–sngwaaghaq",
 "root":['sngwaaghagh'],
 "cyrillic":"-сңӱьāӷақ",
@@ -10472,7 +10472,7 @@ var pbLEX = [
 },
 
 {"UUID":"1ecc1c999daef5683fdfd806230d59a8b279dd60",
-"search_word":['-sqe-', 'sqe'],
+"search_word":['sqe', '-sqe-'],
 "headword":"-sqe-",
 "root":['sqe'],
 "cyrillic":"",
@@ -10494,7 +10494,7 @@ var pbLEX = [
 },
 
 {"UUID":"be707ffc8d9eef770837a4d144ad44e74ec3966f",
-"search_word":['-squghhaq-', 'squghhagh*'],
+"search_word":['squghhagh*', '-squghhaq-', '–squghhaq*'],
 "headword":"–squghhaq*",
 "root":['squghhagh*'],
 "cyrillic":"-сқуҳақ",
@@ -10516,7 +10516,7 @@ var pbLEX = [
 },
 
 {"UUID":"6133a5d7d23907bbe7af3a2e12512a6933389b88",
-"search_word":['-squllgaq-', 'squllgagh'],
+"search_word":['–squllgaq', '-squllgaq-', 'squllgagh'],
 "headword":"–squllgaq",
 "root":['squllgagh'],
 "cyrillic":"-сқульхақ",
@@ -10538,7 +10538,7 @@ var pbLEX = [
 },
 
 {"UUID":"76e596f85e428b97b06960ac5439264dc9fa7099",
-"search_word":['squgh', '-squq-'],
+"search_word":['squgh', '-squq-', '–squq'],
 "headword":"–squq",
 "root":['squgh'],
 "cyrillic":"-сқуқ",
@@ -10560,7 +10560,7 @@ var pbLEX = [
 },
 
 {"UUID":"c0a49a8e5436ee3c5f3874ec5598027040c2fc77",
-"search_word":['sqwaagh', '-sqwaaq-'],
+"search_word":['–sqwaaq', 'sqwaagh', '-sqwaaq-'],
 "headword":"–sqwaaq",
 "root":['sqwaagh'],
 "cyrillic":"-сқӱāқ",
@@ -10582,7 +10582,7 @@ var pbLEX = [
 },
 
 {"UUID":"173ba9daf3899e58769f66771a6e7094b2c4395c",
-"search_word":['-staaghhaa-', 'staaghhaa'],
+"search_word":['?staaghhaa-', '-staaghhaa-', 'staaghhaa'],
 "headword":"?staaghhaa-",
 "root":['staaghhaa'],
 "cyrillic":"",
@@ -10604,7 +10604,7 @@ var pbLEX = [
 },
 
 {"UUID":"4d511748f8e7287def0d2144f98ffcb1c8947763",
-"search_word":['-staaghhaq-', 'staaghhagh*'],
+"search_word":['?staaghhaq*', 'staaghhagh*', '-staaghhaq-'],
 "headword":"?staaghhaq*",
 "root":['staaghhagh*'],
 "cyrillic":"",
@@ -10626,7 +10626,7 @@ var pbLEX = [
 },
 
 {"UUID":"2231a1599c99b18355ca97f5b4b6031b22aad925",
-"search_word":['staagh', '-staaq-'],
+"search_word":['-staaq-', '?staaq', 'staagh'],
 "headword":"?staaq",
 "root":['staagh'],
 "cyrillic":"",
@@ -10648,7 +10648,7 @@ var pbLEX = [
 },
 
 {"UUID":"65c34f588fee6c0a30aaebda9380b8405cf9d796",
-"search_word":['-staghhiinaq-', 'staghhiinagh*'],
+"search_word":['–staghhiinaq*', '-staghhiinaq-', 'staghhiinagh*'],
 "headword":"–staghhiinaq*",
 "root":['staghhiinagh*'],
 "cyrillic":"-стаҳӣнақ",
@@ -10670,7 +10670,7 @@ var pbLEX = [
 },
 
 {"UUID":"a5f2a727a085059fc3ba5b3e8c3aa06334a03bed",
-"search_word":['-ste-', 'ste'],
+"search_word":['ste', '-ste-'],
 "headword":"-ste-",
 "root":['ste'],
 "cyrillic":"",
@@ -10736,7 +10736,7 @@ var pbLEX = [
 },
 
 {"UUID":"f41aee498dc93209d6126065fbb43c2433d9267c",
-"search_word":['su', '-su-'],
+"search_word":['-su-', 'su', '-su-<sup>2</sup>'],
 "headword":"-su-<sup>2</sup>",
 "root":['su'],
 "cyrillic":"",
@@ -10758,7 +10758,7 @@ var pbLEX = [
 },
 
 {"UUID":"5a188e02efef7e83b34148c6b86b340bb3c53a7c",
-"search_word":['su', '-su-'],
+"search_word":['-su-', 'su', '-su<sup>1</sup>'],
 "headword":"-su<sup>1</sup>",
 "root":['su'],
 "cyrillic":"",
@@ -10780,7 +10780,7 @@ var pbLEX = [
 },
 
 {"UUID":"6dab539793504faab3990b6f31ae1ac8ec1693f9",
-"search_word":['-sug-', 'sug'],
+"search_word":['sug', '-sug-'],
 "headword":"-sug-",
 "root":['sug'],
 "cyrillic":"",
@@ -10802,7 +10802,7 @@ var pbLEX = [
 },
 
 {"UUID":"bd5c0d0861f264badab38689b592154cd4e21ce2",
-"search_word":['-sug-', 'sug'],
+"search_word":['sug', '-sug-'],
 "headword":"-sug-",
 "root":['sug'],
 "cyrillic":"-юг-",
@@ -10824,7 +10824,7 @@ var pbLEX = [
 },
 
 {"UUID":"1527427801ed793b1a569b550f34bf83abe4bdcf",
-"search_word":['suggaagh', '-suggaagh-'],
+"search_word":['-suggaagh-', 'suggaagh'],
 "headword":"-suggaagh-",
 "root":['suggaagh'],
 "cyrillic":"",
@@ -10846,7 +10846,7 @@ var pbLEX = [
 },
 
 {"UUID":"0dbe9bf2679f18e301f8fcd22a48ec2eab808867",
-"search_word":['-suggaaq-', 'suggaaq'],
+"search_word":['suggaaq', '-suggaaq', '-suggaaq-'],
 "headword":"-suggaaq",
 "root":['suggaaq'],
 "cyrillic":"",
@@ -10868,7 +10868,7 @@ var pbLEX = [
 },
 
 {"UUID":"f006725e5e51a8d59255bb9e43d0ef9dc830600b",
-"search_word":['sugh', '-sugh-'],
+"search_word":['sugh', '-sugh-', '+sugh-'],
 "headword":"+sugh-",
 "root":['sugh'],
 "cyrillic":"-сюӷ-",
@@ -10912,7 +10912,7 @@ var pbLEX = [
 },
 
 {"UUID":"0de02ce03dcfc9f84b365136caf53237bbf3416c",
-"search_word":['sugnite', '-sugnite-'],
+"search_word":['sugnite', '-sugnite-', '+sugnite-'],
 "headword":"+sugnite-",
 "root":['sugnite'],
 "cyrillic":"-сюгниты-",
@@ -10934,7 +10934,7 @@ var pbLEX = [
 },
 
 {"UUID":"ec2d7855eb65bc7db534ca5410e65449adf4f575",
-"search_word":['-suguma-', 'suguma'],
+"search_word":['suguma', '-suguma-'],
 "headword":"-suguma-",
 "root":['suguma'],
 "cyrillic":"",
@@ -10978,7 +10978,7 @@ var pbLEX = [
 },
 
 {"UUID":"76a56837c444c6c32fee070296154104f288a749",
-"search_word":['suke', '-suke-'],
+"search_word":['suke', '-suke-<sup>1</sup>', '-suke-'],
 "headword":"-suke-<sup>1</sup>",
 "root":['suke'],
 "cyrillic":"",
@@ -11000,7 +11000,7 @@ var pbLEX = [
 },
 
 {"UUID":"c3a37090f669bd4d80e87a78da653cbc5a2b2e1c",
-"search_word":['suke', '-suke-'],
+"search_word":['suke', '-suke-<sup>2</sup>', '-suke-'],
 "headword":"-suke-<sup>2</sup>",
 "root":['suke'],
 "cyrillic":"",
@@ -11044,7 +11044,7 @@ var pbLEX = [
 },
 
 {"UUID":"a36f4ebccc6144341edc22e09e99c7feb00349ae",
-"search_word":['suqaq', '-suqaq-'],
+"search_word":['-suqaq', 'suqaq', '-suqaq-'],
 "headword":"-suqaq",
 "root":['suqaq'],
 "cyrillic":"",
@@ -11088,7 +11088,7 @@ var pbLEX = [
 },
 
 {"UUID":"a0e1a9f9da32723490fc78904bf89b9a073ce800",
-"search_word":['suwhaaq', '-suwhaaq-'],
+"search_word":['-suwhaaq-', '-suwhaaq', 'suwhaaq'],
 "headword":"-suwhaaq",
 "root":['suwhaaq'],
 "cyrillic":"",
@@ -11110,7 +11110,7 @@ var pbLEX = [
 },
 
 {"UUID":"14bb5e7761872cc8c121ed154a069460664b2090",
-"search_word":['-ta-', 'ta'],
+"search_word":['ta', '+ta', '-ta-'],
 "headword":"+ta",
 "root":['ta'],
 "cyrillic":"-та",
@@ -11132,7 +11132,7 @@ var pbLEX = [
 },
 
 {"UUID":"bafb3ff4e576d5d1aa1a4e83a814f2269272c162",
-"search_word":['-ta-', 'ta'],
+"search_word":['-ta', 'ta', '-ta-'],
 "headword":"-ta",
 "root":['ta'],
 "cyrillic":"",
@@ -11154,7 +11154,7 @@ var pbLEX = [
 },
 
 {"UUID":"4f76ce580af80282d0dcb02e844c1b9e990214a3",
-"search_word":['-ta-', 'ta'],
+"search_word":['-ta', 'ta', '-ta-'],
 "headword":"-ta",
 "root":['ta'],
 "cyrillic":"",
@@ -11176,7 +11176,7 @@ var pbLEX = [
 },
 
 {"UUID":"d0c417a34cdf137d20d8efba90711c461bb8c8cf",
-"search_word":['tagh', '-tagh-'],
+"search_word":['tagh', '+tagh-<sup>1</sup>', '-tagh-'],
 "headword":"+tagh-<sup>1</sup>",
 "root":['tagh'],
 "cyrillic":"-таӷ-1",
@@ -11198,7 +11198,7 @@ var pbLEX = [
 },
 
 {"UUID":"cc184da250cdaec2b1f790a74fdd1d5b77d0ca86",
-"search_word":['tagh', '-tagh-'],
+"search_word":['tagh', '+tagh-<sup>2</sup>', '-tagh-'],
 "headword":"+tagh-<sup>2</sup>",
 "root":['tagh'],
 "cyrillic":"-таӷ-2",
@@ -11220,7 +11220,7 @@ var pbLEX = [
 },
 
 {"UUID":"a641d46f2397030f46dbb9569b9ed6a87d303875",
-"search_word":['tagh', '-tagh-'],
+"search_word":['+tagh-<sup>3</sup>', 'tagh', '-tagh-'],
 "headword":"+tagh-<sup>3</sup>",
 "root":['tagh'],
 "cyrillic":"-таӷ-3",
@@ -11242,7 +11242,7 @@ var pbLEX = [
 },
 
 {"UUID":"888662a89e947b7b3c6dd6b837e4a370dafeede0",
-"search_word":['tala', '-tala-'],
+"search_word":['+tala', 'tala', '-tala-'],
 "headword":"+tala",
 "root":['tala'],
 "cyrillic":"-таля",
@@ -11264,7 +11264,7 @@ var pbLEX = [
 },
 
 {"UUID":"54319cc7f436c57890c8b6f506f6af54d4005cac",
-"search_word":['-taq-', 'taq'],
+"search_word":['taq', '-taq-', '-taq'],
 "headword":"-taq",
 "root":['taq'],
 "cyrillic":"",
@@ -11286,7 +11286,7 @@ var pbLEX = [
 },
 
 {"UUID":"b6c15313dc46acb284f6065781b024276b0bc21b",
-"search_word":['tagh', '-taq-'],
+"search_word":['tagh', '+taq<sup>1</sup>', '-taq-'],
 "headword":"+taq<sup>1</sup>",
 "root":['tagh'],
 "cyrillic":"-тақ",
@@ -11308,7 +11308,7 @@ var pbLEX = [
 },
 
 {"UUID":"551a40f66db2db172631f27fe61d0c71f5e329d7",
-"search_word":['tagh', '-taq-'],
+"search_word":['tagh', '+taq<sup>2</sup>', '-taq-'],
 "headword":"+taq<sup>2</sup>",
 "root":['tagh'],
 "cyrillic":"-тақ",
@@ -11330,7 +11330,7 @@ var pbLEX = [
 },
 
 {"UUID":"f99ffa9b2b87dc8aec57c2de4fc6f2ecadecca0f",
-"search_word":['tagh', '-taq-'],
+"search_word":['tagh', '-taq-', '+taq<sup>3</sup>'],
 "headword":"+taq<sup>3</sup>",
 "root":['tagh'],
 "cyrillic":"-тақ",
@@ -11352,7 +11352,7 @@ var pbLEX = [
 },
 
 {"UUID":"eb973034ef81991f4f042bd427da48b106cc48b8",
-"search_word":['tagh', '-taq-'],
+"search_word":['tagh', '-taq-', '+taq<sup>4</sup>'],
 "headword":"+taq<sup>4</sup>",
 "root":['tagh'],
 "cyrillic":"-тақ4",
@@ -11396,7 +11396,7 @@ var pbLEX = [
 },
 
 {"UUID":"3cfd6d13fa6c4b226195185e58ecdc48a4087724",
-"search_word":['te', '-te-'],
+"search_word":['+te-<sup>1</sup>', 'te', '-te-'],
 "headword":"+te-<sup>1</sup>",
 "root":['te'],
 "cyrillic":"-ты-1",
@@ -11418,7 +11418,7 @@ var pbLEX = [
 },
 
 {"UUID":"e445110e37824348e547b18d7e227bf92d7668a6",
-"search_word":['te', '-te-'],
+"search_word":['te', '-te-', '+te-<sup>2</sup>'],
 "headword":"+te-<sup>2</sup>",
 "root":['te'],
 "cyrillic":"-ты-2",
@@ -11440,7 +11440,7 @@ var pbLEX = [
 },
 
 {"UUID":"11f273c195f3a388c369cb79c506921eca270547",
-"search_word":['te', '-te-'],
+"search_word":['+te-<sup>3</sup>', 'te', '-te-'],
 "headword":"+te-<sup>3</sup>",
 "root":['te'],
 "cyrillic":"-ты-3",
@@ -11462,7 +11462,7 @@ var pbLEX = [
 },
 
 {"UUID":"03383476aba5956bdcd87d73247e07695be22d32",
-"search_word":['te', '-te-'],
+"search_word":['+te-<sup>4</sup>', 'te', '-te-'],
 "headword":"+te-<sup>4</sup>",
 "root":['te'],
 "cyrillic":"-ты-ӷ",
@@ -11484,11 +11484,11 @@ var pbLEX = [
 },
 
 {"UUID":"ce40c3b994ccae89684dd2d2935158be42d49f55",
-"search_word":['tesigate', '-sigate-', '-tesigate-', 'sigate'],
+"search_word":['sigate', '-sigate-', '-tesigate-', '+(te)sigate-', 'tesigate'],
 "headword":"+(te)sigate-",
-"root":['tesigate', 'sigate'],
+"root":['sigate', 'tesigate'],
 "cyrillic":"-(ты)сигаты-",
-"ipa":['təsiɣɑtə', 'siɣɑtə'],
+"ipa":['siɣɑtə', 'təsiɣɑtə'],
 "jacobson":"-ønsπcbufns-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -11506,7 +11506,7 @@ var pbLEX = [
 },
 
 {"UUID":"7b2ee04ea48d7c9fdc6d522a2dbbf8fba3932229",
-"search_word":['-snaanghite-', 'snaanghite', '-tesnaanghite-', 'tesnaanghite'],
+"search_word":['-snaanghite-', 'snaanghite', '+(te)snaanghite-', 'tesnaanghite', '-tesnaanghite-'],
 "headword":"+(te)snaanghite-",
 "root":['snaanghite', 'tesnaanghite'],
 "cyrillic":"-(ты)сньāнӷиты-",
@@ -11528,7 +11528,7 @@ var pbLEX = [
 },
 
 {"UUID":"4b65a8d4465362149198c101968649365cc0cec9",
-"search_word":['-snanigh-', 'tesnanigh', '-tesnanigh-', 'snanigh'],
+"search_word":['-tesnanigh-', 'tesnanigh', '-snanigh-', 'snanigh', '+(te)snanigh-'],
 "headword":"+(te)snanigh-",
 "root":['tesnanigh', 'snanigh'],
 "cyrillic":"-(ты)сньāниӷ-",
@@ -11550,11 +11550,11 @@ var pbLEX = [
 },
 
 {"UUID":"26f928e11c9fea57c483911e8495e981440dc218",
-"search_word":['-teste-', '-ste-', 'teste', 'ste'],
+"search_word":['-ste-', '+(te)ste-', 'ste', '-teste-', 'teste'],
 "headword":"+(te)ste-",
-"root":['teste', 'ste'],
+"root":['ste', 'teste'],
 "cyrillic":"-(ты)сты-",
-"ipa":['təstə', 'stə'],
+"ipa":['stə', 'təstə'],
 "jacobson":"-ønsπcns-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -11572,7 +11572,7 @@ var pbLEX = [
 },
 
 {"UUID":"69b7fde76ee562ff2cbcc159a828858bcb187d9c",
-"search_word":['stegpe', '-stegpe-', '-testegpe-', 'testegpe'],
+"search_word":['-testegpe-', 'stegpe', '-stegpe-', 'testegpe', '+(te)stegpe-'],
 "headword":"+(te)stegpe-",
 "root":['stegpe', 'testegpe'],
 "cyrillic":"-(ты)стыхпы-",
@@ -11594,11 +11594,11 @@ var pbLEX = [
 },
 
 {"UUID":"d97a982385b66ee35584bf90491e7f98d5b41eba",
-"search_word":['-testepag-', 'stepag', 'testepag', '-stepag-'],
+"search_word":['testepag', '-testepag-', '+(te)stepag-', '-stepag-', 'stepag'],
 "headword":"+(te)stepag-",
-"root":['testepag', 'stepag'],
+"root":['stepag', 'testepag'],
 "cyrillic":"-(ты)стыпаг-",
-"ipa":['təstəpɑɣ', 'stəpɑɣ'],
+"ipa":['stəpɑɣ', 'təstəpɑɣ'],
 "jacobson":"-ønsπcnsgfu-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -11616,11 +11616,11 @@ var pbLEX = [
 },
 
 {"UUID":"87ff68b019db042ad1430e8efeab691c183a2f11",
-"search_word":['tesug', '-sug-', '-tesug-', 'sug'],
+"search_word":['sug', '-tesug-', '-sug-', 'tesug', '+(te)sug-'],
 "headword":"+(te)sug-",
-"root":['tesug', 'sug'],
+"root":['sug', 'tesug'],
 "cyrillic":"-(ты)сюг-",
-"ipa":['təsuɣ', 'suɣ'],
+"ipa":['suɣ', 'təsuɣ'],
 "jacobson":"-ønsπc/u-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -11638,7 +11638,7 @@ var pbLEX = [
 },
 
 {"UUID":"90640c2570f4389a6a0761b1cbd9d15fa0ee7e99",
-"search_word":['-tghute-', 'tghute'],
+"search_word":['-tghute-', '?tghute-', 'tghute'],
 "headword":"?tghute-",
 "root":['tghute'],
 "cyrillic":"-тҳуты-",
@@ -11660,7 +11660,7 @@ var pbLEX = [
 },
 
 {"UUID":"d6cedcf7c911a63b3631e35aa67844718464c157",
-"search_word":['ti', '-ti-'],
+"search_word":['+ti-', 'ti', '-ti-'],
 "headword":"+ti-",
 "root":['ti'],
 "cyrillic":"-ти-",
@@ -11704,7 +11704,7 @@ var pbLEX = [
 },
 
 {"UUID":"d26d33305e18ba9afd76239c144e950977389500",
-"search_word":['tmiighte', '-tmiighte-'],
+"search_word":['-tmiighte-', '+tmiighte-', 'tmiighte'],
 "headword":"+tmiighte-",
 "root":['tmiighte'],
 "cyrillic":"-тмьӣҳты-",
@@ -11726,7 +11726,7 @@ var pbLEX = [
 },
 
 {"UUID":"1ae05bb0cb604dd6a3c5bf8887c882d5c63a7844",
-"search_word":['-tmun-', 'tmute'],
+"search_word":['tmute', '+tmun', '-tmun-'],
 "headword":"+tmun",
 "root":['tmute'],
 "cyrillic":"-тмьун",
@@ -11748,7 +11748,7 @@ var pbLEX = [
 },
 
 {"UUID":"0d4ac62e2d0da75ad9199f036860ce215247cf3c",
-"search_word":['tu', '-tu-'],
+"search_word":['-tu-', '±tu-', 'tu'],
 "headword":"±tu-",
 "root":['tu'],
 "cyrillic":"-ту-",
@@ -11770,7 +11770,7 @@ var pbLEX = [
 },
 
 {"UUID":"8d9dd842f7cc1a6c46b7c0d15d2d37c122988cdd",
-"search_word":['-tugh-', 'tugh'],
+"search_word":['-tugh-', '+tugh-<sup>1</sup>', 'tugh'],
 "headword":"+tugh-<sup>1</sup>",
 "root":['tugh'],
 "cyrillic":"-туӷ-1",
@@ -11792,7 +11792,7 @@ var pbLEX = [
 },
 
 {"UUID":"b8e5feee2c164652383abd27fd00410cb2e42fdd",
-"search_word":['-tugh-', 'tugh'],
+"search_word":['-tugh-', 'tugh', '+tugh-<sup>2</sup>'],
 "headword":"+tugh-<sup>2</sup>",
 "root":['tugh'],
 "cyrillic":"-туӷ-2",
@@ -11814,7 +11814,7 @@ var pbLEX = [
 },
 
 {"UUID":"1512ea53c0c3e854d27a7b1e9aa5648ad36a8f55",
-"search_word":['tulli', '-tulli-'],
+"search_word":['tulli', '-tulli-', '+tulli-'],
 "headword":"+tulli-",
 "root":['tulli'],
 "cyrillic":"-тульи-",
@@ -11836,7 +11836,7 @@ var pbLEX = [
 },
 
 {"UUID":"d7cecb82e3374ecc167133da88b6d86cf46c6501",
-"search_word":['tupag', '-tupag-'],
+"search_word":['tupag', '-tupag-', '+tupag-'],
 "headword":"+tupag-",
 "root":['tupag'],
 "cyrillic":"-тупаг-",
@@ -11858,7 +11858,7 @@ var pbLEX = [
 },
 
 {"UUID":"6a3036e712393b1f9993254b254e623834693b48",
-"search_word":['tuqagh', '-tuqaq-'],
+"search_word":['-tuqaq-', 'tuqagh', '±tuqaq'],
 "headword":"±tuqaq",
 "root":['tuqagh'],
 "cyrillic":"-туқақ",
@@ -11880,7 +11880,7 @@ var pbLEX = [
 },
 
 {"UUID":"ab624e03a6201b8774ac0177c1db108cc4907653",
-"search_word":['-tutka-', 'tutka'],
+"search_word":['+tutka-', 'tutka', '-tutka-'],
 "headword":"+tutka-",
 "root":['tutka'],
 "cyrillic":"-тутка-",
@@ -11902,7 +11902,7 @@ var pbLEX = [
 },
 
 {"UUID":"8d94993c13c1b72a79f0dcb3b56fbb02856df6ed",
-"search_word":['-tutkaligh-', 'tutkaligh'],
+"search_word":['+tutkaligh-', 'tutkaligh', '-tutkaligh-'],
 "headword":"+tutkaligh-",
 "root":['tutkaligh'],
 "cyrillic":"-туткалиӷ-",
@@ -11924,7 +11924,7 @@ var pbLEX = [
 },
 
 {"UUID":"e5fd86e5200f4c954ea744f904d6b652d53d2809",
-"search_word":['tuumagh', '-tuumagh-'],
+"search_word":['+tuumagh-', '-tuumagh-', 'tuumagh'],
 "headword":"+tuumagh-",
 "root":['tuumagh'],
 "cyrillic":"-тӯмаӷ-",
@@ -11968,7 +11968,7 @@ var pbLEX = [
 },
 
 {"UUID":"221e3f4d9826c2228ad3cd1f30b26d009c146d0c",
-"search_word":['u', '-u-'],
+"search_word":['-u-', 'u'],
 "headword":"-u-",
 "root":['u'],
 "cyrillic":"",
@@ -11990,7 +11990,7 @@ var pbLEX = [
 },
 
 {"UUID":"7465c746873a14edf48896794df43f59637005ca",
-"search_word":['ute', 'te', '-n-', '-un-'],
+"search_word":['ute', 'te', '-un-', '@~:(u)n', '-n-'],
 "headword":"@~:(u)n",
 "root":['ute', 'te'],
 "cyrillic":"-(у)н",
@@ -12012,11 +12012,11 @@ var pbLEX = [
 },
 
 {"UUID":"23862fc77ab9b4b9b5450373fe86f50f862cd378",
-"search_word":['-saq-', 'sagh', '-usaq-', 'usagh'],
+"search_word":['sagh', '-saq-', '@~:(u)saq', 'usagh', '-usaq-'],
 "headword":"@~:(u)saq",
-"root":['usagh', 'sagh'],
+"root":['sagh', 'usagh'],
 "cyrillic":"-(у)сяқ",
-"ipa":['usɑq', 'sɑq'],
+"ipa":['sɑq', 'usɑq'],
 "jacobson":"-øeπcz2",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -12034,11 +12034,11 @@ var pbLEX = [
 },
 
 {"UUID":"52fa478e13226b0f7a567aafcbfa34fd48fb3f9d",
-"search_word":['-siq-', 'usigh', 'sigh', '-usiq-'],
+"search_word":['-usiq-', 'usigh', '-siq-', '@~:(u)siq', 'sigh'],
 "headword":"@~:(u)siq",
-"root":['usigh', 'sigh'],
+"root":['sigh', 'usigh'],
 "cyrillic":"-(у)сиқ",
-"ipa":['usiq', 'siq'],
+"ipa":['siq', 'usiq'],
 "jacobson":"-øeπcb2",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -12056,7 +12056,7 @@ var pbLEX = [
 },
 
 {"UUID":"8dbb5e67f0e1c8bdfb131a1fed9b312c851bad4c",
-"search_word":['-uta-', 'uta', 'ta', '-ta-'],
+"search_word":['@~:(u)ta', 'ta', '-uta-', '-ta-', 'uta'],
 "headword":"@~:(u)ta",
 "root":['uta', 'ta'],
 "cyrillic":"-(у)та",
@@ -12078,11 +12078,11 @@ var pbLEX = [
 },
 
 {"UUID":"cefa0f275244b630d4191b8191fc9ed3e7909f1a",
-"search_word":['tagh', 'utagh', '-utaq-', '-taq-'],
+"search_word":['tagh', 'utagh', '-taq-', '-utaq-', '@~:(u)taq'],
 "headword":"@~:(u)taq",
-"root":['utagh', 'tagh'],
+"root":['tagh', 'utagh'],
 "cyrillic":"-(у)тақ",
-"ipa":['utɑq', 'tɑq'],
+"ipa":['tɑq', 'utɑq'],
 "jacobson":"-øeπnf2",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -12100,11 +12100,11 @@ var pbLEX = [
 },
 
 {"UUID":"19080b3e070bc0d26ab17718a6031e49e63497ed",
-"search_word":['-ute-', 'te', 'ute', '-te-'],
+"search_word":['-ute-', '@~:(u)te-', 'ute', 'te', '-te-'],
 "headword":"@~:(u)te-",
-"root":['ute', 'te'],
+"root":['te', 'ute'],
 "cyrillic":"-(у)ты-",
-"ipa":['utə', 'tə'],
+"ipa":['tə', 'utə'],
 "jacobson":"-øeπns-",
 "source_pos":"postbase",
 "pos":"<span class='tag postbaseTag'>POSTBASE</span>",
@@ -12122,7 +12122,7 @@ var pbLEX = [
 },
 
 {"UUID":"c87b842b663ae8798040dbb9df07d6a5913b5aa6",
-"search_word":['tke', '-utke-', '-tke-', 'utke'],
+"search_word":['tke', 'utke', '-utke-', '@~:(u)tke-', '-tke-'],
 "headword":"@~:(u)tke-",
 "root":['tke', 'utke'],
 "cyrillic":"-(у)ткы-",
@@ -12144,7 +12144,7 @@ var pbLEX = [
 },
 
 {"UUID":"5e58f8108e0c1ad98c3cd8ace2f0cde62be1c036",
-"search_word":['-ugh-', 'ugh'],
+"search_word":['-ugh-', 'ugh', '?ugh-'],
 "headword":"?ugh-",
 "root":['ugh'],
 "cyrillic":"-уӷ-",
@@ -12166,7 +12166,7 @@ var pbLEX = [
 },
 
 {"UUID":"bde4b9830965d1e72fde4895e947cc1e3e607be9",
-"search_word":['ughagh', '-ughagh-'],
+"search_word":[':ughagh-', '-ughagh-', 'ughagh'],
 "headword":":ughagh-",
 "root":['ughagh'],
 "cyrillic":"-уӷаӷ-",
@@ -12188,7 +12188,7 @@ var pbLEX = [
 },
 
 {"UUID":"3a02553d4ebeb785eebee71d6b475c1e17c21981",
-"search_word":['ughqe', '-ughqe-'],
+"search_word":['ughqe', '?ughqe-', '-ughqe-'],
 "headword":"?ughqe-",
 "root":['ughqe'],
 "cyrillic":"-уҳқы-",
@@ -12210,7 +12210,7 @@ var pbLEX = [
 },
 
 {"UUID":"413b5cbc21e2232aa871bb374595d558a09c2f3b",
-"search_word":['-ughte-', 'ughte'],
+"search_word":['ughte', '-ughte-'],
 "headword":"-ughte-",
 "root":['ughte'],
 "cyrillic":"",
@@ -12232,7 +12232,7 @@ var pbLEX = [
 },
 
 {"UUID":"cb93fd81fe986b1e0e2efd82156c48dd69b19959",
-"search_word":['uma', '-uma-'],
+"search_word":['-uma-', 'uma'],
 "headword":"-uma-",
 "root":['uma'],
 "cyrillic":"",
@@ -12254,7 +12254,7 @@ var pbLEX = [
 },
 
 {"UUID":"6b1bfc21a34fc28781fb4a2d842887696a7f07a1",
-"search_word":['umafte', '-umafte-'],
+"search_word":['-umafte-', 'umafte'],
 "headword":"-umafte-",
 "root":['umafte'],
 "cyrillic":"",
@@ -12298,7 +12298,7 @@ var pbLEX = [
 },
 
 {"UUID":"77adfaf26d9fe59581bdafddc154d9f723b79e79",
-"search_word":['-uman-', 'uman'],
+"search_word":['-uman', '-uman-', 'uman'],
 "headword":"-uman",
 "root":['uman'],
 "cyrillic":"",
@@ -12364,7 +12364,7 @@ var pbLEX = [
 },
 
 {"UUID":"dd92e7786966d04bd78f92412004a24d8730eb1c",
-"search_word":['uute', '-uute-'],
+"search_word":['-uute-', 'uute', '+uute-'],
 "headword":"+uute-",
 "root":['uute'],
 "cyrillic":"-ӯты-",
@@ -12386,7 +12386,7 @@ var pbLEX = [
 },
 
 {"UUID":"9fff17c0e29f70c7a3b53da62f0c217fddb4a00b",
-"search_word":['uute', '-uute-'],
+"search_word":['-uute-', 'uute'],
 "headword":"-uute-",
 "root":['uute'],
 "cyrillic":"",
@@ -12430,7 +12430,7 @@ var pbLEX = [
 },
 
 {"UUID":"d8c1312f795e41ff64f8b17a52f43a99f63e0479",
-"search_word":['-vagh-', 'vagh'],
+"search_word":['?vagh-', '-vagh-', 'vagh'],
 "headword":"?vagh-",
 "root":['vagh'],
 "cyrillic":"-ваӷ-",
@@ -12452,7 +12452,7 @@ var pbLEX = [
 },
 
 {"UUID":"6f1ad3372ad3188d0485410707f5a2321e9da8d8",
-"search_word":['-vak-', 'vag'],
+"search_word":['?vak', '-vak-', 'vag'],
 "headword":"?vak",
 "root":['vag'],
 "cyrillic":"-вак",
@@ -12474,7 +12474,7 @@ var pbLEX = [
 },
 
 {"UUID":"e973dc9ab3b23394d39b79ebd65f364460f0c732",
-"search_word":['valluq', '-valluq-'],
+"search_word":['-valluq-', '-valluq', 'valluq'],
 "headword":"-valluq",
 "root":['valluq'],
 "cyrillic":"",
@@ -12496,7 +12496,7 @@ var pbLEX = [
 },
 
 {"UUID":"efe95460540eabee255b73d66786cd831d5b1ea8",
-"search_word":['vagh', '-vaq-'],
+"search_word":['vagh', '?vaq', '-vaq-'],
 "headword":"?vaq",
 "root":['vagh'],
 "cyrillic":"-вақ",
@@ -12518,7 +12518,7 @@ var pbLEX = [
 },
 
 {"UUID":"3b6231dbe3a0643d6a946c991427f743d6913175",
-"search_word":['-vlaagh-', 'vlaagh'],
+"search_word":['–vlaagh-', '-vlaagh-', 'vlaagh'],
 "headword":"–vlaagh-",
 "root":['vlaagh'],
 "cyrillic":"-вля̄ӷ-",
@@ -12540,7 +12540,7 @@ var pbLEX = [
 },
 
 {"UUID":"c807d7122cf9a54a5df9e55d8a9c784ab2c2e056",
-"search_word":['vlaagh', '-vlaaq-'],
+"search_word":['-vlaaq-', '–vlaaq', 'vlaagh'],
 "headword":"–vlaaq",
 "root":['vlaagh'],
 "cyrillic":"-вля̄қ",
@@ -12562,7 +12562,7 @@ var pbLEX = [
 },
 
 {"UUID":"32aced13a1081eef304b189d4c3b34a0c7041ee7",
-"search_word":['vleghagh', '-vleghagh-'],
+"search_word":['–vleghagh-', 'vleghagh', '-vleghagh-'],
 "headword":"–vleghagh-",
 "root":['vleghagh'],
 "cyrillic":"-влыӷаӷ-",
@@ -12584,7 +12584,7 @@ var pbLEX = [
 },
 
 {"UUID":"209507ad14e7f3271099a23173bb0214baec97e3",
-"search_word":['vleghagh', '-vleghaq-'],
+"search_word":['vleghagh', '-vleghaq-', '–vleghaq'],
 "headword":"–vleghaq",
 "root":['vleghagh'],
 "cyrillic":"-влыӷақ",
@@ -12606,7 +12606,7 @@ var pbLEX = [
 },
 
 {"UUID":"76fcce63ed1d847cf89acea7e5107755221d5874",
-"search_word":['vraagh', '-vraaq-'],
+"search_word":['-vraaq-', 'vraagh', '–vraaq'],
 "headword":"–vraaq",
 "root":['vraagh'],
 "cyrillic":"-врāқ",
@@ -12628,7 +12628,7 @@ var pbLEX = [
 },
 
 {"UUID":"f5a947d6e617f40fa4ddb11a00c0c70741e99536",
-"search_word":['-vreghaq-', 'vreghagh'],
+"search_word":['vreghagh', '–vreghaq', '-vreghaq-'],
 "headword":"–vreghaq",
 "root":['vreghagh'],
 "cyrillic":"-врыӷақ",
@@ -12650,7 +12650,7 @@ var pbLEX = [
 },
 
 {"UUID":"d85e3485271248f96f186910714dfbb85dff5742",
-"search_word":['vyigh', '-vyigh-'],
+"search_word":['vyigh', '-vyigh-', '–vyigh-'],
 "headword":"–vyigh-",
 "root":['vyigh'],
 "cyrillic":"-вӥиӷ-",
@@ -12672,7 +12672,7 @@ var pbLEX = [
 },
 
 {"UUID":"e14ff57d7054a15bef03a0c3f167c222d609f00e",
-"search_word":['vyiigh', '-vyiigh-'],
+"search_word":['vyiigh', '–vyiigh-', '-vyiigh-'],
 "headword":"–vyiigh-",
 "root":['vyiigh'],
 "cyrillic":"-вӥӣӷ-",
@@ -12694,7 +12694,7 @@ var pbLEX = [
 },
 
 {"UUID":"a29c319f416c5f604796e1fe7ddea2d243f286b7",
-"search_word":['vyiigh', '-vyiiq-'],
+"search_word":['–vyiiq', '-vyiiq-', 'vyiigh'],
 "headword":"–vyiiq",
 "root":['vyiigh'],
 "cyrillic":"-вӥӣқ",
@@ -12716,7 +12716,7 @@ var pbLEX = [
 },
 
 {"UUID":"5aa2137fe6263cba88d740ad733fd2e532e1b5b0",
-"search_word":['-vzaaq-', 'vzaagh'],
+"search_word":['–vzaaq', 'vzaagh', '-vzaaq-'],
 "headword":"–vzaaq",
 "root":['vzaagh'],
 "cyrillic":"-взāқ",
@@ -12738,7 +12738,7 @@ var pbLEX = [
 },
 
 {"UUID":"e08561966abeeaeecdc6ff0e2789795533346c28",
-"search_word":['-vzeghaq-', 'vzeghagh'],
+"search_word":['–vzeghaq', '-vzeghaq-', 'vzeghagh'],
 "headword":"–vzeghaq",
 "root":['vzeghagh'],
 "cyrillic":"я-взыӷақ",
@@ -12760,7 +12760,7 @@ var pbLEX = [
 },
 
 {"UUID":"74f1ed99cf17aabd6d3bc177732320c3ef1df61c",
-"search_word":['-vzigh-', 'vzigh'],
+"search_word":['–vzigh-', 'vzigh', '-vzigh-'],
 "headword":"–vzigh-",
 "root":['vzigh'],
 "cyrillic":"-взиӷ-",
@@ -12782,7 +12782,7 @@ var pbLEX = [
 },
 
 {"UUID":"538796b665d887a46756c1c57a3abfef4b48ea35",
-"search_word":['-vziigh-', 'vziigh'],
+"search_word":['-vziigh-', 'vziigh', '–vziigh-'],
 "headword":"–vziigh-",
 "root":['vziigh'],
 "cyrillic":"-взӣӷ-",
@@ -12804,7 +12804,7 @@ var pbLEX = [
 },
 
 {"UUID":"666dfe6d57fa8b770b01552e79c3ab05bc4e9e0c",
-"search_word":['-vziiq-', 'vziigh'],
+"search_word":['vziigh', '-vziiq-', '–vziiq'],
 "headword":"–vziiq",
 "root":['vziigh'],
 "cyrillic":"-взӣқ",
@@ -12826,7 +12826,7 @@ var pbLEX = [
 },
 
 {"UUID":"225fe43c3ad1c89ef95610ae21dcc9da21c4412a",
-"search_word":['-waagh-', 'waagh'],
+"search_word":['-waagh-', 'waagh', '-waagh-<sup>1</sup>'],
 "headword":"-waagh-<sup>1</sup>",
 "root":['waagh'],
 "cyrillic":"",
@@ -12848,7 +12848,7 @@ var pbLEX = [
 },
 
 {"UUID":"7218ef7b4e27da2eae3699d8c99df4673513694d",
-"search_word":['-waagh-', 'waagh'],
+"search_word":['-waagh-', 'waagh', '-waagh-<sup>2</sup>'],
 "headword":"-waagh-<sup>2</sup>",
 "root":['waagh'],
 "cyrillic":"",
@@ -12870,7 +12870,7 @@ var pbLEX = [
 },
 
 {"UUID":"130a32ff8da57ef83d758a61304b7bf7cf824463",
-"search_word":['-waaq-', 'waaq'],
+"search_word":['-waaq-', 'waaq', '-waaq'],
 "headword":"-waaq",
 "root":['waaq'],
 "cyrillic":"",
@@ -12892,7 +12892,7 @@ var pbLEX = [
 },
 
 {"UUID":"71596993606088035c58df3d7241186d6a7c6e0e",
-"search_word":['whaq', '-whaq-'],
+"search_word":['-whaq*', 'whaq', '-whaq-'],
 "headword":"-whaq*",
 "root":['whaq'],
 "cyrillic":"",
@@ -12914,7 +12914,7 @@ var pbLEX = [
 },
 
 {"UUID":"d890749d4fa0d99340e35277d0043c8ee15904d0",
-"search_word":['-whllak-', 'whllak'],
+"search_word":['whllak', '-whllak-', '-whllak'],
 "headword":"-whllak",
 "root":['whllak'],
 "cyrillic":"",
@@ -12936,7 +12936,7 @@ var pbLEX = [
 },
 
 {"UUID":"34a02505095cf45d9a5d8d26c4cc85185948584e",
-"search_word":['y', '-y-'],
+"search_word":['+y', 'y', '-y-'],
 "headword":"+y",
 "root":['y'],
 "cyrillic":"-ӥ",
@@ -12958,7 +12958,7 @@ var pbLEX = [
 },
 
 {"UUID":"bc34cad96b5661025510575145ceee4e366b8d01",
-"search_word":['-yaaq-', 'yaagh'],
+"search_word":['yaagh', '–yaaq', '-yaaq-'],
 "headword":"–yaaq",
 "root":['yaagh'],
 "cyrillic":"-я̄қ",
@@ -12980,7 +12980,7 @@ var pbLEX = [
 },
 
 {"UUID":"7b57f76dca3edd9d01106574576a2e47a0140806",
-"search_word":['-yag-', 'yag'],
+"search_word":['-yag-', 'yag', '+yag-'],
 "headword":"+yag-",
 "root":['yag'],
 "cyrillic":"-яг-",
@@ -13002,7 +13002,7 @@ var pbLEX = [
 },
 
 {"UUID":"507438a45a9b5ae7116886041ea59e0a6f72c9a4",
-"search_word":['yaga', '-yaga-'],
+"search_word":['-yaga-', '+yaga<sup>e</sup>', 'yaga'],
 "headword":"+yaga<sup>e</sup>",
 "root":['yaga'],
 "cyrillic":"-ягаы",
@@ -13024,7 +13024,7 @@ var pbLEX = [
 },
 
 {"UUID":"618c4766c2900934b3be702a231fb775d67a4f4f",
-"search_word":['-yak-', 'yag'],
+"search_word":['-yak-', 'yag', '?yak'],
 "headword":"?yak",
 "root":['yag'],
 "cyrillic":"-як",
@@ -13046,7 +13046,7 @@ var pbLEX = [
 },
 
 {"UUID":"8032ed453748104af9a3933c503158eaf7a0ee38",
-"search_word":['yugh', '-yuq-'],
+"search_word":['+yuq', 'yugh', '-yuq-'],
 "headword":"+yuq",
 "root":['yugh'],
 "cyrillic":"-юқ",
