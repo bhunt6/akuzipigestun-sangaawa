@@ -108,7 +108,7 @@
     <script type="text/javascript" src="dictionary_js/parseSearch.js"></script>
     <script type="text/javascript" src="dictionary_js/autocomplete.js"></script>
     <script type="text/javascript" src="dictionary_js/bases072124.js"></script>
-    <script type="text/javascript" src="dictionary_js/postbases071824.js"></script>
+    <script type="text/javascript" src="dictionary_js/postbases072124.js"></script>
     <script type="text/javascript" src="dictionary_js/wordoftheday.js"></script>
     <script type="text/javascript" src="dictionary_js/categories.js"></script>
     <script type="text/javascript" src="dictionary_js/cyrillic_convert.js"></script>
@@ -159,7 +159,7 @@
 
         for(let j=0, i=LEX.length; i<(LEX.length+pbLEX.length); i++){
             
-            headwords[i] = "-" + pbLEX[j].headword.replace(/[\@\~\–\-\+\?\±\%\:]/g, "").replace(/\<su[bp]\>[\d*ef]\<\/su[bp]\>/g, "") + "-";
+            headwords[i] = "-" + pbLEX[j].headword.replace(/[\@\~\–\-\+\?\±\%\:]/g, "").replace(/\<su[bp]\>[\d*ef]\<\/su[bp]\>/g, "").replace(/\(.*\)/g,"") + "-";
             j++;
         }
 
