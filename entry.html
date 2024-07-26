@@ -121,7 +121,7 @@
     <script type="text/javascript" src="dictionary_js/bases072124.js"></script>
     <script type="text/javascript" src="dictionary_js/postbases072124.js"></script>
     <script type="text/javascript" src="dictionary_js/autocomplete.js"></script>
-    <script type="text/javascript" src="dictionary_js/inflection_tables.js"></script>
+    <script type="text/javascript" src="dictionary_js/inflection_tables_new.js"></script>
     <script type="text/javascript" src="dictionary_js/inflections.js"></script>
     <script type="text/javascript" src="dictionary_js/foma_apply_down.js"></script>
     <script type="text/javascript" src="dictionary_js/transducer_inverted.js"></script>
@@ -172,18 +172,14 @@
 
         function entryFinder(){
             let findEntry = LEX.filter((word) => word.UUID === entryID);
-            console.log(findEntry)
             if(!findEntry.length){
                 findEntry = pbLEX.filter((word) => word.UUID === entryID);
                 currentEntry = findEntry[0];
                 currentIndex = pbLEX.indexOf(currentEntry);
-                console.log(currentIndex);
                 return;
             }
             currentEntry = findEntry[0];
-            console.log(currentEntry);
             currentIndex = LEX.indexOf(currentEntry);
-            console.log(currentIndex);
         }
 
         entryFinder()
@@ -274,14 +270,14 @@
                 wheel.innerHTML = wheelElements;
             }
             
-            
+            controller(currentEntry.root[0], currentEntry.source_pos);
             //inflectional tables
-            if(currentEntry.headword.includes("<sup>e</sup>")){
-                controller(currentEntry.search_word[0], currentEntry.headword, currentEntry.source_pos, true);
-            }
-            else{
-                controller(currentEntry.search_word[0], currentEntry.headword, currentEntry.source_pos, false);
-            }
+            //if(currentEntry.headword.includes("<sup>e</sup>")){
+            //    controller(currentEntry.search_word[0], currentEntry.headword, currentEntry.source_pos, true);
+            //}
+            //else{
+            //    controller(currentEntry.search_word[0], currentEntry.headword, currentEntry.source_pos, false);
+            //}
             
             //Event listeners for collapsibles
             var coll = document.getElementsByClassName("collapsible");

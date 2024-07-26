@@ -2,26 +2,28 @@
 
 //Determine words part of speech and assign appropriate parser tags to the root
 //then pass to the appropriate paradigm function
+
+//When the new analyzer is implemented, change all [.] to (.)
 function controller(word, pos) {
     let root = word;
     if (pos == "noun") {
-        root += "(N)";
+        root += "[N]";
         nominal(root);
     }
     else if (pos == "verb") {
-        root += "(V)";
+        root += "[V]";
         verbal(root);
     }
     else if (pos == "emotional root") {
-        root += "(EMO)";
+        root += "[EMO]";
         verbal(root);
     }
     else if (pos == "postural root") {
-        root += "(POS)";
+        root += "[POS]";
         verbal(root);
     }
     else if (pos == "pronoun") {
-        root += "(N)";
+        root += "[N]";
     }
 }
 
@@ -47,14 +49,17 @@ function nominal(root) {
     for (var nCase in nounInfl) {
         var forms = new Array;
         //alert("infl = " + nounInfl[nCase].length);
-        for (var i = 0; i<nounInfl[nCase].length; i++) {
-            let surString = root + "^" + nounInfl[nCase][i];
-            //var surString = "sikig[N][Abs][1SgPoss][SgPosd]";
-            console.log(surString)
+        for (let i = 0; i<nounInfl[nCase].length; i++) {
+            //Eventually, this vv should be the format of the string:
+            //let surString = root + "^" + nounInfl[nCase][i];
+            //(Current format for old analyzer) var surString = "sikig[N][Abs][1SgPoss][SgPosd]";
+            let surString = root + nounInfl[nCase][i];            
             forms[i] = foma_apply_down(transducer, surString);
         }
     
-        tableContent += `<table class="tg">
+        tableContent += `<button type="button" class="collapsible">${nCase}</button>
+        <div class="table_cont">
+        <table class="tg">
         <thead>
             <tr>
                 <th class="tg-d0ae1">${nCase}</th>
@@ -66,12 +71,12 @@ function nominal(root) {
                     style="text-decoration:none;">Dual</span></th>
             </tr>
         </thead>`;
-
+        var i=0;
         for (let head in headers) {
-            var i=0;
+            
             tableContent += `<tbody>
             <tr>
-                <td class="tg-kyww"><span style="text-decoration:none;">${head}</span></td>
+                <td class="tg-kyww"><span style="text-decoration:none;">${headers[head]}</span></td>
                 <td class="tg-d0ae">${forms[i][0]}</td>
                 <td class="tg-d0ae">${forms[i+1][0]}</td>
                 <td class="tg-d0ae">${forms[i+2][0]}</td>
@@ -79,7 +84,7 @@ function nominal(root) {
             i+=3;
         }
         
-        tableContent += `</tbody></table>`
+        tableContent += `</tbody></table></div>`
     };
     tableZone.innerHTML = tableContent;
 }
