@@ -96,6 +96,11 @@ function akuzSearch(term){
     }
 };
 
+//This function uses filter() to return a list of entry objects in which, for a given key:value pair 
+//where the key is "gloss", "examples", or "notes", the value matches or includes the search term.
+//All resulting lists are then concatenated and returned in filteredLexicon. Preference is given
+//to the search term existing in "gloss", then "examples", then lastly "notes".
+//filteredLexicon = exact match gloss + includes match gloss + includes match examples + includes match notes
 //Search for English words
 function englishSearch(term) {
     let regTerm = ` ${term} `;
