@@ -227,6 +227,7 @@ p {
 }
 #contents{
 	padding-left: 3rem;
+	font-weight: bold;
 }
 
 .methods{
