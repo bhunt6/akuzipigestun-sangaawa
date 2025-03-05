@@ -43,6 +43,7 @@
             <a href="https://bhunt6.github.io/itemquulteki/" data-title="Morphological Analyzer"><img src="icons/analyzer_hires.png" width="52" height="51" alt="Morphological Analyzer" /></a>
             <a href="https://saintlawrenceislandyupik.github.io/web_tools/index_utilities.html" data-title="Orthotactic Spellchecker"><img src="icons/spellchecker_hires.png" width="53" height="51" alt="Orthotactic Spellchecker" /></a>
             <a href="contact.html" data-title="Contact Us"><img src="icons/contact_hires.png" width="52" height="37" alt="Contact Us" /></a>
+            <a href="about.html" data-title="About"><img src="icons/about.png" width="51" height="43" alt="About the Dictionary"></a>
         </div>
         <div class="search" role="search">
             <div class="bar_button autocomplete">
@@ -64,22 +65,34 @@
         <div class="section about">
             <div class="sectionHeader">About the Dictionary</div>
             <div class="sectionContent">
-                <p>This site is an implementation of an existing print dictionary for St. Lawrence Island Yupik/Akuzipik. The source dictionary 
+                <p>This site is an implementation of and ongoing expansion on an existing print dictionary for St. Lawrence Island Yupik/Akuzipik. The source dictionary 
                     is the culmination of many years of diligent documentary work by Linda Womkon Badten (Aghnaghaghpik), Vera Oovi Kaneshiro (Uqiitlek), 
-                    Marie Oovi (Uvegtu), Christopher Koonooka (Petuwaq) and Steven A. Jacobson, first published in 1987 and most recently revised in 2008. This electronic dictionary 
+                    Marie Oovi (Uvegtu), Christopher Koonooka (Petuwaq) and Steven A. Jacobson, first published in 1987 and most recently revised in 2008 <a href="#Badten">(Badten et al 2008)</a>. This electronic dictionary 
                     presents the information compiled in Badten et al (2008) and preserves all lexical entry data contained therein in a searchable digital database. 
-
-
                 </p>
             </div>
-        </div>        
-        <div class="section methods">
+        </div>  
+        <div class="section contents">
+            <div class="sectionHeader">Contents</div>
+            <div class="sectionContent">
+                <ul id="contents">
+                    <li><a href="#morph">Morphological Parser</a></li>
+                    <li><a href="#entry">Overview of an Entry</a></li>
+                    <li><a href="#tags">Entry Tags</a></li>
+                    <li><a href="#rules">Jacobson's Attachment Rules</a></li>
+                    <li><a href="#methods">Methodology</a></li>
+                    <li><a href="#suggestions">Suggestions?</a></li>
+                    <li><a href="#refs">References</a></li>
+                </ul>
+            </div>
+        </div>      
+        <div class="section methods" id="methods">
             <div class="sectionHeader">Methodology</div>
             <div class="sectionContent">
                 <p>
                     The implementation of this electronic dictionary, as well as the accompanying work on Akuzipik that our team has engaged in, 
                     has been undertaken with ongoing discussions with rights holders in the Akuzipik-speaking community in the 
-                    village of Sivuqaq (Gambell). This work is part of a larger project that includes documentation, digitization, 
+                    villages of Sivuqaq (Gambell) and Sivungaq (Savoonga). This work is part of a larger project that includes documentation, digitization, 
                     building computer tools for the use of speakers and scholars, and supporting revitalization and pedagogical 
                     efforts in the community.
                 </p>
@@ -89,13 +102,16 @@
                 </p>
             </div>
         </div>
-        <div class="section parserInfo">
+        <div class="section parserInfo" id="morph">
             <div class="sectionHeader">Morphological Parser</div>
             <div class="sectionContent">
-                <p>This dictionary integrates a morphological </p>
+                <p>This dictionary integrates a morphological parser developed using foma, a toolkit for the creation of 
+                    finite state automata and transducers created by Mans Hulden <a href="#Hulden">(Hulden 2009)</a>. The parser was implemented in foma originally by Emily Chen <a href="#Chen">(Chen & Schwartz 2018)</a>
+                and later converted to a javascript version using a Pearl script also developed by Mans Hulden. The parser is built in to the dictionary and is used anytime a user executes a search from the search bar. 
+                It has also been given its own dedicated word builder interface, <a href="https://bhunt6.github.io/itemquulteki/">Itemquulteki</a>, which allows the user to both construct Akuzpik words from component morphemss and break down full words into possible parses.</p>
             </div>
         </div>
-        <div class="section entryInfo">
+        <div class="section entryInfo" id="entry">
             <div class="sectionHeader">Overview of an Entry</div>
             <div class="sectionContent">
                 <img src="icons/entry_diagram.png" style="max-width:80%; height:auto"alt="Diagram of an entry">
@@ -109,7 +125,7 @@
                 <img src="icons/word_wheel.png" style="max-width:250px; height:auto" alt="Word Wheel">
             </div>
         </div>
-        <div class="section tagsInfo">
+        <div class="section tagsInfo" id="tags">
             <div class="sectionHeader">Entry Tags</div>
             <div class="sectionContent">
                 <p>Each entry is labeled with one or more tags which describe things like the headword's part of speech, 
@@ -170,22 +186,23 @@
                             <span class='tag ChukotkanTag'>CHUKOTKAN</span>
                             <p>Words used primarily in the Chukotkan dialect.</p>
                         </div>
-                        <div>
+                        <!--<div>
                             <span class='tag commonTag'>COMMON</span>
                             <p>Words that are among the most commonly used in the corpus. These words
                                 have a frequency value in the written corpus higher than ___.
                             </p>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section attachmentRules">
+        <div class="section attachmentRules" id="rules">
             <div class="sectionHeader">Jacobson's Attachment Rules</div>
             <div class="sectionContent">
                 <p>
                     The derivational morphemes listed in the lexicon are often prefixed by a number of symbols denoting how 
-                    the morpheme affects the base it attaches to phonologically. 
+                    the morpheme affects the base it attaches to phonologically. These symbols were present in the print dictionary 
+                    and are preserved here for the sake of consistency.
                 </p>
                 <table>
                     <tr>
@@ -239,16 +256,20 @@
                         <td>Segment between brackets only appears
                             certain forms of the word</td>
                     </tr>
+                    <tr>
+                        <td>?</td>
+                        <td>Non-productive form; Attachment rules undetermined</td>
+                    </tr>
                     
                 </table>
             </div>
         </div>
-        <div class="section suggestions">
+        <div class="section suggestions" id="suggestions">
             <div class="sectionHeader">Suggestions?</div>
             <div class="sectionContent">
                 <p>If you have any suggestions for improvements to the dictionary, additions or corrections to existing entries, 
                     or Akuzipik words or phrases that we don't have record of, please submit this information using the form on
-                    the contact page.
+                    the <a src="contact.html">contact</a> page.
                 </p>
                 <br>
                 <p>
@@ -256,17 +277,17 @@
                 </p>
             </div>
         </div>
-        <div class="footer">
-            <div id="footer1">© 2023 St.Lawrence Island</div>
-            <div id="footer2"><b>Data and entries sourced from: </b>
-                <br> 
-                Badten, L.W. (Aghnaghaghpik), 
-                Kaneshiro, V.O. (Uqiitlek), 
-                Oovi, M. (Uvegtu), & 
-                Koonooka, C. (Petuwaq). (2008). 
-                <i>St. Lawrence Island/Siberian Yupik Eskimo dictionary. </i>
-                University of Alaska Fairbanks: Alaska Native Language Center.
+        <div class="section references" id="refs">
+            <div class="sectionHeader">References</div>
+            <div class="sectionContent">
+                <p id="Badten">Badten, L.W. (Aghnaghaghpik), Kaneshiro, V.O. (Uqiitlek), Oovi, M. (Uvegtu), & Koonooka, C. (Petuwaq). (2008). <i>St. Lawrence Island/Siberian Yupik Eskimo dictionary.</i> Fairbanks: Alaska Native Language Center, University of Alaska, Fairbanks.</p>
+                <p id="Chen">Chen, E., & Schwartz, L. (2018, May). A morphological analyzer for st. lawrence island/central siberian yupik. In <i>Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018).</i></p>
+                <p id="Hulden">Hulden, M. (2009, April). Foma: a finite-state compiler and library. In <i>Proceedings of the Demonstrations Session at EACL 2009</i> (pp. 29-32).</p>
+                <p id="Jacobson">Jacobson, Steven A. (2001). <i>A Practical Grammar of the St. Lawrence Island / Siberian Yupik Eskimo Language.</i> Second Edition. Fairbanks: Alaska Native Language Center, University of Alaska, Fairbanks.</p>
             </div>
+        </div>
+        <div class="footer">
+            <div id="footer1">© 2025 St.Lawrence Island</div>
         </div>
     </div>
     <script type="text/javascript" src="dictionary_js/autocomplete.js"></script>
