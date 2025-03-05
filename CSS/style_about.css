@@ -13,18 +13,20 @@
 	display: grid;
 	min-height: 100%;
 	grid-template-columns: 1fr 3fr 2fr 230px 1fr;
-	grid-template-rows:  minmax(10.5rem, auto) .4em 9rem repeat(7, minmax(60px, auto)) minmax(4.4rem, auto);
+	grid-template-rows:  minmax(10.5rem, auto) .4em 9rem repeat(9, minmax(60px, auto)) minmax(4.4rem, auto);
 	grid-template-areas: 
 		". title search search ."
 		". border border border ."
 		". . nav nav ."
 		". about about about ."
-		". parserInfo parserInfo parserInfo ."
+		". contents contents contents ."
 		". entryInfo entryInfo entryInfo ."
+		". parserInfo parserInfo parserInfo ."
 		". tagsInfo tagsInfo tagsInfo ."
 		". attachmentRules attachmentRules attachmentRules ."
 		". methods methods methods ."
 		". suggestions suggestions suggestions ."
+		". references references references ."
 		"footer footer footer footer footer";
 }
 
@@ -100,6 +102,10 @@ h3{
 
 .nav a{
 	margin: 20px 20px 0px 0px;
+}
+
+.nav a:last-child{
+	margin-top: 17.5px;
 }
 
 .search{
@@ -186,12 +192,18 @@ input[type='radio']:checked {
 }
 
 .section{
-	padding-bottom: 3rem;
+	padding-top: 1rem;
+	padding-bottom: .5rem;
 }
 
-.sectionContent p{
+.sectionContent p, ul, li, a{
 	margin-bottom: 1rem;
 	margin-top: .5rem;
+}
+
+p {
+	text-align: justify;
+	text-justify: inter-word;
 }
 
 .twoColumn{
@@ -208,6 +220,13 @@ input[type='radio']:checked {
 
 .about{
 	grid-area: about;
+}
+
+.contents{
+	grid-area: contents;
+}
+#contents{
+	padding-left: 3rem;
 }
 
 .methods{
@@ -232,6 +251,10 @@ input[type='radio']:checked {
 
 .suggestions{
 	grid-area: suggestions;
+}
+
+.references{
+	grid-area: references;
 }
 
 .tag{
@@ -391,12 +414,13 @@ h1, h2, h3, h4{
 [data-title]:after {
     content: attr(data-title);
     color: #4c4f53;
-    font-size: 15px;
+    font-size: 1rem;
 	font-weight: bold;
     position: absolute;
-    bottom: 2em;
+    top: 3rem;
     left: 0%;
-    white-space: nowrap;
+	max-width: 6rem;
+    white-space: normal;
     opacity: 0;
     z-index: 99999;
     visibility: hidden;
@@ -451,19 +475,21 @@ h1, h2, h3, h4{
 		display: grid;
 		min-height: 100%;
 		grid-template-columns: 1fr 3fr 2fr 2fr 1fr;
-		grid-template-rows:  minmax(10.5rem, auto) 6.25rem .4em 9rem repeat(7, minmax(12.5rem, auto)) minmax(12rem, auto);
+		grid-template-rows:  minmax(10.5rem, auto) 6.25rem .4em 9rem repeat(9, minmax(12.5rem, auto)) minmax(12rem, auto);
 		grid-template-areas: 
 			"title title title title title"
 			". search search search ."
 			". border border border ."
 			". . nav nav ."
 			". about about about ."
-			". parserInfo parserInfo parserInfo ."
+			". contents contents contents ."
 			". entryInfo entryInfo entryInfo ."
+			". parserInfo parserInfo parserInfo ."
 			". tagsInfo tagsInfo tagsInfo ."
 			". attachmentRules attachmentRules attachmentRules ."
-			". suggestions suggestions suggestions ."
 			". methods methods methods ."
+			". suggestions suggestions suggestions ."
+			". references references references ."
 			"footer footer footer footer footer";
 	}
 
@@ -488,6 +514,10 @@ h1, h2, h3, h4{
 
 	.nav a{
 		margin: 20px 10px 0px 0px;
+	}
+
+	.nav a:last-child{
+		margin-top: 17.5px;
 	}
 	
 	.nav a img{
