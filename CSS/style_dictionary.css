@@ -127,6 +127,10 @@ h3{
 	margin: 20px 20px 0px 0px;
 }
 
+.nav a:last-child{
+	margin-top: 17.5px;
+}
+
 .wod{
 	grid-area: wod;
 	display: flex;
@@ -579,6 +583,10 @@ h1, h2, h3, h4, i{
 
 	.nav a{
 		margin: 20px 10px 0px 0px;
+	}
+
+	.nav a:last-child{
+		margin-top: 17.5px;
 	}
 	
 	.nav a img{

@@ -186,6 +186,10 @@ h3{
 	margin: 20px 20px 0px 0px;
 }
 
+.nav a:last-child{
+	margin-top: 17.5px;
+}
+
 .search{
 	grid-area: search;
 	display: flex;
@@ -561,12 +565,13 @@ h1, h2, h3, h4{
 [data-title]:after {
     content: attr(data-title);
     color: #4c4f53;
-    font-size: 15px;
+    font-size: 1rem;
 	font-weight: bold;
     position: absolute;
-    bottom: 2em;
+    top: 3rem;
     left: 0%;
-    white-space: nowrap;
+	max-width: 6rem;
+    white-space: normal;
     opacity: 0;
     z-index: 99999;
     visibility: hidden;
@@ -746,6 +751,10 @@ h1, h2, h3, h4{
 
 	.nav a{
 		margin: 20px 10px 0px 0px;
+	}
+
+	.nav a:last-child{
+		margin-top: 17.5px;
 	}
 	
 	.nav a img{
