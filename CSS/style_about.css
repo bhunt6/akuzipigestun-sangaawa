@@ -272,19 +272,21 @@ p {
 .taglist{
 	display: flex;
 	flex-direction: column;
-	width: 50%;
-	padding-right: 1rem;
+	max-width: 100%;
+	max-height: 30rem;
+	flex-wrap: wrap;
 }
 
 .tgCell{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: flex-start;
+	max-width: 50%;
 }
 
 .tgCell p {
-	margin-left: 1rem;
 	margin-top: 0rem;
+	padding-right: 1rem;
 }
 
 .tgCont{
@@ -292,7 +294,7 @@ p {
 	flex-direction: column;
 	align-items: start;
   	justify-content: start;
-	min-width: 20%;
+	min-width: 6.5rem;
 }
 
 .tag{
@@ -508,6 +510,22 @@ h1, h2, h3, h4{
 		"footer footer footer footer footer";*/
 
 /*media queries*/
+
+
+@media only screen and (max-width: 1300px) {
+	
+	.taglist{
+		max-height: 40rem;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	
+	.taglist{
+		max-height: 50rem;
+	}
+}
+
 @media only screen and (max-width: 750px) {
 	.main{
 		display: grid;
@@ -600,5 +618,14 @@ h1, h2, h3, h4{
 
 	.parseTag{
 		margin-bottom: 1rem;
+	}
+
+	.taglist{
+		max-height: fit-content;
+		flex-wrap: nowrap;
+	}
+
+	.tgCell{
+		max-width: 100%;
 	}
 } 
