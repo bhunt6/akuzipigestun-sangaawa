@@ -121,6 +121,7 @@
     <script type="text/javascript" src="dictionary_js/bases072124.js"></script>
     <script type="text/javascript" src="dictionary_js/postbases072124.js"></script>
     <script type="text/javascript" src="dictionary_js/autocomplete.js"></script>
+    <script type="text/javascript" src="dictionary_js/wordBuilder.js"></script>
     <script type="text/javascript" src="dictionary_js/inflection_tables_new.js"></script>
     <script type="text/javascript" src="dictionary_js/inflections.js"></script>
     <script type="text/javascript" src="dictionary_js/foma_apply_down.js"></script>
@@ -270,7 +271,8 @@
                 wheel.innerHTML = wheelElements;
             }
             
-            controller(currentEntry.root[0], currentEntry.source_pos);
+            //controller(currentEntry.root[0], currentEntry.source_pos);
+            buildController(currentEntry.root[0], currentEntry.source_pos);
             //inflectional tables
             //if(currentEntry.headword.includes("<sup>e</sup>")){
             //    controller(currentEntry.search_word[0], currentEntry.headword, currentEntry.source_pos, true);
