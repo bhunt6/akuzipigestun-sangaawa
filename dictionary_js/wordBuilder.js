@@ -1,9 +1,7 @@
-function controller(word, pos) {
-    let root = word;
+function buildController(root, pos) {
     if (pos == "noun") {
         root += "(N)";
         createDropdowns(root, pos);
-        populate()
     }
     else if (pos == "verb") {
         root += "(V)";
@@ -27,13 +25,13 @@ function controller(word, pos) {
 }
 
 function getMorphs(){
-    var morphList = document.getElementsbyClassName("morph");
-    return morphList.join("^");
-
+    var morphList = document.getElementsByClassName("morph");
+    alert(morphList.join("^"));
 }
 
 function createDropdowns(base, pos){
-    let builderArea = document.getElementbyId("wordBuilder");
+    let builderArea = document.getElementById("wordBuilder");
+    alert(base);
     if(pos=="noun"){
         builderArea.innerHTML = `<span class="morph" id="base">${base}</span>
                                 <select class="morph" id="case" autocomplete="off">
@@ -56,12 +54,12 @@ function createDropdowns(base, pos){
 						            <option value="default" selected>Mood</option>
                                 </select>`;
 
-        let moodList = document.getElementbyID("mood");
+        let moodList = document.getElementById("mood");
         for (let mood in verbMoods){
             let newOpt = document.createElement("option");
             newOpt.value = verbMoods[mood];
             newOpt.innerHTML = verbMoods[mood];
-            moodList.options.add(newOption);
+            moodList.options.add(newOpt);
         }
 
         builderArea.innerHTML += `<select class="morph" id="perNum" autocomplete="off">
@@ -76,12 +74,12 @@ function createDropdowns(base, pos){
 					            </select>
                                 <input id="searchButton" type="button" value="Generate" onclick="getMorphs(event)">`
 
-        let prnList = document.getElementbyID("prnInfl");
+        let prnList = document.getElementById("prnInfl");
         for (let prn in pronouns){
             let newOpt = document.createElement("option");
             newOpt.value = pronouns[prn];
             newOpt.innerHTML = pronouns[prn];
-            prnList.options.add(newOption);
+            prnList.options.add(newOpt);
         }
     }
 }
