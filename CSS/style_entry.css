@@ -13,12 +13,13 @@
 	display: grid;
 	min-height: 100%;
 	grid-template-columns: 1fr 3fr 2fr 230px 1fr;
-	grid-template-rows: minmax(10.5rem, auto) .4em 9rem minmax(200px, auto) minmax(200px, auto) minmax(4.4rem, auto);
+	grid-template-rows: minmax(10.5rem, auto) .4em 9rem minmax(200px, auto) 3rem minmax(200px, auto) minmax(4.4rem, auto);
 	grid-template-areas: 
 		". title search search ."
 		". border border border ."
 		". . nav nav ."
 		". entry entry wheel ."
+		". wordBuilder wordBuilder . ."
 		". tables tables tables ."
 		"footer footer footer footer footer";
 }
@@ -508,6 +509,10 @@ transform: rotate(45deg);
 
 .shaded{
 	background-color: #f9f9f9;
+}
+
+.wordBuilder{
+	grid-area: wordBuilder;
 }
 
 .tables{
