@@ -15,10 +15,12 @@ function exactMatch(term){
     let result = new Array;
     //Exact match
     let exactWord = LEX.filter((word) =>
-        word.search_word.join(", ").toLowerCase() == searchString
+        word.search_word.some(search_word => search_word.toLowerCase() == searchString)
+        //word.search_word.join(", ").toLowerCase() == searchString
     );
     let exactPb = pbLEX.filter((word) =>
-        word.search_word.join(", ").toLowerCase() == searchString
+        word.search_word.some(search_word => search_word.toLowerCase() == searchString)
+        //word.search_word.join(", ").toLowerCase() == searchString
     );
     result = exactWord.concat(exactPb);
     return result
