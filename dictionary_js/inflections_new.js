@@ -309,27 +309,27 @@ var verbMoods = [
     '[Ctmp.Intr]',
     '[Ctmp.Trns]',
     '[Sbrd.Intr]',
-    '[Sbrd.Trns]'
-]
-
-var verbExeptions = [
-    '[Intrg.Intr.2Sg]',
-    '[Intrg.Intr.2Pl]',
-    '[Intrg.Intr.2Du]',
+    '[Sbrd.Trns]',
     '[Opt.Pres.Intr]',
     '[Opt.Pres.Trns]',
-    '[Opt.Pres.Intr.2Sg]',
-    '[Opt.Pres.Trns.2Sg.3Sg]',
     '[Opt.Neg.Pres.Intr]',
     '[Opt.Neg.Pres.Trns]',
-    '[Opt.Neg.Pres.Trns.2Sg.3Pl]',
-    '[Opt.Neg.Pres.Trns.2Pl.3Pl]',
-    '[Opt.Neg.Pres.Trns.2Du.3Pl]',
     '[Opt.Fut.Intr]',
     '[Opt.Fut.Trns]',
     '[Opt.Fut.Neg.Intr]',
     '[Opt.Fut.Neg.Trns]'
 ]
+
+var verbExeptions = {
+    '[Intrg.Intr][2sg]':'[Intrg.Intr.2Sg]',
+    '[Intrg.Intr][2pl]':'[Intrg.Intr.2Pl]',
+    '[Intrg.Intr][2du]':'[Intrg.Intr.2Du]',
+    '[Opt.Pres.Intr][2Sg]':'[Opt.Pres.Intr.2Sg]',
+    '[Opt.Pres.Trns][2Sg.3Sg]':'[Opt.Pres.Trns.2Sg.3Sg]',
+    '[Opt.Neg.Pres.Trns][2Sg.3Pl]':'[Opt.Neg.Pres.Trns.2Sg.3Pl]',
+    '[Opt.Neg.Pres.Trns][2Pl.3Pl]':'[Opt.Neg.Pres.Trns.2Pl.3Pl]',
+    '[Opt.Neg.Pres.Trns][2Du.3Pl]':'[Opt.Neg.Pres.Trns.2Du.3Pl]'
+}
 
 var verbIntr = [
     '[3Sg]',
