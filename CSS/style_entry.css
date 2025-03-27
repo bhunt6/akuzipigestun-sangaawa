@@ -515,6 +515,18 @@ transform: rotate(45deg);
 	grid-area: wordBuilder;
 }
 
+select{
+	height: 38px;
+    font-size: 18px;
+    font-weight: lighter;
+	color: #4c4f53;
+    padding-top: 3px;
+	border: none;
+    border-bottom: 2px solid #666666;
+	background-color: #FFF;
+	margin: 4.5px 5px 0px 5px;
+}
+
 .tables{
 	grid-area: tables;
 	display: flex;
