@@ -68,7 +68,7 @@
                 <div class="sectionContent">
                     <p>This site is an implementation of and ongoing expansion on an existing print dictionary for St. Lawrence Island Yupik/Akuzipik. The source dictionary 
                         is the culmination of many years of diligent documentary work by Linda Womkon Badten (Aghnaghaghpik), Vera Oovi Kaneshiro (Uqiitlek), 
-                        Marie Oovi (Uvegtu), Christopher Koonooka (Petuwaq) and Steven A. Jacobson, first published in 1987 and most recently revised in 2008 <a href="#Badten">(Badten et al 2008)</a>. This electronic dictionary 
+                        Marie Oovi (Uvegtu), Christopher Koonooka (Petuwaq) and Steven A. Jacobson, first published in 1987 and most recently revised in 2008 <a href="#Badten2008">(Badten et al 2008)</a>. This electronic dictionary 
                         presents the information compiled in Badten et al (2008) and preserves all lexical entry data contained therein in a searchable digital database. 
                     </p>
                 </div>
@@ -107,7 +107,7 @@
                 <div class="sectionHeader">Morphological Parser</div>
                 <div class="sectionContent">
                     <p>This dictionary integrates a morphological parser developed using foma, a toolkit for the creation of 
-                        finite state automata and transducers created by Mans Hulden <a href="#Hulden">(Hulden 2009)</a>. The parser was implemented in foma originally by Emily Chen <a href="#Chen">(Chen & Schwartz 2018)</a>
+                        finite state automata and transducers created by Mans Hulden <a href="#Hulden2009">(Hulden 2009)</a>. The parser was implemented in foma originally by Emily Chen <a href="#ChenSchwartz2018">(Chen & Schwartz 2018)</a>
                     and later converted to a javascript version using a Pearl script also developed by Mans Hulden. The parser is built in to the dictionary and is used anytime a user executes a search from the search bar. 
                     It has also been given its own dedicated word builder interface, <a href="https://bhunt6.github.io/itemquulteki/">Itemquulteki</a>, which allows the user to both construct Akuzpik words from component 
                     morphemes and break down full words into possible parses.</p>
@@ -300,12 +300,30 @@
                 </div>
             </div>
             <div class="section references" id="refs">
-                <div class="sectionHeader">References</div>
+                <div class="sectionHeader" id="exRefs">References for Example Sentences</div>
                 <div class="sectionContent">
-                    <p id="Badten">Badten, L.W. (Aghnaghaghpik), Kaneshiro, V.O. (Uqiitlek), Oovi, M. (Uvegtu), & Koonooka, C. (Petuwaq). (2008). <i>St. Lawrence Island/Siberian Yupik Eskimo dictionary.</i> Fairbanks: Alaska Native Language Center, University of Alaska, Fairbanks.</p>
-                    <p id="Chen">Chen, E., & Schwartz, L. (2018, May). A morphological analyzer for st. lawrence island/central siberian yupik. In <i>Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018).</i></p>
-                    <p id="Hulden">Hulden, M. (2009, April). Foma: a finite-state compiler and library. In <i>Proceedings of the Demonstrations Session at EACL 2009</i> (pp. 29-32).</p>
-                    <p id="Jacobson">Jacobson, Steven A. (2001). <i>A Practical Grammar of the St. Lawrence Island / Siberian Yupik Eskimo Language.</i> Second Edition. Fairbanks: Alaska Native Language Center, University of Alaska, Fairbanks.</p>
+                <p>The source dictionary provides example sentences both in Akuzipik and in English for many entries in the lexicon.
+                    A portion of these sentences were created by "one or another of the compilers Badten, Oovi, Kaneshiro, and Koonooka especially...
+                    or come from Walunga and Apassingok 1988 (with translations by Vera Kaneshiro)" (Badten et al, 2008; vol. I, pg. xviii). The 
+                    other examples are sourced from a number of Akuzipik texts and referenced with an abbreviated title. The expanded version of 
+                    these works and their citations are given below.
+                </p>
+                <table id="citation_table">
+                    <tr>
+                        <th>Source Abbreviation</th>
+                        <th>Full Title</th>
+                        <th>Citation</th>
+                    <!--maybe generate this dynamically-->
+                    </tr>
+                </table>
+                </div>
+                <div class="sectionHeader">References</div>
+                <div id="references" class="sectionContent">
+                    <p id="AynanaNakazik1987">Aynana, L. I, and G. A. Nakazik 1981. Aanghhaq (Iskorka (the Little Spark)). Leningrad: Prosveshchenie. Yupik readings of various sorts for children and older children, in Cyrillic without translation. Reprinted in 1987.</p>
+                    <p id="Badten2008">Badten, L.W. (Aghnaghaghpik), Kaneshiro, V.O. (Uqiitlek), Oovi, M. (Uvegtu), & Koonooka, C. (Petuwaq). (2008). <i>St. Lawrence Island/Siberian Yupik Eskimo dictionary.</i> Fairbanks: Alaska Native Language Center, University of Alaska, Fairbanks.</p>
+                    <p id="ChenSchwartz2018">Chen, E., & Schwartz, L. (2018, May). A morphological analyzer for st. lawrence island/central siberian yupik. In <i>Proceedings of the Eleventh International Conference on Language Resources and Evaluation (LREC 2018).</i></p>
+                    <p id="Hulden2009">Hulden, M. (2009, April). Foma: a finite-state compiler and library. In <i>Proceedings of the Demonstrations Session at EACL 2009</i> (pp. 29-32).</p>
+                    <p id="Jacobson2001">Jacobson, Steven A. (2001). <i>A Practical Grammar of the St. Lawrence Island / Siberian Yupik Eskimo Language.</i> Second Edition. Fairbanks: Alaska Native Language Center, University of Alaska, Fairbanks.</p>
                 </div>
             </div>
         </div>
@@ -316,6 +334,7 @@
     <script type="text/javascript" src="dictionary_js/autocomplete.js"></script>
     <script type="text/javascript" src="dictionary_js/foma_apply_down.js"></script>
     <script type="text/javascript" src="dictionary_js/transducer_inverted.js"></script>
+    <script type="text/javascript" src="dictionary_js/citation_abbreviations.js"></script>
     <script>
 
 

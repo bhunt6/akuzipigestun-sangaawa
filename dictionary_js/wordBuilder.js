@@ -34,9 +34,13 @@ function getMorphs(){
         values.push(morphList[i].value);
     }
     console.log(values);
-    gen = values[0] + "^" + values.slice(1).join("");
+    gen = values[0] + "^" + values.slice(1).join("^");
     console.log(gen);
+    //result = foma_apply_down(s2m, "qavaghtuq");
+ 
     result = foma_apply_down(m2s, gen);
+    console.log(result);
+
 
     //print error message
     if (result === undefined || result.length == 0) {
@@ -58,7 +62,6 @@ function fomaPrintInvert(tkn, valid){
 	}
 
 	else {
-		document.getElementById("parse").style.display = "flex";
 		for(i=0; i<tkn.length; i++){
 			content.innerHTML = tkn[i];
 			results.appendChild(content);
