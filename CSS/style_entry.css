@@ -396,6 +396,11 @@ input[type='radio']:checked {
 	font-family: 'Doulos SIL', serif;
 }
 
+.entrySource{
+    font-weight: normal;
+	font-family: 'Doulos SIL', serif;
+}
+
 .etymology i{
 	font-family: inherit;
 }
@@ -527,6 +532,13 @@ select{
 	margin: 4.5px 5px 0px 5px;
 }
 
+#results{
+	display:flex;
+	flex-direction: row;
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding-top: 1rem;
+}
 .tables{
 	grid-area: tables;
 	display: flex;
