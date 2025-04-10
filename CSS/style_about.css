@@ -210,6 +210,20 @@ input[type='radio']:checked {
 	margin-top: .5rem;
 }
 
+#citation_table{
+	width: 100%;
+}
+
+th{
+	height: 2.5rem;
+	text-align: left;
+	padding-right: 2rem;
+}
+
+td{
+	text-align: left;
+}
+
 p {
 	text-align: justify;
 	text-justify: inter-word;
