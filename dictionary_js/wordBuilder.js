@@ -5,7 +5,7 @@ function buildController(root, pos) {
         "postural root":"(POS)",
         "pronoun":"(N)"
 }
-    root += posList.pos;
+    root += posList[pos];
     createDropdowns(root, pos);
 }
 
