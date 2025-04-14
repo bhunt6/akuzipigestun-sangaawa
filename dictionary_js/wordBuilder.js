@@ -1,27 +1,12 @@
 function buildController(root, pos) {
-    if (pos == "noun") {
-        root += "(N)";
-        createDropdowns(root, pos);
-    }
-    else if (pos == "verb") {
-        root += "(V)";
-        createDropdowns(root, pos);
-    }
-    else if (pos == "emotional root") {
-        root += "(EMO)";
-        createDropdowns(root, pos);
-    }
-    else if (pos == "postural root") {
-        root += "(POS)";
-        createDropdowns(root, pos);
-    }
-    else if (pos == "pronoun") {
-        root += "(N)";
-        createDropdowns(root, pos);
-    }
-    else{
-        return
-    }
+    let posList = { "noun":"(N)",
+        "verb":"(V)",
+        "emotional root":"(EMO)",
+        "postural root":"(POS)",
+        "pronoun":"(N)"
+}
+    root += posList.pos;
+    createDropdowns(root, pos);
 }
 
 function getMorphs(){
@@ -33,8 +18,11 @@ function getMorphs(){
     for(let i=1; i<morphList.length; i++){
         values.push(morphList[i].value);
     }
-    console.log(values);
-    gen = values[0] + "^" + values.slice(1).join("^");
+    let joinedInfl = values.slice(1).join("^");
+    if(joinedInfl in verbExeptions){
+        joinedInfl = verbExeptions[joinedInfl];
+    }
+    gen = values[0] + "^" + joinedInfl;
     console.log(gen);
     //result = foma_apply_down(s2m, "qavaghtuq");
  
