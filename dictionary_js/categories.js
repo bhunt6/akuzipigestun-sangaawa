@@ -32,6 +32,7 @@
 //Numbers
 //Materials/Artifacts
 //Exclamations
+//Astronomical
 
 //Function that displays all entries belonging to a particular category when a labelled button is pressed.
 //Each entry has hidden semantic tags 
@@ -58,7 +59,9 @@ var categories = ["Native_Plants",
 	"Medicine",
 	"Numbers",
 	"Materials_Artifacts",
-	"Exclamations"
+	"Exclamations",
+	"Astronomical",
+
 ];
 
 function findCats(cat) {
