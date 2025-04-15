@@ -1,4 +1,4 @@
-var nounInfl = {
+const nounInfl = {
    "Absolutive": ['[Abs.Sg]',
     '[Abs.Pl]',
     '[Abs.Du]',
@@ -287,75 +287,19 @@ var nounInfl = {
     ]
 }
 
-var verbMoods = [
-    '[Ind.Intr]',
-    '[Ind.Trns]',
-    '[Ptcp.Intr]',
-    '[Ptcp.Trns]',
-    '[Intrg.Intr]',
-    '[Intrg.Trns]',
-    '[PtcpObl.Intr]',
-    '[PtcpObl.Trns]',
-    '[Prec.Intr]',
-    '[Prec.Trns]',
-    '[Conc.Intr]',
-    '[Conc.Trns]',
-    '[Cnsq1.Intr]',
-    '[Cnsq1.Trns]',
-    '[Cnsq2.Intr]',
-    '[Cnsq2.Trns]',
-    '[Cond.Intr]',
-    '[Cond.Trns]',
-    '[Ctmp.Intr]',
-    '[Ctmp.Trns]',
-    '[Sbrd.Intr]',
-    '[Sbrd.Trns]',
-    '[Opt.Pres.Intr]',
-    '[Opt.Pres.Trns]',
-    '[Opt.Neg.Pres.Intr]',
-    '[Opt.Neg.Pres.Trns]',
-    '[Opt.Fut.Intr]',
-    '[Opt.Fut.Trns]',
-    '[Opt.Fut.Neg.Intr]',
-    '[Opt.Fut.Neg.Trns]'
-]
-
-var verbExeptions = {
-    '[Intrg.Intr][2sg]':'[Intrg.Intr.2Sg]',
-    '[Intrg.Intr][2pl]':'[Intrg.Intr.2Pl]',
-    '[Intrg.Intr][2du]':'[Intrg.Intr.2Du]',
-    '[Opt.Pres.Intr][2Sg]':'[Opt.Pres.Intr.2Sg]',
-    '[Opt.Pres.Trns][2Sg.3Sg]':'[Opt.Pres.Trns.2Sg.3Sg]',
-    '[Opt.Neg.Pres.Trns][2Sg.3Pl]':'[Opt.Neg.Pres.Trns.2Sg.3Pl]',
-    '[Opt.Neg.Pres.Trns][2Pl.3Pl]':'[Opt.Neg.Pres.Trns.2Pl.3Pl]',
-    '[Opt.Neg.Pres.Trns][2Du.3Pl]':'[Opt.Neg.Pres.Trns.2Du.3Pl]'
-}
-
-var verbIntr = [
+const verbIntr = [
     '[3Sg]',
     '[1Sg]',
     '[2Sg]',
-    '[4Sg]',
     '[3Pl]',
     '[1Pl]',
     '[2Pl]',
-    '[4Pl]',
     '[3Du]',
     '[1Du]',
-    '[2Du]',
-    '[4Du]'
+    '[2Du]'
 ]
 
-var verbTrns = [
-    '[3Sg.3Sg]',
-    '[3Sg.3Pl]',
-    '[3Sg.3Du]',
-    '[3Pl.3Sg]',
-    '[3Pl.3Pl]',
-    '[3Pl.3Du]',
-    '[3Du.3Sg]',
-    '[3Du.3Pl]',
-    '[3Du.3Du]',
+const verbTrns = [
     '[1Sg.3Sg]',
     '[1Sg.3Pl]',
     '[1Sg.3Du]',
@@ -365,60 +309,7 @@ var verbTrns = [
     '[1Du.3Sg]',
     '[1Du.3Pl]',
     '[1Du.3Du]',
-    '[2Sg.3Sg]',
-    '[2Sg.3Pl]',
-    '[2Sg.3Du]',
-    '[2Pl.3Sg]',
-    '[2Pl.3Pl]',
-    '[2Pl.3Du]',
-    '[2Du.3Sg]',
-    '[2Du.3Pl]',
-    '[2Du.3Du]',
-    '[4Sg.4Sg]',
-    '[4Sg.4Pl]',
-    '[4Sg.4Du]',
-    '[4Pl.4Sg]',
-    '[4Pl.4Pl]',
-    '[4Pl.4Du]',
-    '[4Du.4Sg]',
-    '[4Du.4Pl]',
-    '[4Du.4Du]',
-    '[3Sg.1Sg]',
-    '[3Sg.1Pl]',
-    '[3Sg.1Du]',
-    '[3Pl.1Sg]',
-    '[3Pl.1Pl]',
-    '[3Pl.1Du]',
-    '[3Du.1Sg]',
-    '[3Du.1Pl]',
-    '[3Du.1Du]',
-    '[2Sg.1Sg]',
-    '[2Sg.1Pl]',
-    '[2Sg.1Du]',
-    '[2Pl.1Sg]',
-    '[2Pl.1Pl]',
-    '[2Pl.1Du]',
-    '[2Du.1Sg]',
-    '[2Du.1Pl]',
-    '[2Du.1Du]',
-    '[4Sg.1Sg]',
-    '[4Sg.1Pl]',
-    '[4Sg.1Du]',
-    '[4Pl.1Sg]',
-    '[4Pl.1Pl]',
-    '[4Pl.1Du]',
-    '[4Du.1Sg]',
-    '[4Du.1Pl]',
-    '[4Du.1Du]',
-    '[3Sg.2Sg]',
-    '[3Sg.2Pl]',
-    '[3Sg.2Du]',
-    '[3Pl.2Sg]',
-    '[3Pl.2Pl]',
-    '[3Pl.2Du]',
-    '[3Du.2Sg]',
-    '[3Du.2Pl]',
-    '[3Du.2Du]',
+
     '[1Sg.2Sg]',
     '[1Sg.2Pl]',
     '[1Sg.2Du]',
@@ -428,6 +319,183 @@ var verbTrns = [
     '[1Du.2Sg]',
     '[1Du.2Pl]',
     '[1Du.2Du]',
+
+    '[2Sg.3Sg]',
+    '[2Sg.3Pl]',
+    '[2Sg.3Du]',
+    '[2Pl.3Sg]',
+    '[2Pl.3Pl]',
+    '[2Pl.3Du]',
+    '[2Du.3Sg]',
+    '[2Du.3Pl]',
+    '[2Du.3Du]',
+
+    '[2Sg.1Sg]',
+    '[2Sg.1Pl]',
+    '[2Sg.1Du]',
+    '[2Pl.1Sg]',
+    '[2Pl.1Pl]',
+    '[2Pl.1Du]',
+    '[2Du.1Sg]',
+    '[2Du.1Pl]',
+    '[2Du.1Du]',
+
+    '[3Sg.3Sg]',
+    '[3Sg.3Pl]',
+    '[3Sg.3Du]',
+    '[3Pl.3Sg]',
+    '[3Pl.3Pl]',
+    '[3Pl.3Du]',
+    '[3Du.3Sg]',
+    '[3Du.3Pl]',
+    '[3Du.3Du]',
+
+    '[3Sg.1Sg]',
+    '[3Sg.1Pl]',
+    '[3Sg.1Du]',
+    '[3Pl.1Sg]',
+    '[3Pl.1Pl]',
+    '[3Pl.1Du]',
+    '[3Du.1Sg]',
+    '[3Du.1Pl]',
+    '[3Du.1Du]',
+
+    '[3Sg.2Sg]',
+    '[3Sg.2Pl]',
+    '[3Sg.2Du]',
+    '[3Pl.2Sg]',
+    '[3Pl.2Pl]',
+    '[3Pl.2Du]',
+    '[3Du.2Sg]',
+    '[3Du.2Pl]',
+    '[3Du.2Du]',
+]
+
+const verbExceptions = {
+    '[Intrg.Intr]^[2Sg]':'[Intrg.Intr.2Sg]',
+    '[Intrg.Intr]^[2Pl]':'[Intrg.Intr.2Pl]',
+    '[Intrg.Intr]^[2Du]':'[Intrg.Intr.2Du]',
+    '[Opt.Pres.Intr]^[2Sg]':'[Opt.Pres.Intr.2Sg]',
+    '[Opt.Pres.Trns]^[2Sg.3Sg]':'[Opt.Pres.Trns.2Sg.3Sg]',
+    '[Opt.Neg.Pres.Trns]^[2Sg.3Pl]':'[Opt.Neg.Pres.Trns.2Sg.3Pl]',
+    '[Opt.Neg.Pres.Trns]^[2Pl.3Pl]':'[Opt.Neg.Pres.Trns.2Pl.3Pl]',
+    '[Opt.Neg.Pres.Trns]^[2Du.3Pl]':'[Opt.Neg.Pres.Trns.2Du.3Pl]'
+}
+
+const verbNegOptativeIntr = [
+    "[2Sg]",
+    "[2Pl]",
+    "[2Du]"
+]
+
+const verbNegOptativeTrns = [
+    "[2Du.1Du]",
+    "[2Sg.2Sg]",
+    "[2Sg.2Pl]",
+    "[2Sg.2Du]",
+    "[2Pl.2Sg]",
+    "[2Pl.2Pl]",
+    "[2Pl.2Du]",
+    "[2Du.2Sg]",
+    "[2Du.2Pl]",
+    "[2Du.2Du]"
+]
+
+const verbOptativeTrns = [
+    '[2Sg.3Sg]',
+    '[2Sg.3Pl]',
+    '[2Sg.3Du]',
+    '[2Pl.3Sg]',
+    '[2Pl.3Pl]',
+    '[2Pl.3Du]',
+    '[2Du.3Sg]',
+    '[2Du.3Pl]',
+    '[2Du.3Du]',
+
+    '[2Sg.1Sg]',
+    '[2Sg.1Pl]',
+    '[2Sg.1Du]',
+    '[2Pl.1Sg]',
+    '[2Pl.1Pl]',
+    '[2Pl.1Du]',
+    '[2Du.1Sg]',
+    '[2Du.1Pl]',
+    '[2Du.1Du]'
+]
+
+const verbIntrNo3 = [
+    '[1Sg]',
+    '[2Sg]',
+    '[4Sg]',
+    '[1Pl]',
+    '[2Pl]',
+    '[4Pl]',
+    '[1Du]',
+    '[2Du]',
+    '[4Du]'
+]
+
+const verbTrnsNo3 = [
+    '[1Sg.3Sg]',
+    '[1Sg.3Pl]',
+    '[1Sg.3Du]',
+    '[1Pl.3Sg]',
+    '[1Pl.3Pl]',
+    '[1Pl.3Du]',
+    '[1Du.3Sg]',
+    '[1Du.3Pl]',
+    '[1Du.3Du]',
+
+    '[1Sg.2Sg]',
+    '[1Sg.2Pl]',
+    '[1Sg.2Du]',
+    '[1Pl.2Sg]',
+    '[1Pl.2Pl]',
+    '[1Pl.2Du]',
+    '[1Du.2Sg]',
+    '[1Du.2Pl]',
+    '[1Du.2Du]',
+
+    '[2Sg.3Sg]',
+    '[2Sg.3Pl]',
+    '[2Sg.3Du]',
+    '[2Pl.3Sg]',
+    '[2Pl.3Pl]',
+    '[2Pl.3Du]',
+    '[2Du.3Sg]',
+    '[2Du.3Pl]',
+    '[2Du.3Du]',
+
+    '[2Sg.1Sg]',
+    '[2Sg.1Pl]',
+    '[2Sg.1Du]',
+    '[2Pl.1Sg]',
+    '[2Pl.1Pl]',
+    '[2Pl.1Du]',
+    '[2Du.1Sg]',
+    '[2Du.1Pl]',
+    '[2Du.1Du]',
+
+    '[4Sg.4Sg]',
+    '[4Sg.4Pl]',
+    '[4Sg.4Du]',
+    '[4Pl.4Sg]',
+    '[4Pl.4Pl]',
+    '[4Pl.4Du]',
+    '[4Du.4Sg]',
+    '[4Du.4Pl]',
+    '[4Du.4Du]',
+
+    '[4Sg.1Sg]',
+    '[4Sg.1Pl]',
+    '[4Sg.1Du]',
+    '[4Pl.1Sg]',
+    '[4Pl.1Pl]',
+    '[4Pl.1Du]',
+    '[4Du.1Sg]',
+    '[4Du.1Pl]',
+    '[4Du.1Du]',
+
     '[4Sg.2Sg]',
     '[4Sg.2Pl]',
     '[4Sg.2Du]',
@@ -437,6 +505,136 @@ var verbTrns = [
     '[4Du.2Sg]',
     '[4Du.2Pl]',
     '[4Du.2Du]',
+]
+
+const verbSubrTrns = [
+    "[_.3Sg]",
+    "[_.3Pl]",
+    "[_.3Du]",
+    "[_.1Sg]",
+    "[_.1Pl]",
+    "[_.1Du]",
+    "[_.2Sg]",
+    "[_.2Pl]",
+    "[_.2Du]",
+]
+
+const verbConnectIntr = [
+    '[1Sg]',
+    '[2Sg]',
+    '[3Sg]',
+    '[4Sg]',
+    '[1Pl]',
+    '[2Pl]',
+    '[3Pl]',
+    '[4Pl]',
+    '[1Du]',
+    '[2Du]',
+    '[3Du]',
+    '[4Du]'
+]
+
+const verbConnectTrns = [
+    '[1Sg.3Sg]',
+    '[1Sg.3Pl]',
+    '[1Sg.3Du]',
+    '[1Pl.3Sg]',
+    '[1Pl.3Pl]',
+    '[1Pl.3Du]',
+    '[1Du.3Sg]',
+    '[1Du.3Pl]',
+    '[1Du.3Du]',
+
+    '[1Sg.2Sg]',
+    '[1Sg.2Pl]',
+    '[1Sg.2Du]',
+    '[1Pl.2Sg]',
+    '[1Pl.2Pl]',
+    '[1Pl.2Du]',
+    '[1Du.2Sg]',
+    '[1Du.2Pl]',
+    '[1Du.2Du]',
+
+    '[2Sg.3Sg]',
+    '[2Sg.3Pl]',
+    '[2Sg.3Du]',
+    '[2Pl.3Sg]',
+    '[2Pl.3Pl]',
+    '[2Pl.3Du]',
+    '[2Du.3Sg]',
+    '[2Du.3Pl]',
+    '[2Du.3Du]',
+
+    '[2Sg.1Sg]',
+    '[2Sg.1Pl]',
+    '[2Sg.1Du]',
+    '[2Pl.1Sg]',
+    '[2Pl.1Pl]',
+    '[2Pl.1Du]',
+    '[2Du.1Sg]',
+    '[2Du.1Pl]',
+    '[2Du.1Du]',
+
+    '[3Sg.3Sg]',
+    '[3Sg.3Pl]',
+    '[3Sg.3Du]',
+    '[3Pl.3Sg]',
+    '[3Pl.3Pl]',
+    '[3Pl.3Du]',
+    '[3Du.3Sg]',
+    '[3Du.3Pl]',
+    '[3Du.3Du]',
+
+    '[3Sg.1Sg]',
+    '[3Sg.1Pl]',
+    '[3Sg.1Du]',
+    '[3Pl.1Sg]',
+    '[3Pl.1Pl]',
+    '[3Pl.1Du]',
+    '[3Du.1Sg]',
+    '[3Du.1Pl]',
+    '[3Du.1Du]',
+
+    '[3Sg.2Sg]',
+    '[3Sg.2Pl]',
+    '[3Sg.2Du]',
+    '[3Pl.2Sg]',
+    '[3Pl.2Pl]',
+    '[3Pl.2Du]',
+    '[3Du.2Sg]',
+    '[3Du.2Pl]',
+    '[3Du.2Du]',
+
+    '[4Sg.4Sg]',
+    '[4Sg.4Pl]',
+    '[4Sg.4Du]',
+    '[4Pl.4Sg]',
+    '[4Pl.4Pl]',
+    '[4Pl.4Du]',
+    '[4Du.4Sg]',
+    '[4Du.4Pl]',
+    '[4Du.4Du]',
+
+    '[4Sg.1Sg]',
+    '[4Sg.1Pl]',
+    '[4Sg.1Du]',
+    '[4Pl.1Sg]',
+    '[4Pl.1Pl]',
+    '[4Pl.1Du]',
+    '[4Du.1Sg]',
+    '[4Du.1Pl]',
+    '[4Du.1Du]',
+
+    '[4Sg.2Sg]',
+    '[4Sg.2Pl]',
+    '[4Sg.2Du]',
+    '[4Pl.2Sg]',
+    '[4Pl.2Pl]',
+    '[4Pl.2Du]',
+    '[4Du.2Sg]',
+    '[4Du.2Pl]',
+    '[4Du.2Du]',
+
     '[_.3Sg]',
     '[_.3Pl]',
     '[_.3Du]',
@@ -448,7 +646,83 @@ var verbTrns = [
     '[_.2Du]'
 ]
 
-var pronouns = [
+const verbBoth = verbIntr.concat(verbTrns);
+const verbOptBoth = verbOptativeTrns.concat(verbNegOptativeTrns);
+
+const verbMoods = {
+    //use verbIntr
+    '[Ind.Intr]': verbIntr,
+
+    //use verbTrns
+    '[Ind.Trns]': verbTrns,
+
+    //use verbIntr
+    '[Ptcp.Intr]': verbIntr,
+
+    //use verbTrns
+    '[Ptcp.Trns]': verbTrns,
+
+    //use verbIntr
+    '[Intrg.Intr]': verbIntr,
+
+    //use verbTrns
+    '[Intrg.Trns]': verbTrns,
+    
+    //use verbIntrNo3
+    '[PtcpObl.Intr]': verbIntrNo3,
+
+    //use verbTrnsNo3
+    '[PtcpObl.Trns]': verbTrnsNo3,
+    
+    //use the verbConnectIntr or Trns
+    '[Prec.Intr]': verbConnectIntr,
+    '[Prec.Trns]': verbConnectTrns,
+    '[Conc.Intr]': verbConnectIntr,
+    '[Conc.Trns]': verbConnectTrns,
+    '[Cnsq1.Intr]': verbConnectIntr,
+    '[Cnsq1.Trns]': verbConnectTrns,
+    '[Cnsq2.Intr]': verbConnectIntr,
+    '[Cnsq2.Trns]': verbConnectTrns,
+    '[Cond.Intr]': verbConnectIntr,
+    '[Cond.Trns]': verbConnectTrns,
+    '[Ctmp.Intr]': verbConnectIntr,
+    '[Ctmp.Trns]': verbConnectTrns,
+
+    //use verbIntr + verbTrns
+    '[Volitive.Of.Fear]': verbBoth,
+
+    //use verbIntrNo3
+    '[Sbrd.Intr]': verbIntrNo3,
+
+    //use verbSubrTrns
+    '[Sbrd.Trns]': verbSubrTrns,
+
+    //use verbIntr
+    '[Opt.Pres.Intr]': verbIntr,
+
+    //use verbTrns
+    '[Opt.Pres.Trns]': verbTrns,
+
+    //use verbNegOptativeIntr
+    '[Opt.Neg.Pres.Intr]': verbNegOptativeIntr,
+
+    //use verbOptativeTrns
+    '[Opt.Neg.Pres.Trns]': verbOptativeTrns,
+
+    //use verbIntr
+    '[Opt.Fut.Intr]': verbIntr,
+
+    //use verbOptativeTrns
+    '[Opt.Fut.Trns]': verbOptativeTrns,
+
+    //use verbNegOptativeIntr
+    '[Opt.Neg.Fut.Intr]': verbNegOptativeIntr,
+
+    //use verbOptativeTrns + verbNegOptativeTrns
+    '[Opt.Neg.Fut.Trns]': verbOptBoth,
+}
+
+const pronouns = [
     '(PRO.AbsRel.1Sg)',
     '(PRO.AbsRel.1Pl)',
     '(PRO.AbsRel.1Du)',
