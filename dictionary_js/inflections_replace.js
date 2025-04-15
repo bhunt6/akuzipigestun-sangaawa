@@ -1140,6 +1140,7 @@ var verbsInflReplace = {
     "[Opt.Neg.Fut.Trns]^[2Du.2Sg]" : "@~fyaquna^ng",
     "[Opt.Neg.Fut.Trns]^[2Du.2Pl]" : "@~fyaquna^si",
     "[Opt.Neg.Fut.Trns]^[2Du.2Du]" : "@~fyaquna^tek",
+    
     "[Opt.Neg.Pres.Intr]^[2Sg]" : "-fqaa^vek",
     "[Opt.Neg.Pres.Intr]^[2Pl]" : "-fqaa^fsi",
     "[Opt.Neg.Pres.Intr]^[2Du]" : "-fqaa^ftek",
