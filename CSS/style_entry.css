@@ -520,6 +520,10 @@ transform: rotate(45deg);
 	grid-area: wordBuilder;
 }
 
+.morph{
+	font-size: 18px;
+}
+
 select{
 	height: 38px;
     font-size: 18px;
