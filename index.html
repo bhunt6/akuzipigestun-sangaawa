@@ -117,7 +117,7 @@
     <script type="text/javascript" src="sw2.js"></script>
     <script>
         if (!navigator.serviceWorker.controller) {
-            navigator.serviceWorker.register("/sw.js").then(function(reg) {
+            navigator.serviceWorker.register("sw2.js").then(function(reg) {
                 console.log("Service worker has been registered for scope: " + reg.scope);
             });
         }
