@@ -4,8 +4,8 @@
   "theme_color": "#ef9d87",
   "background_color": "#ffffff",
   "display": "standalone",
-  "scope": "/akuzipigestun-sangaawa/",
-  "start_url": "/akuzipigestun-sangaawa/",
+  "scope": "/",
+  "start_url": "https://bhunt6.github.io/akuzipigestun-sangaawa/",
 
   "icons": [
     {
