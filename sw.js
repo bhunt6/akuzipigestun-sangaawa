@@ -4,9 +4,13 @@ var VERSION = 'version_000';
 var URLS = [    
   `${GHPATH}/`,
   `${GHPATH}/index.html`,
-  `${GHPATH}/css/styles.css`,
+  `${GHPATH}/css/style_dictionary.css`,
   `${GHPATH}/icons/Sivuqaq_icon.png`,
-  `${GHPATH}/dictionary_js/`
+  `${GHPATH}/dictionary_js/`,
+  `${GHPATH}/entry.html`,
+  `${GHPATH}/about.html`,
+  `${GHPATH}/contact.html`,
+  `${GHPATH}/results.html`
 ]
 
 var CACHE_NAME = APP_PREFIX + VERSION
