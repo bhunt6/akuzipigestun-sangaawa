@@ -1,0 +1,20 @@
+{
+  "name": "Akuzipigestun Sangaawa",
+  "short_name": "Akuz",
+  "theme_color": "#ef9d87",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/akuzipigestun-sangaawa/",
+  "start_url": "/akuzipigestun-sangaawa/",
+
+  "icons": [
+    {
+      "src":"icons/android-chrome-512x512.png",
+      "sizes":"512x512"
+    },
+    {
+      "src":"icons/android-chrome-192x192.png",
+      "sizes":"192x192"
+    }
+  ]
+}
