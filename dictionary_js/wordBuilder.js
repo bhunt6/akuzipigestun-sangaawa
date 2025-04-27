@@ -84,7 +84,7 @@ function populate(s1, s2){
 function createDropdowns(root, pos, base){
     let builderArea = document.getElementById("wordBuilder");
     if(pos=="noun"){
-        builderArea.innerHTML = `<span class="morph include" id=${base}>${root}</span>
+        builderArea.innerHTML = `<span class="morph include" id=${base}>${root}-</span>
                                 <select class="morph" id="case" onchange="populate(this.id, 'possNum');" autocomplete="off">
                                     <option value="Default" selected disabled>Case</option>
 						            <option value="Absolutive">Absolutive</option>
@@ -98,18 +98,18 @@ function createDropdowns(root, pos, base){
 					            <select class="morph include" id="possNum" autocomplete="off">
 						            <option value="default" selected disabled>Possession/Number</option>
 					            </select>
-                                <input id="searchButton" type="button" value="Generate" onclick="getMorphs(event)">
+                                <input id="generate" type="button" value="Generate" onclick="getMorphs(event)">
                                 <div id="results"></div>`
     }
     else if(pos=="verb"){
-        builderArea.innerHTML = `<span class="morph include" id=${base}>${root}</span>
+        builderArea.innerHTML = `<span class="morph include" id=${base}>${root}-</span>
                                 <select class="morph include" id="mood" onchange="populate(this.id, 'perNum');" autocomplete="off">
 						            <option value="default" selected disabled>Mood</option>
                                 </select>
                                 <select class="morph include" id="perNum" autocomplete="off">
 						            <option value="default" selected disabled>Person/Number</option>
 					            </select>
-                                <input id="searchButton" type="button" value="Generate" onclick="getMorphs(event)">
+                                <input id="generate" type="button" value="Generate" onclick="getMorphs(event)">
                                 <div id="results"></div>`;
 
         let moodList = document.getElementById("mood");
@@ -121,11 +121,11 @@ function createDropdowns(root, pos, base){
         }
     }
     else if(pos=="pronoun"){
-        builderArea.innerHTML =`<span class="morph" id=${base}>${root}</span>
+        builderArea.innerHTML =`<span class="morph" id=${base}>${root}-</span>
                                 <select class="morph" id="prnInfl" autocomplete="off">
 						            <option value="default" selected>Case/Number</option>
 					            </select>
-                                <input id="searchButton" type="button" value="Generate" onclick="getMorphs(event)">
+                                <input id="generate" type="button" value="Generate" onclick="getMorphs(event)">
                                 <div id="results"></div>`
 
         let prnList = document.getElementById("prnInfl");
