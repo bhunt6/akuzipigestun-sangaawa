@@ -179,6 +179,7 @@ h3{
 .nav{
 	grid-area: nav;
 	display: flex;
+	flex-direction: row;
 	float: left;
 	justify-content: flex-end;
 }
@@ -187,7 +188,7 @@ h3{
 	margin: 20px 20px 0px 0px;
 }
 
-.nav a:last-child{
+#row2 a:last-child{
 	margin-top: 17.5px;
 }
 
@@ -751,15 +752,15 @@ h1, h2, h3, h4{
 		display: grid;
 		min-height: 100%;
 		grid-template-columns: 1fr 3fr 2fr 2fr 1fr;
-		grid-template-rows: minmax(10.5rem, auto) 6.25rem .4em 9rem minmax(6.25rem, auto) minmax(12.5rem, auto) minmax(6.25rem, auto) minmax(12rem, auto);
+		grid-template-rows: minmax(10.5rem, auto) 10rem .4em 9rem minmax(6.25rem, auto) 15rem minmax(12.5rem, auto) minmax(12rem, auto);
 		grid-template-areas: 
 			"title title title title title"
 			". search search search ."
 			". border border border ."
 			". nav nav nav ."
 			". entry entry entry ."
+			". wordBuilder wordBuilder wordBuilder ."
 			". wheel wheel wheel ."
-			". tables tables tables ."
 			"footer footer footer footer footer";
 	}
 
@@ -780,6 +781,24 @@ h1, h2, h3, h4{
 	
 	.titleText h3{
 		font-size: .8rem;
+	}
+
+	.nav{
+		flex-flow: column;
+	}
+
+	.navRow{
+		display: flex;
+		justify-content: center;
+		flex-grow: 1;
+	}
+
+	.bar_button{
+		flex-flow: wrap;
+	}
+
+	#searchButton{
+		margin-top: .5rem;
 	}
 
 	.nav a{
@@ -822,6 +841,20 @@ h1, h2, h3, h4{
 		overflow-x: scroll;
 	}
 
+	.wordBuilder{
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+	}
+	.wordBuilder > #results {
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+
+	#generate{
+		margin-left: 0;
+		margin-top: .5em;
+	}
 	.wheel{
 		padding: 0px;
 	}

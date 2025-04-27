@@ -12,7 +12,7 @@
 .main{
 	display: grid;
 	min-height: 100%;
-	grid-template-columns: 1fr 3fr 2fr 230px 1fr;
+	grid-template-columns: 1fr 3fr 2fr 2fr 1fr;
 	grid-template-rows:  minmax(10.5rem, auto) .4em 9rem minmax(60px, auto) minmax(4.4rem, auto);
 	grid-template-areas: 
 		". title search search ."
@@ -36,7 +36,6 @@
 		". methods methods methods ."
 		". suggestions suggestions suggestions ."
 		". references references references .";
-	padding: 0% 10% 0% 10%;
 }
 
 .title{
@@ -545,12 +544,12 @@ h1, h2, h3, h4{
 		display: grid;
 		min-height: 100%;
 		grid-template-columns: 1fr 3fr 2fr 2fr 1fr;
-		grid-template-rows:  minmax(10.5rem, auto) 6.25rem .4em 9rem minmax(12.5rem, auto) minmax(12rem, auto);
+		grid-template-rows:  minmax(10.5rem, auto) 10rem .4em 9rem minmax(12.5rem, auto) minmax(12rem, auto);
 		grid-template-areas: 
 			"title title title title title"
 			". search search search ."
 			". border border border ."
-			". . nav nav ."
+			". nav nav nav ."
 			". aboutContainer aboutContainer aboutContainer ."
 			"footer footer footer footer footer";
 	}
@@ -558,18 +557,18 @@ h1, h2, h3, h4{
 	.aboutContainer{
 		grid-area: aboutContainer;
 		display: grid;
+		grid-template-columns: 100%;
 		grid-template-rows: repeat(9, minmax(60px, auto));
 		grid-template-areas: 
-			". about about about ."
-			". contents contents contents ."
-			". entryInfo entryInfo entryInfo ."
-			". parserInfo parserInfo parserInfo ."
-			". tagsInfo tagsInfo tagsInfo ."
-			". attachmentRules attachmentRules attachmentRules ."
-			". methods methods methods ."
-			". suggestions suggestions suggestions ."
-			". references references references .";
-		padding: 0% 10% 0% 10%;
+			"about"
+			"contents"
+			"entryInfo"
+			"parserInfo"
+			"tagsInfo"
+			"attachmentRules"
+			"methods"
+			"suggestions"
+			"references";
 	}
 
 	.title a img{
@@ -589,6 +588,24 @@ h1, h2, h3, h4{
 	
 	.titleText h3{
 		font-size: .8rem;
+	}
+
+	.nav{
+		flex-flow: column;
+	}
+
+	.navRow{
+		display: flex;
+		justify-content: center;
+		flex-grow: 1;
+	}
+
+	.bar_button{
+		flex-flow: wrap;
+	}
+
+	#searchButton{
+		margin-top: .5rem;
 	}
 
 	.nav a{
@@ -641,5 +658,10 @@ h1, h2, h3, h4{
 
 	.tgCell{
 		max-width: 100%;
+	}
+
+	.wheel{
+		display: flex;
+		flex-direction: column;
 	}
 } 

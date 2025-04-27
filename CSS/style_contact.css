@@ -241,7 +241,7 @@ h1, h2, h3, h4{
 		display: grid;
 		min-height: 100%;
 		grid-template-columns: 1fr 3fr 2fr 2fr 1fr;
-		grid-template-rows: minmax(10.5rem, auto) .4em 9rem minmax(6.25rem, auto) minmax(12rem, auto);
+		grid-template-rows: minmax(12rem, auto) .4em 9rem minmax(6.25rem, auto) minmax(12rem, auto);
 		grid-template-areas: 
 			"title title title title title"
 			". border border border ."
@@ -267,6 +267,15 @@ h1, h2, h3, h4{
 	
 	.titleText h3{
 		font-size: .8rem;
+	}
+	.nav{
+		flex-flow: column;
+	}
+
+	.navRow{
+		display: flex;
+		justify-content: center;
+		flex-grow: 1;
 	}
 
 	.nav a{
