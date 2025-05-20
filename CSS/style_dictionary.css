@@ -126,6 +126,7 @@ h3{
 
 .navRow{
 	display: flex;
+	justify-content: flex-start;
 	align-items: start;		
 }
 
