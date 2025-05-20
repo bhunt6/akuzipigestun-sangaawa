@@ -243,14 +243,14 @@ const citations = [
         "abbreviation":"QATEP.",
         "title":"Qateperewaaghmeng Aatkaqelghii Yuuk",
         "id":"Slwooko1977",
-        "short_citation":"Slwooko (1977)",
+        "short_citation":"Slwooko (1977a)",
         "full_citation":""
     },
     {
         "abbreviation":"QUNGLUK",
         "title":"Qungluk Liillghii Pugimameng",
         "id":"Kaneshiro1974b",
-        "short_citation":"Kaneshiro (1974)b",
+        "short_citation":"Kaneshiro (1974b)",
         "full_citation":""
     },
     {
@@ -292,7 +292,7 @@ const citations = [
         "abbreviation":"SIVUQ. UNGIPAGH. (I)",
         "title":"Sivuqam Ungipaghaatangi",
         "id":"Slwooko1977",
-        "short_citation":"Slwooko (1977)",
+        "short_citation":"Slwooko (1977b)",
         "full_citation":""
     },
     {
