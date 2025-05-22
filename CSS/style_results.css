@@ -87,15 +87,22 @@ h3{
 .nav{
 	grid-area: nav;
 	display: flex;
+	flex-direction: row;
 	float: left;
 	justify-content: flex-end;
+}
+
+.navRow{
+	display: flex;
+	justify-content: flex-start;
+	align-items: start;		
 }
 
 .nav a{
 	margin: 20px 20px 0px 0px;
 }
 
-.nav a:last-child{
+#row2 a:last-child{
 	margin-top: 17.5px;
 }
 
