@@ -108,7 +108,6 @@
             </div>
         </div>
         <div class="wordBuilder" id="wordBuilder"></div>
-        <div class="tables" id="tables"></div>
         <div class="footer">
             <div id="footer1">© 2025 St.Lawrence Island</div>
             <div id="footer2"><b>Data and entries sourced from: </b>
@@ -208,7 +207,7 @@
                                 <span class="entryCyr">(${currentEntry.cyrillic})</span>
                             </span>
                             <span class="entryInfo">Pronunciation:
-                                <span class="entryIpa">/${currentEntry.ipa.join("/, /")}/</span>
+                                <span class="entryIpa">/${currentEntry.ipa}/</span>
                             </span>
                             <span class="entryInfo">Etymology: 
                                 <span class="etymology">${currentEntry.etymology}</span>
@@ -324,7 +323,7 @@
 
             window.onload = (event) => {
                 wordWheeler(currentIndex);
-                buildController(currentEntry.root[0], currentEntry.source_pos);
+                buildController(currentEntry.root, currentEntry.source_pos);
                 citationLink();
             }
     </script>
