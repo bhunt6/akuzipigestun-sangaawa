@@ -39,14 +39,12 @@
 	color: #b0e0e6;
 	visibility: visible;
 	display: inline-block;
-	position: absolute;
+	position: fixed;
 	max-width: 100%;
 	max-height: 100%;
 	z-index: 10;
-	right: 50%;
+	left: 50%;
 	top: 50%;
-	/*width: 50px;
-	height: 50px;*/
 }
 .lds-grid div {
 	position: absolute;
@@ -182,6 +180,12 @@ h3{
 	flex-direction: row;
 	float: left;
 	justify-content: flex-end;
+}
+
+.navRow{
+	display: flex;
+	justify-content: flex-start;
+	align-items: start;		
 }
 
 .nav a{
