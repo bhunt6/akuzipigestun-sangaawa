@@ -19,6 +19,7 @@ function getMorphs(){
         values.push(morphList[i].value);
     }
     let joinedInfl = values.slice(1).join("^");
+    
     finalInfl = joinedInfl;
     
     if(joinedInfl in verbExceptions){
@@ -27,6 +28,7 @@ function getMorphs(){
     
     gen = values[0] + "^" + finalInfl;
  
+    console.log(gen);
     result = foma_apply_down(m2s, gen);
 
     //print error message
@@ -121,8 +123,8 @@ function createDropdowns(root, pos, base){
         }
     }
     else if(pos=="pronoun"){
-        builderArea.innerHTML =`<span class="morph" id=${base}>${root}-</span>
-                                <select class="morph" id="prnInfl" autocomplete="off">
+        builderArea.innerHTML =`<span class="morph include" id=${base}>${root}-</span>
+                                <select class="morph include" id="prnInfl" autocomplete="off">
 						            <option value="default" selected>Case/Number</option>
 					            </select>
                                 <input id="generate" type="button" value="Generate" onclick="getMorphs(event)">
