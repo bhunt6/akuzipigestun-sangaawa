@@ -321,18 +321,20 @@ input[type='radio']:checked {
 }
 
 .tag{
+	font-weight: bold;
 	border-radius: 6px;
-	font-size: 1rem;
-	padding: .25rem .5rem .25rem .5rem;
+	font-size: .7rem;
+	padding: .25rem .6rem .25rem .6rem;
 	margin-right: .25rem;
 	color: #FFF;
-	line-height: 25px;
+	line-height: 1.9em;
 	white-space: nowrap;
 }
 
 .wheelElement .tag{
 	font-size: .5rem;
-	line-height: 20px;
+	line-height: 1.3em;
+	padding: .25rem .4rem .25rem .4rem;
 }
 
 .ChukotkanTag{
@@ -363,6 +365,10 @@ input[type='radio']:checked {
 	background: #5d737e
 }
 
+.pronounTag{
+	background: #5d737e;
+}
+
 .rootTag{
 	background: #902923
 }
@@ -377,6 +383,10 @@ input[type='radio']:checked {
 
 .exclamatoryTag, .conjunctiveTag, .interjectionalTag, .adverbialTag{
 	background: #4c4f53
+}
+
+.gambellWord, .savoongaWord{
+	background: #b0e0e6;
 }
 
 .entryInfo{

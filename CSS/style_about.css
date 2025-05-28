@@ -317,11 +317,12 @@ p {
 }
 
 .tag{
+	font-weight: bold;
 	border-radius: 6px;
-	font-size: .65rem;
-	padding: .1rem .5rem .1rem .5rem;
+	font-size: .7rem;
+	padding: .1rem .6rem .1rem .6rem;
 	color: #FFF;
-	line-height: 25px;
+	line-height: 1.9em;
 	text-wrap: nowrap;
 }
 
@@ -353,6 +354,10 @@ p {
 	background: #5d737e
 }
 
+.pronounTag{
+	background: #5d737e;
+}
+
 .rootTag{
 	background: #902923
 }
@@ -367,6 +372,10 @@ p {
 
 .exclamatoryTag, .conjunctiveTag, .interjectionalTag, .adverbialTag{
 	background: #4c4f53
+}
+
+.gambellWord, .savoongaWord{
+	background: #b0e0e6;
 }
 
 .entryHead{
