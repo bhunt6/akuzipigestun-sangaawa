@@ -119,6 +119,7 @@
     <script type="text/javascript" src="dictionary_js/categories.js"></script>
     <script type="text/javascript" src="dictionary_js/cyrillic_convert.js"></script>
     <script type="text/javascript" src="sw2.js"></script>
+    <script type="text/javascript" src="dictionary_js/tagSearch.js"></script>
     <script>
         if (!navigator.serviceWorker.controller) {
             navigator.serviceWorker.register("/sw2.js").then(function(reg) {
@@ -212,11 +213,12 @@
             let currentEntry = findEntry(currentID);
 
             let wod_cont = document.getElementById("wod_container");
-            wod_cont.innerHTML += `<a href="entry.html?entry=${currentEntry.UUID}" class="result">
-                                    <div class="entryContent">
+            wod_cont.innerHTML += `<div class="entryContent result">
                                         <div class="entryTop">
                                             <span class="entryHead">
-                                                <div class="headwordCont">${currentEntry.headword}</div>
+                                                <a href="entry.html?entry=${currentEntry.UUID}" class="headwordlink">
+                                                    <div class="headwordCont">${currentEntry.headword}</div>
+                                                </a>
                                                 <div class="tagCont">${currentEntry.tags}${currentEntry.pos}</div>
                                             </span>
                                         </div>
