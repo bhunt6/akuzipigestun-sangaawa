@@ -1,20 +1,48 @@
 {
-  "name": "Akuzipigestun Sangaawa",
-  "short_name": "Akuz",
-  "theme_color": "#ef9d87",
-  "background_color": "#ffffff",
-  "display": "standalone",
-  "scope": "/",
-  "start_url": "https://bhunt6.github.io/akuzipigestun-sangaawa/",
-
-  "icons": [
+"name": "Akuzipigestun Sangaawa: An electronic dictionary for St. Lawrence Island Akuzipik",
+"short_name": "Akuzipigestun Sangaawa",
+"start_url": "https://bhunt6.github.io/akuzipigestun-sangaawa/",
+"display": "standalone",
+"description": "An searchable, morphologically-aware implementation of ST.LAWRENCE ISLAND/SIBERIAN YUPIK ESKIMO DICTIONARY (Badten et al, 2008)",
+"lang": "English",
+"dir": "auto",
+"theme_color": "#ef9d87",
+"background_color": "#ffffff",
+"orientation": "any",
+"icons": [
     {
-      "src":"icons/android-chrome-512x512.png",
-      "sizes":"512x512"
+        "src": "icons/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
     },
     {
-      "src":"icons/android-chrome-192x192.png",
-      "sizes":"192x192"
+        "src": "icons/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
     }
-  ]
+],
+"screenshots": [
+    {
+        "src": "homepage.png",
+        "sizes": "1820x870",
+        "type": "image/png",
+        "description": "A screenshot of the home page"
+    }
+],
+"related_applications": [],
+"prefer_related_applications": false,
+"shortcuts": [
+    {
+        "name":"Contact us",
+        "url":"/contact.html",
+        "description":"Submit a correction or suggestion."
+    },
+    {
+        "name":"About the Dictionary",
+        "url":"/about.html",
+        "description":"Information about the dictionary and Akuzipik data."
+    }
+]
 }
