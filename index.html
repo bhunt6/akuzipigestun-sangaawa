@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-    <link rel="manifest" href="icons/site.webmanifest">
+    <link rel="manifest" href="manifest.json">
     <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#50b5c2">
     <meta name="msapplication-TileColor" content="#b0e0e6">
     <meta name="theme-color" content="#b0e0e6">
@@ -23,8 +23,9 @@
     gtag('js', new Date());
 
     gtag('config', 'G-XHL7JCQHC0');
+    //register service worker
+    navigator.serviceWorker.register("sw.js")
     </script>
-
 </head>
 <body>
     <div class="banner_notice" id="banner_notice">
@@ -121,11 +122,6 @@
     <script type="text/javascript" src="sw2.js"></script>
     <script type="text/javascript" src="dictionary_js/tagSearch.js"></script>
     <script>
-        if (!navigator.serviceWorker.controller) {
-            navigator.serviceWorker.register("/sw2.js").then(function(reg) {
-                console.log("Service worker has been registered for scope: " + reg.scope);
-            });
-        }
 
         const searchInput = document.getElementById("searchInput");
         const results = document.getElementById("results");
@@ -198,7 +194,15 @@
         } 
 
         function wordOfTheDay() {
-            let d = new Date();
+            //could maybe future proof this:
+            //calculate the distance between an arbitrary start date and today and use that offset%listLength to access the wordlist and loop when it runs out
+            //wordlist should just be a list of UUIDs, no associated dates
+            const today =  new Date(new Date().toLocaleString("en-US", {timeZone: "America/Nome"}));
+            const start = new Date("")
+
+
+            let d = new Date(new Date().toLocaleString("en-US", {timeZone: "America/Nome"}));
+            //let d = new Date();
             let month = d.getMonth() +1;
             let date = d.getDate();
             let year = d.getFullYear();
