@@ -7,7 +7,6 @@ const PRECACHE_ASSETS = [
     'about.html',
     "index.html",
     "contact.html",
-    "results.html",
     "entry.html",
     "/CSS/"
 ]
@@ -29,8 +28,8 @@ self.addEventListener('fetch', event => {
       const cache = await caches.open(CACHE_NAME);
 
       // match the request to our cache
-      const cachedResponse = await cache.match(event.request);
-
+      const cachedResponse = await cache.match(event.request, {ignoreSearch:true});
+      console.log(cachedResponse);
       // check if we got a valid response
       if (cachedResponse !== undefined) {
           // Cache hit, return the resource
