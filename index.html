@@ -196,6 +196,15 @@
         }
 
         wordOfTheDay();
+
+        const params = new URLSearchParams(window.location.search);
+        if(params){
+            searchInput.value = params.get('search');
+            if(params.get('lang') == 'eng'){
+                document.getElementById("engSearch").checked = true;
+            }
+            document.getElementById("searchButton").click();
+        }
     </script>
 </body>
 </html>

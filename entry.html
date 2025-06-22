@@ -167,30 +167,37 @@
                 lang = "eng";
             }
 
-            location.href = "results.html?search=" + searchInput.value.toLowerCase() + "&lang=" + lang;
+            location.href = "index.html?search=" + searchInput.value.toLowerCase() + "&lang=" + lang;
         };
 
-        //Capture HTML params
-        var captured = /entry=([^&]+)/.exec(window.location.href)[1]; // Value is in [1]
-        var entryID = captured ? captured : 'fbf759704d42e303bc1a4f596f5d9ce2a220d0e9';
-
-        var currentEntry, currentIndex
-
-        function entryFinder(){
-            let findEntry = LEX.filter((word) => word.UUID === entryID);
-            if(!findEntry.length){
-                findEntry = pbLEX.filter((word) => word.UUID === entryID);
-                currentEntry = findEntry[0];
-                currentIndex = pbLEX.indexOf(currentEntry);
-                return;
-            }
-            currentEntry = findEntry[0];
-            currentIndex = LEX.indexOf(currentEntry);
-        }
-
-        entryFinder()
+        const params = new URLSearchParams(window.location.search);
         
-        var incrIndex = currentIndex;
+        //Capture HTML params
+        const captured = params.get('entry');
+        const entryID = captured ? captured : 'fbf759704d42e303bc1a4f596f5d9ce2a220d0e9';
+
+        const findEntry = entryFinder(entryID);
+
+        function entryFinder(id){
+            let findEntry = LEX.filter((word) => word.UUID === id);
+            if(!findEntry.length){
+                findEntry = pbLEX.filter((word) => word.UUID === id);
+                return {
+                    entry: findEntry[0],
+                    index: pdLEX.indexOf(findEntry[0])
+                }
+            }
+            else{
+                return{
+                    entry: findEntry[0],
+                    index: LEX.indexOf(findEntry[0])
+                }
+            }
+        };
+
+        var incrIndex = findEntry.index;
+        const currentEntry = findEntry.entry;
+
         //Entry formatting
         const output = document.getElementById("entry");
         var htmlString = `<div class="entryHeaderLine">
@@ -322,7 +329,7 @@
             }
 
             window.onload = (event) => {
-                wordWheeler(currentIndex);
+                wordWheeler(findEntry.index);
                 buildController(currentEntry.root, currentEntry.source_pos);
                 citationLink();
             }
