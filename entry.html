@@ -107,7 +107,14 @@
                 <div class="arrow_box" onclick="scrollWheelDown(incrIndex)" tabindex="0"><i class="arrow down"></i></div>
             </div>
         </div>
-        <div class="wordBuilder" id="wordBuilder"></div>
+        <div class="related" id="related">
+            <div class="relTitle">Related Entries</div>
+            <div class="relList" id="relList"></div>
+        </div>
+        <div class="wordBuilderCont" id="wordBuilderCont">
+            <h2>Word Builder</h2>
+            <div class="wordBuilder" id="wordBuilder"></div>
+        </div>
         <div class="footer">
             <div id="footer1">© 2025 St.Lawrence Island</div>
             <div id="footer2"><b>Data and entries sourced from: </b>
@@ -121,7 +128,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="dictionary_js/bases52125.js"></script>
+    <script type="text/javascript" src="dictionary_js/bases62625.js"></script>
     <script type="text/javascript" src="dictionary_js/postbases52125.js"></script>
     <script type="text/javascript" src="dictionary_js/autocomplete.js"></script>
     <script type="text/javascript" src="dictionary_js/wordBuilder.js"></script>
@@ -132,6 +139,9 @@
     <script type="text/javascript" src="dictionary_js/s2m.js"></script>
     <!--script type="text/javascript" src="dictionary_js/transducer_inverted.js"></script-->
     <script type="text/javascript" src="dictionary_js/loader.js"></script>
+    <script type="text/javascript" src="dictionary_js/relatedWords.js"></script>
+    <script type="text/javascript" src="dictionary_js/entryFinder.js"></script>
+
     <script>
         
         //Search functionality
@@ -177,23 +187,6 @@
         const entryID = captured ? captured : 'fbf759704d42e303bc1a4f596f5d9ce2a220d0e9';
 
         const findEntry = entryFinder(entryID);
-
-        function entryFinder(id){
-            let findEntry = LEX.filter((word) => word.UUID === id);
-            if(!findEntry.length){
-                findEntry = pbLEX.filter((word) => word.UUID === id);
-                return {
-                    entry: findEntry[0],
-                    index: pdLEX.indexOf(findEntry[0])
-                }
-            }
-            else{
-                return{
-                    entry: findEntry[0],
-                    index: LEX.indexOf(findEntry[0])
-                }
-            }
-        };
 
         var incrIndex = findEntry.index;
         const currentEntry = findEntry.entry;
@@ -332,6 +325,7 @@
                 wordWheeler(findEntry.index);
                 buildController(currentEntry.root, currentEntry.source_pos);
                 citationLink();
+                relatedWords(currentEntry);
             }
     </script>
 </body>

@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+html{
+	font-size: 110%;
+}
 * {
 	margin: 0px;
 	padding: 0px;
@@ -12,15 +15,15 @@
 .main{
 	display: grid;
 	min-height: 100%;
-	grid-template-columns: 1fr 3fr 2fr 230px 1fr;
-	grid-template-rows: minmax(10.5rem, auto) .4em 9rem minmax(200px, auto) 3rem minmax(200px, auto) minmax(4.4rem, auto);
+	grid-template-columns: 1fr 3fr 2fr 250px 1fr;
+	grid-template-rows: minmax(10.5rem, auto) .4em 7rem minmax(200px, auto) minmax(3rem, auto) minmax(200px, auto) minmax(4.4rem, auto);
 	grid-template-areas: 
 		". title search search ."
 		". border border border ."
 		". . nav nav ."
 		". entry entry wheel ."
 		". wordBuilder wordBuilder . ."
-		". tables tables tables ."
+		". related related . ."
 		"footer footer footer footer footer";
 }
 
@@ -116,31 +119,29 @@
 .title{
 	grid-area: title;
 	display: flex;	
+	padding-top: 60px;
 }
 
-.title a img{
-	padding: 60px 0px 0px 0px;
-	position: relative;
-}
+
 
 .titleText{
 	display: flex;
 	flex-direction: column;
 	background: none;
-	padding: 4.5rem 2rem 1rem 1.5rem;
+	padding: 0rem 2rem 1rem 1.5rem;
 }
 
-.titleText h1{
+h1{
 	font-family: 'Josefin Sans', sans-serif;
 	font-size: 2rem;
 }
 
-.titleText h2{
-	font-size: 1.1rem;
+h2{
+	font-size: 1rem;
 }
 
 h3{
-	font-size: 1.1rem;
+	font-size: 1rem;
 }
 
 .visually-hidden { 
@@ -216,7 +217,7 @@ h3{
 input[type=text]{
     height: 38px;
     width: 400px;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: lighter;
 	color: #4c4f53;
     padding-top: 3px;
@@ -233,7 +234,7 @@ input[type=button]{
     height: 43px;
     min-width: 115px;
     background: #4c4f53;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: lighter;
     color: #FFF;
 	transition: all 0.2s ease;
@@ -253,6 +254,7 @@ input[type=button]:hover{
 }
 
 .radiolabel{
+	font-size: 1rem;
 	cursor: pointer;
 	margin: 0 1rem 0 1rem;
 }
@@ -284,7 +286,7 @@ input[type='radio']:checked {
 	flex-direction: column;
 	/*background: #f9f9f9;
 	box-shadow: 2px 2px 6px 1px #ccc;*/
-	font-size: 19px;
+	font-size: 1rem;
 	color: #4c4f53;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -308,7 +310,7 @@ input[type='radio']:checked {
 
 .entryHead{
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 1.5rem;
 	color: #ef9d87;
 	padding-right: 15px;
 }
@@ -324,7 +326,7 @@ input[type='radio']:checked {
 	font-weight: bold;
 	border-radius: 6px;
 	font-size: .7rem;
-	padding: .25rem .6rem .25rem .6rem;
+	padding: .25rem .4rem .25rem .4rem;
 	margin-right: .25rem;
 	color: #FFF;
 	line-height: 1.9em;
@@ -332,7 +334,6 @@ input[type='radio']:checked {
 }
 
 .wheelElement .tag{
-	font-size: .5rem;
 	line-height: 1.3em;
 	padding: .25rem .4rem .25rem .4rem;
 }
@@ -390,8 +391,8 @@ input[type='radio']:checked {
 }
 
 .entryInfo{
+	font-size: 1rem;
     font-weight: bold;
-    font-size: 17px;
     padding: 2px 0px 2px;
     color:#4c4f53;
 }
@@ -432,7 +433,7 @@ input[type='radio']:checked {
 }
 
 .entryExamples{
-	font-size: 17px;
+	font-size: 1rem;
 	margin-top: 20px;
 	margin-bottom: 10px;
 	display: flex;
@@ -452,19 +453,24 @@ input[type='radio']:checked {
 	font-style: italic;
 }
 
+.citation{
+	text-decoration: none;
+	color: #333;
+}
+
 .wheel{
 	grid-area: wheel;
 	padding-left: 10px;
 }
 
 .wheelBorder{
-	background: #f9f9f9;
+	background: #f6f4f4;
 	/*box-shadow: 2px 2px 6px 1px #ccc;*/
 	padding: 10px 10px;
 }
 
 .wheelList{
-	background: #f9f9f9;
+	background: #f6f4f4;
 	display: flex;
 	flex-direction: column;
 	justify-content: left;
@@ -476,7 +482,7 @@ input[type='radio']:checked {
 	padding: 5px 5px;
 	text-decoration: none;
 	color: #4c4f53;
-	font-size: 14px;
+	font-size: .8rem;
 }
 
 .wheelElement>span{
@@ -490,7 +496,7 @@ input[type='radio']:checked {
 	font-weight: bold;
 }
 .arrow {
-	border: solid #b0e0e6;
+	border: solid #333;
 	border-width: 0 3px 3px 0;
 	display: inline-block;
 	padding: 3px;
@@ -508,7 +514,7 @@ input[type='radio']:checked {
 }
 
 .arrow_box:hover .arrow{
-	border: solid #ffffff;
+	border: solid #666;
 	border-width: 0 3px 3px 0;
 }
 
@@ -531,17 +537,20 @@ transform: rotate(45deg);
 	background-color: #f9f9f9;
 }
 
-.wordBuilder{
+.wordBuilderCont{
 	grid-area: wordBuilder;
+	padding: .5rem;
+	background: #f6f4f4;
+	color:#333;
 }
 
 .morph{
-	font-size: 18px;
+	font-size: 1rem;
 }
 
 select{
 	height: 38px;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: lighter;
 	color: #4c4f53;
     padding-top: 3px;
@@ -554,10 +563,48 @@ select{
 #results{
 	display:flex;
 	flex-direction: row;
-	font-size: 1.5rem;
-	font-weight: bold;
+	font-size: 1rem;
 	padding-top: 1rem;
 }
+
+.related{
+	font-size: 1rem;
+	grid-area: related;
+	padding: .5rem;
+	display: flex;
+	flex-direction: column;
+	color: #333;
+	background: #f6f4f4;
+}
+
+.relTitle{
+	font-weight: bold;
+}
+
+.relList{
+	padding-top: .5rem;
+	height: 3rem;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.relList a{
+	line-height: 3rem;
+	color: inherit;
+}
+
+.relList a:hover{
+	background: #b0e0e6;
+}
+
+.relTerm{
+	text-decoration: none;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
 .tables{
 	grid-area: tables;
 	display: flex;
@@ -572,7 +619,7 @@ select{
 	flex-direction: column;
 	padding-top: 4rem;
 	justify-content: center;
-	font-size: .8rem;
+	font-size: .7rem;
 }
 
 #footer1{
@@ -612,14 +659,14 @@ h1, h2, h3, h4{
 
 [data-title]:after {
     content: attr(data-title);
-    color: #4c4f53;
+    color: #333;
     font-size: 1rem;
 	font-weight: bold;
     position: absolute;
     top: 3rem;
     left: 0%;
 	max-width: 6rem;
-    white-space: normal;
+    white-space: nowrap;
     opacity: 0;
     z-index: 99999;
     visibility: hidden;
@@ -629,7 +676,7 @@ h1, h2, h3, h4{
     position: relative;
 }
 
-/*Table styling*/
+/*Table styling
 .table_cont{
 	width: 100%;
 	overflow-x: visible;
@@ -699,7 +746,7 @@ h1, h2, h3, h4{
 	font-size: 16px;
 }
 
- /* Style the button that is used to open and close the collapsible content */
+Style the button that is used to open and close the collapsible content
 .collapsible {
 	background-color: #b0e0e6;
 	color: #ffffff;
@@ -714,13 +761,13 @@ h1, h2, h3, h4{
 	font-size: 15px;
 }
   
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover)
 .active, .collapsible:hover {
 	background-color: #4da9b5;
 }
 
 .collapsible:after {
-	content: '\02795'; /* Unicode character for "plus" sign (+) */
+	content: '\02795'; Unicode character for "plus" sign (+) 
 	font-size: 13px;
 	color: transparent;  
 	text-shadow: 0 0 0 white;
@@ -729,9 +776,9 @@ h1, h2, h3, h4{
   }
   
   .active:after {
-	content: "\2796"; /* Unicode character for "minus" sign (-) */
+	content: "\2796"; Unicode character for "minus" sign (-) 
   }
-
+*/
   /*autocomplete styling*/
 .autocomplete {
 	position: relative;
@@ -766,7 +813,7 @@ h1, h2, h3, h4{
 		display: grid;
 		min-height: 100%;
 		grid-template-columns: 1fr 3fr 2fr 2fr 1fr;
-		grid-template-rows: minmax(10.5rem, auto) 10rem .4em 9rem minmax(6.25rem, auto) 15rem minmax(12.5rem, auto) minmax(12rem, auto);
+		grid-template-rows: minmax(10.5rem, auto) 10rem .4em 9rem minmax(6.25rem, auto) 15rem minmax(12.5rem, auto) minmax(12.5rem, auto) minmax(12rem, auto);
 		grid-template-areas: 
 			"title title title title title"
 			". search search search ."
@@ -774,6 +821,7 @@ h1, h2, h3, h4{
 			". nav nav nav ."
 			". entry entry entry ."
 			". wordBuilder wordBuilder wordBuilder ."
+			". related related related ."
 			". wheel wheel wheel ."
 			"footer footer footer footer footer";
 	}
@@ -794,7 +842,7 @@ h1, h2, h3, h4{
 	}
 	
 	.titleText h3{
-		font-size: .8rem;
+		font-size: .7rem;
 	}
 
 	.nav{
@@ -828,7 +876,7 @@ h1, h2, h3, h4{
 	}
 
 	[data-title]:after {
-		font-size: .8rem;
+		font-size: .7rem;
 	}
 
 	.radios{
@@ -838,7 +886,6 @@ h1, h2, h3, h4{
 
 	.radiolabel{
 		margin: 0 1rem 0 0;
-		font-size: .9rem;
 		padding-left: 1em;
 	}
 
