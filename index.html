@@ -23,7 +23,6 @@
     gtag('js', new Date());
 
     gtag('config', 'G-XHL7JCQHC0');
-    //register service worker
     </script>
 </head>
 <body>
@@ -113,17 +112,17 @@
     <script type="text/javascript" src="dictionary_js/displayWords.js"></script>
     <script type="text/javascript" src="dictionary_js/parseSearch.js"></script>
     <script type="text/javascript" src="dictionary_js/autocomplete.js"></script>
-    <script type="text/javascript" src="dictionary_js/bases52125.js"></script>
+    <script type="text/javascript" src="dictionary_js/bases62625.js"></script>
     <script type="text/javascript" src="dictionary_js/postbases52125.js"></script>
     <script type="text/javascript" src="dictionary_js/wordoftheday.js"></script>
     <script type="text/javascript" src="dictionary_js/categories.js"></script>
     <script type="text/javascript" src="dictionary_js/cyrillic_convert.js"></script>
-    <script type="text/javascript" src="sw.js"></script>
+    <!--<script type="text/javascript" src="sw.js"></script>-->
     <script type="text/javascript" src="dictionary_js/tagSearch.js"></script>
     <script>
-        if (typeof navigator.serviceWorker !== 'undefined') {
-            navigator.serviceWorker.register('sw.js')
-        }
+        // if (typeof navigator.serviceWorker !== 'undefined') {
+        //     navigator.serviceWorker.register('sw.js')
+        // }
 
         const searchInput = document.getElementById("searchInput");
         const results = document.getElementById("results");
