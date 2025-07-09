@@ -81,8 +81,9 @@
                 <div class="sectionHeader">Contents</div>
                 <div class="sectionContent">
                     <ul id="contents">
-                        <li><a href="#morph">Morphological Parser</a></li>
                         <li><a href="#entry">Overview of an Entry</a></li>
+                        <li><a href="#word_wheel">Word Wheel</a></li>
+                        <li><a href="#morph">Morphological Parser</a></li>
                         <li><a href="#tags">Entry Tags</a></li>
                         <li><a href="#rules">Jacobson's Attachment Rules</a></li>
                         <li><a href="#methods">Methodology</a></li>
@@ -122,7 +123,7 @@
                 <div class="sectionContent">
                     <img src="icons/entry_diagram.png" style="max-width:80%; height:auto"alt="Diagram of an entry">
                 </div>
-                <div class="sectionHeader">The Word Wheel</div>
+                <div class="sectionHeader" id="word_wheel">The Word Wheel</div>
                 <div class="sectionContent wheel">
                     <p>The Word Wheel is located to the right of the main entry section and contains an alphabetized list of all entries in the dictionary.
                         The current entry is centered and highlighted when the page is first loaded and other entries can be accessed by clicking on any word visible in the wheel.
@@ -294,7 +295,7 @@
                         <tr>
                             <td>*</td>
                             <td>Unattested form (if word-initial);
-                                Upredictably strong gh (if word-final)</td>
+                                Unpredictably strong gh (if word-final)</td>
                         </tr>
                         <tr>
                             <td>&lt; &gt;</td>
@@ -350,6 +351,7 @@
                 </div>
             </div>
         </div>
+        <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">Top</button> 
         <div class="footer">
             <div id="footer1">© 2025 St.Lawrence Island</div>
         </div>
@@ -358,9 +360,5 @@
     <script type="text/javascript" src="dictionary_js/foma_apply_down.js"></script>
     <script type="text/javascript" src="dictionary_js/transducer_inverted.js"></script>
     <script type="text/javascript" src="dictionary_js/citation_abbreviations.js"></script>
-    <script>
-
-
-    </script>
-
+    <script type="text/javascript" src="dictionary_js/scrollButton.js"></script>
 </body>

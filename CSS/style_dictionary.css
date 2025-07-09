@@ -546,7 +546,7 @@ h1, h2, h3, h4, i{
 	color: #ffffff;
 }
 
-#myBtn {
+#scrollBtn {
 	display: none; /* Hidden by default */
 	position: fixed; /* Fixed/sticky position */
 	bottom: 20px; /* Place the button at the bottom of the page */
@@ -562,7 +562,7 @@ h1, h2, h3, h4, i{
 	font-size: 18px; /* Increase font size */
 }
 	
-#myBtn:hover {
+#scrollBtn:hover {
 	background-color: #ef9d87; /* Add a dark-grey background on hover */
 }
 
