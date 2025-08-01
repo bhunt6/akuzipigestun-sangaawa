@@ -8789,7 +8789,7 @@ function wordOfTheDay() {
 
     const offset = diffDays % wordOfDay.length;
     const currentID = wordOfDay[offset];
-    const currentEntry = findEntry(currentID);
+    const currentEntry = entryFinder(currentID);
 
     let wod_cont = document.getElementById("wod_container");
     wod_cont.innerHTML += `<div class="entryContent result">
