@@ -8795,14 +8795,14 @@ function wordOfTheDay() {
     wod_cont.innerHTML += `<div class="entryContent result">
                                 <div class="entryTop">
                                     <span class="entryHead">
-                                        <a href="entry.html?entry=${currentEntry.UUID}" class="headwordlink">
-                                            <div class="headwordCont">${currentEntry.headword}</div>
+                                        <a href="entry.html?entry=${currentEntry.entry.UUID}" class="headwordlink">
+                                            <div class="headwordCont">${currentEntry.entry.headword}</div>
                                         </a>
-                                        <div class="tagCont">${currentEntry.tags}${currentEntry.pos}</div>
+                                        <div class="tagCont">${currentEntry.entry.tags}${currentEntry.entry.pos}</div>
                                     </span>
                                 </div>
                                 <div class="entryBottom">
-                                    <span class="entryDef">${currentEntry.gloss.join("; ")}</span>
+                                    <span class="entryDef">${currentEntry.entry.gloss.join("; ")}</span>
                                 </div>
                             </div>
                         </a>
