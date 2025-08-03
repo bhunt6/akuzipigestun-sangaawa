@@ -82,7 +82,7 @@ const freqCount = {
 "ughvughqefig(N)" : "1";
 "ughunqightughte(V)" : "1";
 "palighte(V)" : "1";
-"an'giqragh(V)", 1";
+"an'giqragh(V)" : 1";
 "qigughrug(N)" : "1";
 "Sivuglleghii(N)" : "1";
 "muutagh(N)" : "1";
@@ -934,7 +934,7 @@ const freqCount = {
 "nengzighhe(V)" : "1";
 "[All.1DuPoss.Pl]" : "1";
 "kukegte(V)" : "1";
-"un'gu(DEM.PRO)", 1";
+"un'gu(DEM.PRO)" : 1";
 "yukumighte(V)" : "1";
 "–llgite(V→V)" : "1";
 "aamna(PTCL)" : "1";
@@ -1114,7 +1114,7 @@ const freqCount = {
 "takemriig(N)" : "2";
 "kagimlegh(N)" : "2";
 "ilughwaghniighute(V)" : "2";
-"an'gaghagh(N)", 2";
+"an'gaghagh(N)" : 2";
 "uspute(V)" : "2";
 "entami(PTCL)" : "2";
 "naqenqaghqe(V)" : "2";
@@ -1130,7 +1130,7 @@ const freqCount = {
 "piyaqleg(N)" : "2";
 "aghliigh(EMO)" : "2";
 "amsakenegh(N)" : "2";
-"peng'gu(V)", 2";
+"peng'gu(V)" : 2";
 "Pingayaa(COMPOUND)" : "2";
 "elpetegnun(PRO.All.2Du)" : "2";
 "anighaaghte(V)" : "2";
@@ -1941,7 +1941,7 @@ const freqCount = {
 "uukagh(N)" : "3";
 "ipigtu(V)" : "3";
 "ipigkestaaghhagh(N)" : "3";
-"un'gapisigh(N)", 3";
+"un'gapisigh(N)" : 3";
 "tagneghli(N)" : "3";
 "@–nqegte(V→V)" : "3";
 "uqughqagh(N)" : "3";
@@ -1969,7 +1969,7 @@ const freqCount = {
 "sakmu(DEM.PRO)" : "3";
 "kanagagh(N)" : "3";
 "esneg(N)" : "3";
-"uun'ggun(DEM.ADV.Prl)", 3";
+"uun'ggun(DEM.ADV.Prl)" : 3";
 "kaangqugh(N)" : "3";
 "avaqraggiighute(V)" : "3";
 "teghigagh(N)" : "3";
@@ -2202,7 +2202,7 @@ const freqCount = {
 "kimaawi(V)" : "4";
 "Quutmii(N)" : "4";
 "maallgute(V)" : "4";
-"ag'ghiyugnegh(N)", 4";
+"ag'ghiyugnegh(N)" : 4";
 "uqigtuqagh(N)" : "4";
 "aghsug(V)" : "4";
 "paayghagh(N)" : "4";
@@ -3731,7 +3731,7 @@ const freqCount = {
 "ugkelli(V)" : "13";
 "–liite(N→V)" : "13";
 "allake(V)" : "13";
-"un'ga(DEM.ADV)", 13";
+"un'ga(DEM.ADV)" : 13";
 "pengeg(V)" : "13";
 "puuve(V)" : "13";
 "–qaqu(V→V)" : "13";
@@ -4109,7 +4109,7 @@ const freqCount = {
 "nughagh(N)" : "19";
 "angyaatagh(N)" : "19";
 "Quurkeli(N)" : "19";
-"an'gigh(V)", 20";
+"an'gigh(V)" : 20";
 "aqfaasnaq(PTCL)" : "20";
 "tekegh(N)" : "20";
 "tengug(N)" : "20";
@@ -4461,9 +4461,9 @@ const freqCount = {
 "ellmeggneng(PRO.Abl_Mod.4Pl)" : "31";
 "asitmun(PTCL)" : "31";
 "uusneghwaagh(N)" : "31";
-"un'gani(DEM.ADV.Loc)", 31";
+"un'gani(DEM.ADV.Loc)" : 31";
 "unguvagh(V)" : "31";
-"un'gavek(DEM.ADV.All)", 31";
+"un'gavek(DEM.ADV.All)" : 31";
 "kiiweg(N)" : "31";
 "kugegh(N)" : "31";
 "pilag(V)" : "31";
@@ -5359,5 +5359,5 @@ const freqCount = {
 "@–lghii(V→N)" : "5134";
 "[Ind.Intr]" : "5528";
 "@~:(i/u)ma(V→V)" : "6032";
-"[Abs.Sg]" : "13478'
+"[Abs.Sg]" : "13478"
 }
