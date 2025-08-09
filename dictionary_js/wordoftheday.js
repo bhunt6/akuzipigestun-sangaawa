@@ -8782,7 +8782,7 @@ function wordOfTheDay() {
     //calculate the distance between an arbitrary start date and today and use that offset%listLength to access the wordlist and loop when it runs out
     //wordlist should just be a list of UUIDs, no associated dates
     const today =  new Date(new Date().toLocaleString("en-US", {timeZone: "America/Nome"}));
-    const start = new Date("2022, 12, 2");
+    const start = new Date("2022-12-02");
 
     const diffTime = Math.abs(today - start);
     const diffDays = Math.floor(diffTime / (1000 * 3600 * 24));
