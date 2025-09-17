@@ -9,11 +9,11 @@ const displayWords = (words) => {
                         <a href="entry.html?entry=${word.UUID}" class="headwordlink">
                             <div class="headwordCont">${word.headword}</div>
                         </a>
-                        <div class="tagCont">${word.tags}${word.pos}</div>
+                        <div class="tagCont">${tagString(word.tags)}${tagString(word.pos)}</div>
                     </span>
                 </div>
                 <div class="entryBottom">
-                    <span class="entryDef">${word.gloss.join("; ")}</span>
+                    <span class="entryDef">${checkChars(word.gloss.join("; "))}</span>
                 </div>
             </div>
             `)
@@ -22,6 +22,22 @@ const displayWords = (words) => {
 
     setTag();
 };
+
+const tagString = (tags) => {
+    let tagStr = "";
+    if(!Array.isArray(tags)){
+        return `<span class='tag ${tags}Tag'>${tags.toUpperCase()}</span>`
+    }
+    for(let i=0; i<tags.length; i++){
+        tagStr += `<span class='tag ${tags[i]}Tag'>${tags[i].toUpperCase()}</span>`
+    }
+    return tagStr;
+}
+
+const checkChars = (str) => {
+    const max = 100;
+    return str.length > max ? str.substring(0, max) + "..." : str;
+}
 //code for displaying examples on card
 //<span class="entryOther">${word.examples.join("\n")}</span>
 //<span class="entryCyr">(${word.cyrillic})</span>
