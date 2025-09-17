@@ -1,4 +1,4 @@
-var nounsInflReplace = {
+var inflReplace = {
     "[Abs.Sg]" : "∅",
     "[Abs.Pl]" : "~sf-w:(e)t",
     "[Abs.Du]" : "~sf-w:(e)k",
@@ -288,10 +288,8 @@ var nounsInflReplace = {
     "[Equ.4PlPoss.Du]" : "~sf-w:(e)gmegestun",
     "[Equ.4DuPoss.Sg]" : "~f-wmegestun",
     "[Equ.4DuPoss.Pl]" : "~f-wmegestun",
-    "[Equ.4DuPoss.Du]" : "~sf-w:(e)gmegestun"
-}
+    "[Equ.4DuPoss.Du]" : "~sf-w:(e)gmegestun",
 
-var verbsInflReplace = {
     "[Conc.Intr]^[3Sg]" : "–ghnga^an",
     "[Conc.Intr]^[1Sg]" : "–ghngaagh^ma",
     "[Conc.Intr]^[2Sg]" : "–ghngaagh^pek",
@@ -1642,4 +1640,26 @@ var verbsInflReplace = {
     "[Volitive.Of.Fear]^[3Du.4Sg]" : "nayuka^atni",
     "[Volitive.Of.Fear]^[3Du.4Pl]" : "nayuka^asteng",
     "[Volitive.Of.Fear]^[3Du.4Du]" : "nayuka^astek"
+}
+
+const inflEng = {
+    "Abs" : "the",
+    "Rel" : "the (relative case)",
+    "Abl_Mod" : "a/some/from",
+    "Loc" : "in/at",
+    "All" : "to",
+    "Prl" : "through/using",
+    "Equ" : "like, similar to",
+    "3SgPoss" : "his/her/its",
+    "3PlPoss" : "their (3+)",
+    "3DuPoss" : "their (2)",
+    "1SgPoss" : "my",
+    "1PlPoss" : "out (3+)",
+    "1DuPoss" : "our (2)",
+    "2SgPoss" : "your",
+    "2PlPoss" : "your (3+)",
+    "2DuPoss" : "your (2)",
+    "Sg" : "one" ,
+    "Pl" : "3 or more",
+    "Du" : "two",
 }
