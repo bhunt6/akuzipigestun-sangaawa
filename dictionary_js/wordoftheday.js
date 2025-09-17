@@ -8798,7 +8798,7 @@ function wordOfTheDay() {
                                         <a href="entry.html?entry=${currentEntry.entry.UUID}" class="headwordlink">
                                             <div class="headwordCont">${currentEntry.entry.headword}</div>
                                         </a>
-                                        <div class="tagCont">${currentEntry.entry.tags}${currentEntry.entry.pos}</div>
+                                        <div class="tagCont">${currentEntry.entry.tags}<span class='tag ${currentEntry.entry.pos}Tag'>${currentEntry.entry.pos.toUpperCase()}</span></div>
                                     </span>
                                 </div>
                                 <div class="entryBottom">
