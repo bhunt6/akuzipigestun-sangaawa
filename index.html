@@ -58,18 +58,7 @@
         </div>
         <div class="border">
         </div>
-        <div class="nav" role="navigation">
-            <div id="row1" class="navRow">
-                <a href="https://ldl.linguistics.gmu.edu/" data-title="GMU LangDoc Lab Group"><img src="icons/lab_group_hires.png" width="51" height="42" alt="GMU LangDoc Lab Group" /></a>
-                <a href="https://akuzipik.info/" data-title="Yupik Corpus"><img src="icons/corpus_hires.png" width="52" height="37" alt="Yupik Corpus" /></a>
-                <a href="https://bhunt6.github.io/itemquulteki/" data-title="Morphological Analyzer"><img src="icons/analyzer_hires.png" width="52" height="51" alt="Morphological Analyzer" /></a>
-            </div>
-            <div id="row2" class="navRow">
-                <a href="https://saintlawrenceislandyupik.github.io/web_tools/index_utilities.html" data-title="Orthotactic Spellchecker"><img src="icons/spellchecker_hires.png" width="53" height="51" alt="Orthotactic Spellchecker" /></a>
-                <a href="contact.html" data-title="Contact Us"><img src="icons/contact_hires.png" width="52" height="37" alt="Contact Us" /></a>
-                <a href="about.html" data-title="About"><img src="icons/about.png" width="51" height="43" alt="About the Dictionary"></a>
-            </div>
-        </div>
+        <nav-component class="nav" role="navigation"></nav-component>
         <div class="search" role="search">
             <div class="bar_button autocomplete">
                 <label for="searchInput" class="visually-hidden">Search</label>
@@ -93,18 +82,7 @@
         </div>
         <div class="results" id="results"></div>
         <button onclick="scrollToTop()" id="scrollBtn" title="Go to top">Top</button> 
-        <div class="footer">
-            <div id="footer1">© 2025 St.Lawrence Island</div>
-            <div id="footer2"><b>Data and entries sourced from: </b>
-                <br> 
-                Badten, L.W. (Aghnaghaghpik), 
-                Kaneshiro, V.O. (Uqiitlek), 
-                Oovi, M. (Uvegtu), & 
-                Koonooka, C. (Petuwaq). (2008). 
-                <i>St. Lawrence Island/Siberian Yupik Eskimo dictionary. </i>
-                University of Alaska Fairbanks: Alaska Native Language Center.
-            </div>
-        </div>
+        <footer-component class="footer"></footer-component>
     </div>
     <script type="text/javascript" src="dictionary_js/foma_apply_down.js"></script>
     <script type="text/javascript" src="dictionary_js/s2m.js"></script>
@@ -122,6 +100,9 @@
     <script type="text/javascript" src="dictionary_js/tagSearch.js"></script>
     <script type="text/javascript" src="dictionary_js/scrollButton.js"></script>
     <script type="text/javascript" src="dictionary_js/inflections_replace.js"></script>
+    <script type="text/javascript" src="dictionary_js/components/nav.js"></script>
+    <script type="text/javascript" src="dictionary_js/components/footer.js"></script>
+
     <script>
         // if (typeof navigator.serviceWorker !== 'undefined') {
         //     navigator.serviceWorker.register('sw.js')
