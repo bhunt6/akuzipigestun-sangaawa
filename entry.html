@@ -247,32 +247,39 @@
 
             //Word Wheel
             function wordWheeler(index){
+                let currentWheelView = "";
+                for (let i=-5; i<6; i++){
+                    let slot = LEX[(index+lexLength+i)%lexLength];
+                    currentWheelView += `<a href="entry.html?entry=${slot.UUID}" class="wheelElement"><span><span>${slot.headword}</span><span>${posString(slot)}</span></a>`
+                }
 
-                let min5 = LEX[(index+lexLength-5)%lexLength];
-                let min4 = LEX[(index+lexLength-4)%lexLength];
-                let min3 = LEX[(index+lexLength-3)%lexLength];
-                let min2 = LEX[(index+lexLength-2)%lexLength];
-                let min1 = LEX[(index+lexLength-1)%lexLength];
-                let cur = LEX[(index+lexLength)%lexLength];
-                let plus1 = LEX[(index+lexLength+1)%lexLength];
-                let plus2 = LEX[(index+lexLength+2)%lexLength];
-                let plus3 = LEX[(index+lexLength+3)%lexLength];
-                let plus4 = LEX[(index+lexLength+4)%lexLength];
-                let plus5 = LEX[(index+lexLength+5)%lexLength];
+                wheel.innerHTML = currentWheelView;
+                
+                // let min5 = LEX[(index+lexLength-5)%lexLength];
+                // let min4 = LEX[(index+lexLength-4)%lexLength];
+                // let min3 = LEX[(index+lexLength-3)%lexLength];
+                // let min2 = LEX[(index+lexLength-2)%lexLength];
+                // let min1 = LEX[(index+lexLength-1)%lexLength];
+                // let cur = LEX[(index+lexLength)%lexLength];
+                // let plus1 = LEX[(index+lexLength+1)%lexLength];
+                // let plus2 = LEX[(index+lexLength+2)%lexLength];
+                // let plus3 = LEX[(index+lexLength+3)%lexLength];
+                // let plus4 = LEX[(index+lexLength+4)%lexLength];
+                // let plus5 = LEX[(index+lexLength+5)%lexLength];
 
-                const wheelElements = `<a href="entry.html?entry=${min5.UUID}" class="wheelElement"><span><span>${min5.headword}</span><span>${posString(min5)}</span></a>
-                                        <a href="entry.html?entry=${min4.UUID}" class="wheelElement shaded"><span><span>${min4.headword}</span>${posString(min4)}</span></a>
-                                        <a href="entry.html?entry=${min3.UUID}" class="wheelElement"><span><span>${min3.headword}</span>${posString(min3)}</span></a>
-                                        <a href="entry.html?entry=${min2.UUID}" class="wheelElement shaded"><span><span>${min2.headword}</span>${posString(min2)}</span></a>
-                                        <a href="entry.html?entry=${min1.UUID}" class="wheelElement"><span><span>${min1.headword}</span>${posString(min1)}</span></a>
-                                        <a href="entry.html?entry=${cur.UUID}" class="wheelElement current"><span><span>${cur.headword}</span>${posString(cur)}</span></a>
-                                        <a href="entry.html?entry=${plus1.UUID}" class="wheelElement"><span><span>${plus1.headword}</span>${posString(plus1)}</span></a>
-                                        <a href="entry.html?entry=${plus2.UUID}" class="wheelElement shaded"><span><span>${plus2.headword}</span>${posString(plus2)}</span></a>
-                                        <a href="entry.html?entry=${plus3.UUID}" class="wheelElement"><span><span>${plus3.headword}</span>${posString(plus3)}</span></a>
-                                        <a href="entry.html?entry=${plus4.UUID}" class="wheelElement shaded"><span><span>${plus4.headword}</span>${posString(plus4)}</span></a>
-                                        <a href="entry.html?entry=${plus5.UUID}" class="wheelElement"><span><span>${plus5.headword}</span>${posString(plus5)}</span></a>`;
+                // const wheelElements = `<a href="entry.html?entry=${min5.UUID}" class="wheelElement"><span><span>${min5.headword}</span><span>${posString(min5)}</span></a>
+                //                         <a href="entry.html?entry=${min4.UUID}" class="wheelElement shaded"><span><span>${min4.headword}</span>${posString(min4)}</span></a>
+                //                         <a href="entry.html?entry=${min3.UUID}" class="wheelElement"><span><span>${min3.headword}</span>${posString(min3)}</span></a>
+                //                         <a href="entry.html?entry=${min2.UUID}" class="wheelElement shaded"><span><span>${min2.headword}</span>${posString(min2)}</span></a>
+                //                         <a href="entry.html?entry=${min1.UUID}" class="wheelElement"><span><span>${min1.headword}</span>${posString(min1)}</span></a>
+                //                         <a href="entry.html?entry=${cur.UUID}" class="wheelElement current"><span><span>${cur.headword}</span>${posString(cur)}</span></a>
+                //                         <a href="entry.html?entry=${plus1.UUID}" class="wheelElement"><span><span>${plus1.headword}</span>${posString(plus1)}</span></a>
+                //                         <a href="entry.html?entry=${plus2.UUID}" class="wheelElement shaded"><span><span>${plus2.headword}</span>${posString(plus2)}</span></a>
+                //                         <a href="entry.html?entry=${plus3.UUID}" class="wheelElement"><span><span>${plus3.headword}</span>${posString(plus3)}</span></a>
+                //                         <a href="entry.html?entry=${plus4.UUID}" class="wheelElement shaded"><span><span>${plus4.headword}</span>${posString(plus4)}</span></a>
+                //                         <a href="entry.html?entry=${plus5.UUID}" class="wheelElement"><span><span>${plus5.headword}</span>${posString(plus5)}</span></a>`;
 
-                wheel.innerHTML = wheelElements;
+                // wheel.innerHTML = wheelElements;
             }
 
             function posString(position){
