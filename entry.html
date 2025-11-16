@@ -148,7 +148,7 @@
             }
         });
 
-        //Search functionality; redirect to results page
+        //Search functionality; redirect to index page
         document.getElementById("searchButton").onclick = function () {
             if(document.getElementById("akuzSearch").checked){
                 lang = "akuz";
@@ -177,7 +177,7 @@
         var htmlString = `<div class="entryHeaderLine">
                                 <div class="headwordCont">
                                     <div class="entryHead">${currentEntry.headword}</div>
-                                    <div class="entryPos">${tagString(word.tags)}${tagString(word.pos)}</div>
+                                    <div class="entryPos">${tagString(currentEntry.tags)}${tagString(currentEntry.pos)}</div>
                                 </div>
                                 <a href="contact.html?entry=${currentEntry.UUID}&headword=${currentEntry.headword}" title="Report Issue">
                                     <img src="icons/ReportIssueButton.png" width="30" height="30" alt="" />
